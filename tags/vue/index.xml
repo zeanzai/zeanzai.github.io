@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on 天晴小猪</title>
+    <link>https://zeanzai.github.io/tags/vue/</link>
+    <description>Recent content in Vue on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 Aug 2018 15:42:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue学习笔记</title>
+      <link>https://zeanzai.github.io/post/vue/</link>
+      <pubDate>Tue, 28 Aug 2018 15:42:14 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/vue/</guid>
+      <description>这是vue的学习笔记。</description>
+    </item>
+    
+  </channel>
+</rss>
