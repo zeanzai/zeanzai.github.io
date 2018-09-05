@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Domain</title>
+      <link>https://zeanzai.github.io/tags/domain/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/tags/domain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Foreach</title>
+      <link>https://zeanzai.github.io/tags/foreach/</link>
+      <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/tags/foreach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Html</title>
       <link>https://zeanzai.github.io/tags/html/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
@@ -39,11 +57,29 @@
     </item>
     
     <item>
+      <title>Java</title>
+      <link>https://zeanzai.github.io/tags/java/</link>
+      <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Network</title>
       <link>https://zeanzai.github.io/tags/network/</link>
       <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
       
       <guid>https://zeanzai.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Other</title>
+      <link>https://zeanzai.github.io/tags/other/</link>
+      <pubDate>Fri, 31 Aug 2018 09:23:56 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/tags/other/</guid>
       <description></description>
     </item>
     
@@ -71,6 +107,15 @@
       <pubDate>Tue, 28 Aug 2018 15:42:14 +0800</pubDate>
       
       <guid>https://zeanzai.github.io/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://zeanzai.github.io/tags/website/</link>
+      <pubDate>Fri, 31 Aug 2018 17:27:43 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/tags/website/</guid>
       <description></description>
     </item>
     

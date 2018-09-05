@@ -6,10 +6,178 @@
     <description>Recent content on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 28 Aug 2018 15:42:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 10:06:34 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>第三章 数据链路层</title>
+      <link>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</link>
+      <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</guid>
+      <description>本章重点内容：
+本章讨论的是同一个局域网中，分组怎么从一个主机传送到另一台主机，并不经过路由器转发。
+（1）数据链路层的点对点信道和广播信道的特点，及这两种信道所使用的协议的特点
+（2）数据链路层的三个基本问题：封装成帧、透明传输和差错检测
+（3）以太网MAC层的硬件地址
+（4）适配器、转发器、集线器、网桥、以太网交换机的作用及使用场合
+只讨论数据的水平流动。
+3.1 使用点对点信道的数据链路层  概念
+ 链路  一个结点到相邻结点的一段物理线路（有线或无线），中间没有任何其他交换结点，链路只是一条路径的组成部分。也称物理链路（对应逻辑链路）。
+ 数据链路  在一条线路上传输数据时，除了必须要有一条物理线路外，还必须要有一些必要的通信协议来控制数据的传输，把实现这些协议的硬件和软件加到链路上，就构成了数据链路。也称为逻辑线路（对应物理链路，就是物理链路加上必要的通信协议）。
+ IP数据报（数据报、分组、包）  网络层协议数据单元。
+ 帧  数据链路层的协议数据单元，包裹了IP数据报
+ 最大传输单元MTU（maximum transfer unit）  链路层协议规定了所能传输的帧的数据部分长度上限就是最大传输数据单元
+ 帧界定符  可以用来标识帧的边界的特殊编码。
+ 透明传输  在数据链路层透明传输数据表示无论什么样的比特组合的数据，都能够按照原样没有差错的通过该数据链路层。
+ 数据链路层通信的主要步骤
+ 结点A的数据链路层把网络层交下来的IP数据报进行添加首部和尾部封装成帧的操作； 结点A把封装好的帧发送给结点B的数据链路层； 结点B的数据链路层校验收到的帧是否有差错，若没有差错，就从收到的帧中去除IP数据报交给上层网络层，否则就丢弃这个帧。  传输过程中可能遇到的问题及目标
+ 帧传输时出现的问题（即大块比特进行传输时）： 帧丢失、帧重复和帧失序，需要实现的目标是：可靠传输，数据链路层不考虑这部分问题 帧转化为比特进行传输时：比特丢失、比特错位（0变1，1变0），需要实现的目标是：无比特差错，数据链路层主要解决这部分问题  三个基本问题
+  数据链路层协议有很多，但是都需要讨论三个基本问题，这三个基本问题是共同的：封装成帧、透明传输、差错检测。
+ 封装成帧
+ 做法  使用包含许多必要的控制信息组成的首部（ASCII码中的SOH——start of header，十六进制编码：01，二进制编码：0000 0001）和尾部（ASCII码中的EOT——end of transmission，十六进制编码：04，二进制编码：0000 0100）将由网络层传来的IP数据报进行包裹，组成帧。</description>
+    </item>
+    
+    <item>
+      <title>第二章 物理层</title>
+      <link>https://zeanzai.github.io/post/network/chapter02-physical-layer/</link>
+      <pubDate>Mon, 03 Sep 2018 17:35:34 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter02-physical-layer/</guid>
+      <description>本章重点内容：
+（1）物理层的任务
+（2）几种常用的信道复用技术
+（3）几种常用的快带接入技术，主要是ADSL和FTTx
+2.1 物理层的基本概念 物理层考虑的是如何在连接各种计算机的传输媒体上传输数据比特流的问题，而非具体的传输媒体，当然，也不能忽略传输媒体在此层的重要作用。物理层的作用就是尽可能的屏蔽掉传输媒体和通信手段的差异，使物理层上的数据链路层感觉不到差异，这样数据链路层就只需要考虑如何完成本层的协议和服务，而不必考虑网络具体的阐述媒体和通信手段是什么。 要了解物理层的主要任务，就必须明确一个目标：物理层的主要任务是确定与传输媒体的接口有关的一些特性。
+这些特性有：
+（1）机械特性
+指明接口所用的接线器的形状和尺寸、引脚数目和排列、固定和锁定装置等。平时常见的各种规格的接口插件都有严格的标准化的规定。
+（2）电气特性
+电压范围
+（3）功能特性
+电压表示含义
+（4）过程特性
+不同功能的各种可能事件的出现顺序
+2.2 数据通信的基础知识  一个数据系统可以划分为三个部分：源系统（或称发送端、发送方）、传输系统（或称传输网络）和目的系统（或称接收端、接收方）。
+ 常用术语：
+ 通信的目的是消息（message） 运输消息的实体是数据（data） 数据的电磁或电气表现是信号（signal）  信号分类：
+ 模拟信号（连续信号）：代表消息的参数的取值是连续的 数字信号（离散信号）：代表消息的参数的取值是离散的（即0状态和1状态，0和1即为码元：代表着不同离散数值的基本波形）  信道
+ 定义：用来表示向某一方向传递消息的媒体（可以理解为信号的通道，逻辑意义上的概念——笔者注）。一条通信电路上往往包含一条发送信道和一条接收信道。
+ 通信双方信息的交互方式有以下三种：
+ 单向通信（单工通信）：只有一个方向上的通信而没有反方向的交互。例如：无线电广播、电视广播等。
+ 双向交替通信（半双工通信）：通信的双方都可以发送信息，但是不能双方同时发送（也不能同时接收）。
+ 双向同时通信（全双工通信）：通信双方可以同时发送也可以同时接收信息。
+ 信号处理方式：
+ 为什么要处理信号？
+  来自源的信号被称为基带信号（即基本频带信号），由于基带信号中包含了很多低频成分，甚至会有直流成分，而许多信道的电气或电磁特性又不允许传输这些低频分量或直流分量。因此就必须对信号进行处理，对信号进行处理的手段统称为调制（modulation）。
+ 调制的分类
+ 基带调制：对基带信号的波形进行变换，使之能适应信道的电磁或电气特性。 带通调制：将基带信号的频率范围搬移到较高的频段以便在信道中传输，这种方式成为带通调制，调制过的信号称为带通信号（即仅能够在一段频率范围内通过信道）。 带通调制方法的分类：  调幅（AM），即载波的振幅随基带数字信号而变化 调频（FM），即载波的频率随基带数字信号而变化 调相（PM），即载波的初始相位随基带数字信号而变化 正交振幅调制（QAM），复杂的多元制的振幅相位混合调制方法   传输速率
+  影响码元在信道上的传输速率的因素
+ 信道能够通过的频率范围 信噪比   2.</description>
+    </item>
+    
+    <item>
+      <title>第一章 概述</title>
+      <link>https://zeanzai.github.io/post/network/chapter01-overview/</link>
+      <pubDate>Mon, 03 Sep 2018 17:32:34 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter01-overview/</guid>
+      <description>本章重点内容：
+（1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念
+（2） 计算机的性能指标
+（3） 计算机网络的分层次的体系结构，包含协议和服务的概念
+1.1 计算机网络的作用  三网： 电信网络、有线电视网、计算机网络 作用： 连通性、共享  1.2 因特网概述  网络是由若干结点（node，包括计算机、集线器、交换机或路由器等）和连接这些结点的链路（link）组成。   因特网发展的三个阶段：
+ 从单个网络向互联网发展的过程
+ 建成了三级结构的因特网
+ 逐渐形成了多层次ISP（Internet Service Provider，因特网服务提供者）结构的因特网
+  因特网服务商从因特网管理机构申请多个IP地址，通过通信线路为用户提供上网服务。
+为了使不同层次的ISP经营的网络都能互通，1994年创建了四个网络接入点NAP（network access point，每个接入点之间是对等关系）
+一旦某个用户接入因特网，那么他就成为了一个ISP，他只需要购买一些调制解调器或路由器就可以使其他用户相互连通
+了解NGI计划
+ 因特网的标准化工作：
+ 成立国际组织，设置两个不同职能的部门 制定标准的流程： 因特网草案(internet draft) -&amp;gt; 建议标准(proposed standard)-&amp;gt;草案标准(draft standard)-&amp;gt;因特网标准(internet standard)   1.3 因特网的组成  边缘部分 由所有连接到因特网上的主机组成，用户直接使用，提供通信和资源共享。 主机A和主机B进行通信：实际上指的是：运行在主机A上面的某个进程和运行在主机B上面的某一进程进行通信，即计算机之间的通信。 边缘部分的进程之间的通信分为两大类：  客户-服务器方式 服务请求方即为客户端，服务提供方即为服务器端。 对等连接（peer-to-peer，P2P） 互为对方的服务器端，也互为对方的客户端。  核心部分 由大量网络和连接这些网络的路由器组成，为边缘部分提供服务，提供连通性和交换。 此部分起特殊作用的是路由器，而路由器的主要任务是：分组转发（packet switching）。</description>
+    </item>
+    
+    <item>
+      <title>Awesome Websites（常用的技术博客）</title>
+      <link>https://zeanzai.github.io/post/other/awesome-websites/</link>
+      <pubDate>Fri, 31 Aug 2018 17:27:43 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/awesome-websites/</guid>
+      <description> 发表文章  博客园 csdn 微信公众号 掘金 gitee GitHub Stack Overflow 腾讯云开发者社区 阿里云开发者社区  九月份需要完成的目标：  这是好各个网络平台的主题，并完成各个平台的发表文章的流程梳理 星火英语四级搞定 之前的博客进行迁移 整理GitHub仓库  </description>
+    </item>
+    
+    <item>
+      <title>Mybatis中Foreach的用法</title>
+      <link>https://zeanzai.github.io/post/dev/mybatis-foreach/</link>
+      <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/dev/mybatis-foreach/</guid>
+      <description>foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&amp;ldquo;params&amp;rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &amp;ldquo;ids&amp;rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &amp;ldquo;ids.id&amp;rdquo; 如果传入参数类型为map，这个入参有注解@Param(&amp;ldquo;params&amp;rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&amp;ldquo;,&amp;ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&amp;ldquo;)&amp;ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&amp;ldquo;(&amp;ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &amp;lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&amp;gt; &amp;lt;select id=&amp;quot;getEmployeesListParams&amp;quot; resultType=&amp;quot;Employees&amp;quot;&amp;gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &amp;lt;foreach collection=&amp;quot;list&amp;quot; item=&amp;quot;employeeId&amp;quot; index=&amp;quot;index&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot;&amp;gt; #{employeeId} &amp;lt;/foreach&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>java中的字符串操作</title>
+      <link>https://zeanzai.github.io/post/dev/java-string-plit/</link>
+      <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/dev/java-string-plit/</guid>
+      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
+ 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
+如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
+    </item>
+    
+    <item>
+      <title>域名的那些事儿</title>
+      <link>https://zeanzai.github.io/post/other/about-domain/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/about-domain/</guid>
+      <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
+ </description>
+    </item>
+    
+    <item>
+      <title>域名的那些事儿</title>
+      <link>https://zeanzai.github.io/post/other/about-domain0/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/about-domain0/</guid>
+      <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
+ </description>
+    </item>
+    
+    <item>
+      <title>域名的那些事儿</title>
+      <link>https://zeanzai.github.io/post/other/about-domain1/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/about-domain1/</guid>
+      <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
+ </description>
+    </item>
+    
+    <item>
+      <title>域名的那些事儿</title>
+      <link>https://zeanzai.github.io/post/other/about-domain2/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/about-domain2/</guid>
+      <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
+ </description>
+    </item>
+    
+    <item>
+      <title>域名的那些事儿</title>
+      <link>https://zeanzai.github.io/post/other/about-domain3/</link>
+      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/other/about-domain3/</guid>
+      <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
+ </description>
+    </item>
     
     <item>
       <title>Vue学习笔记</title>
@@ -27,15 +195,6 @@
       
       <guid>https://zeanzai.github.io/post/spring-cloud/</guid>
       <description>Spring-Cloud</description>
-    </item>
-    
-    <item>
-      <title>计算机网络学习笔记</title>
-      <link>https://zeanzai.github.io/post/network/</link>
-      <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
-      
-      <guid>https://zeanzai.github.io/post/network/</guid>
-      <description>chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述 chapter 01 计算机概述  </description>
     </item>
     
     <item>
@@ -74,6 +233,60 @@
       
       <guid>https://zeanzai.github.io/readme/</guid>
       <description> zeanzaiblogarticle </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter04-network-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter04-network-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter05-transport-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter05-transport-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter06-application-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter06-application-layer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter07-network-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter07-network-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter08-vedio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter08-vedio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</guid>
+      <description></description>
     </item>
     
     <item>

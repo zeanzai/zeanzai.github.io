@@ -3,6 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</loc>
+    <lastmod>2018-09-04T10:06:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter02-physical-layer/</loc>
+    <lastmod>2018-09-03T17:35:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter01-overview/</loc>
+    <lastmod>2018-09-03T17:32:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/awesome-websites/</loc>
+    <lastmod>2018-08-31T17:27:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/dev/mybatis-foreach/</loc>
+    <lastmod>2018-08-31T11:05:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/dev/java-string-plit/</loc>
+    <lastmod>2018-08-31T10:54:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/</loc>
+    <lastmod>2018-08-31T09:23:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/about-domain/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/about-domain0/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/about-domain1/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/about-domain2/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/other/about-domain3/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.github.io/post/vue/</loc>
     <lastmod>2018-08-28T15:42:14+08:00</lastmod>
   </url>
@@ -37,6 +97,35 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.github.io/post/dev/</loc>
+    <lastmod>2018-08-31T11:05:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter04-network-layer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter05-transport-layer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter06-application-layer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter07-network-security/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter08-vedio/</loc>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</loc>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.github.io/post/archives/</loc>
   </url>
   
@@ -64,14 +153,62 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.github.io/tags/domain/</loc>
+    <lastmod>2018-08-31T09:12:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/tags/foreach/</loc>
+    <lastmod>2018-08-31T11:05:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.github.io/tags/html/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://zeanzai.github.io/tags/java/</loc>
+    <lastmod>2018-08-31T10:54:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/categories/java/</loc>
+    <lastmod>2018-08-31T10:54:45+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/categories/mybatis/</loc>
+    <lastmod>2018-08-31T11:05:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.github.io/tags/network/</loc>
     <lastmod>2018-08-27T17:07:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/categories/network/</loc>
+    <lastmod>2018-09-04T10:06:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/tags/other/</loc>
+    <lastmod>2018-08-31T09:23:56+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/categories/other/</loc>
+    <lastmod>2018-08-31T17:27:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,6 +221,12 @@
   <url>
     <loc>https://zeanzai.github.io/tags/spring-cloud/</loc>
     <lastmod>2018-08-27T17:07:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.github.io/categories/string/</loc>
+    <lastmod>2018-08-31T10:54:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -118,8 +261,14 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.github.io/tags/website/</loc>
+    <lastmod>2018-08-31T17:27:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.github.io/</loc>
-    <lastmod>2018-08-28T15:42:14+08:00</lastmod>
+    <lastmod>2018-09-04T10:06:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   

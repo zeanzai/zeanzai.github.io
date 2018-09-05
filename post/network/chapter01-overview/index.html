@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>第一章 概述</title>
+	<meta name="description" content="概述">
+	<meta name="generator" content="Hugo 0.46" />
+	<meta property="og:title" content="第一章 概述" />
+<meta property="og:description" content="概述" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.github.io/post/network/chapter01-overview/" />
+
+
+
+<meta property="article:published_time" content="2018-09-03T17:32:34&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-09-03T17:32:34&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container-outer">
+		<header class="header">
+			<div class="container container-inner">
+				<div class="logo" role="banner">
+					<a class="logo__link" href="/" title="天晴小猪" rel="home">
+						<div class="logo__title">天晴小猪</div>
+						<div class="logo__tagline">有个爱的人，有份爱的工作，敲敲代码，看看书，这样，过一生。</div>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/post/test">测试</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/archives/">存档</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/network/">计算机网络</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/vue/">VUE</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/spring-cloud/">SPRING-CLOUD</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/other/">其他</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/dev/">Q&amp;A</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/basic-elements/">JEKYLL MIGRATION</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/about/">关于我</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper flex">
+
+<main class="main content">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">第一章 概述</h1><div class="post__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-03T17:32:34">September 03, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/network" rel="category">network</a></span>
+</span></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/img/tn.png" alt="第一章 概述">
+		</figure><div class="post__content clearfix">
+			
+
+<p>本章重点内容：</p>
+
+<p>（1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念</p>
+
+<p>（2） 计算机的性能指标</p>
+
+<p>（3） 计算机网络的分层次的体系结构，包含协议和服务的概念</p>
+
+<h2 id="1-1-计算机网络的作用">1.1 计算机网络的作用</h2>
+
+<ul>
+<li>三网： 电信网络、有线电视网、计算机网络</li>
+<li>作用： 连通性、共享</li>
+</ul>
+
+<h2 id="1-2-因特网概述">1.2 因特网概述</h2>
+
+<ul>
+<li>网络是由若干结点（node，包括计算机、集线器、交换机或路由器等）和连接这些结点的链路（link）组成。</li>
+</ul>
+
+<p><img src="/img/network/1-1.png" alt="" /></p>
+
+<ul>
+<li><p>因特网发展的三个阶段：</p>
+
+<ul>
+<li><p>从单个网络向互联网发展的过程</p></li>
+
+<li><p>建成了三级结构的因特网</p></li>
+
+<li><p>逐渐形成了多层次ISP（Internet Service Provider，因特网服务提供者）结构的因特网</p></li>
+</ul>
+
+<p>因特网服务商从因特网管理机构申请多个IP地址，通过通信线路为用户提供上网服务。</p>
+
+<p>为了使不同层次的ISP经营的网络都能互通，1994年创建了四个网络接入点NAP（network access point，每个接入点之间是对等关系）</p>
+
+<p>一旦某个用户接入因特网，那么他就成为了一个ISP，他只需要购买一些调制解调器或路由器就可以使其他用户相互连通</p>
+
+<p>了解NGI计划</p></li>
+
+<li><p>因特网的标准化工作：</p>
+
+<ul>
+<li>成立国际组织，设置两个不同职能的部门</li>
+<li>制定标准的流程：
+因特网草案(internet draft) -&gt; 建议标准(proposed standard)-&gt;草案标准(draft standard)-&gt;因特网标准(internet standard)</li>
+</ul></li>
+</ul>
+
+<h2 id="1-3-因特网的组成">1.3 因特网的组成</h2>
+
+<p><img src="/img/network/1-6.png" alt="" /></p>
+
+<ul>
+<li>边缘部分
+由所有连接到因特网上的主机组成，用户直接使用，提供通信和资源共享。
+主机A和主机B进行通信：实际上指的是：运行在主机A上面的某个进程和运行在主机B上面的某一进程进行通信，即计算机之间的通信。
+边缘部分的进程之间的通信分为两大类：
+
+<ul>
+<li>客户-服务器方式
+服务请求方即为客户端，服务提供方即为服务器端。</li>
+<li>对等连接（peer-to-peer，P2P）
+互为对方的服务器端，也互为对方的客户端。</li>
+</ul></li>
+
+<li><p>核心部分
+由大量网络和连接这些网络的路由器组成，为边缘部分提供服务，提供连通性和交换。
+此部分起特殊作用的是路由器，而路由器的主要任务是：分组转发（packet switching）。</p>
+
+<ul>
+<li><p>电路交换
+主要关键词就是：独占资源</p></li>
+
+<li><p>分组交换
+<strong>报文</strong>：需要发送的整块数据叫做报文
+<img src="/img/network/1-11.png" alt="" /></p></li>
+</ul>
+
+<p><strong>分组</strong>：将报文分为等长的数据段，然后加上必要的控制信息组成的<strong>首部</strong>就构成了分组，也称为<strong>包</strong>，首部成为<strong>包头</strong></p>
+
+<p>路由器就是用来转发分组的。路由器收到一个分组后，先进行暂存，然后检查其首部，查找转发表，按照首部中的目的地址，找到合适的接口转发出去，把分组交给下一个路由器。</p>
+
+<p><strong>优点</strong>： 高效（动态分配带宽，逐段占用链路）、灵活（为每一个分组独立选择转发路由）、迅速（以分组为单位传送，可以不先建立连接传输）、可靠（使用可靠的网络协议、分布式多路由的分组交换网）</p>
+
+<ul>
+<li>报文交换
+现将整个报文传递到相邻结点，全部存储下来之后再查找转发表，转发给下一个结点。</li>
+</ul></li>
+</ul>
+
+<p><img src="/img/network/1-13.png" alt="" /></p>
+
+<h2 id="1-4-计算机网络在我国的发展">1.4 计算机网络在我国的发展</h2>
+
+<p>略</p>
+
+<h2 id="1-5-计算机网络的类别">1.5 计算机网络的类别</h2>
+
+<ul>
+<li>计算机网络的定义：一些互相连接的、自治的计算机的集合。</li>
+<li>按照不同作用范围划分
+
+<ul>
+<li>广域网（wide area network）</li>
+<li>城域网（metropolitan area network, MAN）</li>
+<li>局域网（local area network, LAN）</li>
+<li>个人区域网（personal area network, PAN）</li>
+</ul></li>
+<li>按照不同使用者划分
+
+<ul>
+<li>公用网（public network）</li>
+<li>专用网（private network）</li>
+</ul></li>
+<li>用来把用户接入因特网的网络
+接入网AN（access network），既不属于核心部分，也不属于边缘部分</li>
+</ul>
+
+<h2 id="1-6-计算机网络的性能">1.6 计算机网络的性能</h2>
+
+<ul>
+<li><p>性能指标</p>
+
+<ul>
+<li>速率</li>
+</ul>
+
+<p>单位时间内传输的数据量的大小，单位： b/s  kb/s  mb/s等
+- 带宽</p>
+
+<p><strong>信号带宽</strong>：某种信号所包含的各种不同频率成分所占的频率范围
+<strong>网络带宽</strong>：表示单位时间内从网络中的某一个点到另一个点所能通过的<strong>最高数据率</strong>
+- 吞吐量</p>
+
+<p>单位时间内通过某个网络（或信道、接口）的数据量，更多的运用于对现实世界中的网络的一种测量，以便知道到底有多少数据量能够通过网络
+- 时延</p>
+
+<p><strong>发送时延</strong>，也叫传输时延，主机或路由器发送数据帧所需要的时间，也就是从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕为止所需要的时间。计算公式为：发送时延=数据帧长度/信道带宽</p>
+
+<p><strong>传播时延</strong>，电磁波在信道中传播一段距离所需要的时间。计算公式为：传播时延=信道长度/传播速率</p>
+
+<p><strong>处理时延</strong>，主机或路由器在收到分组时需要花费一定时间进行处理数据，例如分析首部、提取数据部分、进行差错检验、查找路由</p>
+
+<p>排队时延，分组经过网络传输时，在输入队列中的排队等待时间</p>
+
+<p><strong>究竟哪一种时延占主导地位，需要具体情况具体分析。对于高速网络链路，我们提高的仅仅是数据的发送速率而不是比特在链路上的传输速率，也就是只是减少了发送时延。</strong>
+<img src="/img/network/1-14.png" alt="" /></p>
+
+<ul>
+<li>时延带宽积</li>
+</ul>
+
+<p>把链路比作圆柱形管道，管道的长度（以时间为单位表示链路长度）比作链路的传播时延，管道的截面积代表链路的带宽，而管道的体积就代表时延带宽积。例如：某段链路传播时延：20ms，带宽：10Mb/s，则时延带宽积为：<code>20*10^-3*10*10^6=2*10^5bit</code>。也就是说，如果发送端持续发送数据，则在发送第一个比特即将到达终点时，发送端发送了<code>2*10^5</code>个bit，而这<code>2*10^5</code>个bit正在链路上面向前移动。因此又被称为：以比特为单位的链路长度。
+- 往返时间（RTT，round-trip time）</p>
+
+<p>从发送方发送数据开始到发送方收到接收方的确认时所需要的时间。多用于衡量卫星通信
+- 利用率</p>
+
+<p><strong>信道利用率</strong>，某信道有多少比例的时间是被利用的。</p>
+
+<p><strong>网络利用率</strong>，全网络的信道率的加权平均值。</p>
+
+<p>根据排队理论，当某个信道利用率增大时，该信道上面引起的时延也迅速增加。可以类比高速公路。这要求我们懂得：信道或网络利用率过高，就会产生非常大的时延。</p></li>
+
+<li><p>非性能指标</p>
+
+<ul>
+<li>费用</li>
+<li>质量</li>
+<li>标准化</li>
+<li>可靠性</li>
+<li>可扩展性和可升级性</li>
+<li>易于管理和维护</li>
+</ul></li>
+</ul>
+
+<h2 id="1-7-计算机网络体系结构">1.7 计算机网络体系结构</h2>
+
+<ul>
+<li><p>开放系统互联基本参考模型（OSI/RM）的由来历史及废弃原因</p></li>
+
+<li><p>事实上的国际标准：TCP/IP</p></li>
+
+<li><p>网络协议（network protocol）</p>
+
+<ul>
+<li>定义</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>为进行网络中的数据交换而建立的规则、标准或约定称为网络协议</p>
+</blockquote>
+
+<ul>
+<li>三要素</li>
+</ul>
+
+<blockquote>
+<p>语法：数据与控制信息的结构或格式</p>
+
+<p>语义：需要发出的控制信息、完成的动作以及做出的响应</p>
+
+<p>同步：事件实现顺序的详细说明</p>
+</blockquote>
+
+<ul>
+<li>协议分为两种不同表现形式</li>
+</ul>
+
+<p>一种：便于人们来阅读和理解的文字描述</p>
+
+<p>一种：能让计算机理解的程序代码</p>
+
+<ul>
+<li><p>复杂的计算机网络应该是分层的，分层的优点有：</p>
+
+<ul>
+<li>各层相互独立</li>
+<li>灵活性好</li>
+<li>结构上可分割</li>
+<li>易于实现和维护</li>
+<li>能够促进标准化工作</li>
+</ul></li>
+
+<li><p>每一层都需要完成以下一些（可以是一种，也可以是多种）</p>
+
+<ul>
+<li>差错控制： 使相应层次对等方的通信更加可靠</li>
+<li>流量控制：发送端的发送速率必须使接收端来得及接收，不能太快</li>
+<li>分段和重装：发送端将发送的数据划分为更小单位，在接收端还原</li>
+<li>复用和分用：发送端高层会话复用低层连接，接收端进行分用</li>
+<li>建立连接和释放连接：交换数据前建立一条逻辑连接，数据传送结束后释放连接</li>
+</ul></li>
+
+<li><p>体系结构和实现</p></li>
+</ul>
+
+<p>体系结构是指计算机网络的各层及其协议的集合，换言之，计算机网络的体系结构就是这个计算机网络及其构建所应完成的功能的精确定义。这些功能究竟是用何种硬件或软件来完成，则是一种遵循这种体系结构的实现。总之，体系结构是抽象的，实现是具体的。</p>
+
+<p><img src="/img/network/1-18.png" alt="" /></p>
+
+<ul>
+<li><p><strong>具有五层协议的体系结构</strong></p>
+
+<ul>
+<li>应用层</li>
+</ul>
+
+<p>任务：完成应用进程之间的交互</p>
+
+<p>协议定义：应用进程之间的<strong>通信和交互</strong>规则，如：DNS、HTTP、SMTP等</p>
+
+<p>数据单元：报文</p>
+
+<ul>
+<li>运输层</li>
+</ul>
+
+<p>任务：应用进程间的<strong>数据传输</strong>、分用和复用服务</p>
+
+<p>协议</p>
+
+<ul>
+<li>传输控制协议TCP（transmission control protocol），提供面向连接的、可靠的数据传输服务，数据单元为：报文段（segment）</li>
+
+<li><p>用户数据报协议UDP（user datagram protocol），提供无连接的、尽最大努力的数据传输服务，数据单元为：用户数据报</p></li>
+
+<li><p>网络层</p></li>
+</ul>
+
+<p>任务：为不同主机提供通信服务、将运输层产生的报文段或用户数据报分装成<strong>分组（也叫IP数据报，二者等同）</strong>或<strong>包</strong>进行传送</p>
+
+<p>协议： IP协议</p>
+
+<p>数据单元：IP数据报，也称分组或数据报</p>
+
+<p>网络层也称网际层或IP层</p>
+
+<ul>
+<li>数据链路层</li>
+</ul>
+
+<p>任务：在发送端将网络层交下来的IP数据报封装成帧，在接收端将帧提取称IP数据报</p>
+
+<p>数据单元：帧（frame）</p>
+
+<p>每一帧都包括数据和必要的控制信息（同步信息、地址信息、差错控制等）</p>
+
+<ul>
+<li>物理层</li>
+</ul>
+
+<p>任务： 将数据转化为0和1的比特流</p>
+
+<p>数据单元： 比特（bite）</p>
+
+<p>通常人们说TCP/IP时，是指互联网所使用到的整个<strong>TCP/IP协议族（protocol）</strong></p></li>
+</ul>
+
+<p>传输的复杂过程好像被屏蔽了，就如同两个相同层次之间直接通信一样，这就是所谓的对等层之间的通信。同理，各层协议，就是各个对等层之间传递数据的协议。协议栈，是因为几个层次画在一起像一个栈一样的结构。</p>
+
+<p><img src="/img/network/1-18.png" alt="" /></p>
+
+<p><img src="/img/network/1-19.png" alt="" /></p>
+
+<ul>
+<li><p>实体、协议、服务和服务访问点</p>
+
+<ul>
+<li>实体：表示任何可发送或接收信息的硬件或软件进程</li>
+<li>协议：控制两个对等实体（或多个实体）进行通信的规则的集合。在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务，也能够为下一层提供服务</li>
+<li>服务：协议是水平的，服务是垂直的，即服务是由下层向上层通过层间接口提供。不在同一层内完成的功能都称为服务。上层使用下层提供的服务是通过与下层交换命令完成的，这些命令在OSI中被称为<strong>服务原语</strong>。层与层之间的交换数据单元称为：服务数据单元SDU（service data unit），与PDU（协议数据单元，对等层之间的数据格式）</li>
+<li>服务访问点：SAP（service access point），相邻两层的实体进行交互（交换信息）的地方</li>
+</ul></li>
+</ul>
+
+<p>协议需要把所有的不利条件事先都估计好，不能假定一切都是正常的和非常理想的。检查协议是否正确，不能只看正常情况下能否使用，还必须要检查协议是否能够应付各种异常情况。</p>
+
+<ul>
+<li>TCP/IP的体系结构
+TCP/IP体系结构比较简单，只有四层，路由器在转发分组时最高只用到网络层而没有用到运输层和应用层。如下图：</li>
+</ul>
+
+<p><img src="/img/network/1-22.png" alt="" /></p>
+
+<p>技术的发展并不是严格遵循OSI分层概念，实际上已经演变成如下图所示的体系结构：
+<img src="/img/network/1-23.png" alt="" /></p>
+
+<p>TCP/IP协议可以为各式各样的应用提供服务，也允许IP协议在各式各样的网络构成的互联网上运行。如下图，可以看出IP协议在互联网中的核心作用。
+<img src="/img/network/1-24.png" alt="" /></p>
+
+<p>利用例子来说明协议栈在互联网常用的客户-服务器工作方式中的位置：
+<img src="/img/network/1-25.png" alt="" /></p>
+
+		</div>
+		
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="天晴小猪 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 天晴小猪</span>
+	</div>
+	<div class="authorbox__description">
+		有个爱的人，有份爱的工作，敲敲代码，看看书，这样，过一生。
+	</div>
+</div>
+
+	
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/network/chapter04-network-layer/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title"></p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/network/chapter02-physical-layer/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">第二章 物理层</p></a>
+	</div>
+</nav>
+	
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ciqu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+</main>
+
+<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://zeanzai.github.io" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/network/chapter03-data-link-layer/">第三章 数据链路层</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/network/chapter02-physical-layer/">第二章 物理层</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/network/chapter01-overview/">第一章 概述</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/other/awesome-websites/">Awesome Websites（常用的技术博客）</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/mybatis-foreach/">Mybatis中Foreach的用法</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/development">Development</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mybatis">Mybatis</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/other">Other</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/string">String</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/study">Study</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/test">Test</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/domain" title="Domain">Domain (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/other" title="Other">Other (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/spring-cloud" title="Spring cloud">Spring cloud (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/test" title="Test">Test (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vue" title="Vue">Vue (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/website" title="Website">Website (1)</a>
+	</div>
+</div><div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Sina Weibo" rel="noopener noreferrer" href="https://weibo.com/zeanzai" target="_blank">
+				<svg t="1518502970248" class="widget-social__link-icon icon-weibo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="808" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M712.779 484.273c0-8.579 75.506-78.938 0-123.555s-214.506 24.025-209.359 15.443c60.062-104.679-25.741-137.283-68.643-137.283-102.962 0-374.098 229.952-374.098 375.813s180.186 264.273 403.271 264.273 401.554-118.406 401.554-264.273c0-123.555-152.73-123.555-152.73-130.419zM474.246 798.311c-140.717 20.592-267.705-39.47-281.43-133.852s90.95-185.333 233.382-205.926c142.433-20.592 267.705 39.47 281.43 133.852s-90.95 185.333-233.382 205.926z" fill="#FFF" p-id="809"></path>
+					<path d="M800.297 434.506h17.163c10.297 0 20.592-8.579 22.308-18.876 0 0 18.876-77.222-27.457-120.125s-108.113-27.457-108.113-27.457c-10.297 1.716-18.876 12.014-18.876 22.308v6.863c0 10.297 8.579 18.876 18.876 17.163 0 0 51.483-6.863 77.222 24.025s5.149 78.938 5.149 78.938c-3.434 10.297 3.434 17.163 13.728 17.163z" fill="" p-id="810"></path>
+					<path d="M899.826 207.989c-85.804-82.37-212.788-70.359-212.788-70.359-15.443 0-27.457 13.728-27.457 29.171v13.728c0 15.443 12.014 27.457 29.171 27.457 0 0 121.84-13.728 173.323 61.778s29.171 169.888 29.171 169.888c-1.716 15.443 8.579 27.457 24.025 27.457h12.014c15.443 0 30.89-12.014 32.605-27.457-1.716 0 25.741-147.58-60.062-231.666zM398.74 510.014c-84.086 17.163-142.433 87.519-128.703 159.594s94.384 116.691 178.469 99.53 142.433-87.519 128.703-159.594-94.384-116.691-178.469-99.53zM391.875 698.779c-25.741 12.014-54.915 5.149-63.493-13.728-8.579-20.592 5.149-46.333 30.89-58.347s54.915-6.863 63.493 13.728c8.579 20.592-5.149 46.333-30.89 58.347zM451.938 638.717c-15.443 0-27.457-12.014-25.741-25.741 0-13.728 12.014-25.741 25.741-25.741s25.741 10.297 25.741 25.741c0 13.728-12.014 25.741-25.741 25.741z" fill="#FFF" p-id="811"></path>
+				</svg>
+				<span>Weibo</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="zhihu" rel="noopener noreferrer" href="https://www.zhihu.com/people/zeanzai/"
+			 target="_blank">
+				<svg t="1518502950969" class="widget-social__link-icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 p-id="893" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"
+					 fill="#FFF" p-id="894"></path>
+				</svg>
+				<span>zhihu</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:438123371@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>438123371@qq.com</span>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+</aside>
+	</div>
+		<footer class="footer">
+			<div class="container container-inner">
+				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+		label: "Menu",
+	});
+</script></body>
+</html>
