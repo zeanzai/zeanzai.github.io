@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 天晴小猪</title>
+    <link>https://zeanzai.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 06 Sep 2018 09:12:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用hugo创建自己的博客</title>
+      <link>https://zeanzai.github.io/post/dev/hugo-devlope/</link>
+      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.github.io/post/dev/hugo-devlope/</guid>
+      <description>笔者在进行试验时，有以下几个操作习惯，具体参考。 Centos7默认开通了80端口和22端口。
+ 安装golang  安装过程如下：  # 1. 进入安装包存放位置 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/ # 2. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz --2018-09-04 18:14:18-- https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz Resolving studygolang.com (studygolang.com)... 59.110.219.94 Connecting to studygolang.com (studygolang.com)|59.110.219.94|:443... connected. HTTP request sent, awaiting response... 303 See Other Location: https://dl.google.com/go/go1.11.linux-amd64.tar.gz [following] --2018-09-04 18:14:19-- https://dl.google.com/go/go1.11.linux-amd64.tar.gz Resolving dl.google.com (dl.google.com)... 203.208.40.35, 203.208.40.39, 203.208.40.40, ... Connecting to dl.google.com (dl.google.com)|203.208.40.35|:443... connected. HTTP request sent, awaiting response... 200 OK Length: 127163815 (121M) [application/octet-stream] Saving to: ‘go1.</description>
+    </item>
+    
+  </channel>
+</rss>
