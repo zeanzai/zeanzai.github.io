@@ -6,12 +6,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Dev</title>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.48" />
+	<meta name="generator" content="Hugo 0.46" />
 	<meta property="og:title" content="Dev" />
 <meta property="og:description" content="What else did you expect me to say?" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zeanzai.github.io/categories/dev/" />
-<meta property="og:updated_time" content="2018-09-06T09:12:55&#43;08:00"/>
+
+
+
+<meta property="og:updated_time" content="2018-09-06T18:28:25&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,6 +56,7 @@
 		<li class="menu__item"><a class="menu__link" href="/post/spring-cloud/">SPRING-CLOUD</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/other/">其他</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/dev/">Q&amp;A</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/tips/">技巧</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/basic-elements/">JEKYLL MIGRATION</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/about/">关于我</a></li>
 	</ul>
@@ -56,33 +70,171 @@
 			<h1 class="page-header__title">Dev</h1>
 		</header><article class="list__item post">
 	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/dev/hugo-devlope/">
-			<img src="/img/domain.jpg" alt="使用hugo创建自己的博客" />
+		<a href="https://zeanzai.github.io/post/dev/install-nginx/">
+			<img src="/img/dev/nginx.jpg" alt="安装Nginx" />
 		</a>
 	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/hugo-devlope/" rel="bookmark">使用hugo创建自己的博客</a>
+				<a href="/post/dev/install-nginx/" rel="bookmark">安装Nginx</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-09-06T09:12:55">September 06, 2018</time>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:28:25">September 06, 2018</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
 </span></div>
 		</header>
+		
 		<div class="list__excerpt post__content">
-			笔者在进行试验时，有以下几个操作习惯，具体参考。 Centos7默认开通了80端口和22端口。
- 安装golang  安装过程如下：  # 1. 进入安装包存放位置 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/ # 2. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz --2018-09-04 18:14:18-- https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz Resolving studygolang.com (studygolang.com)... 59.110.219.94 Connecting to studygolang.com (studygolang.com)|59.110.219.94|:443... connected. HTTP request sent, awaiting response... 303 See Other Location: https://dl.google.com/go/go1.11.linux-amd64.tar.gz [following] --2018-09-04 18:14:19-- https://dl.google.com/go/go1.11.linux-amd64.tar.gz Resolving dl.google.com (dl.google.com)... 203.208.40.35, 203.208.40.39, 203.208.40.40, ... Connecting to dl.google.com (dl.google.com)|203.208.40.35|:443... connected. HTTP request sent, awaiting response... 200 OK Length: 127163815 (121M) [application/octet-stream] Saving to: ‘go1.
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
+# 1. …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/hugo-devlope/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/install-nginx/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-webhook/">
+			<img src="/img/dev/webhook.jpg" alt="安装Webhook" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-webhook/" rel="bookmark">安装Webhook</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:27:14">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
+举个例子来说明：
+ 需求分析: 远程调用一个命令后，服务器打印当前服务器的时间 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-webhook/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-hugo/">
+			<img src="/img/dev/hugo.png" alt="安装Hugo" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-hugo/" rel="bookmark">安装Hugo</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:25:30">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装hugo hugo是本教程的另一个不可或缺的工具.
+具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
+安装包安装方式  查看安 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-hugo/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-git/">
+			<img src="/img/dev/git.jpg" alt="安装Git" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-git/" rel="bookmark">安装Git</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:24:05">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
+依然采用源码的安装方式进行安装.
+基本过程如下:
+ 删除旧版本 安装依赖 下载源 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-git/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-golang/">
+			<img src="/img/dev/golang.jpg" alt="安装golang" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-golang/" rel="bookmark">安装golang</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:12:55">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
+由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-golang/">Read more…</a>
 		</div>
 	</div>
 </article>
 
+
 		
+<div class="pagination">
+	<span class="pagination__item pagination__item--current">1/2</span>
+	<a class="pagination__item pagination__item--next btn" href="/categories/dev/page/2/">»</a>
+</div>
+
 	</main>
 
 
@@ -99,11 +251,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/hugo-devlope/">使用hugo创建自己的博客</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter03-data-link-layer/">第三章 数据链路层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter02-physical-layer/">第二章 物理层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter01-overview/">第一章 概述</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/other/awesome-websites/">Awesome Websites（常用的技术博客）</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter03/">第三章 把着计算机的脉</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter02/">第二章 会用你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter01/">第一章 了解你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/">互联网弄潮儿的必备技能</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install-nginx/">安装Nginx</a></li>
 		</ul>
 	</div>
 </div>
@@ -120,6 +272,7 @@
 			<li class="widget__item"><a class="widget__link" href="/categories/string">String</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/study">Study</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/test">Test</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
 		</ul>
 	</div>
 </div>
@@ -127,11 +280,13 @@
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/computer" title="Computer">Computer (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/domain" title="Domain">Domain (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/index" title="Index">Index (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/other" title="Other">Other (1)</a>

@@ -6,12 +6,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>天晴小猪</title>
 	<meta name="description" content="What else did you expect me to say?">
-	<meta name="generator" content="Hugo 0.48" />
+	<meta name="generator" content="Hugo 0.46" />
 	<meta property="og:title" content="天晴小猪" />
 <meta property="og:description" content="What else did you expect me to say?" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zeanzai.github.io/" />
-<meta property="og:updated_time" content="2018-08-31T11:05:33&#43;08:00"/>
+
+
+
+<meta property="og:updated_time" content="2018-09-06T18:27:14&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,6 +56,7 @@
 		<li class="menu__item"><a class="menu__link" href="/post/spring-cloud/">SPRING-CLOUD</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/other/">其他</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/dev/">Q&amp;A</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/tips/">技巧</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/basic-elements/">JEKYLL MIGRATION</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/about/">关于我</a></li>
 	</ul>
@@ -53,133 +67,168 @@
 
 	<main class="main list content" role="main"><article class="list__item post">
 	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/dev/mybatis-foreach/">
-			<img src="/img/tn.png" alt="Mybatis中Foreach的用法" />
+		<a href="https://zeanzai.github.io/post/dev/install-webhook/">
+			<img src="/img/dev/webhook.jpg" alt="安装Webhook" />
 		</a>
 	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/mybatis-foreach/" rel="bookmark">Mybatis中Foreach的用法</a>
+				<a href="/post/dev/install-webhook/" rel="bookmark">安装Webhook</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-08-31T11:05:33">August 31, 2018</time>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:27:14">September 06, 2018</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/mybatis" rel="category">Mybatis</a></span>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
 </span></div>
 		</header>
+		
 		<div class="list__excerpt post__content">
-			foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&ldquo;params&rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &ldquo;ids&rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &ldquo;ids.id&rdquo; 如果传入参数类型为map，这个入参有注解@Param(&ldquo;params&rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&ldquo;,&ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&ldquo;)&ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&ldquo;(&ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&gt; &lt;select id=&quot;getEmployeesListParams&quot; resultType=&quot;Employees&quot;&gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &lt;foreach collection=&quot;list&quot; item=&quot;employeeId&quot; index=&quot;index&quot; open=&quot;(&quot; close=&quot;)&quot; separator=&quot;,&quot;&gt; #{employeeId} &lt;/foreach&gt; &lt;/select&gt; &lt;!
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
+举个例子来说明：
+ 需求分析: 远程调用一个命令后，服务器打印当前服务器的时间 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/mybatis-foreach/">Read more…</a>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/dev/java-string-plit/">
-			<img src="/img/tn.png" alt="java中的字符串操作" />
-		</a>
-	</figure>
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/java-string-plit/" rel="bookmark">java中的字符串操作</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-08-31T10:54:45">August 31, 2018</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/java" rel="category">Java</a>, <a class="meta-categories__link" href="/categories/string" rel="category">String</a></span>
-</span></div>
-		</header>
-		<div class="list__excerpt post__content">
-			在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
- 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&quot;\\.&quot;)。这样才能正确的分隔开，不能用String.split(&quot;.&quot;)；
-如果用“|”作为分隔的话，必须是如下写法：String.split(&quot;\\|&quot;)。这样才能正确的分隔开，不能用String.split(&quot;|&quot;);
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/other/about-domain/">
-			<img src="/img/domain.jpg" alt="域名的那些事儿" />
-		</a>
-	</figure>
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/other/about-domain/" rel="bookmark">域名的那些事儿</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-08-31T09:12:55">August 31, 2018</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/other" rel="category">other</a></span>
-</span></div>
-		</header>
-		<div class="list__excerpt post__content">
-			 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
- 
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/other/about-domain0/">
-			<img src="/img/domain.jpg" alt="域名的那些事儿" />
-		</a>
-	</figure>
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/other/about-domain0/" rel="bookmark">域名的那些事儿</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-08-31T09:12:55">August 31, 2018</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/other" rel="category">other</a></span>
-</span></div>
-		</header>
-		<div class="list__excerpt post__content">
-			域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
- 这是一次很厉害的测试。
-这有是一个非常厉害的测试。
-又一次非常牛逼的测试。
-这是。。。。
-最后一次特别牛逼的测试。
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.github.io/post/other/about-domain1/">
-			<img src="/img/domain.jpg" alt="域名的那些事儿" />
-		</a>
-	</figure>
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/other/about-domain1/" rel="bookmark">域名的那些事儿</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-08-31T09:12:55">August 31, 2018</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/other" rel="category">other</a></span>
-</span></div>
-		</header>
-		<div class="list__excerpt post__content">
-			 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
- 
+			<a class="list__footer-readmore btn" href="/post/dev/install-webhook/">Read more…</a>
 		</div>
 	</div>
 </article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-hugo/">
+			<img src="/img/dev/hugo.png" alt="安装Hugo" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-hugo/" rel="bookmark">安装Hugo</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:25:30">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装hugo hugo是本教程的另一个不可或缺的工具.
+具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
+安装包安装方式  查看安 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-hugo/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-git/">
+			<img src="/img/dev/git.jpg" alt="安装Git" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-git/" rel="bookmark">安装Git</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:24:05">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
+依然采用源码的安装方式进行安装.
+基本过程如下:
+ 删除旧版本 安装依赖 下载源 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-git/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/install-golang/">
+			<img src="/img/dev/golang.jpg" alt="安装golang" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install-golang/" rel="bookmark">安装golang</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T18:12:55">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
+由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install-golang/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.github.io/post/dev/hugo-devlope/">
+			<img src="/img/domain.jpg" alt="使用hugo创建自己的博客" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/hugo-devlope/" rel="bookmark">使用hugo创建自己的博客</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-09-06T09:12:55">September 06, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span></div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
+笔者将以不同场景的操作方式来讲述这个过程.
+ 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 然后使用  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令,  …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/hugo-devlope/">Read more…</a>
+		</div>
+	</div>
+</article>
+
 		
 
 		
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/">«</a>
-	<span class="pagination__item pagination__item--current">2/5</span>
+	<span class="pagination__item pagination__item--current">2/7</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/3/">»</a>
 </div>
 
@@ -198,11 +247,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/hugo-devlope/">使用hugo创建自己的博客</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter03-data-link-layer/">第三章 数据链路层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter02-physical-layer/">第二章 物理层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter01-overview/">第一章 概述</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/other/awesome-websites/">Awesome Websites（常用的技术博客）</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter03/">第三章 把着计算机的脉</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter02/">第二章 会用你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter01/">第一章 了解你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/">互联网弄潮儿的必备技能</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install-nginx/">安装Nginx</a></li>
 		</ul>
 	</div>
 </div>
@@ -219,6 +268,7 @@
 			<li class="widget__item"><a class="widget__link" href="/categories/string">String</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/study">Study</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/test">Test</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
 		</ul>
 	</div>
 </div>
@@ -226,11 +276,13 @@
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/computer" title="Computer">Computer (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/domain" title="Domain">Domain (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/index" title="Index">Index (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/other" title="Other">Other (1)</a>

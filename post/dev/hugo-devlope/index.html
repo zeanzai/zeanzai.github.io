@@ -6,12 +6,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>使用hugo创建自己的博客</title>
 	<meta name="description" content="hugo开发">
-	<meta name="generator" content="Hugo 0.48" />
+	<meta name="generator" content="Hugo 0.46" />
 	<meta property="og:title" content="使用hugo创建自己的博客" />
 <meta property="og:description" content="hugo开发" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.github.io/post/dev/hugo-devlope/" /><meta property="article:published_time" content="2018-09-06T09:12:55&#43;08:00"/>
+<meta property="og:url" content="https://zeanzai.github.io/post/dev/hugo-devlope/" />
+
+
+
+<meta property="article:published_time" content="2018-09-06T09:12:55&#43;08:00"/>
+
 <meta property="article:modified_time" content="2018-09-06T09:12:55&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -42,6 +58,7 @@
 		<li class="menu__item"><a class="menu__link" href="/post/spring-cloud/">SPRING-CLOUD</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/other/">其他</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/dev/">Q&amp;A</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/tips/">技巧</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/basic-elements/">JEKYLL MIGRATION</a></li>
 		<li class="menu__item"><a class="menu__link" href="/post/about/">关于我</a></li>
 	</ul>
@@ -66,348 +83,44 @@
 		</figure><div class="post__content clearfix">
 			
 
-<blockquote>
-<p>笔者在进行试验时，有以下几个操作习惯，具体<a href="https://github.com/zeanzai/Computer-Science-Study-Note/blob/master/operation/README.md">参考</a>。
-Centos7默认开通了80端口和22端口。</p>
-</blockquote>
+<h2 id="整个开发流程">整个开发流程</h2>
 
-<h2 id="安装golang">安装golang</h2>
+<p>在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.</p>
+
+<p>笔者将以不同场景的操作方式来讲述这个过程.</p>
 
 <ol>
-<li>安装过程如下：</li>
+<li>公司
+在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 然后使用</li>
 </ol>
 
-<pre><code class="language-shell"># 1. 进入安装包存放位置
-[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/
+<p>该步骤为关键步骤, 主要分为<code>分解文档结构</code>, <code>上传文档到各自仓库</code>, <code>克隆项目到服务器</code>, <code>创建webhook命令</code>, <code>在GitHub上面配置webhook</code>, <code>测试</code>几个步骤.</p>
 
-# 2. 下载
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz
---2018-09-04 18:14:18--  https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz
-Resolving studygolang.com (studygolang.com)... 59.110.219.94
-Connecting to studygolang.com (studygolang.com)|59.110.219.94|:443... connected.
-HTTP request sent, awaiting response... 303 See Other
-Location: https://dl.google.com/go/go1.11.linux-amd64.tar.gz [following]
---2018-09-04 18:14:19--  https://dl.google.com/go/go1.11.linux-amd64.tar.gz
-Resolving dl.google.com (dl.google.com)... 203.208.40.35, 203.208.40.39, 203.208.40.40, ...
-Connecting to dl.google.com (dl.google.com)|203.208.40.35|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 127163815 (121M) [application/octet-stream]
-Saving to: ‘go1.11.linux-amd64.tar.gz’
+<h4 id="分解文档结构">分解文档结构</h4>
 
-100%[=======================================================================&gt;] 127,163,815 11.9MB/s   in 10s
+<p>将hugo初始化的根目录分解, 分解成四个目录, 这样分解的目的是为了区分不同仓库的功能, 也是为了更好的维护.</p>
 
-2018-09-04 18:14:29 (11.6 MB/s) - ‘go1.11.linux-amd64.tar.gz’ saved [127163815/127163815]
-
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# ll
-total 124188
--rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz
-
-# 3. 创建安装目录
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup
-
-# 4. 解压到安装目录
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# ll
-total 4
-drwxr-xr-x 10 root root 4096 Aug 25 04:41 go
-
-# 5. 创建gopath目录结构
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# mkdir go/gopath/
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# mkdir go/gopath/bin
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# mkdir go/gopath/src
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# mkdir go/gopath/pkg
-
-# 6. 配置环境变量
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# vi /etc/profile
-# 添加以下内容
-export GOROOT=/usr/setup/go
-export GOPATH=/usr/setup/go/gopath
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-# 7. 使配置文件生效
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# source /etc/profile
-
-# 8. 测试
-[root@iZwz97ekphk0kmqgt9zvc4Z setup]# go version
-go version go1.11 linux/amd64
-
+<pre><code>hugo
+  |- &lt;username&gt;.github.io
+  |- &lt;username&gt;blogarticle
+  |- &lt;username&gt;blogtheme
+  |- &lt;username&gt;blogbase
 </code></pre>
+
+<p>讲解:
+- <code>&lt;username&gt;.github.io</code> 为使用GitHubPage所创建的项目, 保存的是执行 hugo 命令后生成的静态文件, 相当于根目录中的 public 文件夹.
+- <code>&lt;username&gt;blogarticle</code> 文章目录, 保存的是所有的 md 文档, 相当于根目录中的 content 文件夹.
+- <code>&lt;username&gt;blogtheme</code> 主题目录, 保存的是自定义的主题, 相当于根目录中的 theme 文件夹.
+- <code>&lt;username&gt;blogbase</code> 其他目录, 保存的是除上面三个目录外的其他目录.</p>
+
+<p>将文档分解完成后,</p>
 
 <ol>
-<li>参考网址
-&gt; <a href="https://www.cnblogs.com/chy123/p/6750347.html">https://www.cnblogs.com/chy123/p/6750347.html</a>
-&gt; <a href="https://studygolang.com/dl">https://studygolang.com/dl</a>
-&gt; <a href="https://blog.csdn.net/shida_csdn/article/details/79441694">https://blog.csdn.net/shida_csdn/article/details/79441694</a></li>
-</ol>
-
-<hr />
-
-<h2 id="安装git">安装git</h2>
-
-<pre><code class="language-shell"># 1. 查看是否已经安装
-[root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version
-
-# 2. 安装依赖包
-[root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
-
-# 3. 进入安装包存放目录
-[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/
-
-# 4. 下载
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz
-
-# 5. 解压到当前目录
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.18.0.tar.gz
-
-# 6. 创建安装目录
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup/git_2.18.0
-
-# 7. 进入源码目录，并进行make配置
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd git-2.18.0/
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# make prefix=/usr/setup/git_2.18.0 all
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# make prefix=/usr/setup/git_2.18.0 install
-
-# 8. 配置环境变量，并使配置生效
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# vi /etc/profile
-# 添加以下内容
-export GIT_HOME=/usr/setup/git_2.18.0
-export PATH=$PATH:$GIT_HOME/bin
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# source /etc/profile
-
-# 9. 测试
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# git --version
-
-# 10. 配置git全局用户名和邮箱
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# git config --global user.name &quot;zeanzai&quot;
-[root@iZwz97ekphk0kmqgt9zvc4Z packages]# git config --global user.email &quot;438123371@qq.com&quot;
-</code></pre>
-
-<hr />
-
-<h2 id="安装hugo">安装hugo</h2>
-
-<p>安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。</p>
-
-<h4 id="安装包安装方式">安装包安装方式</h4>
-
-<ol>
-<li>查看安装包下载地址： <a href="https://github.com/gohugoio/hugo/releases/">https://github.com/gohugoio/hugo/releases/</a></li>
-<li>选取最新版本，并复制下载地址</li>
-
-<li><p>安装
-```shell</p>
-
-<h1 id="1-进入安装包存放目录">1. 进入安装包存放目录</h1>
-
-<p>[root@izwz97ekphk0kmqgt9zvc4z ~]# cd opt/packages/</p></li>
-</ol>
-
-<h1 id="2-下载安装包">2. 下载安装包</h1>
-
-<p>[root@izwz97ekphk0kmqgt9zvc4z packages]# wget -c <a href="https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.tar.gz">https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.tar.gz</a></p>
-
-<h1 id="3-解压">3. 解压</h1>
-
-<p>[root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf hugo_0.48_Linux-64bit.tar.gz</p>
-
-<h1 id="4-移动">4. 移动</h1>
-
-<p>[root@izwz97ekphk0kmqgt9zvc4z packages]# mv /usr/setup/hugo/hugo /usr/local/bin/</p>
-
-<h1 id="5-测试">5. 测试</h1>
-
-<p>[root@izwz97ekphk0kmqgt9zvc4z packages]# hugo version
-Hugo Static Site Generator v0.48 linux/amd64 BuildDate: 2018-08-29T06:33:51Z</p>
-
-<pre><code>4. 参考
-&gt; https://www.jianshu.com/p/bb2d483f4caf
-
-#### yum安装方式（建议）
-1. 根据hugo官方[文档](https://gohugo.io/getting-started/installing/)提示，找到[Epel Repo](https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/)下载地址，获取hugo的Epel Repo里面的[内容](https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/repo/epel-7/daftaupe-hugo-epel-7.repo)
-2. 安装
-```shell
-# 1. 将第一步获取到的内容复制到hugo.repo文件中
-[root@study ~]# vi /etc/yum.repos.d/hugo.repo
-
-# 2. 使用yum进行安装
-[root@study ~]# yum -y install hugo
-
-# 3. 测试
-[root@study ~]# hugo version
-Hugo Static Site Generator v0.48 linux/amd64 BuildDate: 2018-08-29T09:42:25Z
-</code></pre>
-
-<hr />
-
-<h2 id="安装webhook">安装webhook</h2>
-
-<p>webhook可以理解成可以通过远程调用来执行的相关命令的工具。举个例子来说明：
-&gt; 需求分析
-&gt;   远程调用一个命令后，服务器打印当前服务器的时间到/opt/scripts/hugo-deploy/redeploy.log</p>
-
-<pre><code class="language-shell"># 1. 安装webhook客户端
-[root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook
-# 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面
-
-# 2. 创建可执行的文件
-[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy
-[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh
-  #!/bin/bash
-
-  time=`date &quot;+%Y-%m-%d %H:%M:%S&quot;`
-  echo &quot;${time}&quot; &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log
-[root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh
-
-# 3. 测试是否能够打印
-[root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh
-[root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log
-
-# 4. 创建hooks.json文件
-[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.json
-  [
-    {
-      &quot;id&quot;: &quot;redeploy-webhook&quot;,
-      &quot;execute-command&quot;: &quot;/opt/scripts/hugo-deploy/redeploy.sh&quot;,
-      &quot;command-working-directory&quot;: &quot;./&quot;
-    }
-  ]
-
-# 5. 启动webhook客户端
-[root@izwz97ekphk0kmqgt9zvc4z ~]# /usr/setup/go/gopath/bin/webhook -hooks /opt/scripts/hugo-deploy/hooks.json -port=9876 -verbose
-
-# 6. 开放9876端口，并测试
-在阿里云安全组上放开9876端口，然后在浏览器中输入：http://&lt;your-ip&gt;:9876/hooks/redeploy-webhook
-打印log文件
-
-# 7. 创建服务
-[root@izwz97ekphk0kmqgt9zvc4z ~]# cd /etc/systemd/system
-[root@izwz97ekphk0kmqgt9zvc4z system]# vi webhook.service
-  [Unit]
-  Description=Webhooks
-
-  [Service]
-  ExecStart=/usr/setup/go/gopath/bin/webhook -hooks /opt/scripts/hugo-deploy/hooks.json -port=9876 -hotreload
-
-  [Install]
-  WantedBy=multi-user.target
-[root@izwz97ekphk0kmqgt9zvc4z system]# systemctl enable webhook.service
-[root@izwz97ekphk0kmqgt9zvc4z system]# systemctl start webhook.service
-
-# 8. 测试
-
-</code></pre>
-
-<p>参考
-&gt; <a href="https://davidauthier.wearemd.com/blog/deploy-using-github-webhooks.html">https://davidauthier.wearemd.com/blog/deploy-using-github-webhooks.html</a></p>
-
-<hr />
-
-<h2 id="安装nginx">安装Nginx</h2>
-
-<pre><code class="language-shell"># 1. 创建安装目录
-[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2
-[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp
-
-# 2. 安装依赖
-[root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
-
-# 3. 下载安装包并上传到/opt/package
-
-# 4. 解压
-[root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/
-[root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz
-[root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/
-
-# 5. 配置
-[root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \
-&gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \
-&gt; --lock-path=/usr/setup/nginx_1.12.2/lock/nginx.lock \
-&gt; --error-log-path=/usr/setup/nginx_1.12.2/log/error.log \
-&gt; --http-log-path=/usr/setup/nginx_1.12.2/log/access.log \
-&gt; --http-client-body-temp-path=/usr/setup/nginx_1.12.2/temp/client \
-&gt; --http-proxy-temp-path=/usr/setup/nginx_1.12.2/temp/proxy \
-&gt; --http-fastcgi-temp-path=/usr/setup/nginx_1.12.2/temp/fastcgi \
-&gt; --http-uwsgi-temp-path=/usr/setup/nginx_1.12.2/temp/uwsgi \
-&gt; --http-scgi-temp-path=/usr/setup/nginx_1.12.2/temp/scgi \
-&gt; --with-http_stub_status_module \
-&gt; --with-http_gzip_static_module \
-&gt; --with-http_ssl_module
-
-[root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# make
-[root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# make install
-
-# 6. 开放80端口，并进行测试
-[root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2]# /usr/setup/nginx_1.12.2/sbin/nginx
-
-# 7. 配置服务文件
-[root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2]# cd /etc/systemd/system
-[root@izwz97ekphk0kmqgt9zvc4z system]# vi nginx.service
-  [Unit]
-  Description=nginx
-  After=network.target
-
-  [Service]
-  Type=forking
-  ExecStart=/usr/setup/nginx_1.12.2/sbin/nginx
-  ExecReload=/usr/setup/nginx_1.12.2/sbin/nginx -s reload
-  ExecStop=/usr/setup/nginx_1.12.2/sbin/nginx -s quit
-  PrivateTmp=true
-
-  [Install]
-  WantedBy=multi-user.target
-
-[root@izwz97ekphk0kmqgt9zvc4z system]# systemctl enable nginx.service
-[root@izwz97ekphk0kmqgt9zvc4z system]# systemctl start nginx.service
-
-# 8. 启动Nginx，并进行测试
-
-</code></pre>
-
-<p><strong>扩展</strong>：
-1. 启动和关闭</p>
-
-<pre><code class="language-shell">// 切换到Nginx安装目录
-$ cd /usr/setup/nginx_1.12.2/sbin
-
-// 启动 （也可以加上 -C /usr/setup/nginx_1.12.2/config/nginx.conf 配置文件）
-$ ./nginx
-
-// 关闭
-第一种方式 查找相关进程，然后kill进程
-第二种方式 ./nginx -s stop
-第三种方式 ./nginx -s quit
-</code></pre>
-
-<ol>
-<li>关于centos7的系统服务命令</li>
-</ol>
-
-<pre><code class="language-shell">$ systemctl start nginx.service
-$ systemctl enable nginx.service
-$ systemctl disable nginx.service
-$ systemctl status nginx.service
-$ systemctl restart nginx.service
-</code></pre>
-
-<hr />
-
-<h2 id="部署">部署</h2>
-
-<ol>
-<li><p>文件结构详解
-hugo
-|- <username>.github.io
-|- <username>blogarticle
-|- <username>blogbase
-|- <username>blogbase</p></li>
-
-<li><p>在开发用的机子上面创建以上文件夹，并完成hugo的配置，然后将文件上传到github上面，总共是四个仓库。</p></li>
-
-<li><p>生成服务器的秘钥</p>
-
-<pre><code class="language-shell">[root@izwz97ekphk0kmqgt9zvc4z ~]# ssh-keygen -t rsa -C &quot;438123371@qq.com&quot;
-</code></pre></li>
+<li>在开发用的机子上面创建以上文件夹，并完成hugo的配置，然后将文件上传到github上面，总共是四个仓库。</li>
+<li>生成服务器的秘钥
+<code>shell
+[root@izwz97ekphk0kmqgt9zvc4z ~]# ssh-keygen -t rsa -C &quot;438123371@qq.com&quot;
+</code></li>
 
 <li><p>将/root/.ssh/id_rsa.pub文件中的字符串复制到GitHub添加sshkey的界面中</p></li>
 
@@ -539,11 +252,14 @@ echo &ldquo;&rdquo; &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log</p>
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/post/dev/mybatis-foreach/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Mybatis中Foreach的用法</p></a>
 	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/dev/install-golang/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">安装golang</p></a>
+	</div>
 </nav>
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     var disqus_config = function () {
     
     
@@ -579,11 +295,11 @@ echo &ldquo;&rdquo; &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log</p>
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/hugo-devlope/">使用hugo创建自己的博客</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter03-data-link-layer/">第三章 数据链路层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter02-physical-layer/">第二章 物理层</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/network/chapter01-overview/">第一章 概述</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/other/awesome-websites/">Awesome Websites（常用的技术博客）</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter03/">第三章 把着计算机的脉</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter02/">第二章 会用你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter01/">第一章 了解你的电脑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/tips/">互联网弄潮儿的必备技能</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install-nginx/">安装Nginx</a></li>
 		</ul>
 	</div>
 </div>
@@ -600,6 +316,7 @@ echo &ldquo;&rdquo; &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log</p>
 			<li class="widget__item"><a class="widget__link" href="/categories/string">String</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/study">Study</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/test">Test</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
 		</ul>
 	</div>
 </div>
@@ -607,11 +324,13 @@ echo &ldquo;&rdquo; &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log</p>
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/computer" title="Computer">Computer (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/domain" title="Domain">Domain (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/index" title="Index">Index (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/other" title="Other">Other (1)</a>
