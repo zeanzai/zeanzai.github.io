@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>SpringCloud学习笔记</title>
 	<meta name="description" content="">
+	<meta name="keywords" content="">
 	<meta name="generator" content="Hugo 0.46" />
 	<meta property="og:title" content="SpringCloud学习笔记" />
 <meta property="og:description" content="Spring-Cloud" />
@@ -36,6 +37,17 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126218706-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container-outer">
@@ -44,7 +56,7 @@
 				<div class="logo" role="banner">
 					<a class="logo__link" href="/" title="天晴小猪" rel="home">
 						<div class="logo__title">天晴小猪</div>
-						<div class="logo__tagline">有个爱的人，有份爱的工作，敲敲代码，看看书，这样，过一生。</div>
+						<div class="logo__tagline">我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。</div>
 					</a>
 				</div>
 			</div>
@@ -67,6 +79,7 @@
 		</header>
 		<div class="wrapper flex">
 
+
 <main class="main content">
 	<article class="post">
 		<header class="post__header">
@@ -77,10 +90,18 @@
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/study" rel="category">study</a></span>
 </span></div>
-		</header><div class="post__content clearfix">
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		
+	</div>
+</div>
+<div class="post__content clearfix">
 			<p>Spring-Cloud</p>
 
 		</div>
+		
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
@@ -98,7 +119,7 @@
 		<span class="authorbox__name">About 天晴小猪</span>
 	</div>
 	<div class="authorbox__description">
-		有个爱的人，有份爱的工作，敲敲代码，看看书，这样，过一生。
+		我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
 	</div>
 </div>
 
@@ -112,31 +133,29 @@
 	</div>
 </nav>
 	
-<section class="comments">
-	<div id="disqus_thread"></div>
+
+
+
+
+
+<div id="git-comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ciqu" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  var gitment = new Gitment({
+    id: 'index',  
+    owner: 'zeanzai',
+    repo: 'zeanzai.github.io',
+    oauth: {
+      client_id: '53cce0d877ed23ba31e3',
+      client_secret: '8a4d09b54a5a58b39a098887b08be46e3c446e41',
+    }
+  })
+  gitment.render('git-comments')
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
+
 
 </main>
-
 <aside class="sidebar"><div class="widget-search widget">
 	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
 	
@@ -252,5 +271,7 @@
 		navClass: "menu--collapse",
 		label: "Menu",
 	});
-</script></body>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
 </html>
