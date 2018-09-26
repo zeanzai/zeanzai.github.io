@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>天晴小猪</title>
-    <link>https://zeanzai.github.io/post/tips/</link>
+    <link>https://zeanzai.me/post/tips/</link>
     <description>Recent content on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 07 Sep 2018 09:58:18 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/post/tips/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/post/tips/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第三章 把着计算机的脉</title>
-      <link>https://zeanzai.github.io/post/tips/chapter03/</link>
+      <link>https://zeanzai.me/post/tips/chapter03/</link>
       <pubDate>Fri, 07 Sep 2018 09:58:18 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter03/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter03/</guid>
       <description>本章将要介绍:
  说明如何高效使用浏览器 介绍可以用来查找问题的网站 说明搜索资源 那些可以用来提高效率的技巧 关于盲打  返回</description>
     </item>
     
     <item>
       <title>第二章 会用你的电脑</title>
-      <link>https://zeanzai.github.io/post/tips/chapter02/</link>
+      <link>https://zeanzai.me/post/tips/chapter02/</link>
       <pubDate>Fri, 07 Sep 2018 09:58:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter02/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter02/</guid>
       <description>本章将要介绍的内容:
  常用软件的安装与操作  浏览器 输入法 Tim和WeChat office Outlook NutStore NeteaseMusic PDF阅读器 Xmind PotPlay Thunder BaiduNetDisk   返回</description>
     </item>
     
     <item>
       <title>第一章 了解你的电脑</title>
-      <link>https://zeanzai.github.io/post/tips/chapter01/</link>
+      <link>https://zeanzai.me/post/tips/chapter01/</link>
       <pubDate>Fri, 07 Sep 2018 09:53:40 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter01/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter01/</guid>
       <description>这一章主要介绍以下内容:
  什么是计算机 计算机系统的分类 计算机的硬件 计算机的软件 软件通识 ABCDEF硬盘 硬盘间的复制和移动 内存和外存 文档类型 快捷键 文件夹视图 装卸软件 终端  返回</description>
     </item>
     
     <item>
       <title>互联网弄潮儿的必备技能</title>
-      <link>https://zeanzai.github.io/post/tips/</link>
+      <link>https://zeanzai.me/post/tips/</link>
       <pubDate>Fri, 07 Sep 2018 09:43:01 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/</guid>
+      <guid>https://zeanzai.me/post/tips/</guid>
       <description> 第一章 了解你的电脑
 在本章节中, 笔者将带领大家从零去了解一台电脑, 或许你已经对电脑有所了解, 但是你真的了解吗? 不见得吧, 那就跟随笔者一块去重新认识一下吧!
  第二章 会用你的电脑

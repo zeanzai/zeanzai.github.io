@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 天晴小猪</title>
-    <link>https://zeanzai.github.io/tags/hugo/</link>
+    <link>https://zeanzai.me/tags/hugo/</link>
     <description>Recent content in Hugo on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 06 Sep 2018 18:28:25 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>安装Nginx</title>
-      <link>https://zeanzai.github.io/post/dev/install-nginx/</link>
+      <link>https://zeanzai.me/post/dev/install-nginx/</link>
       <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-nginx/</guid>
+      <guid>https://zeanzai.me/post/dev/install-nginx/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -26,10 +26,10 @@
     
     <item>
       <title>安装Webhook</title>
-      <link>https://zeanzai.github.io/post/dev/install-webhook/</link>
+      <link>https://zeanzai.me/post/dev/install-webhook/</link>
       <pubDate>Thu, 06 Sep 2018 18:27:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-webhook/</guid>
+      <guid>https://zeanzai.me/post/dev/install-webhook/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -41,10 +41,10 @@
     
     <item>
       <title>安装Hugo</title>
-      <link>https://zeanzai.github.io/post/dev/install-hugo/</link>
+      <link>https://zeanzai.me/post/dev/install-hugo/</link>
       <pubDate>Thu, 06 Sep 2018 18:25:30 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-hugo/</guid>
+      <guid>https://zeanzai.me/post/dev/install-hugo/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -55,10 +55,10 @@
     
     <item>
       <title>安装Git</title>
-      <link>https://zeanzai.github.io/post/dev/install-git/</link>
+      <link>https://zeanzai.me/post/dev/install-git/</link>
       <pubDate>Thu, 06 Sep 2018 18:24:05 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-git/</guid>
+      <guid>https://zeanzai.me/post/dev/install-git/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -71,10 +71,10 @@
     
     <item>
       <title>安装golang</title>
-      <link>https://zeanzai.github.io/post/dev/install-golang/</link>
+      <link>https://zeanzai.me/post/dev/install-golang/</link>
       <pubDate>Thu, 06 Sep 2018 18:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-golang/</guid>
+      <guid>https://zeanzai.me/post/dev/install-golang/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -87,10 +87,10 @@
     
     <item>
       <title>使用hugo创建自己的博客</title>
-      <link>https://zeanzai.github.io/post/dev/hugo-devlope/</link>
+      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
       <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/hugo-devlope/</guid>
+      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
       <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
 笔者将以不同场景的操作方式来讲述这个过程.
  公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.

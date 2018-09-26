@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>计算机网络学习笔记 on 天晴小猪</title>
-    <link>https://zeanzai.github.io/post/network/</link>
+    <link>https://zeanzai.me/post/network/</link>
     <description>Recent content in 计算机网络学习笔记 on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 27 Aug 2018 17:07:34 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/post/network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/post/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第三章 数据链路层</title>
-      <link>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter03-data-link-layer/</link>
       <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter03-data-link-layer/</guid>
       <description>本章重点内容：
 本章讨论的是同一个局域网中，分组怎么从一个主机传送到另一台主机，并不经过路由器转发。
 （1）数据链路层的点对点信道和广播信道的特点，及这两种信道所使用的协议的特点
@@ -42,10 +42,10 @@
     
     <item>
       <title>第二章 物理层</title>
-      <link>https://zeanzai.github.io/post/network/chapter02-physical-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter02-physical-layer/</link>
       <pubDate>Mon, 03 Sep 2018 17:35:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter02-physical-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter02-physical-layer/</guid>
       <description>本章重点内容：
 （1）物理层的任务
 （2）几种常用的信道复用技术
@@ -80,10 +80,10 @@
     
     <item>
       <title>第一章 概述</title>
-      <link>https://zeanzai.github.io/post/network/chapter01-overview/</link>
+      <link>https://zeanzai.me/post/network/chapter01-overview/</link>
       <pubDate>Mon, 03 Sep 2018 17:32:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter01-overview/</guid>
+      <guid>https://zeanzai.me/post/network/chapter01-overview/</guid>
       <description>本章重点内容：
 （1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念
 （2） 计算机的性能指标
@@ -102,55 +102,55 @@
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter04-network-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter04-network-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter04-network-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter04-network-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter05-transport-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter05-transport-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter05-transport-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter05-transport-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter06-application-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter06-application-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter06-application-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter06-application-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter07-network-security/</link>
+      <link>https://zeanzai.me/post/network/chapter07-network-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter07-network-security/</guid>
+      <guid>https://zeanzai.me/post/network/chapter07-network-security/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter08-vedio/</link>
+      <link>https://zeanzai.me/post/network/chapter08-vedio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter08-vedio/</guid>
+      <guid>https://zeanzai.me/post/network/chapter08-vedio/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</link>
+      <link>https://zeanzai.me/post/network/chapter09-wifi-wireless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</guid>
+      <guid>https://zeanzai.me/post/network/chapter09-wifi-wireless/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Index on 天晴小猪</title>
-    <link>https://zeanzai.github.io/tags/index/</link>
+    <link>https://zeanzai.me/tags/index/</link>
     <description>Recent content in Index on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 07 Sep 2018 09:43:01 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>互联网弄潮儿的必备技能</title>
-      <link>https://zeanzai.github.io/post/tips/</link>
+      <link>https://zeanzai.me/post/tips/</link>
       <pubDate>Fri, 07 Sep 2018 09:43:01 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/</guid>
+      <guid>https://zeanzai.me/post/tips/</guid>
       <description> 第一章 了解你的电脑
 在本章节中, 笔者将带领大家从零去了解一台电脑, 或许你已经对电脑有所了解, 但是你真的了解吗? 不见得吧, 那就跟随笔者一块去重新认识一下吧!
  第二章 会用你的电脑

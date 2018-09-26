@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>天晴小猪</title>
-    <link>https://zeanzai.github.io/</link>
+    <link>https://zeanzai.me/</link>
     <description>Recent content on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 07 Sep 2018 09:58:18 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第三章 把着计算机的脉</title>
-      <link>https://zeanzai.github.io/post/tips/chapter03/</link>
+      <link>https://zeanzai.me/post/tips/chapter03/</link>
       <pubDate>Fri, 07 Sep 2018 09:58:18 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter03/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter03/</guid>
       <description>本章将要介绍:
  说明如何高效使用浏览器 介绍可以用来查找问题的网站 说明搜索资源 那些可以用来提高效率的技巧 关于盲打  返回</description>
     </item>
     
     <item>
       <title>第二章 会用你的电脑</title>
-      <link>https://zeanzai.github.io/post/tips/chapter02/</link>
+      <link>https://zeanzai.me/post/tips/chapter02/</link>
       <pubDate>Fri, 07 Sep 2018 09:58:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter02/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter02/</guid>
       <description>本章将要介绍的内容:
  常用软件的安装与操作  浏览器 输入法 Tim和WeChat office Outlook NutStore NeteaseMusic PDF阅读器 Xmind PotPlay Thunder BaiduNetDisk   返回</description>
     </item>
     
     <item>
       <title>第一章 了解你的电脑</title>
-      <link>https://zeanzai.github.io/post/tips/chapter01/</link>
+      <link>https://zeanzai.me/post/tips/chapter01/</link>
       <pubDate>Fri, 07 Sep 2018 09:53:40 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/chapter01/</guid>
+      <guid>https://zeanzai.me/post/tips/chapter01/</guid>
       <description>这一章主要介绍以下内容:
  什么是计算机 计算机系统的分类 计算机的硬件 计算机的软件 软件通识 ABCDEF硬盘 硬盘间的复制和移动 内存和外存 文档类型 快捷键 文件夹视图 装卸软件 终端  返回</description>
     </item>
     
     <item>
       <title>互联网弄潮儿的必备技能</title>
-      <link>https://zeanzai.github.io/post/tips/</link>
+      <link>https://zeanzai.me/post/tips/</link>
       <pubDate>Fri, 07 Sep 2018 09:43:01 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/tips/</guid>
+      <guid>https://zeanzai.me/post/tips/</guid>
       <description> 第一章 了解你的电脑
 在本章节中, 笔者将带领大家从零去了解一台电脑, 或许你已经对电脑有所了解, 但是你真的了解吗? 不见得吧, 那就跟随笔者一块去重新认识一下吧!
  第二章 会用你的电脑
@@ -58,10 +58,10 @@
     
     <item>
       <title>安装Nginx</title>
-      <link>https://zeanzai.github.io/post/dev/install-nginx/</link>
+      <link>https://zeanzai.me/post/dev/install-nginx/</link>
       <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-nginx/</guid>
+      <guid>https://zeanzai.me/post/dev/install-nginx/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -71,10 +71,10 @@
     
     <item>
       <title>安装Webhook</title>
-      <link>https://zeanzai.github.io/post/dev/install-webhook/</link>
+      <link>https://zeanzai.me/post/dev/install-webhook/</link>
       <pubDate>Thu, 06 Sep 2018 18:27:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-webhook/</guid>
+      <guid>https://zeanzai.me/post/dev/install-webhook/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -86,10 +86,10 @@
     
     <item>
       <title>安装Hugo</title>
-      <link>https://zeanzai.github.io/post/dev/install-hugo/</link>
+      <link>https://zeanzai.me/post/dev/install-hugo/</link>
       <pubDate>Thu, 06 Sep 2018 18:25:30 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-hugo/</guid>
+      <guid>https://zeanzai.me/post/dev/install-hugo/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -100,10 +100,10 @@
     
     <item>
       <title>安装Git</title>
-      <link>https://zeanzai.github.io/post/dev/install-git/</link>
+      <link>https://zeanzai.me/post/dev/install-git/</link>
       <pubDate>Thu, 06 Sep 2018 18:24:05 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-git/</guid>
+      <guid>https://zeanzai.me/post/dev/install-git/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -116,10 +116,10 @@
     
     <item>
       <title>安装golang</title>
-      <link>https://zeanzai.github.io/post/dev/install-golang/</link>
+      <link>https://zeanzai.me/post/dev/install-golang/</link>
       <pubDate>Thu, 06 Sep 2018 18:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/install-golang/</guid>
+      <guid>https://zeanzai.me/post/dev/install-golang/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -132,10 +132,10 @@
     
     <item>
       <title>使用hugo创建自己的博客</title>
-      <link>https://zeanzai.github.io/post/dev/hugo-devlope/</link>
+      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
       <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/hugo-devlope/</guid>
+      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
       <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
 笔者将以不同场景的操作方式来讲述这个过程.
  公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.
@@ -145,10 +145,10 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>第三章 数据链路层</title>
-      <link>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter03-data-link-layer/</link>
       <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter03-data-link-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter03-data-link-layer/</guid>
       <description>本章重点内容：
 本章讨论的是同一个局域网中，分组怎么从一个主机传送到另一台主机，并不经过路由器转发。
 （1）数据链路层的点对点信道和广播信道的特点，及这两种信道所使用的协议的特点
@@ -174,10 +174,10 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>第二章 物理层</title>
-      <link>https://zeanzai.github.io/post/network/chapter02-physical-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter02-physical-layer/</link>
       <pubDate>Mon, 03 Sep 2018 17:35:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter02-physical-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter02-physical-layer/</guid>
       <description>本章重点内容：
 （1）物理层的任务
 （2）几种常用的信道复用技术
@@ -212,10 +212,10 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>第一章 概述</title>
-      <link>https://zeanzai.github.io/post/network/chapter01-overview/</link>
+      <link>https://zeanzai.me/post/network/chapter01-overview/</link>
       <pubDate>Mon, 03 Sep 2018 17:32:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter01-overview/</guid>
+      <guid>https://zeanzai.me/post/network/chapter01-overview/</guid>
       <description>本章重点内容：
 （1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念
 （2） 计算机的性能指标
@@ -234,28 +234,28 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>Awesome Websites（常用的技术博客）</title>
-      <link>https://zeanzai.github.io/post/other/awesome-websites/</link>
+      <link>https://zeanzai.me/post/other/awesome-websites/</link>
       <pubDate>Fri, 31 Aug 2018 17:27:43 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/awesome-websites/</guid>
+      <guid>https://zeanzai.me/post/other/awesome-websites/</guid>
       <description> 发表文章  博客园 csdn 微信公众号 掘金 gitee GitHub Stack Overflow 腾讯云开发者社区 阿里云开发者社区  九月份需要完成的目标：  这是好各个网络平台的主题，并完成各个平台的发表文章的流程梳理 星火英语四级搞定 之前的博客进行迁移 整理GitHub仓库  </description>
     </item>
     
     <item>
       <title>Mybatis中Foreach的用法</title>
-      <link>https://zeanzai.github.io/post/dev/mybatis-foreach/</link>
+      <link>https://zeanzai.me/post/dev/mybatis-foreach/</link>
       <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/mybatis-foreach/</guid>
+      <guid>https://zeanzai.me/post/dev/mybatis-foreach/</guid>
       <description>foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&amp;ldquo;params&amp;rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &amp;ldquo;ids&amp;rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &amp;ldquo;ids.id&amp;rdquo; 如果传入参数类型为map，这个入参有注解@Param(&amp;ldquo;params&amp;rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&amp;ldquo;,&amp;ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&amp;ldquo;)&amp;ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&amp;ldquo;(&amp;ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &amp;lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&amp;gt; &amp;lt;select id=&amp;quot;getEmployeesListParams&amp;quot; resultType=&amp;quot;Employees&amp;quot;&amp;gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &amp;lt;foreach collection=&amp;quot;list&amp;quot; item=&amp;quot;employeeId&amp;quot; index=&amp;quot;index&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot;&amp;gt; #{employeeId} &amp;lt;/foreach&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
       <title>java中的字符串操作</title>
-      <link>https://zeanzai.github.io/post/dev/java-string-plit/</link>
+      <link>https://zeanzai.me/post/dev/java-string-plit/</link>
       <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/dev/java-string-plit/</guid>
+      <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
       <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
  转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
 如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
@@ -263,20 +263,20 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>域名的那些事儿</title>
-      <link>https://zeanzai.github.io/post/other/about-domain/</link>
+      <link>https://zeanzai.me/post/other/about-domain/</link>
       <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/about-domain/</guid>
+      <guid>https://zeanzai.me/post/other/about-domain/</guid>
       <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
  </description>
     </item>
     
     <item>
       <title>域名的那些事儿</title>
-      <link>https://zeanzai.github.io/post/other/about-domain0/</link>
+      <link>https://zeanzai.me/post/other/about-domain0/</link>
       <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/about-domain0/</guid>
+      <guid>https://zeanzai.me/post/other/about-domain0/</guid>
       <description>域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
  这是一次很厉害的测试。
 这有是一个非常厉害的测试。
@@ -287,151 +287,151 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>域名的那些事儿</title>
-      <link>https://zeanzai.github.io/post/other/about-domain1/</link>
+      <link>https://zeanzai.me/post/other/about-domain1/</link>
       <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/about-domain1/</guid>
+      <guid>https://zeanzai.me/post/other/about-domain1/</guid>
       <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
  </description>
     </item>
     
     <item>
       <title>域名的那些事儿</title>
-      <link>https://zeanzai.github.io/post/other/about-domain2/</link>
+      <link>https://zeanzai.me/post/other/about-domain2/</link>
       <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/about-domain2/</guid>
+      <guid>https://zeanzai.me/post/other/about-domain2/</guid>
       <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
  </description>
     </item>
     
     <item>
       <title>域名的那些事儿</title>
-      <link>https://zeanzai.github.io/post/other/about-domain3/</link>
+      <link>https://zeanzai.me/post/other/about-domain3/</link>
       <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/other/about-domain3/</guid>
+      <guid>https://zeanzai.me/post/other/about-domain3/</guid>
       <description> 域名（英语：Domain Name），简称域名、网域，是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位（有时也指地理位置）。
  </description>
     </item>
     
     <item>
       <title>Vue学习笔记</title>
-      <link>https://zeanzai.github.io/post/vue/</link>
+      <link>https://zeanzai.me/post/vue/</link>
       <pubDate>Tue, 28 Aug 2018 15:42:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/vue/</guid>
+      <guid>https://zeanzai.me/post/vue/</guid>
       <description>这是vue的学习笔记。</description>
     </item>
     
     <item>
       <title>SpringCloud学习笔记</title>
-      <link>https://zeanzai.github.io/post/spring-cloud/</link>
+      <link>https://zeanzai.me/post/spring-cloud/</link>
       <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/spring-cloud/</guid>
+      <guid>https://zeanzai.me/post/spring-cloud/</guid>
       <description>Spring-Cloud</description>
     </item>
     
     <item>
       <title>这是测试文档</title>
-      <link>https://zeanzai.github.io/post/test/</link>
+      <link>https://zeanzai.me/post/test/</link>
       <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/test/</guid>
+      <guid>https://zeanzai.me/post/test/</guid>
       <description> 这是一篇测试。
   安装GitLab  </description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>https://zeanzai.github.io/post/about/</link>
+      <link>https://zeanzai.me/post/about/</link>
       <pubDate>Sat, 25 Aug 2018 17:09:06 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/about/</guid>
+      <guid>https://zeanzai.me/post/about/</guid>
       <description>有一个爱的人，有一份爱的工作。</description>
     </item>
     
     <item>
       <title>Basic HTML Elements</title>
-      <link>https://zeanzai.github.io/post/basic-elements/</link>
+      <link>https://zeanzai.me/post/basic-elements/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/basic-elements/</guid>
+      <guid>https://zeanzai.me/post/basic-elements/</guid>
       <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/readme/</link>
+      <link>https://zeanzai.me/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/readme/</guid>
+      <guid>https://zeanzai.me/readme/</guid>
       <description>zeanzaiblogarticle 这是文章仓库。
 测试是否上传到了服务器上面。</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter04-network-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter04-network-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter04-network-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter04-network-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter05-transport-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter05-transport-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter05-transport-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter05-transport-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter06-application-layer/</link>
+      <link>https://zeanzai.me/post/network/chapter06-application-layer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter06-application-layer/</guid>
+      <guid>https://zeanzai.me/post/network/chapter06-application-layer/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter07-network-security/</link>
+      <link>https://zeanzai.me/post/network/chapter07-network-security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter07-network-security/</guid>
+      <guid>https://zeanzai.me/post/network/chapter07-network-security/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter08-vedio/</link>
+      <link>https://zeanzai.me/post/network/chapter08-vedio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter08-vedio/</guid>
+      <guid>https://zeanzai.me/post/network/chapter08-vedio/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</link>
+      <link>https://zeanzai.me/post/network/chapter09-wifi-wireless/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/chapter09-wifi-wireless/</guid>
+      <guid>https://zeanzai.me/post/network/chapter09-wifi-wireless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Archives</title>
-      <link>https://zeanzai.github.io/post/archives/</link>
+      <link>https://zeanzai.me/post/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/post/archives/</guid>
+      <guid>https://zeanzai.me/post/archives/</guid>
       <description></description>
     </item>
     

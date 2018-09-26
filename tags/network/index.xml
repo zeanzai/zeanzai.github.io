@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Network on 天晴小猪</title>
-    <link>https://zeanzai.github.io/tags/network/</link>
+    <link>https://zeanzai.me/tags/network/</link>
     <description>Recent content in Network on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 27 Aug 2018 17:07:34 +0800</lastBuildDate>
     
-	<atom:link href="https://zeanzai.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/tags/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>计算机网络学习笔记</title>
-      <link>https://zeanzai.github.io/post/network/</link>
+      <link>https://zeanzai.me/post/network/</link>
       <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/post/network/</guid>
+      <guid>https://zeanzai.me/post/network/</guid>
       <description></description>
     </item>
     

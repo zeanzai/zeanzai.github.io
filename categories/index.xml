@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 天晴小猪</title>
-    <link>https://zeanzai.github.io/categories/</link>
+    <link>https://zeanzai.me/categories/</link>
     <description>Recent content in Categories on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="https://zeanzai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zeanzai.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dev</title>
-      <link>https://zeanzai.github.io/categories/dev/</link>
+      <link>https://zeanzai.me/categories/dev/</link>
       <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/dev/</guid>
+      <guid>https://zeanzai.me/categories/dev/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
-      <link>https://zeanzai.github.io/categories/development/</link>
+      <link>https://zeanzai.me/categories/development/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/development/</guid>
+      <guid>https://zeanzai.me/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://zeanzai.github.io/categories/java/</link>
+      <link>https://zeanzai.me/categories/java/</link>
       <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/java/</guid>
+      <guid>https://zeanzai.me/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mybatis</title>
-      <link>https://zeanzai.github.io/categories/mybatis/</link>
+      <link>https://zeanzai.me/categories/mybatis/</link>
       <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/mybatis/</guid>
+      <guid>https://zeanzai.me/categories/mybatis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network</title>
-      <link>https://zeanzai.github.io/categories/network/</link>
+      <link>https://zeanzai.me/categories/network/</link>
       <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/network/</guid>
+      <guid>https://zeanzai.me/categories/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Other</title>
-      <link>https://zeanzai.github.io/categories/other/</link>
+      <link>https://zeanzai.me/categories/other/</link>
       <pubDate>Fri, 31 Aug 2018 17:27:43 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/other/</guid>
+      <guid>https://zeanzai.me/categories/other/</guid>
       <description></description>
     </item>
     
     <item>
       <title>String</title>
-      <link>https://zeanzai.github.io/categories/string/</link>
+      <link>https://zeanzai.me/categories/string/</link>
       <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/string/</guid>
+      <guid>https://zeanzai.me/categories/string/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Study</title>
-      <link>https://zeanzai.github.io/categories/study/</link>
+      <link>https://zeanzai.me/categories/study/</link>
       <pubDate>Tue, 28 Aug 2018 15:42:14 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/study/</guid>
+      <guid>https://zeanzai.me/categories/study/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>https://zeanzai.github.io/categories/test/</link>
+      <link>https://zeanzai.me/categories/test/</link>
       <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/test/</guid>
+      <guid>https://zeanzai.me/categories/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tips</title>
-      <link>https://zeanzai.github.io/categories/tips/</link>
+      <link>https://zeanzai.me/categories/tips/</link>
       <pubDate>Fri, 07 Sep 2018 09:58:18 +0800</pubDate>
       
-      <guid>https://zeanzai.github.io/categories/tips/</guid>
+      <guid>https://zeanzai.me/categories/tips/</guid>
       <description></description>
     </item>
     
