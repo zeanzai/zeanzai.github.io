@@ -40,9 +40,22 @@
     </item>
     
     <item>
+      <title>使用hugo创建自己的博客</title>
+      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
+      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
+      <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
+笔者将以不同场景的操作方式来讲述这个过程.
+ 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.
+分解文档结构 将hugo初始化的根目录分解, 分解成四个目录, 这样分解的目的是为了区分不同仓库的功能, 也是为了更好的维护.
+hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticle |- &amp;lt;username&amp;gt;blogtheme |- &amp;lt;username&amp;gt;blogbase  讲解: - &amp;lt;username&amp;gt;.github.io 为使用GitHubPage所创建的项目, 保存的是执行 hugo 命令后生成的静态文件, 相当于根目录中的 public 文件夹. - &amp;lt;username&amp;gt;blogarticle 文章目录, 保存的是所有的 md 文档, 相当于根目录中的 content 文件夹. - &amp;lt;username&amp;gt;blogtheme 主题目录, 保存的是自定义的主题, 相当于根目录中的 theme 文件夹.</description>
+    </item>
+    
+    <item>
       <title>安装Hugo</title>
       <link>https://zeanzai.me/post/dev/install-hugo/</link>
-      <pubDate>Thu, 06 Sep 2018 18:25:30 +0800</pubDate>
+      <pubDate>Sun, 06 Sep 2015 18:25:30 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/install-hugo/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
@@ -54,25 +67,9 @@
     </item>
     
     <item>
-      <title>安装Git</title>
-      <link>https://zeanzai.me/post/dev/install-git/</link>
-      <pubDate>Thu, 06 Sep 2018 18:24:05 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-git/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
-依然采用源码的安装方式进行安装.
-基本过程如下:
- 删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
-# 1. 查看是否已经安装 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version  # 2. 安装依赖包 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker  # 3. 进入安装包存放目录 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 4. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz  # 5. 解压到当前目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
-    </item>
-    
-    <item>
       <title>安装golang</title>
       <link>https://zeanzai.me/post/dev/install-golang/</link>
-      <pubDate>Thu, 06 Sep 2018 18:12:55 +0800</pubDate>
+      <pubDate>Tue, 06 Sep 2011 18:12:55 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/install-golang/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
@@ -86,16 +83,20 @@
     </item>
     
     <item>
-      <title>使用hugo创建自己的博客</title>
-      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
-      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      <title>安装Git</title>
+      <link>https://zeanzai.me/post/dev/install-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
-      <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
-笔者将以不同场景的操作方式来讲述这个过程.
- 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.
-分解文档结构 将hugo初始化的根目录分解, 分解成四个目录, 这样分解的目的是为了区分不同仓库的功能, 也是为了更好的维护.
-hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticle |- &amp;lt;username&amp;gt;blogtheme |- &amp;lt;username&amp;gt;blogbase  讲解: - &amp;lt;username&amp;gt;.github.io 为使用GitHubPage所创建的项目, 保存的是执行 hugo 命令后生成的静态文件, 相当于根目录中的 public 文件夹. - &amp;lt;username&amp;gt;blogarticle 文章目录, 保存的是所有的 md 文档, 相当于根目录中的 content 文件夹. - &amp;lt;username&amp;gt;blogtheme 主题目录, 保存的是自定义的主题, 相当于根目录中的 theme 文件夹.</description>
+      <guid>https://zeanzai.me/post/dev/install-git/</guid>
+      <description>date: 2016-09-06T18:24:05+08:00
+前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
+依然采用源码的安装方式进行安装.
+基本过程如下:
+ 删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
+# 1. 查看是否已经安装 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version  # 2. 安装依赖包 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker  # 3. 进入安装包存放目录 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 4. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz  # 5. 解压到当前目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
     </item>
     
   </channel>

@@ -13,11 +13,16 @@
     
     <item>
       <title>Basic HTML Elements</title>
-      <link>https://zeanzai.me/post/basic-elements/</link>
+      <link>https://zeanzai.me/post/study/basic-elements/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://zeanzai.me/post/basic-elements/</guid>
-      <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.
+      <guid>https://zeanzai.me/post/study/basic-elements/</guid>
+      <description>&lt;p&gt;menu:
+  main:
+    name: Jekyll migration
+    weight: 10&lt;/p&gt;
+
+&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.
 &lt;/p&gt;</description>
     </item>
     

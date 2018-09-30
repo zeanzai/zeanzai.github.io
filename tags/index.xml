@@ -39,11 +39,11 @@
     </item>
     
     <item>
-      <title>Domain</title>
-      <link>https://zeanzai.me/tags/domain/</link>
-      <pubDate>Fri, 31 Aug 2018 09:12:55 +0800</pubDate>
+      <title>Docker</title>
+      <link>https://zeanzai.me/tags/docker/</link>
+      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.me/tags/domain/</guid>
+      <guid>https://zeanzai.me/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -75,11 +75,11 @@
     </item>
     
     <item>
-      <title>Index</title>
-      <link>https://zeanzai.me/tags/index/</link>
-      <pubDate>Fri, 07 Sep 2018 09:43:01 +0800</pubDate>
+      <title>Install</title>
+      <link>https://zeanzai.me/tags/install/</link>
+      <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/tags/index/</guid>
+      <guid>https://zeanzai.me/tags/install/</guid>
       <description></description>
     </item>
     
@@ -95,54 +95,18 @@
     <item>
       <title>Network</title>
       <link>https://zeanzai.me/tags/network/</link>
-      <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
+      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Other</title>
-      <link>https://zeanzai.me/tags/other/</link>
-      <pubDate>Fri, 31 Aug 2018 09:23:56 +0800</pubDate>
+      <title>面经</title>
+      <link>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</link>
+      <pubDate>Sat, 29 Sep 2018 10:55:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/tags/other/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring Cloud</title>
-      <link>https://zeanzai.me/tags/spring-cloud/</link>
-      <pubDate>Mon, 27 Aug 2018 17:07:34 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/spring-cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://zeanzai.me/tags/test/</link>
-      <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vue</title>
-      <link>https://zeanzai.me/tags/vue/</link>
-      <pubDate>Tue, 28 Aug 2018 15:42:14 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Website</title>
-      <link>https://zeanzai.me/tags/website/</link>
-      <pubDate>Fri, 31 Aug 2018 17:27:43 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/website/</guid>
+      <guid>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</guid>
       <description></description>
     </item>
     
