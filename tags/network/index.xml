@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/network/</link>
+    <description>Recent content in Network on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 06 Sep 2018 09:12:55 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ffffff</title>
+      <link>https://zeanzai.me/post/study/tttt/</link>
+      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/study/tttt/</guid>
+      <description> 计算机网络学习  第一章 概述 第二章 物理层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层  Docker学习  第一章 概述 第二章 物理层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层   第一章 了解你的电脑
+在本章节中, 笔者将带领大家从零去了解一台电脑, 或许你已经对电脑有所了解, 但是你真的了解吗? 不见得吧, 那就跟随笔者一块去重新认识一下吧!
+ 第二章 会用你的电脑
+计算机也是人们智力的成果, 那么它也一定有这通用的操作套路. 如何安装一个软件? 大多数软件有哪些通用操作? 笔者同你一同探寻另一个未知世界.
+ 第三章 把着计算机的脉
+假如前两章是笔者做好的饭端到你的面前, 喂给你吃, 那么这一章, 笔者就交给你做饭的技巧.
+  </description>
+    </item>
+    
+  </channel>
+</rss>
