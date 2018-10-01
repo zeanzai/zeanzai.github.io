@@ -6,97 +6,29 @@
     <description>Recent content in Dev on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 06 Sep 2018 18:28:25 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 15:54:45 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>安装Nginx</title>
-      <link>https://zeanzai.me/post/dev/install-nginx/</link>
-      <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
+      <title>java中的字符串操作</title>
+      <link>https://zeanzai.me/post/dev/java-string-plit/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/install-nginx/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
-# 1. 创建安装目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp  # 2. 安装依赖 [root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  # 3. 下载安装包并上传到/opt/package  # 4. 解压 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/ [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz [root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/  # 5. 配置 [root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \ &amp;gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \ &amp;gt; --lock-path=/usr/setup/nginx_1.</description>
+      <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
+      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
+ 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
+如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
     </item>
     
     <item>
-      <title>安装Webhook</title>
-      <link>https://zeanzai.me/post/dev/install-webhook/</link>
-      <pubDate>Thu, 06 Sep 2018 18:27:14 +0800</pubDate>
+      <title>Mybatis中Foreach的用法</title>
+      <link>https://zeanzai.me/post/dev/mybatis-foreach/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/install-webhook/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
-举个例子来说明：
- 需求分析: 远程调用一个命令后，服务器打印当前服务器的时间到/opt/scripts/hugo-deploy/redeploy.log
- # 1. 安装webhook客户端 [root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook # 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面  # 2. 创建可执行的文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh  #!/bin/bash  time=`date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;` echo &amp;#34;${time}&amp;#34; &amp;gt;&amp;gt; /opt/scripts/hugo-deploy/redeploy.log [root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh  # 3. 测试是否能够打印 [root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh [root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log  # 4. 创建hooks.json文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.</description>
-    </item>
-    
-    <item>
-      <title>使用hugo创建自己的博客</title>
-      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
-      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
-      <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
-笔者将以不同场景的操作方式来讲述这个过程.
- 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.
-分解文档结构 将hugo初始化的根目录分解, 分解成四个目录, 这样分解的目的是为了区分不同仓库的功能, 也是为了更好的维护.
-hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticle |- &amp;lt;username&amp;gt;blogtheme |- &amp;lt;username&amp;gt;blogbase  讲解: - &amp;lt;username&amp;gt;.github.io 为使用GitHubPage所创建的项目, 保存的是执行 hugo 命令后生成的静态文件, 相当于根目录中的 public 文件夹. - &amp;lt;username&amp;gt;blogarticle 文章目录, 保存的是所有的 md 文档, 相当于根目录中的 content 文件夹. - &amp;lt;username&amp;gt;blogtheme 主题目录, 保存的是自定义的主题, 相当于根目录中的 theme 文件夹.</description>
-    </item>
-    
-    <item>
-      <title>安装Hugo</title>
-      <link>https://zeanzai.me/post/dev/install-hugo/</link>
-      <pubDate>Sun, 06 Sep 2015 18:25:30 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-hugo/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装hugo hugo是本教程的另一个不可或缺的工具.
-具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
-安装包安装方式  查看安装包下载地址： https://github.com/gohugoio/hugo/releases/ 选取最新版本，并复制下载地址 安装  # 1. 进入安装包存放目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd opt/packages/  # 2. 下载安装包 [root@izwz97ekphk0kmqgt9zvc4z packages]# wget -c https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.tar.gz  # 3. 解压 [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf hugo_0.48_Linux-64bit.tar.gz  # 4. 移动 [root@izwz97ekphk0kmqgt9zvc4z packages]# mv /usr/setup/hugo/hugo /usr/local/bin/  # 5. 测试 [root@izwz97ekphk0kmqgt9zvc4z packages]# hugo version Hugo Static Site Generator v0.48 linux/amd64 BuildDate: 2018-08-29T06:33:51Z  参考</description>
-    </item>
-    
-    <item>
-      <title>安装golang</title>
-      <link>https://zeanzai.me/post/dev/install-golang/</link>
-      <pubDate>Tue, 06 Sep 2011 18:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-golang/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
-由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使用webhook工具给云服务器发送一条命令，使云服务器自动从GitHub上面pull文章，然后执行hugo命令生成网站）。
-笔者使用开源项目adnanh webhook, adnanh webhook的开发语言就是Go语言, 所以需要安装golang作为基础开发环境.
-安装过程 采用源码安装模式的原因是因为国内的golang的官网访问很慢.
-# 1. 进入安装包存放位置[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 2. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz[root@iZwz97ekphk0kmqgt9zvc4Z packages]# lltotal 124188-rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz# 3. 创建安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup# 4. 解压到安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z setup]# lltotal 4drwxr-xr-x 10 root root 4096 Aug 25 04:41 go# 5.</description>
-    </item>
-    
-    <item>
-      <title>安装Git</title>
-      <link>https://zeanzai.me/post/dev/install-git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-git/</guid>
-      <description>date: 2016-09-06T18:24:05+08:00
-前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
-依然采用源码的安装方式进行安装.
-基本过程如下:
- 删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
-# 1. 查看是否已经安装 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version  # 2. 安装依赖包 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker  # 3. 进入安装包存放目录 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 4. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz  # 5. 解压到当前目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
+      <guid>https://zeanzai.me/post/dev/mybatis-foreach/</guid>
+      <description>foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&amp;ldquo;params&amp;rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &amp;ldquo;ids&amp;rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &amp;ldquo;ids.id&amp;rdquo; 如果传入参数类型为map，这个入参有注解@Param(&amp;ldquo;params&amp;rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&amp;ldquo;,&amp;ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&amp;ldquo;)&amp;ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&amp;ldquo;(&amp;ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &amp;lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&amp;gt; &amp;lt;select id=&amp;quot;getEmployeesListParams&amp;quot; resultType=&amp;quot;Employees&amp;quot;&amp;gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &amp;lt;foreach collection=&amp;quot;list&amp;quot; item=&amp;quot;employeeId&amp;quot; index=&amp;quot;index&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot;&amp;gt; #{employeeId} &amp;lt;/foreach&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;!</description>
     </item>
     
   </channel>

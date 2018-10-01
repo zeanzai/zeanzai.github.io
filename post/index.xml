@@ -6,7 +6,7 @@
     <description>Recent content on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Sep 2018 10:55:45 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 15:55:45 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>面试经验谈</title>
       <link>https://zeanzai.me/post/tips/findjob/</link>
-      <pubDate>Sat, 29 Sep 2018 10:55:45 +0800</pubDate>
+      <pubDate>Mon, 01 Oct 2018 15:55:45 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/tips/findjob/</guid>
       <description> 秋风和煦，落叶枯黄，在这金秋岁月里，那些依然还顶着一身娇羞、两脸懵逼、三头雾水、四肢无力的大学生们开始离开象牙塔，走向社会。我很早就想写一篇文章，记录自己面试的凶险历程，想着将来换工作的时候也能够用的上。自己走过太多的坑，也一直没有时间整理这个痛苦的过程，恰好就在今天，一位刚毕业的好朋友，问起我面试的经验，我的思绪迅速回到我刚毕业那会儿……
@@ -28,6 +28,7 @@
 1. 交通
 刚来到大城市，要迅速适应大城市的节奏，而大城市的节奏往往跟交通有关。所以，就需要你熟悉各个交通工具的特点。这里我不会告诉你具体的特点，我只告诉你，你需要方法。
 首先，你要学会使用各种APP查询路线。这是你的手机信息的手段，很多人说选择比努力更重要的原因就在于那些注重选择的人掌握的信息比那些注重努力的人要做多。其次，你要学会乘坐各种交通工具的流程，也要用自己敏锐的眼光发现各种交通工具的特点，找到适合自己的便捷的交通方式。比如说，深圳的南山区的公交和地铁速度都差不多；一个站点可能有多个公交站牌等。再次，要学会估摸每个站点停靠的时间，完成从地点A到地点B所需时间的预估，比如：深圳地铁每站平均停靠10秒左右；如果从A到B，全天候时段，时间最稳定的是地铁；这是时间成本。最后，要学会控制经济成本，比如：办个一卡通，每次乘车能便宜一两毛钱等。
+未完成
 2. 租房
 3. 收集行业信息
 4. 五险一金
@@ -40,54 +41,70 @@
     </item>
     
     <item>
-      <title>第三章 把着计算机的脉</title>
-      <link>https://zeanzai.me/post/tips/chapter03/</link>
-      <pubDate>Fri, 07 Sep 2018 09:58:18 +0800</pubDate>
+      <title>java中的字符串操作</title>
+      <link>https://zeanzai.me/post/dev/java-string-plit/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/tips/chapter03/</guid>
-      <description>本章将要介绍:
- 说明如何高效使用浏览器 介绍可以用来查找问题的网站 说明搜索资源 那些可以用来提高效率的技巧 关于盲打  返回</description>
+      <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
+      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
+ 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
+如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
     </item>
     
     <item>
-      <title>第二章 会用你的电脑</title>
-      <link>https://zeanzai.me/post/tips/chapter02/</link>
-      <pubDate>Fri, 07 Sep 2018 09:58:14 +0800</pubDate>
+      <title>Mybatis中Foreach的用法</title>
+      <link>https://zeanzai.me/post/dev/mybatis-foreach/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/tips/chapter02/</guid>
-      <description>本章将要介绍的内容:
- 常用软件的安装与操作  浏览器 输入法 Tim和WeChat office Outlook NutStore NeteaseMusic PDF阅读器 Xmind PotPlay Thunder BaiduNetDisk   返回</description>
+      <guid>https://zeanzai.me/post/dev/mybatis-foreach/</guid>
+      <description>foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&amp;ldquo;params&amp;rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &amp;ldquo;ids&amp;rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &amp;ldquo;ids.id&amp;rdquo; 如果传入参数类型为map，这个入参有注解@Param(&amp;ldquo;params&amp;rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&amp;ldquo;,&amp;ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&amp;ldquo;)&amp;ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&amp;ldquo;(&amp;ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &amp;lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&amp;gt; &amp;lt;select id=&amp;quot;getEmployeesListParams&amp;quot; resultType=&amp;quot;Employees&amp;quot;&amp;gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &amp;lt;foreach collection=&amp;quot;list&amp;quot; item=&amp;quot;employeeId&amp;quot; index=&amp;quot;index&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot;&amp;gt; #{employeeId} &amp;lt;/foreach&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
-      <title>第一章 了解你的电脑</title>
-      <link>https://zeanzai.me/post/tips/chapter01/</link>
-      <pubDate>Fri, 07 Sep 2018 09:53:40 +0800</pubDate>
+      <title>安装Golang</title>
+      <link>https://zeanzai.me/post/dev/install/install-golang/</link>
+      <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/tips/chapter01/</guid>
-      <description>这一章主要介绍以下内容:
- 什么是计算机 计算机系统的分类 计算机的硬件 计算机的软件 软件通识 ABCDEF硬盘 硬盘间的复制和移动 内存和外存 文档类型 快捷键 文件夹视图 装卸软件 终端  返回</description>
-    </item>
-    
-    <item>
-      <title>安装Nginx</title>
-      <link>https://zeanzai.me/post/dev/install-nginx/</link>
-      <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-nginx/</guid>
+      <guid>https://zeanzai.me/post/dev/install/install-golang/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
-# 1. 创建安装目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp  # 2. 安装依赖 [root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  # 3. 下载安装包并上传到/opt/package  # 4. 解压 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/ [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz [root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/  # 5. 配置 [root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \ &amp;gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \ &amp;gt; --lock-path=/usr/setup/nginx_1.</description>
+ 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
+由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使用webhook工具给云服务器发送一条命令，使云服务器自动从GitHub上面pull文章，然后执行hugo命令生成网站）。
+笔者使用开源项目adnanh webhook, adnanh webhook的开发语言就是Go语言, 所以需要安装golang作为基础开发环境.
+安装过程 采用源码安装模式的原因是因为国内的golang的官网访问很慢.
+# 1. 进入安装包存放位置 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 2. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz [root@iZwz97ekphk0kmqgt9zvc4Z packages]# ll total 124188 -rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz # 3. 创建安装目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup  # 4. 解压到安装目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/ [root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/ [root@iZwz97ekphk0kmqgt9zvc4Z setup]# ll total 4 drwxr-xr-x 10 root root 4096 Aug 25 04:41 go # 5.</description>
+    </item>
+    
+    <item>
+      <title>安装Hugo</title>
+      <link>https://zeanzai.me/post/dev/install/install-hugo/</link>
+      <pubDate>Mon, 01 Oct 2018 13:25:30 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/install/install-hugo/</guid>
+      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装hugo hugo是本教程的另一个不可或缺的工具.
+具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
+安装包安装方式  查看安装包下载地址： https://github.com/gohugoio/hugo/releases/ 选取最新版本，并复制下载地址 安装  # 1. 进入安装包存放目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd opt/packages/  # 2. 下载安装包 [root@izwz97ekphk0kmqgt9zvc4z packages]# wget -c https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.tar.gz  # 3. 解压 [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf hugo_0.48_Linux-64bit.tar.gz  # 4. 移动 [root@izwz97ekphk0kmqgt9zvc4z packages]# mv /usr/setup/hugo/hugo /usr/local/bin/  # 5. 测试 [root@izwz97ekphk0kmqgt9zvc4z packages]# hugo version Hugo Static Site Generator v0.48 linux/amd64 BuildDate: 2018-08-29T06:33:51Z  参考</description>
+    </item>
+    
+    <item>
+      <title>安装GitLab</title>
+      <link>https://zeanzai.me/post/dev/install/install-gitlab/</link>
+      <pubDate>Mon, 01 Oct 2018 13:23:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/install/install-gitlab/</guid>
+      <description>更新yum源  备份原有的yum源  [root@vm yum.repos.d]# mv CentOS-Base.repo CentOS-Base.repo.bak_20180611   拷贝到目录下  [root@vm yum.repos.d]# mv /opt/program/Centos-7.repo ./CentOS-Base.repo   删除原有yum缓存  [root@vm yum.repos.d]# yum clean all 已加载插件：fastestmirror 正在清理软件源： base extras updates Cleaning up everything Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos Cleaning up list of fastest mirrors   重新生成yum缓存  [root@vm yum.repos.d]# yum makecache 已加载插件：fastestmirror .</description>
     </item>
     
     <item>
       <title>安装Webhook</title>
-      <link>https://zeanzai.me/post/dev/install-webhook/</link>
-      <pubDate>Thu, 06 Sep 2018 18:27:14 +0800</pubDate>
+      <link>https://zeanzai.me/post/dev/install/install-webhook/</link>
+      <pubDate>Mon, 01 Oct 2018 12:27:14 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/install-webhook/</guid>
+      <guid>https://zeanzai.me/post/dev/install/install-webhook/</guid>
       <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
 此外，Centos7默认开通了80端口和22端口。
 云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
@@ -98,39 +115,40 @@
     </item>
     
     <item>
-      <title>ffffff</title>
-      <link>https://zeanzai.me/post/study/tttt/</link>
-      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      <title>安装Nginx</title>
+      <link>https://zeanzai.me/post/dev/install/install-nginx/</link>
+      <pubDate>Mon, 01 Oct 2018 11:28:25 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/study/tttt/</guid>
-      <description> 计算机网络学习  第一章 概述 第二章 物理层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层  Docker学习  第一章 概述 第二章 物理层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层 第三章 数据链路层   第一章 了解你的电脑
-在本章节中, 笔者将带领大家从零去了解一台电脑, 或许你已经对电脑有所了解, 但是你真的了解吗? 不见得吧, 那就跟随笔者一块去重新认识一下吧!
- 第二章 会用你的电脑
-计算机也是人们智力的成果, 那么它也一定有这通用的操作套路. 如何安装一个软件? 大多数软件有哪些通用操作? 笔者同你一同探寻另一个未知世界.
- 第三章 把着计算机的脉
-假如前两章是笔者做好的饭端到你的面前, 喂给你吃, 那么这一章, 笔者就交给你做饭的技巧.
-  </description>
+      <guid>https://zeanzai.me/post/dev/install/install-nginx/</guid>
+      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
+# 1. 创建安装目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp  # 2. 安装依赖 [root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  # 3. 下载安装包并上传到/opt/package  # 4. 解压 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/ [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz [root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/  # 5. 配置 [root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \ &amp;gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \ &amp;gt; --lock-path=/usr/setup/nginx_1.</description>
     </item>
     
     <item>
-      <title>使用hugo创建自己的博客</title>
-      <link>https://zeanzai.me/post/dev/hugo-devlope/</link>
-      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
+      <title>安装Git</title>
+      <link>https://zeanzai.me/post/dev/install/install-git/</link>
+      <pubDate>Mon, 01 Oct 2018 11:24:05 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/hugo-devlope/</guid>
-      <description>整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
-笔者将以不同场景的操作方式来讲述这个过程.
- 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传到GitHub上面去, 上传完成后, GitHub会调用钩子, 个人的阿里云服务器会执行pull操作, 然后重新部署, 达到更新的目的. 家里 同样的开发环境和开发软件, 同样的开发过程, 达到持续部署的目的.  该步骤为关键步骤, 主要分为分解文档结构, 上传文档到各自仓库, 克隆项目到服务器, 创建webhook命令, 在GitHub上面配置webhook, 测试几个步骤.
-分解文档结构 将hugo初始化的根目录分解, 分解成四个目录, 这样分解的目的是为了区分不同仓库的功能, 也是为了更好的维护.
-hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticle |- &amp;lt;username&amp;gt;blogtheme |- &amp;lt;username&amp;gt;blogbase  讲解: - &amp;lt;username&amp;gt;.github.io 为使用GitHubPage所创建的项目, 保存的是执行 hugo 命令后生成的静态文件, 相当于根目录中的 public 文件夹. - &amp;lt;username&amp;gt;blogarticle 文章目录, 保存的是所有的 md 文档, 相当于根目录中的 content 文件夹. - &amp;lt;username&amp;gt;blogtheme 主题目录, 保存的是自定义的主题, 相当于根目录中的 theme 文件夹.</description>
+      <guid>https://zeanzai.me/post/dev/install/install-git/</guid>
+      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
+依然采用源码的安装方式进行安装.
+基本过程如下:
+ 删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
+# 1. 查看是否已经安装 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version  # 2. 安装依赖包 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker  # 3. 进入安装包存放目录 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 4. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz  # 5. 解压到当前目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
     </item>
     
     <item>
       <title>第三章 数据链路层</title>
-      <link>https://zeanzai.me/post/network/chapter03-data-link-layer/</link>
-      <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter03-data-link-layer/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter03-data-link-layer/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter03-data-link-layer/</guid>
       <description>本章重点内容：
 本章讨论的是同一个局域网中，分组怎么从一个主机传送到另一台主机，并不经过路由器转发。
 （1）数据链路层的点对点信道和广播信道的特点，及这两种信道所使用的协议的特点
@@ -156,10 +174,10 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>第二章 物理层</title>
-      <link>https://zeanzai.me/post/network/chapter02-physical-layer/</link>
-      <pubDate>Mon, 03 Sep 2018 17:35:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter02-physical-layer/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:40 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter02-physical-layer/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter02-physical-layer/</guid>
       <description>本章重点内容：
 （1）物理层的任务
 （2）几种常用的信道复用技术
@@ -194,10 +212,10 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     
     <item>
       <title>第一章 概述</title>
-      <link>https://zeanzai.me/post/network/chapter01-overview/</link>
-      <pubDate>Mon, 03 Sep 2018 17:32:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter01-overview/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:34 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter01-overview/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter01-overview/</guid>
       <description>本章重点内容：
 （1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念
 （2） 计算机的性能指标
@@ -215,32 +233,34 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
     </item>
     
     <item>
-      <title>Mybatis中Foreach的用法</title>
-      <link>https://zeanzai.me/post/dev/mybatis-foreach/</link>
-      <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
+      <title>我的博客终于上线了</title>
+      <link>https://zeanzai.me/post/dev/blog/my-first-blog/</link>
+      <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/mybatis-foreach/</guid>
-      <description>foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。   collection foreach遍历的对象，作为入参时，List对象默认用list代替作为键，数组对象有array代替作为键，Map对象没有默认的键。也就是传入的集合（list，array，map）的名字，这个名字可以在foreach里面随便引用），当然在作为入参时可以使用@Param(&amp;ldquo;params&amp;rdquo;)来设置键，设置keyName后，list,array将会失效。 除了入参这种情况外，还有一种作为参数对象的某个字段的时候。举个例子：如果User有属性List ids。入参是User对象，那么这个collection = &amp;ldquo;ids&amp;rdquo; 如果User有属性Ids ids;其中Ids是个对象，Ids有个属性List id;入参是User对象，那么collection = &amp;ldquo;ids.id&amp;rdquo; 如果传入参数类型为map，这个入参有注解@Param(&amp;ldquo;params&amp;rdquo;)，则map的所有的key集合可以写成params.keys，所有值集合可以写成params.values。这样foreach就可以对key集合或值集合进行迭代了。上面只是举例，具体collection等于什么，就看你想对那个元素做循环。该参数为必选。   separator 元素之间的分隔符，例如在in()的时候，separator=&amp;ldquo;,&amp;ldquo;会自动在元素中间用“,“隔开，避免手动输入逗号导致sql错误，如in(1,2,)这样。该参数可选。   open foreach代码的开始符号，一般是(和close=&amp;ldquo;)&amp;ldquo;合用。常用在in(),values()时。该参数可选。   close foreach代码的关闭符号，一般是)和open=&amp;ldquo;(&amp;ldquo;合用。常用在in(),values()时。该参数可选。   index 在list和数组中,index是元素的序号，在map中，index是元素的key，该参数可选。        &amp;lt;!--List:forech中的collection属性类型是List,collection的值必须是:list,item的值可以随意,Dao接口中参数名字随意 --&amp;gt; &amp;lt;select id=&amp;quot;getEmployeesListParams&amp;quot; resultType=&amp;quot;Employees&amp;quot;&amp;gt; select * from EMPLOYEES e where e.EMPLOYEE_ID in &amp;lt;foreach collection=&amp;quot;list&amp;quot; item=&amp;quot;employeeId&amp;quot; index=&amp;quot;index&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot;&amp;gt; #{employeeId} &amp;lt;/foreach&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;!</description>
-    </item>
-    
-    <item>
-      <title>java中的字符串操作</title>
-      <link>https://zeanzai.me/post/dev/java-string-plit/</link>
-      <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
-      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
- 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
-如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
-    </item>
-    
-    <item>
-      <title>安装GitLab</title>
-      <link>https://zeanzai.me/post/dev/install-gitlab/</link>
-      <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-gitlab/</guid>
-      <description>更新yum源  备份原有的yum源  [root@vm yum.repos.d]# mv CentOS-Base.repo CentOS-Base.repo.bak_20180611   拷贝到目录下  [root@vm yum.repos.d]# mv /opt/program/Centos-7.repo ./CentOS-Base.repo   删除原有yum缓存  [root@vm yum.repos.d]# yum clean all 已加载插件：fastestmirror 正在清理软件源： base extras updates Cleaning up everything Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos Cleaning up list of fastest mirrors   重新生成yum缓存  [root@vm yum.repos.d]# yum makecache 已加载插件：fastestmirror .</description>
+      <guid>https://zeanzai.me/post/dev/blog/my-first-blog/</guid>
+      <description>2018年10月1号，是一个值得纪念的日子，因为我的个人博客终于要上线了。
+搭建博客的过程是一个学习曲线陡峭上升的一个阶段，在这个阶段中，我踩了很多坑，我决定将自己搭建博客的前前后后心理历程和实施过程做一个简要的叙述，希望给大家带来一些启示，也算是我给自己的十一国庆的礼物。
+1. 前前后后的心理历程 我一直有一个好习惯：反思和总结。这个习惯给我带来了很多潜移默化的影响。
+上高中的时候我的笔记一直是手写的，写到本子上面，那个时候觉得写字是一件令人愉快的事情，尤其是自己的字被别人夸很好看的时候。这样下来，一年我能写上好几本笔记，现在都不知所踪了。到了大学的时候，我开始慢慢学会把纸上的笔记转移到电脑软件上面了，于是我先是用了一些Windows自带的笔记本，每次写完之后保存到txt文档中，可是突然有一天我发现我要是用不同的电脑写笔记的时候，我就需要用u盘拷来拷去。后来学长推荐了印象笔记，才感觉发现了新大陆——不同平台之间的同步+分享功能。再后来，我的笔记越来越多，跟别人分享的次数也越来越频繁了，我就想为什么不作成博客形式的呢？这样大家就可以浏览我所有的了，于是，做一个博客的想法应运而生。
+2018年年初，我终于鼓起勇气开始搭建博客，当时折腾了hexo，由于对GitHubPage还不够熟悉，总觉得要自己买一个云服务器，苦于囊中羞涩，我想过跟朋友一块合买一台，于是我跟朋友说了我的想法，但是他们反应都不大，甚至他们还跟我开玩笑，说我们刚毕业没多久，要想写一些博客，可以发表在那些知名的网站上面，比如说CSDN、博客园等，但是我觉得我必须要把这件事情办成。加上平时工作内容繁多，时间一直没有安排妥当，于是搭建博客这件事一拖再拖。
+直到2018年年中的时候，公司项目做的差不多了，工作任务也不是很紧张了，才重新开始，起先我只了解到hexo静态网站生成工具，于是说干就干，下载并安装node、安装gem包管理器、安装hexo、本地部署、GitHubPage部署……想象中一切顺利！可后来，我发现我对node以及node的gem包管理器都不是特别了解，再加上找不到合适的主题，于是就果断弃坑了。
+后来我又了解到Jekyll，Jekyll比node要简单一些，使用的是ruby的那一套，也是用了一周的时间去折腾，后来也弃坑了，因为ruby的问题就出现了很多的，并且关于ruby的文档又很少。
+偶然的一次机会，我发现了hugo，看到了hugo的中文官方文档，安装过程几步就搞定了，不用专门学习一门新的语言，我像是发现了一个新天地。于是我开始每天晚上下班回来都整理一下。
+经过一两个月的时间我终于整理出来最合适，也最适合自己的博客方案了。也就是现在大家看到的博客的样子。
+2. 实现过程 我相信，搭建个人博客也属于一种软件工程的实践过程，也是需要遵循软件工程的实践操作准则的，所以，这个问题（如何开发一套完整可用的应用？）就摆在了面前？
+起先，我折腾过hexo、Jekyll等静态网站生成工具，但是没有一套实践过程是坚持到底了的，直到我用到HUGO。现在想来，没有坚持到底的原因有很多：没有域名、对技术不是特别了解、需求不明确、服务器成本过高……这让我想起，这不正是和我们工作中是一样的嘛？我们可能会遇到各种各样的问题，大一些的公司可能有专门的人负责相对应的模块，所以，你只需要做螺丝钉即可，你没有必要兼顾全局。这让我想起腾讯的架构师给我们上的指导课。在我失败了很多次之后，我决定重新整理思维，理论先行，而不是拿到新东西就横冲直撞。于是就有了下面的一系列操作：
+2.1 整理需求 我需要整理明白我希望自己做出来的博客到底是个什么样子的，我要给它画个像，我希望它能完成以下功能：
+ 功能性需求  展示图片+文章 评论功能 网站浏览量统计功能 标签功能 分类功能  非功能性需求  流畅访问 域名访问 7*24H 维护简单   在此，我要特别强调“维护简单”这个非功能性需求，我想要的结果是，我可以专注的去写一些文章，然后发布到服务器上面，然后服务器自动的帮我完成所有的功能，实现自动化运维，这样我就可以集中精力写好文章了。
+2.2 开干 说干就干，我先是看了看hugo的官方文档，然后看了一个网上的实操过程，就在本机上搭建了开发环境，现在本机上面跑了起来。接着我又去官网找了一些自己喜欢的主题，下载到本地，每一个都运行起来，看看具体的效果，紧接着是添加评论功能、添加统计功能等，最后确定出这一版，其开源地址在网站的最下面。
+2.3 部署 在本机电脑上面调试好样式，又添加了几篇文章作为测试后，对整体的效果已经很满意了，接下来就是部署阶段了。
+最开始，我想的方案是，部署到国内云服务商提供的服务器上去，然后申请域名，解析，备案等，过程十分繁琐。这种方案可以实现完全独立自主，但它是以牺牲写作效率、增加运维工作量作为代价的，并且备案也需要花上20天左右的时间。
+后来一个偶然的机会，我了解到还有另外一种方案：部署到GitHub上面，只需注册一个域名即可，然后把域名解析到GitHub上面即可。这对我来说无疑是减少了太多工作量了。
+2.4 上线 我先是去godaddy上面注册了一个域名，然后将域名解析到GitHub上面，一切OK了。
+2.5 写作流程 我在GitHub上面单独创建一个仓库，用来存我的笔记文章，然后创建再创建一个跟用户名一样的仓库作为我的静态网页存储仓库，最后再创建一个专门用来存储我的主题的仓库。这样一来，我的写作流程也就固定下来了。在公司，我需要把三个仓库下载到本机，然后在文章仓库中写文章，写完之后本地运行看一下效果，满意后，生成静态文件，然后push到GitHub的静态网页存储仓库，以后写文章呢，只需要在文章仓库中新建一个文档即可。在家中，也是同样的流程。
+我省下了很多精力，我不用去管服务器的运维、也不用担心备案的过程。
+3. 总结 现在的博客已经基本成型，也基本完成了我想要的效果。我知道，博客还有很多需要完善的地方，我也会逐步的去完成，并写一些对大家有帮助的文档。
+如果大家想要了解博客的具体搭建流程，请添加我的微信（ID： zeanzai）免费咨询，也可以直接扫描下面About中的二维码，或者稍微等待一段时间（等待我的文章出炉）……
+最后希望我的博客能给大家带来惊喜，也希望能够相互交换友链。</description>
     </item>
     
     <item>
@@ -255,124 +275,7 @@ hugo |- &amp;lt;username&amp;gt;.github.io |- &amp;lt;username&amp;gt;blogarticl
 我把这部动画片中的晴天小猪改动了一下，变成了现在的天晴小猪。
 我希望自己能够像则安一样不断的梦想，又希望自己像晴天小猪一样把则安的梦想变成现实。
 出没地 我是一个一点都不安分的90后，也常常想：生活应该怎么过？人生应该朝哪个方向前进？
-常出没于博客、微博、知乎、GitHub。
-关于此博客 fasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasd</description>
-    </item>
-    
-    <item>
-      <title>Basic HTML Elements</title>
-      <link>https://zeanzai.me/post/study/basic-elements/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/study/basic-elements/</guid>
-      <description>&lt;p&gt;menu:
-  main:
-    name: Jekyll migration
-    weight: 10&lt;/p&gt;
-
-&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>安装Hugo</title>
-      <link>https://zeanzai.me/post/dev/install-hugo/</link>
-      <pubDate>Sun, 06 Sep 2015 18:25:30 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-hugo/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装hugo hugo是本教程的另一个不可或缺的工具.
-具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
-安装包安装方式  查看安装包下载地址： https://github.com/gohugoio/hugo/releases/ 选取最新版本，并复制下载地址 安装  # 1. 进入安装包存放目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd opt/packages/  # 2. 下载安装包 [root@izwz97ekphk0kmqgt9zvc4z packages]# wget -c https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.tar.gz  # 3. 解压 [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf hugo_0.48_Linux-64bit.tar.gz  # 4. 移动 [root@izwz97ekphk0kmqgt9zvc4z packages]# mv /usr/setup/hugo/hugo /usr/local/bin/  # 5. 测试 [root@izwz97ekphk0kmqgt9zvc4z packages]# hugo version Hugo Static Site Generator v0.48 linux/amd64 BuildDate: 2018-08-29T06:33:51Z  参考</description>
-    </item>
-    
-    <item>
-      <title>安装golang</title>
-      <link>https://zeanzai.me/post/dev/install-golang/</link>
-      <pubDate>Tue, 06 Sep 2011 18:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-golang/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
-由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使用webhook工具给云服务器发送一条命令，使云服务器自动从GitHub上面pull文章，然后执行hugo命令生成网站）。
-笔者使用开源项目adnanh webhook, adnanh webhook的开发语言就是Go语言, 所以需要安装golang作为基础开发环境.
-安装过程 采用源码安装模式的原因是因为国内的golang的官网访问很慢.
-# 1. 进入安装包存放位置[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 2. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz[root@iZwz97ekphk0kmqgt9zvc4Z packages]# lltotal 124188-rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz# 3. 创建安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup# 4. 解压到安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z setup]# lltotal 4drwxr-xr-x 10 root root 4096 Aug 25 04:41 go# 5.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter04-network-layer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter04-network-layer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter05-transport-layer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter05-transport-layer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter06-application-layer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter06-application-layer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter07-network-security/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter07-network-security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter08-vedio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter08-vedio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zeanzai.me/post/network/chapter09-wifi-wireless/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/network/chapter09-wifi-wireless/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>安装Git</title>
-      <link>https://zeanzai.me/post/dev/install-git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install-git/</guid>
-      <description>date: 2016-09-06T18:24:05+08:00
-前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
-依然采用源码的安装方式进行安装.
-基本过程如下:
- 删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
-# 1. 查看是否已经安装 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version  # 2. 安装依赖包 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker  # 3. 进入安装包存放目录 [root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/  # 4. 下载 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz  # 5. 解压到当前目录 [root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
+常出没于博客、微博、知乎、GitHub。</description>
     </item>
     
   </channel>

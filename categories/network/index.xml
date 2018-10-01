@@ -6,17 +6,17 @@
     <description>Recent content in Network on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Sep 2018 10:06:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 10:19:45 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第三章 数据链路层</title>
-      <link>https://zeanzai.me/post/network/chapter03-data-link-layer/</link>
-      <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter03-data-link-layer/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter03-data-link-layer/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter03-data-link-layer/</guid>
       <description>本章重点内容：
 本章讨论的是同一个局域网中，分组怎么从一个主机传送到另一台主机，并不经过路由器转发。
 （1）数据链路层的点对点信道和广播信道的特点，及这两种信道所使用的协议的特点
@@ -42,10 +42,10 @@
     
     <item>
       <title>第二章 物理层</title>
-      <link>https://zeanzai.me/post/network/chapter02-physical-layer/</link>
-      <pubDate>Mon, 03 Sep 2018 17:35:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter02-physical-layer/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:40 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter02-physical-layer/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter02-physical-layer/</guid>
       <description>本章重点内容：
 （1）物理层的任务
 （2）几种常用的信道复用技术
@@ -80,10 +80,10 @@
     
     <item>
       <title>第一章 概述</title>
-      <link>https://zeanzai.me/post/network/chapter01-overview/</link>
-      <pubDate>Mon, 03 Sep 2018 17:32:34 +0800</pubDate>
+      <link>https://zeanzai.me/post/study/network/chapter01-overview/</link>
+      <pubDate>Mon, 01 Oct 2018 10:19:34 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/network/chapter01-overview/</guid>
+      <guid>https://zeanzai.me/post/study/network/chapter01-overview/</guid>
       <description>本章重点内容：
 （1） 互联网边缘部分和核心部分的作用，其中包含分组交换的概念
 （2） 计算机的性能指标
