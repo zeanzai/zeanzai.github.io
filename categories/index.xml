@@ -15,6 +15,7 @@
       <title>Blog</title>
       <link>https://zeanzai.me/categories/blog/</link>
       <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
+<<<<<<< HEAD
       
       <guid>https://zeanzai.me/categories/blog/</guid>
       <description></description>
@@ -26,22 +27,38 @@
       <pubDate>Thu, 11 Oct 2018 11:09:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/categories/dev/</guid>
+=======
+      
+      <guid>https://zeanzai.me/categories/blog/</guid>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Docker</title>
       <link>https://zeanzai.me/categories/docker/</link>
       <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
       
       <guid>https://zeanzai.me/categories/docker/</guid>
+=======
+      <title>Dev</title>
+      <link>https://zeanzai.me/categories/dev/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/categories/dev/</guid>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <description></description>
     </item>
     
     <item>
       <title>Install</title>
       <link>https://zeanzai.me/categories/install/</link>
+<<<<<<< HEAD
       <pubDate>Thu, 11 Oct 2018 11:07:14 +0800</pubDate>
+=======
+      <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
       <guid>https://zeanzai.me/categories/install/</guid>
       <description></description>

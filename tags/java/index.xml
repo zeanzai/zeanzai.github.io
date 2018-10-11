@@ -6,7 +6,11 @@
     <description>Recent content in Java on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+<<<<<<< HEAD
     <lastBuildDate>Tue, 09 Oct 2018 15:40:31 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 01 Oct 2018 15:54:45 +0800</lastBuildDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
     
 	<atom:link href="https://zeanzai.me/tags/java/index.xml" rel="self" type="application/rss+xml" />
     

@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>天晴小猪</title>
-	<meta name="description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。">
-	<meta name="keywords" content="关于后端 | 天晴小猪 | zeanzai | github | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | Docker | SpringMVC | Mybatis | SpringBoot | SpringCloud | Mysql">
+	<title>Install</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
 	<meta name="generator" content="Hugo 0.46" />
-	<meta property="og:title" content="天晴小猪" />
+	<meta property="og:title" content="Install" />
 <meta property="og:description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://zeanzai.me/" />
+<meta property="og:url" content="https://zeanzai.me/categories/install/" />
 
 
 
-<meta property="og:updated_time" content="2018-10-09T15:28:44&#43;08:00"/>
+<meta property="og:updated_time" content="2018-10-11T11:07:14&#43;08:00"/>
 
 
 
@@ -29,13 +29,13 @@
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
 
-<meta name="twitter:title" content="天晴小猪"/>
+<meta name="twitter:title" content="Install"/>
 <meta name="twitter:description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。"/>
 <meta name="twitter:site" content="@zeanzaime"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss&#43;xml" href="/index.xml">
+	<link rel="alternate" type="application/rss&#43;xml" href="/categories/install/index.xml">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	<script type="text/javascript" src="/js/scripts.js"></script>
@@ -66,79 +66,53 @@
 		<div class="wrapper flex">
 
 
-	<main class="main list content" role="main"><article class="list__item post">
+	<main class="main list content" role="main">
+		<header class="page-header">
+			<h1 class="page-header__title">Install</h1>
+		</header><article class="list__item post">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/get-macbookpro-cpu-type/" rel="bookmark">获取macbookpro的CPU型号</a>
+				<a href="/post/dev/install/install-nginx-and-config/" rel="bookmark">Install Nginx and Config</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-09T15:28:44">2018-10-09</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T11:07:14">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">Install</a></span>
 </span>
 </div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/centos7-new-users/" rel="bookmark">为centos7分配子用户，并使用ssh安全登录</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-09T15:11:08">2018-10-09</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			场景描述 一台服务器上面允许多个用户使用，但是又不能把root账户给非管理人员，为保证安全性，就必须要为普通用户创建子账户，并使用ssh安全登录。 即：
- 在主机A（ip: 192.168.1.100）上面需要使用主机B（ip: 192.168.1.101）的子账户test登录主机B，要求使用ssh安全方式登录。
- ssh远程登录 明文传输与加密传输 明文传输 当我们的数据包在网络上传输的时候，以 …
+			1. install dependencies $ yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  2. make dir $ mkdir /usr/setup $ mkdir /opt/package $ mkdir /usr/setup/nginx $ mkdir …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/centos7-new-users/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-nginx-and-config/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/study/docker/chapter01/">
-			<img src="/img/study/docker/docker.png" alt="Docker学习笔记：第一章 docker概述" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/study/docker/chapter01/" rel="bookmark">Docker学习笔记：第一章 docker概述</a>
+				<a href="/post/dev/install/install-image-server/" rel="bookmark">Centos7上安装图片服务器</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-09T09:57:53">2018-10-09</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T11:04:59">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/docker" rel="category">Docker</a></span>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">Install</a></span>
 </span>
 </div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			什么是Docker Docker与传统虚拟化方式的不同之处
- 传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需的应用进程； 容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟化。 为什么要使用Docker？  更高效的利用系统资源
-不需要硬件虚拟化及运行整个操作系统的额外开销； 更快速的启动时间
-由于直接运行到宿主内核，无需启动完整 …
+			install vsftpd $ yum install -y vsftpd  add user add user and passwor it
+$ useradd ftpuser $ passwd ftpuser  open 21 port $ firewall-cmd --zone=public --add-port=21/tcp --permanent $ firewall-cmd …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/study/docker/chapter01/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-image-server/">Read more…</a>
 		</div>
 	</div>
 </article>
@@ -146,65 +120,68 @@
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/tips/findjob/" rel="bookmark">面试经验谈</a>
+				<a href="/post/dev/install/install-redis-cluster/" rel="bookmark">Centos7下安装Redis</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-01T15:55:45">2018-10-01</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T10:40:03">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/tips" rel="category">Tips</a></span>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">Install</a></span>
 </span>
 </div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			 秋风和煦，落叶枯黄，在这金秋岁月里，那些依然还顶着一身娇羞、两脸懵逼、三头雾水、四肢无力的大学生们开始离开象牙塔，走向社会。我很早就想写一篇文章，记录自己面试的凶险历程，想着将来换工作的时候也能够用的上。自己走过太多的坑，也一直没有时间整理这个痛苦的过程，恰好就在今天，一位刚毕业的好朋友，问起我面试的经验，我的思绪迅速回到我刚毕业那会儿……
-刚毕业那会儿，可能由于自己是在西北偏远地区上学，对于自 …
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/java-string-plit/" rel="bookmark">java中的字符串操作</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-01T15:54:45">2018-10-01</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
- 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&quot;\\.&quot;)。这样才能正确的分隔开，不能用String.split(&quot;.&quot;)；
-如果用“|”作为分隔的话，必须是如下写 …
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/mybatis-foreach/" rel="bookmark">Mybatis中Foreach的用法</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-01T15:05:33">2018-10-01</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			foreach属性    属性 描述     item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若collection属性为list或array，则item代表list或array里面的一个元素。若collection属性对应一个map，则item代表的是map中的value集合中的单个value, 该参数为必选。 …
+			1. 准备 1.1 centos // 查看版本 [root@studyCentOS7 ~]# cat /etc/redhat-release CentOS Linux release 7.2.1511 (Core) // 查看位数 [root@studyCentOS7 ~]# getconf LONG_BIT 64  1.2 redis 下载地址，下载最近的stable版 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/mybatis-foreach/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-redis-cluster/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install/install-mysql/" rel="bookmark">Centos7安装MySQL5.7</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:34:42">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			1 卸载MariaDB 1.1 MariaDB知识 作者：嘎吱喀吧 链接：https://www.zhihu.com/question/41832866/answer/92726790 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。开发这个分支的原因之一是：甲骨文公司收 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-mysql/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install/install-oracle-jdk/" rel="bookmark">Centos7安装OracleJdk</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:32:07">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			// 解压文件 [root@study software_bak]# tar zxf jdk-8u144-linux-x64.tar.gz [root@study software_bak]# ll 总用量 337108 -rw-r--r--. 1 root root 8234674 9月 19 18:43 apache-tomcat-7.0.47.tar.gz drwxr-xr-x. 8 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-oracle-jdk/">Read more…</a>
 		</div>
 	</div>
 </article>
@@ -334,17 +311,48 @@
 		</div>
 	</div>
 </article>
-
+<article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://zeanzai.me/post/dev/install/install-nginx/">
+			<img src="/img/dev/install/nginx.jpg" alt="安装Nginx" />
+		</a>
+	</figure>
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install/install-nginx/" rel="bookmark">安装Nginx</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-01T11:28:25">2018-10-01</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header>
 		
+		<div class="list__excerpt post__content">
+			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
+此外，Centos7默认开通了80端口和22端口。
+云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
+ 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
+# 1. …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-nginx/">Read more…</a>
+		</div>
+	</div>
+</article>
+
 
 		
 <div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/page/2/">«</a>
-	<span class="pagination__item pagination__item--current">3/4</span>
-	<a class="pagination__item pagination__item--next btn" href="/page/4/">»</a>
+	<span class="pagination__item pagination__item--current">1/2</span>
+	<a class="pagination__item pagination__item--next btn" href="/categories/install/page/2/">»</a>
 </div>
 
 	</main>
+
 
 <aside class="sidebar"><div class="widget-search widget">
 	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>

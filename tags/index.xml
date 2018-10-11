@@ -6,21 +6,34 @@
     <description>Recent content in Tags on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 11 Oct 2018 11:09:31 +0800</lastBuildDate>
+=======
+    <lastBuildDate>Mon, 01 Oct 2018 14:12:55 +0800</lastBuildDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
     
 	<atom:link href="https://zeanzai.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+<<<<<<< HEAD
       <title>Acid</title>
       <link>https://zeanzai.me/tags/acid/</link>
       <pubDate>Thu, 11 Oct 2018 11:09:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/acid/</guid>
+=======
+      <title>Devops</title>
+      <link>https://zeanzai.me/tags/devops/</link>
+      <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/devops/</guid>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Centos7</title>
       <link>https://zeanzai.me/tags/centos7/</link>
       <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
@@ -80,19 +93,33 @@
       <pubDate>Thu, 11 Oct 2018 11:07:14 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/devops/</guid>
+=======
+      <title>Foreach</title>
+      <link>https://zeanzai.me/tags/foreach/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/foreach/</guid>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Docker</title>
       <link>https://zeanzai.me/tags/docker/</link>
       <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
+=======
+      <title>Git</title>
+      <link>https://zeanzai.me/tags/git/</link>
+      <pubDate>Mon, 01 Oct 2018 11:24:05 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
-      <guid>https://zeanzai.me/tags/docker/</guid>
+      <guid>https://zeanzai.me/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Filezillaserver</title>
       <link>https://zeanzai.me/tags/filezillaserver/</link>
       <pubDate>Thu, 11 Oct 2018 11:02:00 +0800</pubDate>
@@ -105,12 +132,18 @@
       <title>Foreach</title>
       <link>https://zeanzai.me/tags/foreach/</link>
       <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
+=======
+      <title>Gitlab</title>
+      <link>https://zeanzai.me/tags/gitlab/</link>
+      <pubDate>Mon, 01 Oct 2018 13:23:45 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
-      <guid>https://zeanzai.me/tags/foreach/</guid>
+      <guid>https://zeanzai.me/tags/gitlab/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Git</title>
       <link>https://zeanzai.me/tags/git/</link>
       <pubDate>Mon, 01 Oct 2018 11:24:05 +0800</pubDate>
@@ -133,6 +166,12 @@
       <link>https://zeanzai.me/tags/golang/</link>
       <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
       
+=======
+      <title>Golang</title>
+      <link>https://zeanzai.me/tags/golang/</link>
+      <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
+      
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <guid>https://zeanzai.me/tags/golang/</guid>
       <description></description>
     </item>
@@ -147,20 +186,34 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Image Server</title>
       <link>https://zeanzai.me/tags/image-server/</link>
       <pubDate>Thu, 11 Oct 2018 11:04:59 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/image-server/</guid>
+=======
+      <title>Java</title>
+      <link>https://zeanzai.me/tags/java/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/java/</guid>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Java</title>
       <link>https://zeanzai.me/tags/java/</link>
       <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
+=======
+      <title>Mybatis</title>
+      <link>https://zeanzai.me/tags/mybatis/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
-      <guid>https://zeanzai.me/tags/java/</guid>
+      <guid>https://zeanzai.me/tags/mybatis/</guid>
       <description></description>
     </item>
     
@@ -221,7 +274,11 @@
     <item>
       <title>Nginx</title>
       <link>https://zeanzai.me/tags/nginx/</link>
+<<<<<<< HEAD
       <pubDate>Thu, 11 Oct 2018 09:21:46 +0800</pubDate>
+=======
+      <pubDate>Mon, 01 Oct 2018 11:28:25 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
       <guid>https://zeanzai.me/tags/nginx/</guid>
       <description></description>
@@ -230,13 +287,18 @@
     <item>
       <title>Notes</title>
       <link>https://zeanzai.me/tags/notes/</link>
+<<<<<<< HEAD
       <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
+=======
+      <pubDate>Mon, 01 Oct 2018 10:19:45 +0800</pubDate>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       
       <guid>https://zeanzai.me/tags/notes/</guid>
       <description></description>
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Openjdk</title>
       <link>https://zeanzai.me/tags/openjdk/</link>
       <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
@@ -282,6 +344,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <title>String</title>
       <link>https://zeanzai.me/tags/string/</link>
       <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
@@ -300,6 +364,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Tomcat</title>
       <link>https://zeanzai.me/tags/tomcat/</link>
       <pubDate>Thu, 11 Oct 2018 10:56:42 +0800</pubDate>
@@ -309,6 +374,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <title>Webhook</title>
       <link>https://zeanzai.me/tags/webhook/</link>
       <pubDate>Mon, 01 Oct 2018 12:27:14 +0800</pubDate>
@@ -318,6 +385,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>Windows</title>
       <link>https://zeanzai.me/tags/windows/</link>
       <pubDate>Thu, 11 Oct 2018 11:02:00 +0800</pubDate>
@@ -327,6 +395,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <title>总结</title>
       <link>https://zeanzai.me/tags/%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
@@ -336,6 +406,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>拆箱</title>
       <link>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</link>
       <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
@@ -354,6 +425,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
       <title>面经</title>
       <link>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</link>
       <pubDate>Mon, 01 Oct 2018 15:55:45 +0800</pubDate>

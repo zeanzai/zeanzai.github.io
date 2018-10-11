@@ -23,7 +23,11 @@
  安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
 举个例子来说明：
  需求分析: 远程调用一个命令后，服务器打印当前服务器的时间到/opt/scripts/hugo-deploy/redeploy.log
+<<<<<<< HEAD
  # 1. 安装webhook客户端[root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook# 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面# 2. 创建可执行的文件[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh #!/bin/bashtime=`date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;`echo &amp;#34;${time}&amp;#34; &amp;gt;&amp;gt; /opt/scripts/hugo-deploy/redeploy.log[root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh# 3. 测试是否能够打印[root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh[root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log# 4. 创建hooks.json文件[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.</description>
+=======
+ # 1. 安装webhook客户端 [root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook # 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面  # 2. 创建可执行的文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh  #!/bin/bash  time=`date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;` echo &amp;#34;${time}&amp;#34; &amp;gt;&amp;gt; /opt/scripts/hugo-deploy/redeploy.log [root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh  # 3. 测试是否能够打印 [root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh [root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log  # 4. 创建hooks.json文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.</description>
+>>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
     </item>
     
   </channel>
