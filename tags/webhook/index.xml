@@ -1,34 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Webhook on 天晴小猪</title>
-    <link>https://zeanzai.me/tags/webhook/</link>
-    <description>Recent content in Webhook on 天晴小猪</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 01 Oct 2018 12:27:14 +0800</lastBuildDate>
-    
-	<atom:link href="https://zeanzai.me/tags/webhook/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>安装Webhook</title>
-      <link>https://zeanzai.me/post/dev/install/install-webhook/</link>
-      <pubDate>Mon, 01 Oct 2018 12:27:14 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install/install-webhook/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
-举个例子来说明：
- 需求分析: 远程调用一个命令后，服务器打印当前服务器的时间到/opt/scripts/hugo-deploy/redeploy.log
-<<<<<<< HEAD
- # 1. 安装webhook客户端[root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook# 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面# 2. 创建可执行的文件[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh #!/bin/bashtime=`date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;`echo &amp;#34;${time}&amp;#34; &amp;gt;&amp;gt; /opt/scripts/hugo-deploy/redeploy.log[root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh# 3. 测试是否能够打印[root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh[root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log# 4. 创建hooks.json文件[root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.</description>
-=======
- # 1. 安装webhook客户端 [root@izwz97ekphk0kmqgt9zvc4z ~]# go get github.com/adnanh/webhook # 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面  # 2. 创建可执行的文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir -p /opt/scripts/hugo-deploy [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/redeploy.sh  #!/bin/bash  time=`date &amp;#34;+%Y-%m-%d %H:%M:%S&amp;#34;` echo &amp;#34;${time}&amp;#34; &amp;gt;&amp;gt; /opt/scripts/hugo-deploy/redeploy.log [root@izwz97ekphk0kmqgt9zvc4z ~]# chmod +x /opt/scripts/hugo-deploy/redeploy.sh  # 3. 测试是否能够打印 [root@izwz97ekphk0kmqgt9zvc4z ~]# /opt/scripts/hugo-deploy/redeploy.sh [root@izwz97ekphk0kmqgt9zvc4z ~]# cat /opt/scripts/hugo-deploy/redeploy.log  # 4. 创建hooks.json文件 [root@izwz97ekphk0kmqgt9zvc4z ~]# vi /opt/scripts/hugo-deploy/hooks.</description>
->>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
-    </item>
-    
-  </channel>
-</rss>

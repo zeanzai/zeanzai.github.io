@@ -1,48 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Nginx on 天晴小猪</title>
-    <link>https://zeanzai.me/tags/nginx/</link>
-    <description>Recent content in Nginx on 天晴小猪</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-<<<<<<< HEAD
-    <lastBuildDate>Thu, 11 Oct 2018 09:21:46 +0800</lastBuildDate>
-=======
-    <lastBuildDate>Mon, 01 Oct 2018 11:28:25 +0800</lastBuildDate>
->>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
-    
-	<atom:link href="https://zeanzai.me/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-<<<<<<< HEAD
-      <title>Nginx Upstream</title>
-      <link>https://zeanzai.me/post/dev/nginx-upstream/</link>
-      <pubDate>Thu, 11 Oct 2018 09:21:46 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/nginx-upstream/</guid>
-      <description>############################################################################ # 1. 内容管理系统 start upstream manager.taotao.com { server 192.168.100.202:8081; } server { listen 80; server_name manager.taotao.com; location / { proxy_pass http://manager.taotao.com; index index.html index.htm; } error_page 500 502 503 504 /50x.html; location = /50x.html { root html; } } # 内容管理系统 end ############################################################################ ############################################################################ # 2. 门户服务器 start upstream www.taotao.com { server 192.168.100.202:8081; } server { listen 80; server_name www.taotao.com; location / { proxy_pass http://www.taotao.com; index index.html index.htm; } error_page 500 502 503 504 /50x.</description>
-    </item>
-    
-    <item>
-=======
->>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
-      <title>安装Nginx</title>
-      <link>https://zeanzai.me/post/dev/install/install-nginx/</link>
-      <pubDate>Mon, 01 Oct 2018 11:28:25 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/install/install-nginx/</guid>
-      <description>前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
-<<<<<<< HEAD
-# 1. 创建安装目录[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2[root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp# 2. 安装依赖[root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel# 3. 下载安装包并上传到/opt/package# 4. 解压[root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/[root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz[root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/# 5. 配置[root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \&amp;gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \ &amp;gt; --lock-path=/usr/setup/nginx_1.</description>
-=======
-# 1. 创建安装目录 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2 [root@izwz97ekphk0kmqgt9zvc4z ~]# mkdir /usr/setup/nginx_1.12.2/temp  # 2. 安装依赖 [root@izwz97ekphk0kmqgt9zvc4z ~]# yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  # 3. 下载安装包并上传到/opt/package  # 4. 解压 [root@izwz97ekphk0kmqgt9zvc4z ~]# cd /opt/packages/ [root@izwz97ekphk0kmqgt9zvc4z packages]# tar zxf nginx-1.12.2.tar.gz [root@izwz97ekphk0kmqgt9zvc4z packages]# cd nginx-1.12.2/  # 5. 配置 [root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2]# ./configure --prefix=/usr/setup/nginx_1.12.2 \ &amp;gt; --pid-path=/usr/setup/nginx_1.12.2/nginx.pid \ &amp;gt; --lock-path=/usr/setup/nginx_1.</description>
->>>>>>> 3ba0a1eddcb607020579702b9562eb8848a5ac8e
-    </item>
-    
-  </channel>
-</rss>
