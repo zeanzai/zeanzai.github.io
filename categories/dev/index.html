@@ -15,7 +15,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-09-06T18:28:25&#43;08:00"/>
+<meta property="og:updated_time" content="2018-10-11T11:09:31&#43;08:00"/>
 
 
 
@@ -41,17 +41,6 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </head>
 <body class="body">
 	<div class="container container-outer">
@@ -81,193 +70,258 @@ if (!doNotTrack) {
 		<header class="page-header">
 			<h1 class="page-header__title">Dev</h1>
 		</header><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/install-nginx/">
-			<img src="/img/dev/nginx.jpg" alt="安装Nginx" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/install-nginx/" rel="bookmark">安装Nginx</a>
+				<a href="/post/dev/acid/" rel="bookmark">ACID</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-09-06T18:28:25">2018-09-06</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T11:09:31">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装Nginx nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.
-# 1. …
+			事务概述 ​ 数据库事务是指逻辑工作单元执行的一系列操作，具有要么全部执行成功，要么全部执行不成功的特点。通过将一系列相关操作组合为一个要么完全执行成功，要么完全执行不成功的单元，可以有效的简化错误恢复从而提高系统的可靠性。一个逻辑工作单元要想成为事务，就必须具备所谓的ACID属性。
+ACID属性概述 ​ 1.A（原子性：Atomicity）
+​ 整个事务要么全部执行成功，要么失败，不会存在滞留在 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install-nginx/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/acid/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/install-webhook/">
-			<img src="/img/dev/webhook.jpg" alt="安装Webhook" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/install-webhook/" rel="bookmark">安装Webhook</a>
+				<a href="/post/dev/filezilla-server-config/" rel="bookmark">在Windows上面使用filezillaserver分享文件</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-09-06T18:27:14">2018-09-06</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T11:02:00">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装webhook webhook可以理解成可以通过远程调用来执行的相关命令的工具。
-举个例子来说明：
- 需求分析: 远程调用一个命令后，服务器打印当前服务器的时间 …
+			环境说明 公司使用固定ip方式，由于笔者需要使用多个ip，所以，自己假设了路由器，设置本机ip为192.168.100.100，这就造成了公司同事跟笔者的主机不在一个网段。
+server配置  添加用户并设置分享的文件目录 设置passive mode settings 端口范围，建议5w-5.5w external ip ：192.168.100.100 ftp over TLS …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install-webhook/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/filezilla-server-config/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/hugo-devlope/">
-			<img src="/img/domain.jpg" alt="使用hugo创建自己的博客" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/hugo-devlope/" rel="bookmark">使用hugo创建自己的博客</a>
+				<a href="/post/dev/delete-openjdk/" rel="bookmark">Centos7上删除默认jdk</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-09-06T09:12:55">2018-09-06</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T10:59:54">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			整个开发流程 在此, 笔者定义了一个完整的开发流程, 使得在不同的平台上面都能完成只需要发布文章然后提交到 GitHub 就能够自动化部署的目标.
-笔者将以不同场景的操作方式来讲述这个过程.
- 公司 在公司的电脑上, 安装好hugo, 然后在特定目录下面生成博客的根目录, 使用Atom写文档, 写完之后使用Hugo命令查看一下在本机上的效果. 写完文档之后, 使用sourcetree上传 …
+			// 查看Java [root@localhost local]# java -version openjdk version &quot;1.8.0_101&quot; OpenJDK Runtime Environment (build 1.8.0_101-b13) OpenJDK 64-Bit Server VM (build 25.101-b13, mixed mode) // 查看有哪些 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/hugo-devlope/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/delete-openjdk/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/install-hugo/">
-			<img src="/img/dev/hugo.png" alt="安装Hugo" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/install-hugo/" rel="bookmark">安装Hugo</a>
+				<a href="/post/dev/centos7-split-tomcat-log/" rel="bookmark">Centos7上面tomcat的日志分割</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2015-09-06T18:25:30">2015-09-06</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T10:56:42">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装hugo hugo是本教程的另一个不可或缺的工具.
-具体的安装过程分为两种，一种是使用yum安装，一种是使用安装包形式安装。推荐是用yum方式安装, yum方式也是hugo的官网推荐方式.
-安装包安装方式  查看安 …
+			前言 笔者在进行试验时，有以下几个操作习惯，具体参考。
+Centos7默认开通了80端口和22端口。
+应用场景 tomcat7 在实际生产环境中，由于项目不断部署，Catalina.out文件达到了2G的大小，并且每次查询日志的时候需要查询整个文件，造成查询起来过于困难。
+希望：Catalina.out日志文件以日期划分。放置的位置为/home/logs/tomcat7目录下面。 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install-hugo/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/centos7-split-tomcat-log/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/install-golang/">
-			<img src="/img/dev/golang.jpg" alt="安装golang" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/install-golang/" rel="bookmark">安装golang</a>
+				<a href="/post/dev/contos7-cron/" rel="bookmark">Contos7中Cron的使用</a>
 			</h3><div class="list__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2011-09-06T18:12:55">2011-09-06</time>
+<time class="post__meta-date meta-date" datetime="2018-10-11T10:35:42">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装golang golang是go编程语言编译运行的基础环境，也是go语言开发的应用程序的运行环境。
-由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使 …
+			前言 笔者在进行试验时，有以下几个操作习惯，具体参考。
+Centos7默认开通了80端口和22端口。
+查看服务相关信息 $ systemctl status crond	// crond状态 $ systemctl is-enabled crond	// 是否开机自启  基础知识 Cron时间表达式详解 表达式概述 .---------------- minute (0 - 59)：代表分钟，取值 …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install-golang/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/contos7-cron/">Read more…</a>
 		</div>
 	</div>
 </article>
 <article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://zeanzai.me/post/dev/install-git/">
-			<img src="/img/dev/git.jpg" alt="安装Git" />
-		</a>
-	</figure>
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/dev/install-git/" rel="bookmark">安装Git</a>
+				<a href="/post/dev/study-centos-devops-logs/" rel="bookmark">学习Centos7时的操作日志</a>
 			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-11T09:28:29">2018-10-11</time>
 <span class="post__meta-categories meta-categories">
 	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
-</span></div>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
 		</header>
 		
 		<div class="list__excerpt post__content">
-			date: 2016-09-06T18:24:05+08:00
-前言  笔者在进行试验时，有几个操作习惯，具体在这里。
-此外，Centos7默认开通了80端口和22端口。
-云服务器上面不需要执行开通端口的命令，直接在管理界面中添加安全组即可。
- 安装git Git作为服务器与GitHub沟通(当然这种说法不够严谨, 应该说是博客的版本控制)的关键工具必不可少, 当然也需要安装了.
-依然采用源码的安 …
+			1 基础环境配置  ip：192.168.100.210 root：root1003 包放置地址：/opt/package 软件安装地址： /usr/setup  2 安装jdk1.8.0_111  解压 tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup
+ 设置环境变量 vi /etc/profile 添加以下内容： …
 		</div>
 		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install-git/">Read more…</a>
+			<a class="list__footer-readmore btn" href="/post/dev/study-centos-devops-logs/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/how-to-devops/" rel="bookmark">运维工作手册</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-11T09:23:13">2018-10-11</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			前言 良好的运维习惯有很多优点： - 利于自己维护，利于后继者维护 - 对计算机服务器进行最小化改动 - 便于实现对计算机更好的管理
+良好的习惯 笔者工作使用的电脑是window平台，所以使用Windows平台下的软件工具连接到远程服务器上进行相对应的操作。下面是笔者的一些工作习惯：
+ 使用filezilla工具进行上传 使用SecureCRT工具进行连接 使用editplus编辑较为复杂的文本文 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/how-to-devops/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/nginx-upstream/" rel="bookmark">Nginx Upstream</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-11T09:21:46">2018-10-11</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			############################################################################ # 1. 内容管理系统 start upstream manager.taotao.com { server 192.168.100.202:8081; } server { listen 80; server_name …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/nginx-upstream/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/springboot-connect-oracle/" rel="bookmark">Springboot连接Oracle</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:28:43">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			因为Oracle是付费软件，并且maven不维护Oracle的连接jar包，所以，需要自己手动下载maven的jar
+ 下载jar包  ​ 有两种方式，一种是Oracle的官方网站中下载，一种是去11g的安装目录下面拷贝
+ 使用maven命令，将jar安装到本地仓库中  ​ mvn install:install-file …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/springboot-connect-oracle/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/version-control/" rel="bookmark">软件开发中的版本控制</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:26:48">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			版本控制比较普遍的 3 种命名格式 :
+一、GNU 风格的版本号命名格式 : 主版本号 . 子版本号 [. 修正版本号 [. 编译版本号 ]] Major_Version_Number.Minor_Version_Number[.Revision_Number[.Build_Number]] 示例 : 1.2.1, 2.0, 5.0.0 build-13124
+二、Windows 风格的版本号命名 …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/version-control/">Read more…</a>
 		</div>
 	</div>
 </article>
 
 
 		
+<div class="pagination">
+	<span class="pagination__item pagination__item--current">1/2</span>
+	<a class="pagination__item pagination__item--next btn" href="/categories/dev/page/2/">»</a>
+</div>
+
 	</main>
 
 
@@ -280,11 +334,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/tips/findjob/">面试经验谈</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter03/">第三章 把着计算机的脉</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter02/">第二章 会用你的电脑</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/tips/chapter01/">第一章 了解你的电脑</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install-nginx/">安装Nginx</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
 		</ul>
 	</div>
 </div>
@@ -292,61 +346,61 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Categories</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/dev">Dev</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/development">Development</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/devops">Devops</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/java">Java</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/mybatis">Mybatis</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/string">String</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e5%ad%a6%e4%b9%a0">学习</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/basic-elements" title="Basic elements">Basic elements (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/computer" title="Computer">Computer (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/css" title="Css">Css (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/acid" title="Acid">Acid (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7" title="Centos7">Centos7 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7-logs" title="Centos7 logs">Centos7 logs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/contos7" title="Contos7">Contos7 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/html" title="Html">Html (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (6)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/install" title="Install">Install (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mbp" title="Mbp">Mbp (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oracle-jdk" title="Oracle jdk">Oracle jdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/redis" title="Redis">Redis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/springboot" title="Springboot">Springboot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh" title="Ssh">Ssh (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/string" title="String">String (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips" title="Tips">Tips (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9d%a2%e7%bb%8f" title="面经">面经 (1)</a>
 	</div>
 </div><div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/zeanzai.me" target="_blank">
-				<svg class="widget-social__link-icon icon-facebook" viewBox="0 0 352 352" width="24" height="24" fill="#fff"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
-				<span>Facebook</span>
-			</a>
-		</div>
-		
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/zeanzaime" target="_blank">
-				<svg class="widget-social__link-icon icon-twitter" viewBox="0 0 384 312" width="24" height="24" fill="#fff"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
-				<span>Twitter</span>
-			</a>
-		</div>
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/username" target="_blank">
-				<svg class="widget-social__link-icon icon-linkedin" viewBox="0 0 352 352" width="24" height="24" fill="#fff"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
-				<span>LinkedIn</span>
-			</a>
-		</div>
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/username" target="_blank">
-				<svg class="widget-social__link-icon icon-telegram" viewBox="0 0 132 110" width="24" height="24"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
-				<span>Telegram</span>
-			</a>
-		</div>
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
 				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>

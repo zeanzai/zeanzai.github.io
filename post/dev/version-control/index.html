@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>软件开发中的版本控制</title>
+	<meta name="description" content="软件开发中的版本控制">
+	<meta name="keywords" content="[软件开发 版本号]">
+	<meta name="generator" content="Hugo 0.46" />
+	<meta property="og:title" content="软件开发中的版本控制" />
+<meta property="og:description" content="软件开发中的版本控制" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.me/post/dev/version-control/" />
+
+
+
+<meta property="article:published_time" content="2018-10-09T16:26:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-10-09T16:26:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
+
+<meta name="twitter:title" content="软件开发中的版本控制"/>
+<meta name="twitter:description" content="软件开发中的版本控制"/>
+<meta name="twitter:site" content="@zeanzaime"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container-outer">
+		<header class="header">
+			<div class="container container-inner">
+				<div class="logo" role="banner">
+					<a class="logo__link" href="/" title="天晴小猪" rel="home">
+						<div class="logo__title">天晴小猪</div>
+						<div class="logo__tagline">我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。</div>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="https://zeanzai.me">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/about/">ABOUT</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">ARCHIVE</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper flex">
+
+
+<main class="main content">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">软件开发中的版本控制</h1><div class="post__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:26:48">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header><div class="post__content clearfix">
+			<p>版本控制比较普遍的 3 种命名格式 :</p>
+
+<p>一、GNU 风格的版本号命名格式 : 主版本号 . 子版本号 [. 修正版本号 [. 编译版本号 ]] Major_Version_Number.Minor_Version_Number[.Revision_Number[.Build_Number]] 示例 : 1.2.1, 2.0, 5.0.0 build-13124</p>
+
+<p>二、Windows 风格的版本号命名格式 : 主版本号 . 子版本号 [ 修正版本号 [. 编译版本号 ]] Major_Version_Number.Minor_Version_Number[Revision_Number[.Build_Number]] 示例: 1.21, 2.0</p>
+
+<p>三、.Net Framework 风格的版本号命名格式: 主版本号.子版本号[.编译版本号[.修正版本号]] Major_Version_Number.Minor_Version_Number[.Build_Number[.Revision_Number]] 版本号由二至四个部分组成：主版本号、次版本号、内部版本号和修订号。主版本号和次版本号是必选的；内部版本号和修订号是可选的，但是如果定义了修订号部分，则内部版本号就是必选的。所有定义的部分都必须是大于或等于 0 的整数。</p>
+
+<p>应根据下面的约定使用这些部分：</p>
+
+<p>Major ：具有相同名称但不同主版本号的程序集不可互换。例如，这适用于对产品的大量重写，这些重写使得无法实现向后兼容性。</p>
+
+<p>Minor ：如果两个程序集的名称和主版本号相同，而次版本号不同，这指示显著增强，但照顾到了向后兼容性。例如，这适用于产品的修正版或完全向后兼容的新版本。</p>
+
+<p>Build ：内部版本号的不同表示对相同源所作的重新编译。这适合于更改处理器、平台或编译器的情况。</p>
+
+<p>Revision ：名称、主版本号和次版本号都相同但修订号不同的程序集应是完全可互换的。这适用于修复以前发布的程序集中的安全漏洞。</p>
+
+<p>程序集的只有内部版本号或修订号不同的后续版本被认为是先前版本的修补程序 (Hotfix) 更新。</p>
+
+<p>版本号管理策略</p>
+
+<p>一、GNU 风格的版本号管理策略：</p>
+
+<p>1．项目初版本时，版本号可以为 0.1 或 0.1.0, 也可以为 1.0 或 1.0.0，如果你为人很低调，我想你会选择那个主版本号为 0 的方式；</p>
+
+<p>2．当项目在进行了局部修改或 bug 修正时，主版本号和子版本号都不变，修正版本号加 1；</p>
+
+<p>3．当项目在原有的基础上增加了部分功能时，主版本号不变，子版本号加 1，修正版本号复位为 0，因而可以被忽略掉；</p>
+
+<p>4．当项目在进行了重大修改或局部修正累积较多，而导致项目整体发生全局变化时，主版本号加 1；</p>
+
+<p>5．另外，编译版本号一般是编译器在编译过程中自动生成的，我们只定义其格式，并不进行人为控制。</p>
+
+<p>二、Window 下的版本号管理策略：
+1．项目初版时，版本号为 1.0 或 1.00；
+2. 当项目在进行了局部修改或 bug 修正时，主版本号和子版本号都不变，修正版本号加 1；
+3. 当项目在原有的基础上增加了部分功能时，主版本号不变，子版本号加 1，修正版本号复位为 0，因而可以被忽略掉；
+4. 当项目在进行了重大修改或局部修正累积较多，而导致项目整体发生全局变化时，主版本号加 1；
+5. 另外 , 编译版本号一般是编译器在编译过程中自动生成的，我们只定义其格式，并不进行人为控制。</p>
+
+<p>另外，还可以在版本号后面加入 Alpha、Beta、Gamma、Current、RC (Release Candidate)、Release、Stable 等后缀，在这些后缀后面还可以加入 1 位数字的版本号。</p>
+
+<p>对于用户来说，如果某个软件的主版本号进行了升级，用户还想继续那个软件，则发行软件的公司一般要对用户收取升级费用；而如果子版本号或修正版本号发生了升级，一般来说是免费的。</p>
+
+<p>=====附录软件版本名称=====
+α（alphal） 内部测试版
+α版，此版本表示该软件仅仅是一个初步完成品，通常只在软件开发者内部交流，也有很少一部分发布给专业测试人员。一般而言，该版本软件的 bug 较多，普通用户最好不要安装。
+β（beta）外部测试版
+该版本相对于α版已有了很大的改进，消除了严重的错误，但还是存在着一些缺陷，需要经过大规模的发布测试来进一步消除。这一版本通常由软件公司免费发布，用户可从相关的站点下载。通过一些专业爱好者的测试，将结果反馈给开发者，开发者们再进行有针对性的修改。该版本也不适合一般用户安装。
+γ（gamma）版
+该版本已经相当成熟了，与即将发行的正式版相差无几，如果用户实在等不及了，尽可以装上一试。
+trial（试用版）
+试用版软件在最近的几年里颇为流行，主要是得益于互联网的迅速发展。该版本软件通常都有时间限制，过期之后用户如果希望继续使用，一般得交纳一定的费用进行注册或购买。有些试用版软件还在功能上做了一定的限制。
+unregistered（未注册版）
+未注册版与试用版极其类似，只是未注册版通常没有时间限制，在功能上相对于正式版做了一定的限制，例如绝大多数网络电话软件的注册版和未注册版，两者之间在通话质量上有很大差距。还有些虽然在使用上与正式版毫无二致，但是动不动就会弹出一个恼人的消息框来提醒你注册，如看图软件acdsee、智能陈桥汉字输入软件等。
+demo 演示版
+在非正式版软件中，该版本的知名度最大。demo版仅仅集成了正式版中的几个功能，颇有点像 unregistered。不同的是，demo版一般不能通过升级或注册的方法变为正式版。</p>
+
+<p>以上是软件正式版本推出之前的几个版本，α、β、γ可以称为测试版，大凡成熟软件总会有多个测试版，如 windows 98 的β版，前前后后将近有10个。这么多的测试版一方面为了最终产品尽可能地满足用户的需要，另一方面也尽量减少了软件中的bug 。而 trial 、unregistered 、demo有时统称为演示版，这一类版本的广告色彩较浓，颇有点先尝后买的味道，对于普通用户而言自然是可以免费尝鲜了。</p>
+
+<p>正式版，不同类型的软件的正式版本通常也有区别。
+release 最终释放版
+该版本意味“最终释放版”，在出了一系列的测试版之后，终归会有一个正式版本，对于用户而言，购买该版本的软件绝对不会错。该版本有时也称为标准版。一般情况下，release不会以单词形式出现在软件封面上，取而代之的是符号 &reg; ，如 windows nt&reg; 4.0、ms-dos&reg; 6.22 等。</p>
+
+<p>registered 注册版
+很显然，该版本是与 unregistered 相对的注册版。注册版、release和下面所讲的standard版一样，都是软件的正式版本，只是注册版软件的前身有很大一部分是从网上下载的。</p>
+
+<p>standard 标准版
+这是最常见的标准版，不论是什么软件，标准版一定存在。标准版中包含了该软件的基本组件及一些常用功能，可以满足一般用户的需求。其价格相对高一级版本而言还是“平易近人”的。</p>
+
+<p>deluxe 豪华版
+顾名思义即为“豪华版”。豪华版通常是相对于标准版而言的，主要区别是多了几项功能，价格当然会高出一大块，不推荐一般用户购买。此版本通常是为那些追求“完美”的专业用户所准备的。</p>
+
+<p>reference
+该版本型号常见于百科全书中，比较有名的是微软的encarta系列。 reference是最高级别，其包含的主题、图像、影片剪辑等相对于standard和deluxe版均有大幅增加，容量由一张光盘猛增至三张光盘，并且加入了很强的交互功能，当然价格也不菲。可以这么说，这一版本的百科全书才能算是真正的百科全书，也是发烧友们收藏的首选。</p>
+
+<p>professional（专业版）
+专业版是针对某些特定的开发工具软件而言的。专业版中有许多内容是标准版中所没有的，这些内容对于一个专业的软件开发人员来说是极为重要的。如微软的visual foxpro标准版并不具备编译成可执行文件的功能，这对于一个完整的开发项目而言显然是无法忍受的，若客户机上没有foxpro将不能使用。如果用专业版就没有这个问题了。</p>
+
+<p>enterprise（企业版）
+企业版是开发类软件中的极品（相当于百科全书中的reference版）。拥有一套这种版本的软件可以毫无障碍地开发任何级别的应用软件。如著名的visual c++的企业版相对于专业版来说增加了几个附加的特性，如sql调试、扩展的存储过程向导、支持as/400对ole db的访问等。而这一版本的价格也是普通用户无法接受的。如微软的visual studios 6.0 enterprise 中文版的价格为 23000 元。</p>
+
+<p>其他版本，除了以上介绍的一些版本外，还有一些专有版本名称。</p>
+
+<p>update（升级版）
+升级版的软件是不能独立使用的，该版本的软件在安装过程中会搜索原有的正式版，如果不存在，则拒绝执行下一步。如microsoft office 2000升级版、windows 9x升级版等等。</p>
+
+<p>oem版
+oem 版通常是捆绑在硬件中而不单独销售的版本。将自己的产品交给别的公司去卖，保留自己的著作权，双方互惠互利，一举两得。</p>
+
+<p>单机（网络）版
+网络版在功能、结构上远比单机版复杂，如果留心一下软件的报价，你就会发现某些软件单机版和网络版的价格相差非常大，有些网络版甚至多一个客户端口就要加不少钱。</p>
+
+<p>普及版
+该版本有时也会被称为共享版，其特点是价格便宜（有些甚至完全免费）、功能单一、针对性强（当然也有占领市场、打击盗版等因素）。与试用版不同的是，该版本的软件一般不会有时间上的限制。当然，如果用户想升级，最好还是去购买正式版。</p>
+
+<p>Enhance 增强版或者加强版 属于正式版
+Free 自由版
+Full version 完全版 属于正式版
+shareware 共享版
+Release 发行版 有时间限制
+Upgrade 升级版
+Retail 零售版
+Cardware 属共享软件的一种，只要给作者回复一封电邮或明信片即可。（有的作者并由此提供注册码等），目前这种形式已不多见。
+Plus 属增强版，不过这种大部分是在程序界面及多媒体功能上增强。
+Preview 预览版
+Corporation &amp; Enterprise 企业版
+Standard 标准版
+Mini 迷你版也叫精简版只有最基本的功能
+Premium &ndash; 贵价版
+Professional &ndash; 专业版
+Express &ndash; 特别版
+Deluxe &ndash; 豪华版
+Regged &ndash; 已注册版
+CN &ndash; 简体中文版
+CHT &ndash; 繁体中文版
+EN &ndash; 英文版
+Multilanguage &ndash; 多语言版</p>
+
+		</div>
+		
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/devops/" rel="tag">DevOps</a></li>
+	</ul>
+</div>
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="天晴小猪 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 天晴小猪</span>
+	</div>
+	<div class="authorbox__description">
+		我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
+	</div>
+</div>
+
+	
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/dev/springboot-tomcat-start-error/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">SpringBoot启动和Tomcat部署出现的问题</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/dev/springboot-connect-oracle/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Springboot连接Oracle</p></a>
+	</div>
+</nav>
+	
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zeanzai" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</main>
+<aside class="sidebar"><div class="widget-search widget">
+	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+	
+	
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/dev">Dev</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/acid" title="Acid">Acid (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7" title="Centos7">Centos7 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7-logs" title="Centos7 logs">Centos7 logs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/contos7" title="Contos7">Contos7 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mbp" title="Mbp">Mbp (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oracle-jdk" title="Oracle jdk">Oracle jdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/redis" title="Redis">Redis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/springboot" title="Springboot">Springboot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh" title="Ssh">Ssh (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/string" title="String">String (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips" title="Tips">Tips (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9d%a2%e7%bb%8f" title="面经">面经 (1)</a>
+	</div>
+</div><div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Sina Weibo" rel="noopener noreferrer" href="https://weibo.com/zeanzai" target="_blank">
+				<svg t="1518502970248" class="widget-social__link-icon icon-weibo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="808" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M712.779 484.273c0-8.579 75.506-78.938 0-123.555s-214.506 24.025-209.359 15.443c60.062-104.679-25.741-137.283-68.643-137.283-102.962 0-374.098 229.952-374.098 375.813s180.186 264.273 403.271 264.273 401.554-118.406 401.554-264.273c0-123.555-152.73-123.555-152.73-130.419zM474.246 798.311c-140.717 20.592-267.705-39.47-281.43-133.852s90.95-185.333 233.382-205.926c142.433-20.592 267.705 39.47 281.43 133.852s-90.95 185.333-233.382 205.926z" fill="#FFF" p-id="809"></path>
+					<path d="M800.297 434.506h17.163c10.297 0 20.592-8.579 22.308-18.876 0 0 18.876-77.222-27.457-120.125s-108.113-27.457-108.113-27.457c-10.297 1.716-18.876 12.014-18.876 22.308v6.863c0 10.297 8.579 18.876 18.876 17.163 0 0 51.483-6.863 77.222 24.025s5.149 78.938 5.149 78.938c-3.434 10.297 3.434 17.163 13.728 17.163z" fill="" p-id="810"></path>
+					<path d="M899.826 207.989c-85.804-82.37-212.788-70.359-212.788-70.359-15.443 0-27.457 13.728-27.457 29.171v13.728c0 15.443 12.014 27.457 29.171 27.457 0 0 121.84-13.728 173.323 61.778s29.171 169.888 29.171 169.888c-1.716 15.443 8.579 27.457 24.025 27.457h12.014c15.443 0 30.89-12.014 32.605-27.457-1.716 0 25.741-147.58-60.062-231.666zM398.74 510.014c-84.086 17.163-142.433 87.519-128.703 159.594s94.384 116.691 178.469 99.53 142.433-87.519 128.703-159.594-94.384-116.691-178.469-99.53zM391.875 698.779c-25.741 12.014-54.915 5.149-63.493-13.728-8.579-20.592 5.149-46.333 30.89-58.347s54.915-6.863 63.493 13.728c8.579 20.592-5.149 46.333-30.89 58.347zM451.938 638.717c-15.443 0-27.457-12.014-25.741-25.741 0-13.728 12.014-25.741 25.741-25.741s25.741 10.297 25.741 25.741c0 13.728-12.014 25.741-25.741 25.741z" fill="#FFF" p-id="811"></path>
+				</svg>
+				<span>Weibo</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="zhihu" rel="noopener noreferrer" href="https://www.zhihu.com/people/zeanzai/"
+			 target="_blank">
+				<svg t="1518502950969" class="widget-social__link-icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 p-id="893" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"
+					 fill="#FFF" p-id="894"></path>
+				</svg>
+				<span>zhihu</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:438123371@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>438123371@qq.com</span>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+</aside>
+	</div>
+		<footer class="footer">
+			<div class="container container-inner">
+				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+		label: "Menu",
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

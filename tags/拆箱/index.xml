@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>拆箱 on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</link>
+    <description>Recent content in 拆箱 on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 09 Oct 2018 15:40:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>装箱和拆箱问题详解</title>
+      <link>https://zeanzai.me/post/dev/ints-and-integers/</link>
+      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/ints-and-integers/</guid>
+      <description>1. 导引 1.1 问题引入 我们知道，Java中int变量存在于jvm的静态区中，在系统之中它的存在形式很简单，就是一个简单的内存块，里面放了一个具体的数字，而Integer则是一个具体的对象，里面不光有具体的数字，还有一些具体的操作方法。早期的Java版本中，要想对int的数据进行对象化操作时，就必须要先把int转化为Integer对象才能够进行操作。例如：在Java1.5中，集合（Collections）不能直接放入int类型的数据，因为集合中要求存放的必须是对象。所以，为了节省由原始类型转化为对象类型的人工成本，也为了迎合Java中一切都是对象的思想，Java后续的版本中就引入了自动拆箱和自动装箱的机制。
+2. 概念 2.1 基本数据类型和封装数据类型 基本数据类型主要有8种，他们分别是：
+   基本数据类型(primitive) byte short int long float double char boolean     占用内存大小 1字节 2字节 4字节 8字节 4字节 8字节 1 字节 未知   默认值 (byte)0 (short)0 0 0L 0.0f 0.0d \u000 false   封装数据类型(wrapper) Byte Short Integer Long Float Double Character Boolean    二者之间的区别：
+   基本数据类型 封装数据类型     1.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contos7 on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/contos7/</link>
+    <description>Recent content in Contos7 on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 11 Oct 2018 10:35:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/contos7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contos7中Cron的使用</title>
+      <link>https://zeanzai.me/post/dev/contos7-cron/</link>
+      <pubDate>Thu, 11 Oct 2018 10:35:42 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/contos7-cron/</guid>
+      <description>前言 笔者在进行试验时，有以下几个操作习惯，具体参考。
+Centos7默认开通了80端口和22端口。
+查看服务相关信息 $ systemctl status crond	// crond状态 $ systemctl is-enabled crond	// 是否开机自启  基础知识 Cron时间表达式详解 表达式概述 .---------------- minute (0 - 59)：代表分钟，取值范围00-59 | .------------- hour (0 - 23)：代表小时，取值范围00-23 | | .---------- day of month (1 - 31)：代表月份中的日期，取值范围01-31 | | | .------- month (1 - 12) OR jan,feb,mar,apr ...：代表月份，取值范围01-12 | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat | | | | | * * * * * user-name command to be executed  特殊符号含义    特殊符号 含义     * 表示任意时间都，也是”每”的意思，举例：如00 23 * * *cmd表示每月每周每日的23:00都执行cmd任务   - 表示分隔符，表示一个时间段范围段，如17-19点，每小时的00分执行任务，00 17-19 * * * cmd 。就是17,18,19点整点分别执行的意思   , 表示分隔时段的意思，30 17,18,19 * * * /bin.</description>
+    </item>
+    
+  </channel>
+</rss>

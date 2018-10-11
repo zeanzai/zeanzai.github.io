@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mbp on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/mbp/</link>
+    <description>Recent content in Mbp on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 09 Oct 2018 15:28:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/mbp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>获取macbookpro的CPU型号</title>
+      <link>https://zeanzai.me/post/dev/get-macbookpro-cpu-type/</link>
+      <pubDate>Tue, 09 Oct 2018 15:28:44 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/get-macbookpro-cpu-type/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,88 +6,62 @@
     <description>Recent content in Categories on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Oct 2018 10:12:55 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Blog</title>
+      <link>https://zeanzai.me/categories/blog/</link>
+      <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Dev</title>
       <link>https://zeanzai.me/categories/dev/</link>
-      <pubDate>Thu, 06 Sep 2018 18:28:25 +0800</pubDate>
+      <pubDate>Thu, 11 Oct 2018 11:09:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/categories/dev/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Development</title>
-      <link>https://zeanzai.me/categories/development/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Docker</title>
+      <link>https://zeanzai.me/categories/docker/</link>
+      <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
       
-      <guid>https://zeanzai.me/categories/development/</guid>
+      <guid>https://zeanzai.me/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Devops</title>
-      <link>https://zeanzai.me/categories/devops/</link>
-      <pubDate>Sat, 25 Aug 2018 17:23:45 +0800</pubDate>
+      <title>Install</title>
+      <link>https://zeanzai.me/categories/install/</link>
+      <pubDate>Thu, 11 Oct 2018 11:07:14 +0800</pubDate>
       
-      <guid>https://zeanzai.me/categories/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://zeanzai.me/categories/java/</link>
-      <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mybatis</title>
-      <link>https://zeanzai.me/categories/mybatis/</link>
-      <pubDate>Fri, 31 Aug 2018 11:05:33 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/categories/mybatis/</guid>
+      <guid>https://zeanzai.me/categories/install/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Network</title>
       <link>https://zeanzai.me/categories/network/</link>
-      <pubDate>Tue, 04 Sep 2018 10:06:34 +0800</pubDate>
+      <pubDate>Mon, 01 Oct 2018 10:19:45 +0800</pubDate>
       
       <guid>https://zeanzai.me/categories/network/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>String</title>
-      <link>https://zeanzai.me/categories/string/</link>
-      <pubDate>Fri, 31 Aug 2018 10:54:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/categories/string/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Tips</title>
       <link>https://zeanzai.me/categories/tips/</link>
-      <pubDate>Sat, 29 Sep 2018 10:55:45 +0800</pubDate>
+      <pubDate>Mon, 01 Oct 2018 15:55:45 +0800</pubDate>
       
       <guid>https://zeanzai.me/categories/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>学习</title>
-      <link>https://zeanzai.me/categories/%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Thu, 06 Sep 2018 09:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/categories/%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     

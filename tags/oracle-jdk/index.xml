@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle Jdk on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/oracle-jdk/</link>
+    <description>Recent content in Oracle Jdk on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 09 Oct 2018 16:32:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/oracle-jdk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos7安装OracleJdk</title>
+      <link>https://zeanzai.me/post/dev/install/install-oracle-jdk/</link>
+      <pubDate>Tue, 09 Oct 2018 16:32:07 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/install/install-oracle-jdk/</guid>
+      <description>// 解压文件 [root@study software_bak]# tar zxf jdk-8u144-linux-x64.tar.gz [root@study software_bak]# ll 总用量 337108 -rw-r--r--. 1 root root 8234674 9月 19 18:43 apache-tomcat-7.0.47.tar.gz drwxr-xr-x. 8 uucp 143 4096 7月 22 13:11 jdk1.8.0_144 -rw-r--r--. 1 root root 185515842 9月 19 19:42 jdk-8u144-linux-x64.tar.gz -rw-r--r--. 1 root root 57856 9月 15 00:40 redis-3.0.0.gem -rw-r--r--. 1 root root 1358081 9月 14 19:05 redis-3.0.0.tar.gz -rw-r--r--. 1 root root 150010621 9月 19 18:43 solr-4.10.3.tgz.tgz // 移动到安装目录 [root@study software_bak]# mv jdk1.</description>
+    </item>
+    
+  </channel>
+</rss>
