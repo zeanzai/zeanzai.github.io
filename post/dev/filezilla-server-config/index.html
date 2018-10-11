@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>在Windows上面使用filezillaserver分享文件</title>
+	<meta name="description" content="在Windows上面使用filezillaserver分享文件">
+	<meta name="keywords" content="[windows win filezillaserver share file]">
+	<meta name="generator" content="Hugo 0.46" />
+	<meta property="og:title" content="在Windows上面使用filezillaserver分享文件" />
+<meta property="og:description" content="在Windows上面使用filezillaserver分享文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.me/post/dev/filezilla-server-config/" />
+
+
+
+<meta property="article:published_time" content="2018-10-11T11:02:00&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-10-11T11:02:00&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
+
+<meta name="twitter:title" content="在Windows上面使用filezillaserver分享文件"/>
+<meta name="twitter:description" content="在Windows上面使用filezillaserver分享文件"/>
+<meta name="twitter:site" content="@zeanzaime"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container-outer">
+		<header class="header">
+			<div class="container container-inner">
+				<div class="logo" role="banner">
+					<a class="logo__link" href="/" title="天晴小猪" rel="home">
+						<div class="logo__title">天晴小猪</div>
+						<div class="logo__tagline">我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。</div>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="https://zeanzai.me">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/about/">ABOUT</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">ARCHIVE</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper flex">
+
+
+<main class="main content">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">在Windows上面使用filezillaserver分享文件</h1><div class="post__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-11T11:02:00">2018-10-11</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header><div class="post__content clearfix">
+			
+
+<h2 id="环境说明">环境说明</h2>
+
+<p>公司使用固定ip方式，由于笔者需要使用多个ip，所以，自己假设了路由器，设置本机ip为192.168.100.100，这就造成了公司同事跟笔者的主机不在一个网段。</p>
+
+<h2 id="server配置">server配置</h2>
+
+<ol>
+<li>添加用户并设置分享的文件目录</li>
+<li>设置passive mode settings
+端口范围，建议5w-5.5w
+external ip ：192.168.100.100
+ftp over TLS settings: 生成crt证书，并完成设置</li>
+</ol>
+
+<p>安装目录下面的配置文件内容：</p>
+
+<pre><code class="language-xml">&lt;FileZillaServer&gt;
+    &lt;Groups /&gt;
+    &lt;Users&gt;
+        &lt;User Name=&quot;java&quot;&gt;
+            &lt;Option Name=&quot;Pass&quot;&gt;2D0AFC8B886D5F6CAB2F69231A4C55287D323C1D0321DF97B7CD091D33323DF8C18EC4CEF847F25D1455F807D5AE46F97B9EFBE143D9ECAF756D1F64868479D4&lt;/Option&gt;
+            &lt;Option Name=&quot;Salt&quot;&gt;)`L8&amp;amp;LrcaSX%ZDM&amp;quot;:wuLHfm[cm18`v}a^t&amp;lt;rVM\nQ=4bN!@L0y&amp;quot;v:s!u+1Ty2S/r&lt;/Option&gt;
+            &lt;Option Name=&quot;Group&quot; /&gt;
+            &lt;Option Name=&quot;Bypass server userlimit&quot;&gt;0&lt;/Option&gt;
+            &lt;Option Name=&quot;User Limit&quot;&gt;0&lt;/Option&gt;
+            &lt;Option Name=&quot;IP Limit&quot;&gt;0&lt;/Option&gt;
+            &lt;Option Name=&quot;Enabled&quot;&gt;1&lt;/Option&gt;
+            &lt;Option Name=&quot;Comments&quot; /&gt;
+            &lt;Option Name=&quot;ForceSsl&quot;&gt;0&lt;/Option&gt;
+            &lt;IpFilter&gt;
+                &lt;Disallowed /&gt;
+                &lt;Allowed /&gt;
+            &lt;/IpFilter&gt;
+            &lt;Permissions&gt;
+                &lt;Permission Dir=&quot;D:\softwares_bak&quot;&gt;
+                    &lt;Option Name=&quot;FileRead&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileWrite&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileDelete&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileAppend&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirCreate&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirDelete&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirList&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirSubdirs&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;IsHome&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;AutoCreate&quot;&gt;0&lt;/Option&gt;
+                &lt;/Permission&gt;
+                &lt;Permission Dir=&quot;E:\vedio&quot;&gt;
+                    &lt;Aliases&gt;
+                        &lt;Alias&gt;/vedio&lt;/Alias&gt;
+                    &lt;/Aliases&gt;
+                    &lt;Option Name=&quot;FileRead&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileWrite&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileDelete&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;FileAppend&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirCreate&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirDelete&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirList&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;DirSubdirs&quot;&gt;1&lt;/Option&gt;
+                    &lt;Option Name=&quot;IsHome&quot;&gt;0&lt;/Option&gt;
+                    &lt;Option Name=&quot;AutoCreate&quot;&gt;0&lt;/Option&gt;
+                &lt;/Permission&gt;
+            &lt;/Permissions&gt;
+            &lt;SpeedLimits DlType=&quot;1&quot; DlLimit=&quot;10&quot; ServerDlLimitBypass=&quot;0&quot; UlType=&quot;0&quot; UlLimit=&quot;10&quot; ServerUlLimitBypass=&quot;0&quot;&gt;
+                &lt;Download /&gt;
+                &lt;Upload /&gt;
+            &lt;/SpeedLimits&gt;
+        &lt;/User&gt;
+    &lt;/Users&gt;
+    &lt;Settings&gt;
+        &lt;Item name=&quot;Serverports&quot; type=&quot;string&quot;&gt;21&lt;/Item&gt;
+        &lt;Item name=&quot;Number of Threads&quot; type=&quot;numeric&quot;&gt;2&lt;/Item&gt;
+        &lt;Item name=&quot;Maximum user count&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Timeout&quot; type=&quot;numeric&quot;&gt;120&lt;/Item&gt;
+        &lt;Item name=&quot;No Transfer Timeout&quot; type=&quot;numeric&quot;&gt;600&lt;/Item&gt;
+        &lt;Item name=&quot;Check data connection IP&quot; type=&quot;numeric&quot;&gt;2&lt;/Item&gt;
+        &lt;Item name=&quot;Service name&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Service display name&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Force TLS session resumption&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Login Timeout&quot; type=&quot;numeric&quot;&gt;60&lt;/Item&gt;
+        &lt;Item name=&quot;Show Pass in Log&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Custom PASV IP type&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Custom PASV IP&quot; type=&quot;string&quot;&gt;192.168.100.100&lt;/Item&gt;
+        &lt;Item name=&quot;Custom PASV min port&quot; type=&quot;numeric&quot;&gt;50000&lt;/Item&gt;
+        &lt;Item name=&quot;Custom PASV max port&quot; type=&quot;numeric&quot;&gt;51000&lt;/Item&gt;
+        &lt;Item name=&quot;Initial Welcome Message&quot; type=&quot;string&quot;&gt;%v&amp;#x0D;&amp;#x0A;written by Tim Kosse (tim.kosse@filezilla-project.org)&amp;#x0D;&amp;#x0A;Please visit https://filezilla-project.org/&lt;/Item&gt;
+        &lt;Item name=&quot;Admin port&quot; type=&quot;numeric&quot;&gt;14147&lt;/Item&gt;
+        &lt;Item name=&quot;Admin Password&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Admin IP Bindings&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Admin IP Addresses&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Enable logging&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Logsize limit&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Logfile type&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Logfile delete time&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Disable IPv6&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Enable HASH&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Download Speedlimit Type&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Upload Speedlimit Type&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Download Speedlimit&quot; type=&quot;numeric&quot;&gt;10&lt;/Item&gt;
+        &lt;Item name=&quot;Upload Speedlimit&quot; type=&quot;numeric&quot;&gt;10&lt;/Item&gt;
+        &lt;Item name=&quot;Buffer Size&quot; type=&quot;numeric&quot;&gt;32768&lt;/Item&gt;
+        &lt;Item name=&quot;Custom PASV IP server&quot; type=&quot;string&quot;&gt;http://ip.filezilla-project.org/ip.php&lt;/Item&gt;
+        &lt;Item name=&quot;Use custom PASV ports&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Mode Z Use&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Mode Z min level&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Mode Z max level&quot; type=&quot;numeric&quot;&gt;9&lt;/Item&gt;
+        &lt;Item name=&quot;Mode Z allow local&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Mode Z disallowed IPs&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;IP Bindings&quot; type=&quot;string&quot;&gt;*&lt;/Item&gt;
+        &lt;Item name=&quot;IP Filter Allowed&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;IP Filter Disallowed&quot; type=&quot;string&quot;&gt;&lt;/Item&gt;
+        &lt;Item name=&quot;Hide Welcome Message&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Enable SSL&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Allow explicit SSL&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;SSL Key file&quot; type=&quot;string&quot;&gt;C:\Users\northmeter\ftp\certificate.crt&lt;/Item&gt;
+        &lt;Item name=&quot;SSL Certificate file&quot; type=&quot;string&quot;&gt;C:\Users\northmeter\ftp\certificate.crt&lt;/Item&gt;
+        &lt;Item name=&quot;Implicit SSL ports&quot; type=&quot;string&quot;&gt;990&lt;/Item&gt;
+        &lt;Item name=&quot;Force explicit SSL&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Network Buffer Size&quot; type=&quot;numeric&quot;&gt;262144&lt;/Item&gt;
+        &lt;Item name=&quot;Force PROT P&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;SSL Key Password&quot; type=&quot;string&quot;&gt;northmeter&lt;/Item&gt;
+        &lt;Item name=&quot;Allow shared write&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;No External IP On Local&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Active ignore local&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Autoban enable&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Autoban attempts&quot; type=&quot;numeric&quot;&gt;10&lt;/Item&gt;
+        &lt;Item name=&quot;Autoban type&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;Item name=&quot;Autoban time&quot; type=&quot;numeric&quot;&gt;1&lt;/Item&gt;
+        &lt;Item name=&quot;Minimum TLS version&quot; type=&quot;numeric&quot;&gt;0&lt;/Item&gt;
+        &lt;SpeedLimits&gt;
+            &lt;Download /&gt;
+            &lt;Upload /&gt;
+        &lt;/SpeedLimits&gt;
+    &lt;/Settings&gt;
+&lt;/FileZillaServer&gt;
+
+
+</code></pre>
+
+<h2 id="设置路由器">设置路由器</h2>
+
+<ol>
+<li>DMZ主机将主机映射出去</li>
+<li>虚拟服务器将 14147的端口开放出去</li>
+</ol>
+
+<h2 id="windows系统设置">Windows系统设置</h2>
+
+<p>关闭防火墙</p>
+
+		</div>
+		
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/windows/" rel="tag">windows</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/filezillaserver/" rel="tag">filezillaserver</a></li>
+	</ul>
+</div>
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="天晴小猪 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 天晴小猪</span>
+	</div>
+	<div class="authorbox__description">
+		我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
+	</div>
+</div>
+
+	
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/dev/delete-openjdk/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Centos7上删除默认jdk</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/dev/install/install-image-server/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Centos7上安装图片服务器</p></a>
+	</div>
+</nav>
+	
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zeanzai" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</main>
+<aside class="sidebar"><div class="widget-search widget">
+	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+	
+	
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/dev">Dev</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/acid" title="Acid">Acid (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7" title="Centos7">Centos7 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7-logs" title="Centos7 logs">Centos7 logs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/contos7" title="Contos7">Contos7 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mbp" title="Mbp">Mbp (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oracle-jdk" title="Oracle jdk">Oracle jdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/redis" title="Redis">Redis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/springboot" title="Springboot">Springboot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh" title="Ssh">Ssh (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/string" title="String">String (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips" title="Tips">Tips (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9d%a2%e7%bb%8f" title="面经">面经 (1)</a>
+	</div>
+</div><div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Sina Weibo" rel="noopener noreferrer" href="https://weibo.com/zeanzai" target="_blank">
+				<svg t="1518502970248" class="widget-social__link-icon icon-weibo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="808" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M712.779 484.273c0-8.579 75.506-78.938 0-123.555s-214.506 24.025-209.359 15.443c60.062-104.679-25.741-137.283-68.643-137.283-102.962 0-374.098 229.952-374.098 375.813s180.186 264.273 403.271 264.273 401.554-118.406 401.554-264.273c0-123.555-152.73-123.555-152.73-130.419zM474.246 798.311c-140.717 20.592-267.705-39.47-281.43-133.852s90.95-185.333 233.382-205.926c142.433-20.592 267.705 39.47 281.43 133.852s-90.95 185.333-233.382 205.926z" fill="#FFF" p-id="809"></path>
+					<path d="M800.297 434.506h17.163c10.297 0 20.592-8.579 22.308-18.876 0 0 18.876-77.222-27.457-120.125s-108.113-27.457-108.113-27.457c-10.297 1.716-18.876 12.014-18.876 22.308v6.863c0 10.297 8.579 18.876 18.876 17.163 0 0 51.483-6.863 77.222 24.025s5.149 78.938 5.149 78.938c-3.434 10.297 3.434 17.163 13.728 17.163z" fill="" p-id="810"></path>
+					<path d="M899.826 207.989c-85.804-82.37-212.788-70.359-212.788-70.359-15.443 0-27.457 13.728-27.457 29.171v13.728c0 15.443 12.014 27.457 29.171 27.457 0 0 121.84-13.728 173.323 61.778s29.171 169.888 29.171 169.888c-1.716 15.443 8.579 27.457 24.025 27.457h12.014c15.443 0 30.89-12.014 32.605-27.457-1.716 0 25.741-147.58-60.062-231.666zM398.74 510.014c-84.086 17.163-142.433 87.519-128.703 159.594s94.384 116.691 178.469 99.53 142.433-87.519 128.703-159.594-94.384-116.691-178.469-99.53zM391.875 698.779c-25.741 12.014-54.915 5.149-63.493-13.728-8.579-20.592 5.149-46.333 30.89-58.347s54.915-6.863 63.493 13.728c8.579 20.592-5.149 46.333-30.89 58.347zM451.938 638.717c-15.443 0-27.457-12.014-25.741-25.741 0-13.728 12.014-25.741 25.741-25.741s25.741 10.297 25.741 25.741c0 13.728-12.014 25.741-25.741 25.741z" fill="#FFF" p-id="811"></path>
+				</svg>
+				<span>Weibo</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="zhihu" rel="noopener noreferrer" href="https://www.zhihu.com/people/zeanzai/"
+			 target="_blank">
+				<svg t="1518502950969" class="widget-social__link-icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 p-id="893" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"
+					 fill="#FFF" p-id="894"></path>
+				</svg>
+				<span>zhihu</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:438123371@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>438123371@qq.com</span>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+</aside>
+	</div>
+		<footer class="footer">
+			<div class="container container-inner">
+				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+		label: "Menu",
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

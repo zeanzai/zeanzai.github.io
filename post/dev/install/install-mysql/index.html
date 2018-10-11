@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Centos7安装MySQL5.7</title>
+	<meta name="description" content="Centos7安装MySQL5.7">
+	<meta name="keywords" content="[Centos7 install mysql5.7]">
+	<meta name="generator" content="Hugo 0.46" />
+	<meta property="og:title" content="Centos7安装MySQL5.7" />
+<meta property="og:description" content="Centos7安装MySQL5.7" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-mysql/" />
+
+
+
+<meta property="article:published_time" content="2018-10-09T16:34:42&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-10-09T16:34:42&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
+
+<meta name="twitter:title" content="Centos7安装MySQL5.7"/>
+<meta name="twitter:description" content="Centos7安装MySQL5.7"/>
+<meta name="twitter:site" content="@zeanzaime"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container-outer">
+		<header class="header">
+			<div class="container container-inner">
+				<div class="logo" role="banner">
+					<a class="logo__link" href="/" title="天晴小猪" rel="home">
+						<div class="logo__title">天晴小猪</div>
+						<div class="logo__tagline">我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。</div>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="https://zeanzai.me">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/about/">ABOUT</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">ARCHIVE</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper flex">
+
+
+<main class="main content">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Centos7安装MySQL5.7</h1><div class="post__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-09T16:34:42">2018-10-09</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header><div class="post__content clearfix">
+			
+
+<h1 id="1-卸载mariadb">1 卸载MariaDB</h1>
+
+<h2 id="1-1-mariadb知识">1.1 MariaDB知识</h2>
+
+<pre><code>作者：嘎吱喀吧
+链接：https://www.zhihu.com/question/41832866/answer/92726790
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可。开发这个分支的原因之一是：甲骨文公司收购了MySQL后，有将MySQL闭源的潜在风险，因此社区采用分支的方式来避开这个风险。
+
+MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，10.0.9版起使用XtraDB（名称代号为Aria）来代替MySQL的InnoDB。MariaDB由MySQL的创始人麦克尔·维德纽斯主导开发，他早前曾以10亿美元的价格，将自己创建的公司MySQLAB卖给了SUN，此后，随着SUN被甲骨文收购，MySQL的所有权也落入Oracle的手中。MariaDB名称来自麦克尔·维德纽斯的女儿玛丽亚（英语：Maria）的名字。
+
+版本
+MariaDB直到5.5版本，均依照MySQL的版本。因此，使用MariaDB5.5的人会从MySQL5.5中了解到MariaDB的所有功能。从2012年11月12日起发布的10.0.0版开始，不再依照MySQL的版号。10.0.x版以5.5版为基础，加上移植自MySQL5.6版的功能和自行开发的新功能。
+
+第三方软件
+MariaDB的API和协议兼容MySQL，另外又添加了一些功能，以支持本地的非阻塞操作和进度报告。这意味着，所有使用MySQL的连接器、程序库和应用程序也将可以在MariaDB下工作。在此基础上，由于担心甲骨文MySQL的一个更加封闭的软件项目，Fedora的计划在Fedora19中的以MariaDB取代MySQL，维基媒体基金会的服务器同样也使用MariaDB取代了MySQL。
+</code></pre>
+
+<h2 id="1-2-卸载命令">1.2 卸载命令</h2>
+
+<pre><code>[root@studyCentOS7 ~]# rpm -qa|grep mariadb
+mariadb-libs-5.5.47-1.el7_2.x86_64
+[root@studyCentOS7 ~]# rpm -e mariadb-libs-5.5.47-1.el7_2.x86_64 --nodeps
+[root@studyCentOS7 ~]# rpm -qa|grep mariadb
+[root@studyCentOS7 ~]#
+
+</code></pre>
+
+<h1 id="2-上传">2 上传</h1>
+
+<p>略</p>
+
+<h1 id="3-解压">3 解压</h1>
+
+<pre><code>// 解压
+[root@studyCentOS7 software_bak]#  tar xvf mysql-5.7.16-1.el7.x86_64.rpm-bundle.tar
+mysql-community-libs-compat-5.7.16-1.el7.x86_64.rpm
+mysql-community-devel-5.7.16-1.el7.x86_64.rpm
+mysql-community-minimal-debuginfo-5.7.16-1.el7.x86_64.rpm
+mysql-community-libs-5.7.16-1.el7.x86_64.rpm
+mysql-community-common-5.7.16-1.el7.x86_64.rpm
+mysql-community-embedded-compat-5.7.16-1.el7.x86_64.rpm
+mysql-community-test-5.7.16-1.el7.x86_64.rpm
+mysql-community-embedded-devel-5.7.16-1.el7.x86_64.rpm
+mysql-community-server-minimal-5.7.16-1.el7.x86_64.rpm
+mysql-community-server-5.7.16-1.el7.x86_64.rpm
+mysql-community-client-5.7.16-1.el7.x86_64.rpm
+mysql-community-embedded-5.7.16-1.el7.x86_64.rpm
+
+// 创建目录并移动解压出来的文件
+[root@studyCentOS7 software_bak]# mkdir mysql5.7.16
+[root@studyCentOS7 software_bak]# mv mysql-community-* ./mysql5.7.16/
+
+// 列出所有的文件
+[root@studyCentOS7 mysql5.7.16]# ll
+总用量 556624
+-rw-r--r--. 1 7155 31415  25034716 9月  29 2016 mysql-community-client-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415    277604 9月  29 2016 mysql-community-common-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415   3771664 9月  29 2016 mysql-community-devel-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415  45342240 9月  29 2016 mysql-community-embedded-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415  23923288 9月  29 2016 mysql-community-embedded-compat-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415 125563004 9月  29 2016 mysql-community-embedded-devel-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415   2237116 9月  29 2016 mysql-community-libs-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415   2112700 9月  29 2016 mysql-community-libs-compat-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415  51541740 9月  29 2016 mysql-community-minimal-debuginfo-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415 159295840 9月  29 2016 mysql-community-server-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415  14000136 9月  29 2016 mysql-community-server-minimal-5.7.16-1.el7.x86_64.rpm
+-rw-r--r--. 1 7155 31415 116862620 9月  29 2016 mysql-community-test-5.7.16-1.el7.x86_64.rpm
+</code></pre>
+
+<h1 id="4-安装与配置">4 安装与配置</h1>
+
+<h2 id="4-1-安装">4.1 安装</h2>
+
+<pre><code>[root@studyCentOS7 mysql5.7.16]#  rpm -ivh mysql-community-common-5.7.16-1.el7.x86_64.rpm
+警告：mysql-community-common-5.7.16-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+准备中...                          ################################# [100%]
+正在升级/安装...
+   1:mysql-community-common-5.7.16-1.e################################# [100%]
+
+[root@studyCentOS7 mysql5.7.16]# rpm -ivh mysql-community-libs-5.7.16-1.el7.x86_64.rpm
+警告：mysql-community-libs-5.7.16-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+准备中...                          ################################# [100%]
+正在升级/安装...
+   1:mysql-community-libs-5.7.16-1.el7################################# [100%]
+
+[root@studyCentOS7 mysql5.7.16]# rpm -ivh mysql-community-client-5.7.16-1.el7.x86_64.rpm
+警告：mysql-community-client-5.7.16-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+准备中...                          ################################# [100%]
+正在升级/安装...
+   1:mysql-community-client-5.7.16-1.e################################# [100%]
+
+[root@studyCentOS7 mysql5.7.16]# rpm -ivh mysql-community-server-5.7.16-1.el7.x86_64.rpm
+警告：mysql-community-server-5.7.16-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+准备中...                          ################################# [100%]
+正在升级/安装...
+   1:mysql-community-server-5.7.16-1.e################################# [100%]
+</code></pre>
+
+<h2 id="4-2-初始化并登录测试">4.2 初始化并登录测试</h2>
+
+<p>如果是以 mysql 身份运行，则可以去掉 &ndash;user 选项。
+另外 &ndash;initialize 选项默认以“安全”模式来初始化，则会为 root 用户生成一个密码并将该密码标记为过期，登陆后你需要设置一个新的密码，而使用 &ndash;initialize-insecure 命令则不使用安全模式，则不会为root 用户生成一个密码。</p>
+
+<pre><code>// 初始化数据库
+[root@studyCentOS7 mysql5.7.16]# mysqld --initialize --user=mysql
+
+// 查看密码，最后一行就是密码
+[root@studyCentOS7 mysql5.7.16]# cat /var/log/mysqld.log
+2017-11-29T03:06:29.971884Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2017-11-29T03:06:30.186439Z 0 [Warning] InnoDB: New log files created, LSN=45790
+2017-11-29T03:06:30.239928Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.
+2017-11-29T03:06:30.321974Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 4c0c1fa1-d4b2-11e7-b57d-000c294e37eb.
+2017-11-29T03:06:30.323108Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2017-11-29T03:06:30.324861Z 1 [Note] A temporary password is generated for root@localhost: yvw&gt;IycC_8&lt;T
+
+// 查看MySQL服务是否启动
+[root@studyCentOS7 mysql5.7.16]# systemctl status mysqld
+● mysqld.service - MySQL Server
+   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+// 启动mysql服务
+[root@studyCentOS7 mysql5.7.16]# systemctl start mysqld
+[root@studyCentOS7 mysql5.7.16]# systemctl status mysqld
+● mysqld.service - MySQL Server
+   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
+   Active: active (running) since 三 2017-11-29 11:11:33 CST; 1s ago
+  Process: 9702 ExecStart=/usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid $MYSQLD_OPTS (code=exited, status=0/SUCCESS)
+  Process: 9685 ExecStartPre=/usr/bin/mysqld_pre_systemd (code=exited, status=0/SUCCESS)
+ Main PID: 9706 (mysqld)
+   CGroup: /system.slice/mysqld.service
+           └─9706 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid
+
+11月 29 11:11:32 studyCentOS7.203 systemd[1]: Starting MySQL Server...
+11月 29 11:11:33 studyCentOS7.203 systemd[1]: Started MySQL Server.
+
+// 使用root用户登录MySQL进行测试
+[root@studyCentOS7 mysql5.7.16]# mysql -uroot -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.16
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&gt;
+
+// 此刻做任何事情都是不允许的，因为使用的是默认密码登录的，MySQL强制你修改默认密码
+mysql&gt; show databases;
+ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
+</code></pre>
+
+<h2 id="4-3-配置">4.3 配置</h2>
+
+<h3 id="4-3-1-修改root用户密码">4.3.1 修改root用户密码</h3>
+
+<pre><code>mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY 'northmeter@2017&amp;*(';
+Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+
+<h3 id="4-3-2-创建用户">4.3.2 创建用户</h3>
+
+<pre><code>// 1. 创建能够在任意主机上登录的northmeter用户
+mysql&gt; create user 'northmeter'@'%' identified by 'northmeter!@#';
+Query OK, 0 rows affected (0.00 sec)
+
+// 2. 为northmeter用户赋予增删改查的权限
+mysql&gt; grant select, insert, update, delete on *.* to 'northmeter'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+// 3. 刷新权限
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+********************************************************************
+// 1. 创建管理员用户
+mysql&gt; create user 'admin'@'%' identified by 'admin@2017!@#';
+Query OK, 0 rows affected (0.00 sec)
+
+// 2. 赋予权限
+mysql&gt; grant all on *.* to 'admin'@'%' identified by 'admin@2017!@#';
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+// 3. 刷新权限
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+create user 'admin'@'%' identified by 'admin@2017!@#';
+grant all on *.* to 'admin'@'%' identified by 'admin@2017!@#';
+flush privileges;
+
+</code></pre>
+
+<h3 id="4-3-3-为root赋予全程登录权限">4.3.3 为root赋予全程登录权限</h3>
+
+<p><strong>说明：</strong> <em>此过程非必须，应该是最好不要。</em></p>
+
+<pre><code>// 为root用户赋予远程登录的权限
+mysql&gt; grant all on *.* to 'root'@'%' identified by 'northmeter@2017&amp;*(';
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+// 刷新权限
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+
+<h3 id="4-3-4-开放3306端口">4.3.4 开放3306端口</h3>
+
+<pre><code>[root@studyCentOS7 mysql5.7.16]# firewall-cmd --zone=public --add-port=3306/tcp --permanent
+success
+[root@studyCentOS7 mysql5.7.16]# firewall-cmd --reload
+success
+</code></pre>
+
+<h3 id="4-3-5-软件配置信息">4.3.5 软件配置信息</h3>
+
+<pre><code>[root@200 etc]# cat my.cnf
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html
+
+[mysqld]
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+#
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+# log_bin
+#
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+# join_buffer_size = 128M
+# sort_buffer_size = 2M
+# read_rnd_buffer_size = 2M
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+
+# 设置不区分大小写
+lower_case_table_names=1
+</code></pre>
+
+<h1 id="5-补充">5 补充</h1>
+
+<h2 id="5-1-创建用户">5.1 创建用户</h2>
+
+<p>命令格式</p>
+
+<pre><code>CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+</code></pre>
+
+<p>例子</p>
+
+<pre><code>CREATE USER 'dog'@'localhost' IDENTIFIED BY '123456';
+
+CREATE USER 'dog2'@'localhost' IDENTIFIED BY '';
+</code></pre>
+
+<p>命令讲解：</p>
+
+<pre><code>username - 你将创建的用户名
+host - 指定该用户在哪个主机上可以登陆，此处的&quot;localhost&quot;，是指该用户只能在本地登录，不能在另外一台机器上远程登录，如果想远程登录的话，将&quot;localhost&quot;改为&quot;%&quot;，表示在任何一台电脑上都可以登录;也可以指定某台机器可以远程登录;
+password - 该用户的登陆密码,密码可以为空,如果为空则该用户可以不需要密码登陆服务器。
+</code></pre>
+
+<h2 id="5-2-授权">5.2 授权</h2>
+
+<pre><code>命令:GRANT privileges ON databasename.tablename TO 'username'@'host'
+
+PS: privileges - 用户的操作权限,如SELECT , INSERT , UPDATE 等(详细列表见该文最后面).如果要授予所的权限则使用ALL.;databasename - 数据库名,tablename-表名,如果要授予该用户对所有数据库和表的相应操作权限则可用*表示, 如*.*.
+
+例子: GRANT SELECT, INSERT ON mq.* TO 'dog'@'localhost';
+</code></pre>
+
+<h2 id="5-3-创建用户同时授权">5.3 创建用户同时授权</h2>
+
+<pre><code>mysql&gt; grant all privileges on mq.* to test@localhost identified by '1234';
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql&gt; flush privileges;
+Query OK, 0 rows affected (0.01 sec)
+
+PS:必须执行flush privileges;
+
+否则登录时提示：ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES )
+</code></pre>
+
+<h2 id="5-4-其他">5.4 其他</h2>
+
+<pre><code>四.设置与更改用户密码
+
+命令:SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
+
+例子: SET PASSWORD FOR 'dog2'@'localhost' = PASSWORD(&quot;dog&quot;);
+
+五.撤销用户权限
+
+      命令: REVOKE privilege ON databasename.tablename FROM 'username'@'host';
+
+     说明: privilege, databasename, tablename - 同授权部分.
+
+      例子: REVOKE SELECT ON mq.* FROM 'dog2'@'localhost';
+
+PS: 假如你在给用户'dog'@'localhost''授权的时候是这样的(或类似的):GRANT SELECT ON test.user TO 'dog'@'localhost', 则在使用REVOKE SELECT ON *.* FROM 'dog'@'localhost';命令并不能撤销该用户对test数据库中user表的SELECT 操作.相反,如果授权使用的是GRANT SELECT ON *.* TO 'dog'@'localhost';则REVOKE SELECT ON test.user FROM 'dog'@'localhost';命令也不能撤销该用户对test数据库中user表的Select 权限.
+
+      具体信息可以用命令SHOW GRANTS FOR 'dog'@'localhost'; 查看.
+
+六.删除用户
+
+      命令: DROP USER 'username'@'host';
+
+七.查看用户的授权
+
+mysql&gt; show grants for dog@localhost;
++---------------------------------------------+
+| Grants for dog@localhost |
++---------------------------------------------+
+| GRANT USAGE ON *.* TO 'dog'@'localhost' |
+| GRANT INSERT ON `mq`.* TO 'dog'@'localhost' |
++---------------------------------------------+
+2 rows in set (0.00 sec)
+
+PS:GRANT USAGE:mysql usage权限就是空权限，默认create user的权限，只能连库，啥也不能干
+</code></pre>
+
+		</div>
+		
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/devops/" rel="tag">DevOps</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/mysql/" rel="tag">mysql</a></li>
+	</ul>
+</div>
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="天晴小猪 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 天晴小猪</span>
+	</div>
+	<div class="authorbox__description">
+		我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
+	</div>
+</div>
+
+	
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/dev/install/install-oracle-jdk/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Centos7安装OracleJdk</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/dev/nginx-upstream/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Nginx Upstream</p></a>
+	</div>
+</nav>
+	
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zeanzai" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</main>
+<aside class="sidebar"><div class="widget-search widget">
+	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+	
+	
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/dev">Dev</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/acid" title="Acid">Acid (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7" title="Centos7">Centos7 (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7-logs" title="Centos7 logs">Centos7 logs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/contos7" title="Contos7">Contos7 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mbp" title="Mbp">Mbp (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oracle-jdk" title="Oracle jdk">Oracle jdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/redis" title="Redis">Redis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/springboot" title="Springboot">Springboot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh" title="Ssh">Ssh (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/string" title="String">String (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips" title="Tips">Tips (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9d%a2%e7%bb%8f" title="面经">面经 (1)</a>
+	</div>
+</div><div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Sina Weibo" rel="noopener noreferrer" href="https://weibo.com/zeanzai" target="_blank">
+				<svg t="1518502970248" class="widget-social__link-icon icon-weibo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="808" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M712.779 484.273c0-8.579 75.506-78.938 0-123.555s-214.506 24.025-209.359 15.443c60.062-104.679-25.741-137.283-68.643-137.283-102.962 0-374.098 229.952-374.098 375.813s180.186 264.273 403.271 264.273 401.554-118.406 401.554-264.273c0-123.555-152.73-123.555-152.73-130.419zM474.246 798.311c-140.717 20.592-267.705-39.47-281.43-133.852s90.95-185.333 233.382-205.926c142.433-20.592 267.705 39.47 281.43 133.852s-90.95 185.333-233.382 205.926z" fill="#FFF" p-id="809"></path>
+					<path d="M800.297 434.506h17.163c10.297 0 20.592-8.579 22.308-18.876 0 0 18.876-77.222-27.457-120.125s-108.113-27.457-108.113-27.457c-10.297 1.716-18.876 12.014-18.876 22.308v6.863c0 10.297 8.579 18.876 18.876 17.163 0 0 51.483-6.863 77.222 24.025s5.149 78.938 5.149 78.938c-3.434 10.297 3.434 17.163 13.728 17.163z" fill="" p-id="810"></path>
+					<path d="M899.826 207.989c-85.804-82.37-212.788-70.359-212.788-70.359-15.443 0-27.457 13.728-27.457 29.171v13.728c0 15.443 12.014 27.457 29.171 27.457 0 0 121.84-13.728 173.323 61.778s29.171 169.888 29.171 169.888c-1.716 15.443 8.579 27.457 24.025 27.457h12.014c15.443 0 30.89-12.014 32.605-27.457-1.716 0 25.741-147.58-60.062-231.666zM398.74 510.014c-84.086 17.163-142.433 87.519-128.703 159.594s94.384 116.691 178.469 99.53 142.433-87.519 128.703-159.594-94.384-116.691-178.469-99.53zM391.875 698.779c-25.741 12.014-54.915 5.149-63.493-13.728-8.579-20.592 5.149-46.333 30.89-58.347s54.915-6.863 63.493 13.728c8.579 20.592-5.149 46.333-30.89 58.347zM451.938 638.717c-15.443 0-27.457-12.014-25.741-25.741 0-13.728 12.014-25.741 25.741-25.741s25.741 10.297 25.741 25.741c0 13.728-12.014 25.741-25.741 25.741z" fill="#FFF" p-id="811"></path>
+				</svg>
+				<span>Weibo</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="zhihu" rel="noopener noreferrer" href="https://www.zhihu.com/people/zeanzai/"
+			 target="_blank">
+				<svg t="1518502950969" class="widget-social__link-icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 p-id="893" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"
+					 fill="#FFF" p-id="894"></path>
+				</svg>
+				<span>zhihu</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:438123371@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>438123371@qq.com</span>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+</aside>
+	</div>
+		<footer class="footer">
+			<div class="container container-inner">
+				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+		label: "Menu",
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
