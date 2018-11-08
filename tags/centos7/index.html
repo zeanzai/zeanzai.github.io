@@ -41,6 +41,17 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126218706-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container-outer">
@@ -181,11 +192,11 @@ Centos7默认开通了80端口和22端口。
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/config-https/">在Nginx上面配置Https</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nexus/">在Windows上安装Nexus，并使用nexus上传jar包</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pig/prepareenviroment/">Pig开源框架学习之环境搭建</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter02/">第二篇 硬件通识</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter01/">第一篇 前言</a></li>
 		</ul>
 	</div>
 </div>
@@ -198,7 +209,9 @@ Centos7默认开通了80端口和22端口。
 			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/pig">Pig</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/zhuanlan">Zhuanlan</a></li>
 		</ul>
 	</div>
 </div>
@@ -212,15 +225,17 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https" title="Https">Https (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/install" title="Install">Install (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
@@ -228,6 +243,7 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nexus" title="Nexus">Nexus (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
@@ -240,6 +256,7 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zhuanlan" title="Zhuanlan">Zhuanlan (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>

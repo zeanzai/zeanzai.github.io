@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zeanzai.me/post/dev/config-https/</loc>
+    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/dev/install/install-nexus/</loc>
+    <lastmod>2018-11-01T10:36:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/pig/prepareenviroment/</loc>
+    <lastmod>2018-10-17T16:22:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/zhuanlan/chapter02/</loc>
+    <lastmod>2018-10-16T08:48:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/zhuanlan/chapter01/</loc>
+    <lastmod>2018-10-15T11:46:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/zhuanlan/outline/</loc>
+    <lastmod>2018-10-15T10:59:20+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/post/dev/acid/</loc>
     <lastmod>2018-10-11T11:09:31+08:00</lastmod>
   </url>
@@ -189,7 +219,7 @@
   
   <url>
     <loc>https://zeanzai.me/post/</loc>
-    <lastmod>2018-10-11T11:09:31+08:00</lastmod>
+    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
   </url>
   
   <url>
@@ -242,7 +272,7 @@
   
   <url>
     <loc>https://zeanzai.me/categories/dev/</loc>
-    <lastmod>2018-10-11T11:09:31+08:00</lastmod>
+    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -254,7 +284,7 @@
   
   <url>
     <loc>https://zeanzai.me/tags/devops/</loc>
-    <lastmod>2018-10-11T11:07:14+08:00</lastmod>
+    <lastmod>2018-11-01T10:36:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -301,6 +331,12 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.me/tags/https/</loc>
+    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/tags/hugo/</loc>
     <lastmod>2018-10-01T13:25:30+08:00</lastmod>
     <priority>0</priority>
@@ -313,8 +349,14 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.me/tags/install/</loc>
+    <lastmod>2018-10-17T16:22:57+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/categories/install/</loc>
-    <lastmod>2018-10-11T11:07:14+08:00</lastmod>
+    <lastmod>2018-11-01T10:36:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -367,6 +409,12 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.me/tags/nexus/</loc>
+    <lastmod>2018-11-01T10:36:24+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/tags/nginx/</loc>
     <lastmod>2018-10-11T09:21:46+08:00</lastmod>
     <priority>0</priority>
@@ -387,6 +435,12 @@
   <url>
     <loc>https://zeanzai.me/tags/oracle-jdk/</loc>
     <lastmod>2018-10-09T16:32:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/categories/pig/</loc>
+    <lastmod>2018-10-17T16:22:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -451,8 +505,20 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.me/tags/zhuanlan/</loc>
+    <lastmod>2018-10-16T08:48:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/categories/zhuanlan/</loc>
+    <lastmod>2018-10-16T08:48:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/</loc>
-    <lastmod>2018-10-11T11:09:31+08:00</lastmod>
+    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,108 @@
     <description>Recent content on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 Oct 2018 11:09:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Nov 2018 14:24:07 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>在Nginx上面配置Https</title>
+      <link>https://zeanzai.me/post/dev/config-https/</link>
+      <pubDate>Thu, 08 Nov 2018 14:24:07 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/config-https/</guid>
+      <description>安装Nginx 安装Nginx，可以参考。特别注意安装的时候要把https的支持模块安装上去。 也就是下面的内容：
+&amp;gt; --with-http_stub_status_module \ &amp;gt; --with-http_gzip_static_module \ &amp;gt; --with-http_ssl_module  配置  在相关网络服务商平台上面申请ssl证书，并按照要求操作文件 将ssl证书上传到Nginx的相关位置 在Nginx的配置文件中添加下面内容  server { listen 80; server_name abc.google.com; location / { rewrite ^(.*) https://abc.google.com/$1 permanent; # 表示把指向http的请求转发到https上 } } server { listen 443 ssl; server_name abc.google.com; ssl_certificate /xxx/xxx/nginx/conf/cert/abc/abc.google.com_ca.crt; # 第二步ssl证书上传的位置 ssl_certificate_key /xxx/xxx/nginx/conf/cert/abc/abc.google.com.key; # 第二步ssl证书上传的位置 ssl_session_cache shared:SSL:1m; ssl_session_timeout 5m; ssl_ciphers ALL:!DH:!EXPORT:!RC4:+HIGH:+MEDIUM:!LOW:!aNULL:!eNULL; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_prefer_server_ciphers on; location / { root html/abc; # 网站存放位置 index index.</description>
+    </item>
+    
+    <item>
+      <title>在Windows上安装Nexus，并使用nexus上传jar包</title>
+      <link>https://zeanzai.me/post/dev/install/install-nexus/</link>
+      <pubDate>Thu, 01 Nov 2018 10:36:24 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/install/install-nexus/</guid>
+      <description>1. 私服简介 私服是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载。
+ 
+我们可以使用专门的 Maven 仓库管理软件来搭建私服，比如：Apache Archiva，Artifactory，Sonatype Nexus。这里我们使用 Sonatype Nexus。
+2. nexus简介与安装 2.1 简介 Nexus 专业版是需要付费的.
+2.2 下载 因为试验平台为Windows平台，所以下载nexus-latest-bundle.zip，下载地址在这。 2.3 解压 2.4 配置环境变量 2.5 使用管理员角色打开cmd，执行命令 特别提醒使用管理员角色打开cmd，不然在执行install命令时，会报没有权限错误。 2.6 打开服务 2.7 测试 到此说明nexus安装成功。
+3. nexus中的概念 点击右上角 Log In，使用用户名：admin ，密码：admin123 登录，可使用更多功能.
+3.1 预置仓库类型 登陆Nexus，在左边菜单栏里选择Repositories，然后会出现右边的画面，右边上半部分是列出来的repository，黑体字是类型为group的repository。 这里简单介绍下几种repository的类型：
+ hosted，本地仓库，通常我们会部署自己的构件到这一类型的仓库。比如公司的第二方库。 proxy，代理仓库，它们被用来代理远程的公共仓库，如maven中央仓库。 group，仓库组，用来合并多个hosted/proxy仓库，当你的项目希望在多个repository使用资源时就不需要多次引用了，只需要引用一个group即可。 virtual：虚拟仓库  3.2 三种本地仓库 我们前面讲到类型为hosted的为本地仓库，Nexus预置了3个本地仓库，分别是Releases, Snapshots, 3rd Party. 分别讲一下这三个预置的仓库都是做什么用的:
+ Releases:
+这里存放我们自己项目中发布的构建, 通常是Release版本的, 比如我们自己做了一个FTP Server的项目, 生成的构件为ftpserver.war, 我们就可以把这个构建发布到Nexus的Releases本地仓库. 关于符合发布后面会有介绍. Snapshots:</description>
+    </item>
+    
+    <item>
+      <title>Pig开源框架学习之环境搭建</title>
+      <link>https://zeanzai.me/post/pig/prepareenviroment/</link>
+      <pubDate>Wed, 17 Oct 2018 16:22:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/pig/prepareenviroment/</guid>
+      <description> 1. redis的安装 1.1 下载window版本redis 之前redis的官网上面有window版本的redis安装包，现在没有了，只能从GitHub上面下载：下载地址。
+下载后文件名为： Redis-x64-3.2.100.zip
+1.2 安装、配置与测试  解压 Redis-x64-3.2.100.zip 到安装目录即可。 我的解压地址为： D:\packages\devtools\Redis-x64-3.2.100；解压完成后，即可在命令行中启动redis，但是命令行窗口关闭，redis就会关闭；因此，需要将redis配置为系统服务。
+配置Redis服务 在 file explore 的地址栏内，输入cmd打开cmd.exe命令行。
+在命令行中输入 redis-server --service-install redis.windows-service.conf --loglevel verbose完成服务的注册
+常用的redis服务命令  卸载服务：redis-server --service-uninstall 开启服务：redis-server --service-start 停止服务：redis-server --service-stop  启动服务并测试  2. rabbitmq的安装 2.1 erlang的安装  下载erlang的安装包 下载地址
+ 
+ </description>
+    </item>
+    
+    <item>
+      <title>第二篇 硬件通识</title>
+      <link>https://zeanzai.me/post/zhuanlan/chapter02/</link>
+      <pubDate>Tue, 16 Oct 2018 08:48:37 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/zhuanlan/chapter02/</guid>
+      <description>  设备总览 设备分类，类比哪些人体器官 用一个例子描述整个过程，并类比人体器官整个处理过程 买电脑的一些性能指标及方法 总结  （一）写在前面 今天我决定带领大家走进计算机的硬件设备。我们了解到，计算机硬件是我们使用计算机的载体，我们对计算机的操作，其实是我们操作计算机硬件设备，完成的一个交互的过程。当我们买一台个人pc机，首先我们考虑的也是硬件配置，那么一台计算机有哪些硬件设备呢？这些硬件设备又有什么作用？它们是如何协同工作完成人们操作、达成与人们交互效果的呢？
+在正式开始之前，我想先说几句题外话。比着那些只是简单粗暴的誊写已有的、晦涩难懂的概念，我更倾向于使用类比（或称比喻）的方法，由浅入深的介绍这些硬件的种类及作用，最后以各个硬件协同工作的例子，将所有的硬件串起来。因为我相信这种效果会加深大家对硬件设备的理解，也不容易忘记，更重要的是，这样能够消除那些专业术语带来的枯燥和乏味，使整个过程变得趣味起来。因此，在这个过程中，我的措辞可能不够准确，也不够严谨，请大家见谅。另外，在写这些文章的时候，我也倾向于使用一种朋友之间相互探讨、相互交流的方式去写，目的就是以一种通俗、人人可懂的方式进行科普。
+此外，为什么我不用“电脑”这个词来替代大家平常用的那些设备？原因是因为，后面我打算写一篇文章，单独来介绍计算机的分配，我们平时接触到的那些被我们称为电脑的东西，只是所有计算机中的一部分，而我这篇文章介绍的计算机硬件设备，并不是单独针对电脑这种设备，而是针对所有的计算机设备来讲的。所以，我没有用“电脑”这个词语。
+啰嗦了那么多，现在言归正传。
+（二）为什么要了解硬件？ 要了解计算机的硬件设备，那我们就必须知道什么是硬件设备。通俗的讲，我们接触计算机时，所有能够摸得到的、看得见的东西，就是硬件。那我们为什么要了解计算机的硬件设备呢？那我问你，当我们早上起床去买早餐的时候，看到我们想要吃的油条，为什么要看一下油条的长度、色泽、温度甚至所用油的质量？当我们买一件衣服的时候，为什么会货比三家，然后挑自己能够接受的价格购买？这就是为什么我们要了解计算机的硬件设备的原因。因为我们要了解计算机的质量（或称品质）和价格等因素，而这些因素直接影响着我们使用计算机时，计算机给我们带来的体验（这些体验直观上讲就是计算机的运行速度、画质清晰度等）。所以，从这种意义上来讲，我们有必要了解计算机硬件设备。
+另外一个要了解计算机硬件设备的原因，在于了解这些硬件设备之后，能够更好的操作计算机，也能够在计算机出现问题的时候，能够较为准确的找出原因，这样也不至于被那些维修商们坑来坑去。当然，这里还有很多其他的重要意义，需要大家去慢慢发掘。
+（三）一个计算机有哪些硬件设备？ 百度百科上这样介绍计算机硬件的分类（计算机分为：运算器、控制器、存储器、输入设备和输出设备）。我从来不愿意做严守规矩的小乖乖，所以，我也不打算用这些冠冕堂皇的术语介绍。
+小明去一家新公司面试成功了，周一去上班了，然后他坐到自己的办公桌前，首先映入眼帘的是什么？“电脑屏幕、鼠标、键盘！”对，就是这三样东西。这三样儿小东西就是
+（四）计算机跟人有什么关系？ 计算机的触觉器官（键盘、鼠标） 计算机的脸面（显示器） 计算机的身体（主机）
+计算机的（）
+（五）我们操作计算机，其实是在操作什么？ （六）买个人计算机的时候，有哪些性能指标？ （七）预告 如果说计算机是一个人，那么计算机的硬件就应该是一个看得见摸得着的身体。而计算机软件就是这个身体的灵魂。当我们跟一个人交流的时候，首先，要看看这个人到底长什么样子：是不是残疾？聋不聋？哑不哑？是否失明？身体是否有残缺？
+这就是为什么我们需要先了解计算机硬件的一个重要原因。
+官方说法计算机分为：运算器、控制器、存储器、输入设备和输出设备，这种理解晦涩又难懂，我们不这样去理解，我们从一个人的整体角度来理解。
+输入设备 类比人，眼睛、耳朵、鼻子等这些具有触觉、嗅觉、听觉的感官，就是计算机的输入设备，它们完成了信息的手机。人们利用了眼睛看到物体的成像，用鼻子嗅闻物体的气息，用耳朵听物体发出的声音……同理，所谓的输入设备是什么呢？输入设备的作用是用来完成计算机外部信息的收集的。计算机的键盘和鼠标以及一些外接设备（如话筒等），都是计算机的输入设备。
+触觉器官（输入设备） 输出设备 </description>
+    </item>
+    
+    <item>
+      <title>第一篇 前言</title>
+      <link>https://zeanzai.me/post/zhuanlan/chapter01/</link>
+      <pubDate>Mon, 15 Oct 2018 11:46:06 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/zhuanlan/chapter01/</guid>
+      <description>我敢说：计算机是人类截止到目前来说，算是我们平常人能够接触到的最伟大的智慧产物。  （一）为什么要写这么大胆的文章？ 作为程序员，你是否遇到过这样的场景？
+女朋友：“我的电脑，为什么会越来越慢？” 你：“那是因为你电脑系统越来越臃肿了……” 女朋友：“那为什么系统会越来越臃肿了啊？” 你：“因为你操作不规范啊……” 女朋友：“我怎么操作不规范了，你说清楚！！！” 你：“……”  哦，文章的方向错了，好吧，你没有女朋友，我知道了。（手动滑稽）
+作为程序员，我确实被类似的问题围绕着，整天，我都一遍一遍的重复着同样的回答。我不敢怒，怕单身了。参加工作后，我也总是看到过一些计算机从业人员，他们的操作习惯，他们的计算机操作水平，他们对计算机的了解程度，真的，说实话，我不敢恭维。于是，再纠结了很久很久之后，我在想，能不能总结出一个教程，给非计算机专业又经常需要使用计算机的人员，或者是计算机的爱好者一些科普知识呢？说干就干，我也终于在女朋友的“鼓励（yaoxie）”下，开始了。于是，我决定手把手教女朋友用电脑。
+（二）从哪些角度了解计算机？ 当我向别人讨教问题的时候，我总倾向于问他获取那些我不知道的信息的渠道，我也总是倾向于问他们为什么这么想，而不是简单的问他们问题的答案。所以在跟大家科普的过程中，我也倾向于教大家一些方法，而不是直接告诉你结果。
+我决定从下面几个方面给大家科普计算机的知识：
+ 硬件通识 主要介绍常见的一些硬件设备，通过类比着人体器官，来说明各个硬件的主要作用以及各个硬件设备之间的相互联系； 系统通识 将给大家介绍，操作系统的作用、目前全球范围内比较流行的操作系统种类以及不同操作系统之间的共性特点； 习惯设置 我将主要通过介绍一些常用的操作习惯及各个操作习惯给计算机使用者带来的好处； 软件通识 我将主要给大家科普计算机操作系统的常用术语以及各自作用； 会用软件 我将给大家讲解日常工作中的一些常用软件的安装与设置及各自的操作小技巧……  此专栏的文章可能不会按照上面的顺序去写，甚至连题目都不一定跟上面的一致。但是这个专栏的文章内容，会始终围绕上面的几个主题去写。
+（三）要达成的目标 首先声明：在后续的篇章中，我不敢保证一些术语比较准确，甚至有些时候，为了方便大家理解，我会故意使用一些不符合规范的术语，其目的是为了便于大家理解。在这个专栏结束后，我希望大家通过阅读这些文章后，能够对计算机达到入门的级别，如果说入门级别是一个抽象的概念，那换种说法，我希望大家的电脑以后不会越用越卡，这是我的目标，也是我的愿景。
+（四）问题与反馈 之所以放到专栏里面，是希望能够跟大家不断的沟通和交流，所以也希望后续大家有什么问题，可以在评论中，跟我尽心沟通和交流。</description>
+    </item>
+    
+    <item>
+      <title>手把手教女朋友学电脑</title>
+      <link>https://zeanzai.me/post/zhuanlan/outline/</link>
+      <pubDate>Mon, 15 Oct 2018 10:59:20 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/zhuanlan/outline/</guid>
+      <description>专栏名称： 手把手教女朋友用电脑#e64946; 专栏话题： 科技 相关背景： 在日新月异的今天， 掌握计算机的使用技巧已经成为现代人的必备技能； 计算机的普及也几乎已经达到了人手一台…… 但是， 你和你女朋友真的了解计算机吗？ 你和你女朋友真的将计算机作为高效的生产工具了吗？ 你和你女朋友真的会使用计算机吗？  《第一篇 了解硬件》
+硬件是我们看得见、摸得着的家伙什儿，那这些家伙什儿又有哪些呢？ 《第二篇 了解软件》
+软件是用来操作硬件的，那计算机 《第三篇 计算机套路》
+ 《第四篇 常用软件推荐》
+ 《第五篇 高效率软件推荐》
+ 《第六篇 那些常用的小技巧》
+  </description>
+    </item>
     
     <item>
       <title>ACID</title>

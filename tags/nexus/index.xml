@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nexus on 天晴小猪</title>
+    <link>https://zeanzai.me/tags/nexus/</link>
+    <description>Recent content in Nexus on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 01 Nov 2018 10:36:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/tags/nexus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在Windows上安装Nexus，并使用nexus上传jar包</title>
+      <link>https://zeanzai.me/post/dev/install/install-nexus/</link>
+      <pubDate>Thu, 01 Nov 2018 10:36:24 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/install/install-nexus/</guid>
+      <description>1. 私服简介 私服是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载。
+ 
+我们可以使用专门的 Maven 仓库管理软件来搭建私服，比如：Apache Archiva，Artifactory，Sonatype Nexus。这里我们使用 Sonatype Nexus。
+2. nexus简介与安装 2.1 简介 Nexus 专业版是需要付费的.
+2.2 下载 因为试验平台为Windows平台，所以下载nexus-latest-bundle.zip，下载地址在这。 2.3 解压 2.4 配置环境变量 2.5 使用管理员角色打开cmd，执行命令 特别提醒使用管理员角色打开cmd，不然在执行install命令时，会报没有权限错误。 2.6 打开服务 2.7 测试 到此说明nexus安装成功。
+3. nexus中的概念 点击右上角 Log In，使用用户名：admin ，密码：admin123 登录，可使用更多功能.
+3.1 预置仓库类型 登陆Nexus，在左边菜单栏里选择Repositories，然后会出现右边的画面，右边上半部分是列出来的repository，黑体字是类型为group的repository。 这里简单介绍下几种repository的类型：
+ hosted，本地仓库，通常我们会部署自己的构件到这一类型的仓库。比如公司的第二方库。 proxy，代理仓库，它们被用来代理远程的公共仓库，如maven中央仓库。 group，仓库组，用来合并多个hosted/proxy仓库，当你的项目希望在多个repository使用资源时就不需要多次引用了，只需要引用一个group即可。 virtual：虚拟仓库  3.2 三种本地仓库 我们前面讲到类型为hosted的为本地仓库，Nexus预置了3个本地仓库，分别是Releases, Snapshots, 3rd Party. 分别讲一下这三个预置的仓库都是做什么用的:
+ Releases:
+这里存放我们自己项目中发布的构建, 通常是Release版本的, 比如我们自己做了一个FTP Server的项目, 生成的构件为ftpserver.war, 我们就可以把这个构建发布到Nexus的Releases本地仓库. 关于符合发布后面会有介绍. Snapshots:</description>
+    </item>
+    
+  </channel>
+</rss>

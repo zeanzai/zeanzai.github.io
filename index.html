@@ -15,7 +15,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-11T11:09:31&#43;08:00"/>
+<meta property="og:updated_time" content="2018-11-08T14:24:07&#43;08:00"/>
 
 
 
@@ -41,6 +41,17 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126218706-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container-outer">
@@ -67,6 +78,139 @@
 
 
 	<main class="main list content" role="main"><article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/config-https/" rel="bookmark">在Nginx上面配置Https</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-11-08T14:24:07">2018-11-08</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			安装Nginx 安装Nginx，可以参考。特别注意安装的时候要把https的支持模块安装上去。 也就是下面的内容：
+&gt; --with-http_stub_status_module \ &gt; --with-http_gzip_static_module \ &gt; --with-http_ssl_module  配置  在相关网络服务商平台上面申请ssl证书，并按照要求操作文件  …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/config-https/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install/install-nexus/" rel="bookmark">在Windows上安装Nexus，并使用nexus上传jar包</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-11-01T10:36:24">2018-11-01</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			1. 私服简介 私服是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载。
+ 
+我们可以使用专门的 Maven 仓库管理软件来搭建私服，比如：Apache Archiva，Artifactory，Sonatype …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-nexus/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/pig/prepareenviroment/" rel="bookmark">Pig开源框架学习之环境搭建</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-17T16:22:57">2018-10-17</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/pig" rel="category">pig</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			 1. redis的安装 1.1 下载window版本redis 之前redis的官网上面有window版本的redis安装包，现在没有了，只能从GitHub上面下载：下载地址。
+下载后文件名为： Redis-x64-3.2.100.zip
+1.2 安装、配置与测试  解压 Redis-x64-3.2.100.zip 到安装目录即可。 我的解压地址为： …
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/zhuanlan/chapter02/" rel="bookmark">第二篇 硬件通识</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-16T08:48:37">2018-10-16</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/zhuanlan" rel="category">zhuanlan</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			  设备总览 设备分类，类比哪些人体器官 用一个例子描述整个过程，并类比人体器官整个处理过程 买电脑的一些性能指标及方法 总结  （一）写在前面 今天我决定带领大家走进计算机的硬件设备。我们了解到，计算机硬件是我们使用计算机的载体，我们对计算机的操作，其实是我们操作计算机硬件设备，完成的一个交互的过程。当我们买一台个人pc机，首先我们考虑的也是硬件配置，那么一台计算机有哪些硬件设备呢？这些硬件设备 …
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/zhuanlan/chapter01/" rel="bookmark">第一篇 前言</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-15T11:46:06">2018-10-15</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/zhuanlan" rel="category">zhuanlan</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			我敢说：计算机是人类截止到目前来说，算是我们平常人能够接触到的最伟大的智慧产物。  （一）为什么要写这么大胆的文章？ 作为程序员，你是否遇到过这样的场景？
+女朋友：“我的电脑，为什么会越来越慢？” 你：“那是因为你电脑系统越来越臃肿了……” 女朋友：“那为什么系统会越来越臃肿了啊？” 你：“因为你操作不规范啊……” 女朋友：“我怎么操作不规范了，你说清楚！！！” 你：“……”  哦，文章的方向错 …
+		</div>
+	</div>
+</article>
+<article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/zhuanlan/outline/" rel="bookmark">手把手教女朋友学电脑</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-10-15T10:59:20">2018-10-15</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/zhuanlan" rel="category">zhuanlan</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			专栏名称： 手把手教女朋友用电脑#e64946; 专栏话题： 科技 相关背景： 在日新月异的今天， 掌握计算机的使用技巧已经成为现代人的必备技能； 计算机的普及也几乎已经达到了人手一台…… 但是， 你和你女朋友真的了解计算机吗？ 你和你女朋友真的将计算机作为高效的生产工具了吗？ 你和你女朋友真的会使用计算机吗？  《第一篇 了解硬件》
+硬件是我们看得见、摸得着的家伙什儿，那这些家伙什儿又有哪些呢？ …
+		</div>
+	</div>
+</article>
+<article class="list__item post">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -162,158 +306,12 @@ server配置  添加用户并设置分享的文件目录 设置passive mode sett
 		</div>
 	</div>
 </article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/delete-openjdk/" rel="bookmark">Centos7上删除默认jdk</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T10:59:54">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			// 查看Java [root@localhost local]# java -version openjdk version &quot;1.8.0_101&quot; OpenJDK Runtime Environment (build 1.8.0_101-b13) OpenJDK 64-Bit Server VM (build 25.101-b13, mixed mode) // 查看有哪些 …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/delete-openjdk/">Read more…</a>
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/centos7-split-tomcat-log/" rel="bookmark">Centos7上面tomcat的日志分割</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T10:56:42">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			前言 笔者在进行试验时，有以下几个操作习惯，具体参考。
-Centos7默认开通了80端口和22端口。
-应用场景 tomcat7 在实际生产环境中，由于项目不断部署，Catalina.out文件达到了2G的大小，并且每次查询日志的时候需要查询整个文件，造成查询起来过于困难。
-希望：Catalina.out日志文件以日期划分。放置的位置为/home/logs/tomcat7目录下面。 …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/centos7-split-tomcat-log/">Read more…</a>
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/install/install-redis-cluster/" rel="bookmark">Centos7下安装Redis</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T10:40:03">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">Install</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			1. 准备 1.1 centos // 查看版本 [root@studyCentOS7 ~]# cat /etc/redhat-release CentOS Linux release 7.2.1511 (Core) // 查看位数 [root@studyCentOS7 ~]# getconf LONG_BIT 64  1.2 redis 下载地址，下载最近的stable版 …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/install/install-redis-cluster/">Read more…</a>
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/contos7-cron/" rel="bookmark">Contos7中Cron的使用</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T10:35:42">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			前言 笔者在进行试验时，有以下几个操作习惯，具体参考。
-Centos7默认开通了80端口和22端口。
-查看服务相关信息 $ systemctl status crond	// crond状态 $ systemctl is-enabled crond	// 是否开机自启  基础知识 Cron时间表达式详解 表达式概述 .---------------- minute (0 - 59)：代表分钟，取值 …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/contos7-cron/">Read more…</a>
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/study-centos-devops-logs/" rel="bookmark">学习Centos7时的操作日志</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T09:28:29">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			1 基础环境配置  ip：192.168.100.210 root：root1003 包放置地址：/opt/package 软件安装地址： /usr/setup  2 安装jdk1.8.0_111  解压 tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup
- 设置环境变量 vi /etc/profile 添加以下内容： …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/study-centos-devops-logs/">Read more…</a>
-		</div>
-	</div>
-</article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/how-to-devops/" rel="bookmark">运维工作手册</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-11T09:23:13">2018-10-11</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			前言 良好的运维习惯有很多优点： - 利于自己维护，利于后继者维护 - 对计算机服务器进行最小化改动 - 便于实现对计算机更好的管理
-良好的习惯 笔者工作使用的电脑是window平台，所以使用Windows平台下的软件工具连接到远程服务器上进行相对应的操作。下面是笔者的一些工作习惯：
- 使用filezilla工具进行上传 使用SecureCRT工具进行连接 使用editplus编辑较为复杂的文本文 …
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/dev/how-to-devops/">Read more…</a>
-		</div>
-	</div>
-</article>
 
 		
 
 		
 <div class="pagination">
-	<span class="pagination__item pagination__item--current">1/4</span>
+	<span class="pagination__item pagination__item--current">1/5</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/2/">»</a>
 </div>
 
@@ -328,11 +326,11 @@ Centos7默认开通了80端口和22端口。
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/config-https/">在Nginx上面配置Https</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nexus/">在Windows上安装Nexus，并使用nexus上传jar包</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pig/prepareenviroment/">Pig开源框架学习之环境搭建</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter02/">第二篇 硬件通识</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter01/">第一篇 前言</a></li>
 		</ul>
 	</div>
 </div>
@@ -345,7 +343,9 @@ Centos7默认开通了80端口和22端口。
 			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/pig">Pig</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/zhuanlan">Zhuanlan</a></li>
 		</ul>
 	</div>
 </div>
@@ -359,15 +359,17 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https" title="Https">Https (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/install" title="Install">Install (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
@@ -375,6 +377,7 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nexus" title="Nexus">Nexus (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
@@ -387,6 +390,7 @@ Centos7默认开通了80端口和22端口。
 		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zhuanlan" title="Zhuanlan">Zhuanlan (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>

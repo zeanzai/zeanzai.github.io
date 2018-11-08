@@ -15,7 +15,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-11T11:07:14&#43;08:00"/>
+<meta property="og:updated_time" content="2018-11-01T10:36:24&#43;08:00"/>
 
 
 
@@ -41,6 +41,17 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126218706-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container-outer">
@@ -70,6 +81,31 @@
 		<header class="page-header">
 			<h1 class="page-header__title">Devops</h1>
 		</header><article class="list__item post">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/dev/install/install-nexus/" rel="bookmark">在Windows上安装Nexus，并使用nexus上传jar包</a>
+			</h3><div class="list__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-11-01T10:36:24">2018-11-01</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/install" rel="category">install</a></span>
+</span>
+</div>
+		</header>
+		
+		<div class="list__excerpt post__content">
+			1. 私服简介 私服是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载。
+ 
+我们可以使用专门的 Maven 仓库管理软件来搭建私服，比如：Apache Archiva，Artifactory，Sonatype …
+		</div>
+		<div class="list__footer">
+			<a class="list__footer-readmore btn" href="/post/dev/install/install-nexus/">Read more…</a>
+		</div>
+	</div>
+</article>
+<article class="list__item post">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -283,26 +319,6 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 		</div>
 	</div>
 </article>
-<article class="list__item post">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/dev/get-macbookpro-cpu-type/" rel="bookmark">获取macbookpro的CPU型号</a>
-			</h3><div class="list__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-10-09T15:28:44">2018-10-09</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">Dev</a></span>
-</span>
-</div>
-		</header>
-		
-		<div class="list__excerpt post__content">
-			
-		</div>
-	</div>
-</article>
 
 
 		
@@ -323,11 +339,11 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/dev/acid/">ACID</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nginx-and-config/">Install Nginx and Config</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-image-server/">Centos7上安装图片服务器</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/filezilla-server-config/">在Windows上面使用filezillaserver分享文件</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/dev/delete-openjdk/">Centos7上删除默认jdk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/config-https/">在Nginx上面配置Https</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nexus/">在Windows上安装Nexus，并使用nexus上传jar包</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pig/prepareenviroment/">Pig开源框架学习之环境搭建</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter02/">第二篇 硬件通识</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/zhuanlan/chapter01/">第一篇 前言</a></li>
 		</ul>
 	</div>
 </div>
@@ -340,7 +356,9 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/pig">Pig</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/zhuanlan">Zhuanlan</a></li>
 		</ul>
 	</div>
 </div>
@@ -354,15 +372,17 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (16)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https" title="Https">Https (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/install" title="Install">Install (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
@@ -370,6 +390,7 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nexus" title="Nexus">Nexus (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
@@ -382,6 +403,7 @@ public class XssFilter implements Filter { @Override public void init(FilterConf
 		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zhuanlan" title="Zhuanlan">Zhuanlan (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>

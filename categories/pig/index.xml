@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pig on 天晴小猪</title>
+    <link>https://zeanzai.me/categories/pig/</link>
+    <description>Recent content in Pig on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 17 Oct 2018 16:22:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/categories/pig/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pig开源框架学习之环境搭建</title>
+      <link>https://zeanzai.me/post/pig/prepareenviroment/</link>
+      <pubDate>Wed, 17 Oct 2018 16:22:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/pig/prepareenviroment/</guid>
+      <description> 1. redis的安装 1.1 下载window版本redis 之前redis的官网上面有window版本的redis安装包，现在没有了，只能从GitHub上面下载：下载地址。
+下载后文件名为： Redis-x64-3.2.100.zip
+1.2 安装、配置与测试  解压 Redis-x64-3.2.100.zip 到安装目录即可。 我的解压地址为： D:\packages\devtools\Redis-x64-3.2.100；解压完成后，即可在命令行中启动redis，但是命令行窗口关闭，redis就会关闭；因此，需要将redis配置为系统服务。
+配置Redis服务 在 file explore 的地址栏内，输入cmd打开cmd.exe命令行。
+在命令行中输入 redis-server --service-install redis.windows-service.conf --loglevel verbose完成服务的注册
+常用的redis服务命令  卸载服务：redis-server --service-uninstall 开启服务：redis-server --service-start 停止服务：redis-server --service-stop  启动服务并测试  2. rabbitmq的安装 2.1 erlang的安装  下载erlang的安装包 下载地址
+ 
+ </description>
+    </item>
+    
+  </channel>
+</rss>
