@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
+	<title>在centos7上面搭建Jenkins自动化部署平台</title>
+	<meta name="description" content="在centos7上面搭建Jenkins自动化部署平台">
+	<meta name="keywords" content="[maven tomcat jenkins svn jdk]">
+	<meta name="generator" content="Hugo 0.46" />
+	<meta property="og:title" content="在centos7上面搭建Jenkins自动化部署平台" />
+<meta property="og:description" content="在centos7上面搭建Jenkins自动化部署平台" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.me/post/dev/jenkins-install-config/" />
+
+
+
+<meta property="article:published_time" content="2018-11-12T09:18:51&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-11-12T09:18:51&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+	<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
+
+<meta name="twitter:title" content="在centos7上面搭建Jenkins自动化部署平台"/>
+<meta name="twitter:description" content="在centos7上面搭建Jenkins自动化部署平台"/>
+<meta name="twitter:site" content="@zeanzaime"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126218706-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container-outer">
+		<header class="header">
+			<div class="container container-inner">
+				<div class="logo" role="banner">
+					<a class="logo__link" href="/" title="天晴小猪" rel="home">
+						<div class="logo__title">天晴小猪</div>
+						<div class="logo__tagline">我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。</div>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="https://zeanzai.me">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/about/">ABOUT</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">ARCHIVE</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper flex">
+
+
+<main class="main content">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">在centos7上面搭建Jenkins自动化部署平台</h1><div class="post__meta meta">
+<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+<time class="post__meta-date meta-date" datetime="2018-11-12T09:18:51">2018-11-12</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/dev" rel="category">dev</a></span>
+</span>
+</div>
+		</header><div class="post__content clearfix">
+			
+
+<h1 id="1-概述">1. 概述</h1>
+
+<h2 id="1-1-前言">1.1 前言</h2>
+
+<p>在互联网企业中，运维人员的职位不可获取，他们的主要工作是完成日常文件的备份、服务器状态的监控与日志。不同的企业之间，对运维人员的工作内容不尽相同，但是对于运维的思路却是有共通之处的。早期的运维人员大多数是通过手工方式执行的，但繁杂冗余的工作内容对于手工进行的运维方式无疑是一种人力资源的浪费。因此，<strong>自动化运维也就成了运维人员的必备本领</strong>。
+自动化运维出现之前的三个阶段：</p>
+
+<ol>
+<li>纯手工阶段： 此阶段运维人员通过手工方式，重复的进行软件的部署和运维。</li>
+<li>脚本阶段： 此阶段，运维人员已经开始写一些脚本文件，通过执行脚本文件来完成软件部署和运维。</li>
+<li>工具阶段： 此阶段，运维人员开始借助第三方工具，高效方便的完成运维工作。</li>
+</ol>
+
+<p>对于软件开发人员来说，掌握部分的运维（主要指软件部署、运营、维护、服务器监控和调优等）工作不仅能够让比运维人员更加熟悉软件系统的软件开发人员更好的定位问题、排查问题，也能够利用软件开发人员的专业技能，对服务器进行资源的监控与调优，所以，<strong>必备的运维知识对于软件开发人员也日益成为一种刚需</strong>。</p>
+
+<p>在传统的软件开发过程中，软件人员开发完系统后，往往会先将代码提交到版本控制服务器，然后通过构建工具对代码执行构建过程，最后将构建的结果提交到服务器进行发布部署。但对于测试环境来说，很多时候只更改了部分的项目代码，为了立即查看到修改后的结果，就需要立即部署到测试服务器查看效果（这个过程我们称为<strong>持续集成</strong>）。这个过程每提交一个BUG修复，就需要执行一遍。这对于软件开发人员来说无疑是重复的工作。<strong>为了提高这个过程（持续集成）的效率，我们需要借助自动化工具，这也是我们的这篇文章的主要内容。</strong></p>
+
+<h2 id="1-2-自动化工具">1.2 自动化工具</h2>
+
+<p>自动化工具有很多，有些是针对特定应用场景的、有些是针对特定语言的、也有些是针对特定系统平台的。这里我们着重介绍两款自动化工具。</p>
+
+<ol>
+<li><strong>Ansible</strong><br />
+Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。它是由Python语言编写而成。大多也使用于Python的系统部署场景中。</li>
+<li><strong>Jenkins</strong><br />
+Jenkins是一款由Java编写的开源的持续集成工具。它提供了软件开发的持续集成服务，主要运行在Servlet容器中（如：Apache Tomcat），支持软件配置管理工具（如Git、CVS、Subversion等），同时可以执行基于Apache Ant和Apache Maven的项目，以及任意的Shell执行脚本和Windows批处理命令。此外，它也是基于MIT许可证下发布的自由软件。</li>
+</ol>
+
+<p>这里，我们通过使用Jenkins自动化部署java项目代码来介绍Jenkins完成持续集成的过程。</p>
+
+<hr />
+
+<h1 id="2-安装jdk">2. 安装jdk</h1>
+
+<p>上一章提到Jenkins主要运行到Servlet容器中，这里为了运行Jenkins，我们使用Tomcat，而Tomcat又依赖jdk，因此需要先安装jdk。当然，我们也可以通过Docker容器的方式进行启动Jenkins，或者使用jar命令直接运行Jenkins的war包，这里我们使用tomcat容器方式启动。要想使用tomcat，就必须安装jdk，因为tomcat依赖jdk。故，jdk的安装步骤如下：</p>
+
+<ol>
+<li><p>创建<code>安装包存放目录</code>和<code>自定义软件安装目录</code></p>
+
+<pre><code>[root@JenkinsServer ~]# mkdir /opt/package
+[root@JenkinsServer ~]# mkdir /usr/setup
+</code></pre></li>
+
+<li><p>下载jdk，并上传到第一步创建的<code>安装包存放目录</code></p>
+
+<pre><code>略。
+</code></pre></li>
+
+<li><p>将jdk安装包解压到<code>自定义软件安装目录</code></p>
+
+<pre><code>[root@JenkinsServer ~]# tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup
+</code></pre></li>
+
+<li><p>设置环境变量</p>
+
+<pre><code>[root@JenkinsServer ~]# vi /etc/profile
+# 添加以下内容
+export JAVA_HOME=/usr/setup/jdk1.8.0_111
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=./:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre></li>
+
+<li><p>使环境变量生效</p>
+
+<pre><code>[root@JenkinsServer ~]# source /etc/profile
+</code></pre></li>
+
+<li><p>测试</p>
+
+<pre><code>[root@JenkinsServer ~]# java -version
+[root@JenkinsServer ~]# java
+[root@JenkinsServer ~]# javac
+</code></pre></li>
+</ol>
+
+<hr />
+
+<h1 id="3-安装tomcat">3. 安装tomcat</h1>
+
+<p>安装完jdk之后，我们就要开始tomcat8.5的安装了。这里我们是使用tomcat8.5的版本，下面是安装步骤：</p>
+
+<ol>
+<li><p>上传tomcat安装包到<code>安装包存放目录</code></p>
+
+<pre><code>略
+</code></pre></li>
+
+<li><p>将安装包解压到<code>自定义软件安装目录</code></p>
+
+<pre><code>[root@JenkinsServer ~]# tar zxf /opt/package/apache-tomcat-8.5.32.tar.gz -C /usr/setup/
+</code></pre></li>
+
+<li><p>创建用户，并将home目录放置到安装目录下面</p>
+
+<pre><code>[root@JenkinsServer ~]# useradd -m -U -d /usr/setup/apache-tomcat-8.5.32 -s /bin/false tomcat
+</code></pre></li>
+
+<li><p>创建快捷方式</p>
+
+<pre><code>[root@JenkinsServer ~]# ln -s /usr/setup/apache-tomcat-* /usr/setup/latestTomcat
+</code></pre></li>
+
+<li><p>改变文件所属组和用户为Tomcat</p>
+
+<pre><code>[root@JenkinsServer ~]# chown -R tomcat: /usr/setup/apache-tomcat-*
+[root@JenkinsServer ~]# chown -R tomcat: /usr/setup/latestTomcat
+</code></pre></li>
+
+<li><p>赋予可执行权限</p>
+
+<pre><code>[root@JenkinsServer ~]# chmod +x /usr/setup/latestTomcat/bin/*.sh
+</code></pre></li>
+
+<li><p>创建<code>/etc/systemd/system/tomcat.service</code>文件</p>
+
+<pre><code>[root@JenkinsServer ~]# vi /etc/systemd/system/tomcat.service
+# 添加以下内容
+[Unit]
+Description=Tomcat 8.5 servlet container
+After=network.target
+[Service]
+Type=forking
+User=tomcat
+Group=tomcat
+Environment=&quot;JAVA_HOME=/usr/setup/jdk1.8.0_111&quot;
+Environment=&quot;CATALINA_BASE=/usr/setup/latestTomcat&quot;
+Environment=&quot;CATALINA_HOME=/usr/setup/latestTomcat&quot;
+Environment=&quot;CATALINA_PID=/usr/setup/latestTomcat/temp/tomcat.pid&quot;
+ExecStart=/usr/setup/latestTomcat/bin/startup.sh
+ExecStop=/usr/setup/latestTomcat/bin/shutdown.sh
+[Install]
+WantedBy=multi-user.target
+</code></pre></li>
+
+<li><p>让创建的服务生效，然后启动Tomcat</p>
+
+<pre><code>[root@JenkinsServer ~]# systemctl daemon-reload
+[root@JenkinsServer ~]# systemctl start tomcat
+[root@JenkinsServer ~]# systemctl status tomcat
+</code></pre></li>
+
+<li><p>加入开机自启</p>
+
+<pre><code>[root@JenkinsServer ~]# systemctl enable tomcat
+</code></pre></li>
+
+<li><p>开放端口</p>
+
+<pre><code>[root@JenkinsServer ~]# firewall-cmd --zone=public --permanent --add-port=8080/tcp
+[root@JenkinsServer ~]# firewall-cmd --zone=public --permanent --add-port=8005/tcp
+[root@JenkinsServer ~]# firewall-cmd --zone=public --permanent --add-port=8009/tcp
+[root@JenkinsServer ~]# firewall-cmd --reload
+</code></pre></li>
+
+<li><p>修改配置文件</p>
+
+<pre><code>[root@JenkinsServer ~]# vi /usr/setup/latestTomcat/conf/tomcat-users.xml
+# 添加以下内容
+&lt;role rolename=&quot;manager-script&quot;/&gt;
+&lt;user username=&quot;tomcat&quot; password=&quot;tomcat&quot; roles=&quot;manager-script&quot;/&gt;
+</code></pre>
+
+<pre><code>[root@JenkinsServer ~]# vi /usr/setup/latestTomcat/webapps/manager/META-INF/context.xml
+&lt;Context antiResourceLocking=&quot;false&quot; privileged=&quot;true&quot; &gt;
+&lt;!--  &lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt; --&gt; 把这一行注释掉
+&lt;Manager sessionAttributeValueClassNameFilter=&quot;java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap&quot;/&gt;
+&lt;/Context&gt;
+</code></pre></li>
+
+<li><p>测试</p>
+
+<pre><code>在浏览器输入localhost:8080，查看效果。
+</code></pre></li>
+</ol>
+
+<hr />
+
+<h1 id="4-安装maven">4. 安装maven</h1>
+
+<p>此外，由于公司开发的大大小小的项目都是maven项目，所以maven也是必不可少的。</p>
+
+<ol>
+<li><p>上传到maven安装包到<code>安装包存放目录</code></p>
+
+<pre><code>略
+</code></pre></li>
+
+<li><p>将安装包解压到<code>自定义软件安装目录</code></p>
+
+<pre><code>[root@JenkinsServer ~]# tar zxf /opt/package/apache-maven-3.5.0-bin.tar.gz -C /usr/setup/
+</code></pre></li>
+
+<li><p>设置环境变量</p>
+
+<pre><code>[root@JenkinsServer ~]# vi /etc/profile
+# 添加以下内容
+export export MAVEN_HOME=/usr/setup/apache-maven-3.5.0
+# 并修改下面内容
+export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
+</code></pre></li>
+
+<li><p>使环境变量生效</p>
+
+<pre><code>[root@JenkinsServer ~]# source /etc/profile
+</code></pre></li>
+
+<li><p>测试</p>
+
+<pre><code>[root@JenkinsServer ~]# mvn -v
+</code></pre></li>
+
+<li><p>配置仓库地址</p>
+
+<pre><code># 创建仓库文件夹
+[root@JenkinsServer ~]# mkdir /opt/repository
+# 修改仓库settings.xml配置文件
+[root@JenkinsServer ~]# vi /usr/setup/apache-maven-3.5.0/conf/settings.xml
+修改为： &lt;localRepository&gt;/opt/repository&lt;/localRepository&gt;
+</code></pre></li>
+</ol>
+
+<hr />
+
+<h1 id="5-安装jenkins并完成初始化">5. 安装Jenkins并完成初始化</h1>
+
+<h2 id="5-1-安装jenkins">5.1 安装Jenkins</h2>
+
+<p>最后一步便是安装Jenkins了。此步骤安装过程非常简单，只需要下载Jenkins的war包（版本为：Jenkins 2.138.3），将其放入tomcat的webapp目录下面，最后启动tomcat即可。</p>
+
+<h2 id="5-2-初始化配置">5.2 初始化配置</h2>
+
+<p>在浏览器中输入<code>localhost:8080/jenkins</code>进入操作界面。
+<img src="/img/dev/jenkins-server/001.png" target="_blank"/>
+根据要求找到密码，并复制到密码框中。</p>
+
+<pre><code>[root@JenkinsServer ~]# cat /usr/setup/apache-tomcat-8.5.32/.jenkins/secrets/initialAdminPassword
+</code></pre>
+
+<p>跳过插件安装。
+<img src="/img/dev/jenkins-server/002.png" title="跳过插件安装" style="border: solid 1px red;" /></p>
+
+<p>不创建管理员用户，使用默认管理员用户登录。
+<img src="/img/dev/jenkins-server/003.png" title="使用admin继续" style="border: solid 1px red;" /></p>
+
+<p>使用默认实例配置URL
+<img src="/img/dev/jenkins-server/004.png" title="配置默认url" style="border: solid 1px red;" /></p>
+
+<p>到此结束后，整个初始化配置完成。</p>
+
+<p>初始化完成之后，需要修改admin密码。可以通过登录的操作界面找到admin用户，然后更新密码即可。</p>
+
+<hr />
+
+<h1 id="6-jenkins的配置">6. Jenkins的配置</h1>
+
+<p>初始化完成后，需要对Jenkins的操作界面有所了解，因为以后对项目的所有操作都将会在这个界面中完成。Jenkins的操作界面主要分为两大部分，一左一右，左边相当于我们常用的菜单，右边相当于每一个菜单下面的子菜单。功能正如第一章节所说的那样，包括任务管理、构建管理以及Jenkins的系统管理等。
+对Jenkins的操作界面的熟悉后，下一个步骤就是集成jdk和maven以及安装必要的插件了。</p>
+
+<h2 id="6-1-集成jdk和maven">6.1 集成jdk和maven</h2>
+
+<p>点击右边菜单的“系统管理”，然后选择“全局工具配置”，找到前几步安装的jdk和maven的根目录，拷贝到相应位置保存即可。
+<img src="/img/dev/jenkins-server/global-config.png" title="全局工具配置" style="border: solid 1px red;" /></p>
+
+<h2 id="6-2-安装插件">6.2 安装插件</h2>
+
+<p>由于需要部署的项目是maven项目，并且项目源码位于另外一台svn服务器上面，所以需要两个插件——<code>maven integration</code>和<code>Subversion</code>，此外，项目源码从svn上面下载到Jenkins上面的工作空间后，需要进行编译、打包，最后发布到tomcat容器中去，所以还需要<code>Deploy to container</code>。具体过程，点击右边菜单的“系统管理”，选择“插件管理”，在“可选插件列表中”找到三个插件<code>maven integration</code>、<code>Subversion</code>、<code>Deploy to container</code>，并打上勾，最后点击最下面的“直接安装”即可。安装完成后，在“已安装”标签页中找到刚才安装的三个插件。如果在安装插件时，遇到问题，可以通过检查以下几个问题进行排除：</p>
+
+<ol>
+<li>服务器网络是否能够ping通；（我的服务器是静态ip，安装时未配置DNS）</li>
+<li>通过点击Jenkins右边的“系统管理”，选择系统日志，查看日志内容，然后进行问题的定位</li>
+</ol>
+
+<p><strong>题外话：针对项目的类型、项目所使用的版本库以及项目构建的过程的不同，所需要的插件也不尽相同。</strong></p>
+
+<hr />
+
+<h1 id="7-创建第一个项目">7. 创建第一个项目</h1>
+
+<p>点击首页的“创建一个新任务”按钮。填入任务名称，选择项目类型（构建一个maven项目），点击确定，进入配置界面：
+<img src="/img/dev/jenkins-server/config.png" title="任务配置" style="border: solid 1px red;" /></p>
+
+<p>解释：</p>
+
+<ol>
+<li>General：此框内的内容主要是针对上一步创建的任务的描述以及构建保留的时间等的设置；</li>
+<li>源码管理：默认是无，如果上面过程中已经安装过svn的插件，这地方就会显示svn的选项，同理，如果是git仓库，那需要安装git的插件，之后才会显示git的操作界面；</li>
+<li>构建触发器：此处配置任务创建完成后的构建操作的触发器，即通过什么事件触发构建过程。这里常用的有三种方式，一种是轮询版本库，一旦版本库中发生提交或者修改操作，就会触发构建过程；一种是定时器方式，即根据时钟定时触发构建过程；第三种默认方式，即通过手动方式进行构建。</li>
+<li>Pre Steps：即在执行构建过程之前需要Jenkins做的事情。</li>
+<li>Build：即使用哪个文件构建，构建过程的运行命令等。</li>
+<li>Post Steps：即执行完构建过程之后需要Jenkins做的事情。</li>
+</ol>
+
+<hr />
+
+<h1 id="8-构建">8. 构建</h1>
+
+<p>上一步骤中，配置了一个Jenkins项目的构建过程，但是并未执行，这里只需要对配置好的构建过程执行构建操作即可。</p>
+
+<h2 id="8-1-手动构建">8.1 手动构建</h2>
+
+<p>完成上一步对构建任务的配置之后，就会在Jenkins右边看板中出现任务列表，单击任务的构建图标（即每一行的最后一个图标）即可完成手动构建过程。</p>
+
+<h2 id="8-2-自动构建">8.2 自动构建</h2>
+
+<p>自动构建过程需要在对任务配置相应的触发器，配置触发器可以通过编辑任务配置来完成。即在看板中的任务列表，鼠标放置到任务名称上，会出现一个倒三角，点击倒三角中的配置按钮，进入配置界面，然后填写构建触发器信息，点击完成即可。</p>
+
+<hr />
+
+<h1 id="9-查看日志">9. 查看日志</h1>
+
+<p>Jenkins系统中的日志分为两大类，<strong>一类是系统日志，一类是构建日志</strong>。系统日志主要是记录系统启动、系统读取配置文件、系统安装插件等全局式的日志；而构建日志，则是每一个构建任务都会有一个构建日志，构建日志中则主要记录了执行整个构建过程的日志。通常定位系统中的问题时，我们是通过查看日系统日志来排查的，例如：安装插件的问题排查等；在定位某一个构建过程中出现的问题时，我们则是通过构建日志来完成的，例如：查看某一个构建过程是否执行成功。</p>
+
+<hr />
+
+<h1 id="10-结语">10. 结语</h1>
+
+<p>此外，Jenkins中还可以配置邮件通知系统，即执行构建过程结束后给自定义邮箱发送邮件的功能；还有配置管理员用户等的权限管理等，此处，我们不再介绍这些功能，有兴趣的童鞋可以自行搜索配置。</p>
+
+<p>总结一下，本文主要介绍了从零开始使用Jenkins系统构建一个机遇maven的javaWeb项目，过程依次是：<code>安装jdk、tomcat、maven、Jenkins</code>、<code>初始化Jenkins</code>、<code>配置Jenkins</code>、<code>构建第一个任务</code>……其中也穿插介绍了一下，在完成整个构建过程的配置以后，如何排查在构建过程中所遇到的问题的方式——查看日志等。总的来说，不管<code>gradle</code>风格项目还是<code>maven</code>风格项目，构建过程都是大同小异，构建过程同样都包括通过版本库下载源代码、编译源代码、构建前操作、构建、构建后操作等几个过程，此外最重要的便是配置构建的触发器。掌握此构建的基本思路（或叫套路），基本已经能够完全掌握了Jenkins的所有操作了。</p>
+
+<hr />
+
+<p><strong>参考资料</strong></p>
+
+<ol>
+<li>Jenkins（软件）wiki：<a href="https://zh.wikipedia.org/wiki/Jenkins_(%E8%BD%AF%E4%BB%B6">https://zh.wikipedia.org/wiki/Jenkins_(%E8%BD%AF%E4%BB%B6</a>)</li>
+<li>开源的自动化部署工具探索：<a href="https://my.oschina.net/u/1540325/blog/639884">https://my.oschina.net/u/1540325/blog/639884</a></li>
+<li>这21个自动化部署工具，你都知道吗？：<a href="https://blog.csdn.net/qq_25711251/article/details/72869682">https://blog.csdn.net/qq_25711251/article/details/72869682</a></li>
+<li>Jenkins 持续集成综合实战：<a href="https://blog.csdn.net/kefengwang/article/details/54233584">https://blog.csdn.net/kefengwang/article/details/54233584</a></li>
+<li>使用Jenkins持续集成前端项目并自动化部署到Nginx服务器： <a href="https://segmentfault.com/a/1190000013481128">https://segmentfault.com/a/1190000013481128</a></li>
+<li>使用jenkins实现tomcat自动化部署： <a href="http://blog.51cto.com/ellenv/1932817">http://blog.51cto.com/ellenv/1932817</a></li>
+<li>jenkins+maven+svn 自动化部署：<a href="https://www.cnblogs.com/arnoLixi/p/9241847.html">https://www.cnblogs.com/arnoLixi/p/9241847.html</a></li>
+</ol>
+
+		</div>
+		
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/jenkins/" rel="tag">jenkins</a></li>
+	</ul>
+</div>
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="天晴小猪 avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About 天晴小猪</span>
+	</div>
+	<div class="authorbox__description">
+		我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。
+	</div>
+</div>
+
+	
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/dev/config-https/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">在Nginx上面配置Https</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/dev/centos7-dns/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Centos7修改Dns</p></a>
+	</div>
+</nav>
+	
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zeanzai" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</main>
+<aside class="sidebar"><div class="widget-search widget">
+	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5y2pbv613wx&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+	
+	
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/dev/centos7-dns/">Centos7修改Dns</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/jenkins-install-config/">在centos7上面搭建Jenkins自动化部署平台</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/config-https/">在Nginx上面配置Https</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/dev/install/install-nexus/">在Windows上安装Nexus，并使用nexus上传jar包</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pig/prepareenviroment/">Pig开源框架学习之环境搭建</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/dev">Dev</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/install">Install</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/network">Network</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/pig">Pig</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/tips">Tips</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/zhuanlan">Zhuanlan</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/acid" title="Acid">Acid (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7" title="Centos7">Centos7 (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/centos7-logs" title="Centos7 logs">Centos7 logs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/contos7" title="Contos7">Contos7 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cron" title="Cron">Cron (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/delete" title="Delete">Delete (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/develop" title="Develop">Develop (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/devops" title="Devops">Devops (17)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/filezillaserver" title="Filezillaserver">Filezillaserver (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/foreach" title="Foreach">Foreach (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang" title="Golang">Golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https" title="Https">Https (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/image-server" title="Image server">Image server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/install" title="Install">Install (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java" title="Java">Java (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/jenkins" title="Jenkins">Jenkins (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/log" title="Log">Log (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/manual" title="Manual">Manual (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mbp" title="Mbp">Mbp (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mybatis" title="Mybatis">Mybatis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/network" title="Network">Network (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nexus" title="Nexus">Nexus (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx" title="Nginx">Nginx (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/notes" title="Notes">Notes (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/openjdk" title="Openjdk">Openjdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oracle-jdk" title="Oracle jdk">Oracle jdk (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/redis" title="Redis">Redis (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/springboot" title="Springboot">Springboot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssh" title="Ssh">Ssh (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/string" title="String">String (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tips" title="Tips">Tips (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tomcat" title="Tomcat">Tomcat (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/webhook" title="Webhook">Webhook (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zhuanlan" title="Zhuanlan">Zhuanlan (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%80%bb%e7%bb%93" title="总结">总结 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e6%8b%86%e7%ae%b1" title="拆箱">拆箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%85%e7%ae%b1" title="装箱">装箱 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9d%a2%e7%bb%8f" title="面经">面经 (1)</a>
+	</div>
+</div><div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/zeanzai" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Sina Weibo" rel="noopener noreferrer" href="https://weibo.com/zeanzai" target="_blank">
+				<svg t="1518502970248" class="widget-social__link-icon icon-weibo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="808" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M712.779 484.273c0-8.579 75.506-78.938 0-123.555s-214.506 24.025-209.359 15.443c60.062-104.679-25.741-137.283-68.643-137.283-102.962 0-374.098 229.952-374.098 375.813s180.186 264.273 403.271 264.273 401.554-118.406 401.554-264.273c0-123.555-152.73-123.555-152.73-130.419zM474.246 798.311c-140.717 20.592-267.705-39.47-281.43-133.852s90.95-185.333 233.382-205.926c142.433-20.592 267.705 39.47 281.43 133.852s-90.95 185.333-233.382 205.926z" fill="#FFF" p-id="809"></path>
+					<path d="M800.297 434.506h17.163c10.297 0 20.592-8.579 22.308-18.876 0 0 18.876-77.222-27.457-120.125s-108.113-27.457-108.113-27.457c-10.297 1.716-18.876 12.014-18.876 22.308v6.863c0 10.297 8.579 18.876 18.876 17.163 0 0 51.483-6.863 77.222 24.025s5.149 78.938 5.149 78.938c-3.434 10.297 3.434 17.163 13.728 17.163z" fill="" p-id="810"></path>
+					<path d="M899.826 207.989c-85.804-82.37-212.788-70.359-212.788-70.359-15.443 0-27.457 13.728-27.457 29.171v13.728c0 15.443 12.014 27.457 29.171 27.457 0 0 121.84-13.728 173.323 61.778s29.171 169.888 29.171 169.888c-1.716 15.443 8.579 27.457 24.025 27.457h12.014c15.443 0 30.89-12.014 32.605-27.457-1.716 0 25.741-147.58-60.062-231.666zM398.74 510.014c-84.086 17.163-142.433 87.519-128.703 159.594s94.384 116.691 178.469 99.53 142.433-87.519 128.703-159.594-94.384-116.691-178.469-99.53zM391.875 698.779c-25.741 12.014-54.915 5.149-63.493-13.728-8.579-20.592 5.149-46.333 30.89-58.347s54.915-6.863 63.493 13.728c8.579 20.592-5.149 46.333-30.89 58.347zM451.938 638.717c-15.443 0-27.457-12.014-25.741-25.741 0-13.728 12.014-25.741 25.741-25.741s25.741 10.297 25.741 25.741c0 13.728-12.014 25.741-25.741 25.741z" fill="#FFF" p-id="811"></path>
+				</svg>
+				<span>Weibo</span>
+			</a>
+		</div>
+		
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="zhihu" rel="noopener noreferrer" href="https://www.zhihu.com/people/zeanzai/"
+			 target="_blank">
+				<svg t="1518502950969" class="widget-social__link-icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 p-id="893" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
+					<defs>
+						<style type="text/css"></style>
+					</defs>
+					<path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"
+					 fill="#FFF" p-id="894"></path>
+				</svg>
+				<span>zhihu</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:438123371@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>438123371@qq.com</span>
+			</a>
+		</div>
+
+
+	</div>
+</div>
+
+</aside>
+	</div>
+		<footer class="footer">
+			<div class="container container-inner">
+				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+		label: "Menu",
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

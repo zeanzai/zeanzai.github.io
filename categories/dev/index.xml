@@ -6,10 +6,46 @@
     <description>Recent content in Dev on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Nov 2018 14:24:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 17:44:35 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Centos7修改Dns</title>
+      <link>https://zeanzai.me/post/dev/centos7-dns/</link>
+      <pubDate>Mon, 12 Nov 2018 17:44:35 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/centos7-dns/</guid>
+      <description>https://www.cnblogs.com/dadadechengzi/p/6670530.html
+在CentOS 7下，手工设置 /etc/resolv.conf 里的DNS，过了一会，发现被系统重新覆盖或者清除了。和CentOS 6下的设置DNS方法不同，有几种方式： 1、使用全新的命令行工具 nmcli 来设置
+#显示当前网络连接 #nmcli connection show NAME UUID TYPE DEVICE eno1 5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03 802-3-ethernet eno1
+#修改当前网络连接对应的DNS服务器，这里的网络连接可以用名称或者UUID来标识 #nmcli con mod eno1 ipv4.dns &amp;ldquo;114.114.114.114 8.8.8.8&amp;rdquo;
+#将dns配置生效 #nmcli con up eno1 2、使用传统方法，手工修改 /etc/resolv.conf
+修改 /etc/NetworkManager/NetworkManager.conf 文件，在main部分添加 “dns=none” 选项： [main] plugins=ifcfg-rh dns=none NetworkManager重新装载上面修改的配置
+systemctl restart NetworkManager.service 手工修改 /etc/resolv.conf nameserver 114.114.114.114 nameserver 8.8.8.8</description>
+    </item>
+    
+    <item>
+      <title>在centos7上面搭建Jenkins自动化部署平台</title>
+      <link>https://zeanzai.me/post/dev/jenkins-install-config/</link>
+      <pubDate>Mon, 12 Nov 2018 09:18:51 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/jenkins-install-config/</guid>
+      <description>1. 概述 1.1 前言 在互联网企业中，运维人员的职位不可获取，他们的主要工作是完成日常文件的备份、服务器状态的监控与日志。不同的企业之间，对运维人员的工作内容不尽相同，但是对于运维的思路却是有共通之处的。早期的运维人员大多数是通过手工方式执行的，但繁杂冗余的工作内容对于手工进行的运维方式无疑是一种人力资源的浪费。因此，自动化运维也就成了运维人员的必备本领。 自动化运维出现之前的三个阶段：
+ 纯手工阶段： 此阶段运维人员通过手工方式，重复的进行软件的部署和运维。 脚本阶段： 此阶段，运维人员已经开始写一些脚本文件，通过执行脚本文件来完成软件部署和运维。 工具阶段： 此阶段，运维人员开始借助第三方工具，高效方便的完成运维工作。  对于软件开发人员来说，掌握部分的运维（主要指软件部署、运营、维护、服务器监控和调优等）工作不仅能够让比运维人员更加熟悉软件系统的软件开发人员更好的定位问题、排查问题，也能够利用软件开发人员的专业技能，对服务器进行资源的监控与调优，所以，必备的运维知识对于软件开发人员也日益成为一种刚需。
+在传统的软件开发过程中，软件人员开发完系统后，往往会先将代码提交到版本控制服务器，然后通过构建工具对代码执行构建过程，最后将构建的结果提交到服务器进行发布部署。但对于测试环境来说，很多时候只更改了部分的项目代码，为了立即查看到修改后的结果，就需要立即部署到测试服务器查看效果（这个过程我们称为持续集成）。这个过程每提交一个BUG修复，就需要执行一遍。这对于软件开发人员来说无疑是重复的工作。为了提高这个过程（持续集成）的效率，我们需要借助自动化工具，这也是我们的这篇文章的主要内容。
+1.2 自动化工具 自动化工具有很多，有些是针对特定应用场景的、有些是针对特定语言的、也有些是针对特定系统平台的。这里我们着重介绍两款自动化工具。
+ Ansible
+Ansible 是一个模型驱动的配置管理器，支持多节点发布、远程任务执行。默认使用 SSH 进行远程连接。无需在被管理节点上安装附加软件，可使用各种编程语言进行扩展。它是由Python语言编写而成。大多也使用于Python的系统部署场景中。 Jenkins
+Jenkins是一款由Java编写的开源的持续集成工具。它提供了软件开发的持续集成服务，主要运行在Servlet容器中（如：Apache Tomcat），支持软件配置管理工具（如Git、CVS、Subversion等），同时可以执行基于Apache Ant和Apache Maven的项目，以及任意的Shell执行脚本和Windows批处理命令。此外，它也是基于MIT许可证下发布的自由软件。  这里，我们通过使用Jenkins自动化部署java项目代码来介绍Jenkins完成持续集成的过程。
+2. 安装jdk 上一章提到Jenkins主要运行到Servlet容器中，这里为了运行Jenkins，我们使用Tomcat，而Tomcat又依赖jdk，因此需要先安装jdk。当然，我们也可以通过Docker容器的方式进行启动Jenkins，或者使用jar命令直接运行Jenkins的war包，这里我们使用tomcat容器方式启动。要想使用tomcat，就必须安装jdk，因为tomcat依赖jdk。故，jdk的安装步骤如下：
+ 创建安装包存放目录和自定义软件安装目录
+[root@JenkinsServer ~]# mkdir /opt/package [root@JenkinsServer ~]# mkdir /usr/setup  下载jdk，并上传到第一步创建的安装包存放目录
+略。  将jdk安装包解压到自定义软件安装目录
+[root@JenkinsServer ~]# tar zxf /opt/package/jdk-8u111-linux-x64.tar.gz -C /usr/setup  设置环境变量
+[root@JenkinsServer ~]# vi /etc/profile # 添加以下内容 export JAVA_HOME=/usr/setup/jdk1.8.0_111 export JRE_HOME=$JAVA_HOME/jre export CLASSPATH=.</description>
+    </item>
     
     <item>
       <title>在Nginx上面配置Https</title>

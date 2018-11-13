@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zeanzai.me/post/dev/centos7-dns/</loc>
+    <lastmod>2018-11-12T17:44:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/dev/jenkins-install-config/</loc>
+    <lastmod>2018-11-12T09:18:51+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/post/dev/config-https/</loc>
     <lastmod>2018-11-08T14:24:07+08:00</lastmod>
   </url>
@@ -219,7 +229,7 @@
   
   <url>
     <loc>https://zeanzai.me/post/</loc>
-    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
+    <lastmod>2018-11-12T17:44:35+08:00</lastmod>
   </url>
   
   <url>
@@ -242,7 +252,7 @@
   
   <url>
     <loc>https://zeanzai.me/tags/centos7/</loc>
-    <lastmod>2018-10-11T10:59:54+08:00</lastmod>
+    <lastmod>2018-11-12T17:44:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -272,7 +282,7 @@
   
   <url>
     <loc>https://zeanzai.me/categories/dev/</loc>
-    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
+    <lastmod>2018-11-12T17:44:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -363,6 +373,12 @@
   <url>
     <loc>https://zeanzai.me/tags/java/</loc>
     <lastmod>2018-10-09T15:40:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/tags/jenkins/</loc>
+    <lastmod>2018-11-12T09:18:51+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -518,7 +534,7 @@
   
   <url>
     <loc>https://zeanzai.me/</loc>
-    <lastmod>2018-11-08T14:24:07+08:00</lastmod>
+    <lastmod>2018-11-12T17:44:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
