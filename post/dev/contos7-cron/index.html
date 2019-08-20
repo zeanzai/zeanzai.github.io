@@ -4,31 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
 	<title>Contos7中Cron的使用</title>
 	<meta name="description" content="Contos7中Cron的使用">
 	<meta name="keywords" content="[centos7 cron]">
-	<meta name="generator" content="Hugo 0.46" />
+	<meta name="generator" content="Hugo 0.51" />
 	<meta property="og:title" content="Contos7中Cron的使用" />
 <meta property="og:description" content="Contos7中Cron的使用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/contos7-cron/" />
-
-
-
-<meta property="article:published_time" content="2018-10-11T10:35:42&#43;08:00"/>
-
+<meta property="og:url" content="https://zeanzai.me/post/dev/contos7-cron/" /><meta property="article:published_time" content="2018-10-11T10:35:42&#43;08:00"/>
 <meta property="article:modified_time" content="2018-10-11T10:35:42&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
@@ -44,11 +28,11 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
+	ga('create', 'UA-126754348-1', 'auto');
 	
 	ga('send', 'pageview');
 }
@@ -102,8 +86,8 @@ if (!doNotTrack) {
 
 <h1 id="查看服务相关信息">查看服务相关信息</h1>
 
-<pre><code class="language-shell">$ systemctl status crond		// crond状态
-$ systemctl is-enabled crond	// 是否开机自启
+<pre><code class="language-shell">$ systemctl status crond        // crond状态
+$ systemctl is-enabled crond    // 是否开机自启
 </code></pre>
 
 <h1 id="基础知识">基础知识</h1>
@@ -250,13 +234,13 @@ $ systemctl is-enabled crond	// 是否开机自启
 <h1 id="示例">示例</h1>
 
 <pre><code class="language-shell">// 1. 查看当前用户的定时任务
-	$ crontab -l
+    $ crontab -l
 
 // 2. 为当前用户编辑一个定时任务
-	$ crontab -e
+    $ crontab -e
 
 // 3. 清空当前用户的定时任务
-	$ crontab -r
+    $ crontab -r
 
 // 4. 每分钟打印一次自己的英文名字到 /home/test/name.txt 的文件中
 方式一：
@@ -276,7 +260,7 @@ $ systemctl is-enabled crond	// 是否开机自启
     * * * * * echo &quot;zeanzai&quot;  &gt;&gt; /home/test/name.txt
 
 // 5. 查看定时任务执行的日志
-	$ tail -f /var/log/cron
+    $ tail -f /var/log/cron
 
 // 6. 查看定时任务的配置文件
 方式一：
@@ -378,7 +362,7 @@ $ crontab -e
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -533,7 +517,7 @@ $ crontab -e
 	</div>
 		<footer class="footer">
 			<div class="container container-inner">
-				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+				<div class="footer__copyright">&copy; 2019 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 			</div>
 		</footer>
 	</div>

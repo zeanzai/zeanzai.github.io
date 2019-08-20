@@ -4,31 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
 	<title>安装Nginx</title>
 	<meta name="description" content="在CentOS7上安装Nginx">
 	<meta name="keywords" content="[nginx | centos | centos7 | install]">
-	<meta name="generator" content="Hugo 0.46" />
+	<meta name="generator" content="Hugo 0.51" />
 	<meta property="og:title" content="安装Nginx" />
 <meta property="og:description" content="在CentOS7上安装Nginx" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-nginx/" />
-
-
-
-<meta property="article:published_time" content="2018-10-01T11:28:25&#43;08:00"/>
-
+<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-nginx/" /><meta property="article:published_time" content="2018-10-01T11:28:25&#43;08:00"/>
 <meta property="article:modified_time" content="2018-10-01T11:28:25&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
@@ -44,11 +28,11 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
+	ga('create', 'UA-126754348-1', 'auto');
 	
 	ga('send', 'pageview');
 }
@@ -109,23 +93,23 @@ if (!doNotTrack) {
 
 <p>nginx的作用在本教程中是作为web容器的. 将hugo生成的静态文件放到Nginx里面, 就可以通过访问Nginx来访问博客了.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 创建安装目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/nginx_1.12.2
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/nginx_1.12.2/temp
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 2. 安装依赖
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 3. 下载安装包并上传到/opt/package
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 4. 解压
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf nginx-1.12.2.tar.gz
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd nginx-1.12.2/
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 5. 配置
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># ./configure --prefix=/usr/setup/nginx_1.12.2 \
-</span><span style="color:#75715e"></span>&gt; --pid-path<span style="color:#f92672">=</span>/usr/setup/nginx_1.12.2/nginx.pid <span style="color:#ae81ff">\</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 创建安装目录</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/nginx_1.12.2</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/nginx_1.12.2/temp</span>
+
+<span style="color:#75715e"># 2. 安装依赖</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span>
+
+<span style="color:#75715e"># 3. 下载安装包并上传到/opt/package</span>
+
+<span style="color:#75715e"># 4. 解压</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf nginx-1.12.2.tar.gz</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd nginx-1.12.2/</span>
+
+<span style="color:#75715e"># 5. 配置</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># ./configure --prefix=/usr/setup/nginx_1.12.2 \</span>
+&gt; --pid-path<span style="color:#f92672">=</span>/usr/setup/nginx_1.12.2/nginx.pid <span style="color:#ae81ff">\</span>
 &gt; --lock-path<span style="color:#f92672">=</span>/usr/setup/nginx_1.12.2/lock/nginx.lock <span style="color:#ae81ff">\</span>
 &gt; --error-log-path<span style="color:#f92672">=</span>/usr/setup/nginx_1.12.2/log/error.log <span style="color:#ae81ff">\</span>
 &gt; --http-log-path<span style="color:#f92672">=</span>/usr/setup/nginx_1.12.2/log/access.log <span style="color:#ae81ff">\</span>
@@ -138,16 +122,16 @@ if (!doNotTrack) {
 &gt; --with-http_gzip_static_module <span style="color:#ae81ff">\</span>
 &gt; --with-http_ssl_module
 
-<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># make
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># make install
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 6. 开放80端口，并进行测试
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># /usr/setup/nginx_1.12.2/sbin/nginx
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 7. 配置服务文件
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># cd /etc/systemd/system
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># vi nginx.service
-</span><span style="color:#75715e"></span>  <span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># make</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx-1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># make install</span>
+
+<span style="color:#75715e"># 6. 开放80端口，并进行测试</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># /usr/setup/nginx_1.12.2/sbin/nginx</span>
+
+<span style="color:#75715e"># 7. 配置服务文件</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z nginx_1.12.2<span style="color:#f92672">]</span><span style="color:#75715e"># cd /etc/systemd/system</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># vi nginx.service</span>
+  <span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
   Description<span style="color:#f92672">=</span>nginx
   After<span style="color:#f92672">=</span>network.target
 
@@ -161,10 +145,10 @@ if (!doNotTrack) {
   <span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
   WantedBy<span style="color:#f92672">=</span>multi-user.target
 
-<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl enable nginx.service
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl start nginx.service
-</span><span style="color:#75715e"></span>
-# <span style="color:#ae81ff">8</span>. 启动Nginx，并进行测试</code></pre></div>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl enable nginx.service</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl start nginx.service</span>
+
+<span style="color:#75715e"># 8. 启动Nginx，并进行测试</span></code></pre></div>
 
 <p><strong>扩展</strong>：</p>
 
@@ -231,7 +215,7 @@ $ systemctl restart nginx.service
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -386,7 +370,7 @@ $ systemctl restart nginx.service
 	</div>
 		<footer class="footer">
 			<div class="container container-inner">
-				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+				<div class="footer__copyright">&copy; 2019 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 			</div>
 		</footer>
 	</div>

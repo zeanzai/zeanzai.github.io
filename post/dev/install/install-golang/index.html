@@ -4,31 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
 	<title>安装Golang</title>
 	<meta name="description" content="在CentOS7上面安装golang">
 	<meta name="keywords" content="">
-	<meta name="generator" content="Hugo 0.46" />
+	<meta name="generator" content="Hugo 0.51" />
 	<meta property="og:title" content="安装Golang" />
 <meta property="og:description" content="在CentOS7上面安装golang" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-golang/" />
-
-
-
-<meta property="article:published_time" content="2018-10-01T14:12:55&#43;08:00"/>
-
+<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-golang/" /><meta property="article:published_time" content="2018-10-01T14:12:55&#43;08:00"/>
 <meta property="article:modified_time" content="2018-10-01T14:12:55&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
@@ -44,11 +28,11 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
+	ga('create', 'UA-126754348-1', 'auto');
 	
 	ga('send', 'pageview');
 }
@@ -117,44 +101,44 @@ if (!doNotTrack) {
 
 <p>采用源码安装模式的原因是因为国内的golang的官网访问很慢.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 进入安装包存放位置
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 2. 下载
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># ll
-</span><span style="color:#75715e"></span>total <span style="color:#ae81ff">124188</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 进入安装包存放位置</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/</span>
+
+<span style="color:#75715e"># 2. 下载</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># ll</span>
+total <span style="color:#ae81ff">124188</span>
 -rw-r--r-- <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">127163815</span> Aug <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">06</span>:10 go1.11.linux-amd64.tar.gz
 
-<span style="color:#75715e"># 3. 创建安装目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 4. 解压到安装目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd /usr/setup/
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># ll
-</span><span style="color:#75715e"></span>total <span style="color:#ae81ff">4</span>
+<span style="color:#75715e"># 3. 创建安装目录</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup</span>
+
+<span style="color:#75715e"># 4. 解压到安装目录</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd /usr/setup/</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># ll</span>
+total <span style="color:#ae81ff">4</span>
 drwxr-xr-x <span style="color:#ae81ff">10</span> root root <span style="color:#ae81ff">4096</span> Aug <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">04</span>:41 go
 
-<span style="color:#75715e"># 5. 创建gopath目录结构
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/bin
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/src
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/pkg
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 6. 配置环境变量
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># vi /etc/profile
-</span><span style="color:#75715e"># 添加以下内容
-</span><span style="color:#75715e"></span>export GOROOT<span style="color:#f92672">=</span>/usr/setup/go
+<span style="color:#75715e"># 5. 创建gopath目录结构</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/bin</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/src</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir go/gopath/pkg</span>
+
+<span style="color:#75715e"># 6. 配置环境变量</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># vi /etc/profile</span>
+<span style="color:#75715e"># 添加以下内容</span>
+export GOROOT<span style="color:#f92672">=</span>/usr/setup/go
 export GOPATH<span style="color:#f92672">=</span>/usr/setup/go/gopath
 export PATH<span style="color:#f92672">=</span>$PATH:$GOROOT/bin:$GOPATH/bin
 
-<span style="color:#75715e"># 7. 使配置文件生效
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># source /etc/profile
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 8. 测试
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># go version
-</span><span style="color:#75715e"></span>go version go1.11 linux/amd64</code></pre></div>
+<span style="color:#75715e"># 7. 使配置文件生效</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># source /etc/profile</span>
+
+<span style="color:#75715e"># 8. 测试</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z setup<span style="color:#f92672">]</span><span style="color:#75715e"># go version</span>
+go version go1.11 linux/amd64</code></pre></div>
 
 <blockquote>
 <p>参考:<br>
@@ -199,7 +183,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$GOROOT/bin:$GOPATH/bin
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -354,7 +338,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$GOROOT/bin:$GOPATH/bin
 	</div>
 		<footer class="footer">
 			<div class="container container-inner">
-				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+				<div class="footer__copyright">&copy; 2019 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 			</div>
 		</footer>
 	</div>

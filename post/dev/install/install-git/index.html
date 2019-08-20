@@ -4,31 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
 	<title>安装Git</title>
 	<meta name="description" content="在CentOS7上安装git">
 	<meta name="keywords" content="[git | centos | centos7 | install]">
-	<meta name="generator" content="Hugo 0.46" />
+	<meta name="generator" content="Hugo 0.51" />
 	<meta property="og:title" content="安装Git" />
 <meta property="og:description" content="在CentOS7上安装git" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-git/" />
-
-
-
-<meta property="article:published_time" content="2018-10-01T11:24:05&#43;08:00"/>
-
+<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-git/" /><meta property="article:published_time" content="2018-10-01T11:24:05&#43;08:00"/>
 <meta property="article:modified_time" content="2018-10-01T11:24:05&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
@@ -44,11 +28,11 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
+	ga('create', 'UA-126754348-1', 'auto');
 	
 	ga('send', 'pageview');
 }
@@ -124,42 +108,42 @@ if (!doNotTrack) {
 
 <p>完整过程如下:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 查看是否已经安装
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># git --version
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 2. 安装依赖包
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 3. 进入安装包存放目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 4. 下载
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># wget -c https://github.com/git/git/archive/v2.18.0.tar.gz
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 5. 解压到当前目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf v2.18.0.tar.gz
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 6. 创建安装目录
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/git_2.18.0
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 7. 进入源码目录，并进行make配置
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd git-2.18.0/
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># make prefix=/usr/setup/git_2.18.0 all
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># make prefix=/usr/setup/git_2.18.0 install
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 8. 配置环境变量，并使配置生效
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># vi /etc/profile
-</span><span style="color:#75715e"># 添加以下内容
-</span><span style="color:#75715e"></span>export GIT_HOME<span style="color:#f92672">=</span>/usr/setup/git_2.18.0
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 查看是否已经安装</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># git --version</span>
+
+<span style="color:#75715e"># 2. 安装依赖包</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker</span>
+
+<span style="color:#75715e"># 3. 进入安装包存放目录</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /opt/packages/</span>
+
+<span style="color:#75715e"># 4. 下载</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># wget -c https://github.com/git/git/archive/v2.18.0.tar.gz</span>
+
+<span style="color:#75715e"># 5. 解压到当前目录</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># tar zxf v2.18.0.tar.gz</span>
+
+<span style="color:#75715e"># 6. 创建安装目录</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir /usr/setup/git_2.18.0</span>
+
+<span style="color:#75715e"># 7. 进入源码目录，并进行make配置</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># cd git-2.18.0/</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># make prefix=/usr/setup/git_2.18.0 all</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># make prefix=/usr/setup/git_2.18.0 install</span>
+
+<span style="color:#75715e"># 8. 配置环境变量，并使配置生效</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># vi /etc/profile</span>
+<span style="color:#75715e"># 添加以下内容</span>
+export GIT_HOME<span style="color:#f92672">=</span>/usr/setup/git_2.18.0
 export PATH<span style="color:#f92672">=</span>$PATH:$GIT_HOME/bin
-<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># source /etc/profile
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 9. 测试
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># git --version
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 10. 配置git全局用户名和邮箱
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># git config --global user.name &#34;zeanzai&#34;
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span># git config --global user.email <span style="color:#e6db74">&#34;438123371@qq.com&#34;</span></code></pre></div>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># source /etc/profile</span>
+
+<span style="color:#75715e"># 9. 测试</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># git --version</span>
+
+<span style="color:#75715e"># 10. 配置git全局用户名和邮箱</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># git config --global user.name &#34;zeanzai&#34;</span>
+<span style="color:#f92672">[</span>root@iZwz97ekphk0kmqgt9zvc4Z packages<span style="color:#f92672">]</span><span style="color:#75715e"># git config --global user.email &#34;438123371@qq.com&#34;</span></code></pre></div>
 
 		</div>
 		
@@ -197,7 +181,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$GIT_HOME/bin
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -352,7 +336,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$GIT_HOME/bin
 	</div>
 		<footer class="footer">
 			<div class="container container-inner">
-				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+				<div class="footer__copyright">&copy; 2019 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 			</div>
 		</footer>
 	</div>

@@ -24,7 +24,7 @@
 由于后期需要把博客发布到自己的云服务器上去，并实现自动化运维（即，将博客文章发布到GitHub上，然后使用webhook工具给云服务器发送一条命令，使云服务器自动从GitHub上面pull文章，然后执行hugo命令生成网站）。
 笔者使用开源项目adnanh webhook, adnanh webhook的开发语言就是Go语言, 所以需要安装golang作为基础开发环境.
 安装过程 采用源码安装模式的原因是因为国内的golang的官网访问很慢.
-# 1. 进入安装包存放位置[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 2. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz[root@iZwz97ekphk0kmqgt9zvc4Z packages]# lltotal 124188-rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz# 3. 创建安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup# 4. 解压到安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z setup]# lltotal 4drwxr-xr-x 10 root root 4096 Aug 25 04:41 go# 5.</description>
+# 1. 进入安装包存放位置[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 2. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://studygolang.com/dl/golang/go1.11.linux-amd64.tar.gz[root@iZwz97ekphk0kmqgt9zvc4Z packages]# lltotal 124188-rw-r--r-- 1 root root 127163815 Aug 25 06:10 go1.11.linux-amd64.tar.gz# 3. 创建安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup# 4. 解压到安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf go1.11.linux-amd64.tar.gz -C /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z packages]# cd /usr/setup/[root@iZwz97ekphk0kmqgt9zvc4Z setup]# lltotal 4drwxr-xr-x 10 root root 4096 Aug 25 04:41 go# 5.</description>
     </item>
     
   </channel>

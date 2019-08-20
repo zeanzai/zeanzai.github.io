@@ -24,7 +24,7 @@
 依然采用源码的安装方式进行安装.
 基本过程如下:
  删除旧版本 安装依赖 下载源码 解压 执行安装过程 配置  完整过程如下:
-# 1. 查看是否已经安装[root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version# 2. 安装依赖包[root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker# 3. 进入安装包存放目录[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 4. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz# 5. 解压到当前目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.</description>
+# 1. 查看是否已经安装[root@iZwz97ekphk0kmqgt9zvc4Z ~]# git --version# 2. 安装依赖包[root@iZwz97ekphk0kmqgt9zvc4Z ~]# yum install -y curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker# 3. 进入安装包存放目录[root@iZwz97ekphk0kmqgt9zvc4Z ~]# cd /opt/packages/# 4. 下载[root@iZwz97ekphk0kmqgt9zvc4Z packages]# wget -c https://github.com/git/git/archive/v2.18.0.tar.gz# 5. 解压到当前目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# tar zxf v2.18.0.tar.gz# 6. 创建安装目录[root@iZwz97ekphk0kmqgt9zvc4Z packages]# mkdir /usr/setup/git_2.</description>
     </item>
     
   </channel>

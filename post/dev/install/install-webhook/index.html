@@ -4,31 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-site-verification" content="uxDp57NXeXGHFwRbx2fas3sXlYtVpQX_YTTGlPStCMw" />
 	<title>安装Webhook</title>
 	<meta name="description" content="在CentOS7上安装Webhook">
 	<meta name="keywords" content="[webhook | centos | centos7 | install]">
-	<meta name="generator" content="Hugo 0.46" />
+	<meta name="generator" content="Hugo 0.51" />
 	<meta property="og:title" content="安装Webhook" />
 <meta property="og:description" content="在CentOS7上安装Webhook" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-webhook/" />
-
-
-
-<meta property="article:published_time" content="2018-10-01T12:27:14&#43;08:00"/>
-
+<meta property="og:url" content="https://zeanzai.me/post/dev/install/install-webhook/" /><meta property="article:published_time" content="2018-10-01T12:27:14&#43;08:00"/>
 <meta property="article:modified_time" content="2018-10-01T12:27:14&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://zeanzai.me/img/zeanzai.me.png"/>
@@ -44,11 +28,11 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-126218706-1', 'auto');
+	ga('create', 'UA-126754348-1', 'auto');
 	
 	ga('send', 'pageview');
 }
@@ -116,26 +100,26 @@ if (!doNotTrack) {
   远程调用一个命令后，服务器打印当前服务器的时间到<code>/opt/scripts/hugo-deploy/redeploy.log</code></p>
 </blockquote>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 安装webhook客户端
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># go get github.com/adnanh/webhook
-</span><span style="color:#75715e"># 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 2. 创建可执行的文件
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir -p /opt/scripts/hugo-deploy
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># vi /opt/scripts/hugo-deploy/redeploy.sh
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 1. 安装webhook客户端</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># go get github.com/adnanh/webhook</span>
+<span style="color:#75715e"># 这一步需要安装golang，执行webhook安装过程后，webhook的相关文件就在安装golang时配置的gopath目录下面</span>
+
+<span style="color:#75715e"># 2. 创建可执行的文件</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># mkdir -p /opt/scripts/hugo-deploy</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># vi /opt/scripts/hugo-deploy/redeploy.sh</span>
+  <span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
   time<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date <span style="color:#e6db74">&#34;+%Y-%m-%d %H:%M:%S&#34;</span><span style="color:#e6db74">`</span>
   echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>time<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> &gt;&gt; /opt/scripts/hugo-deploy/redeploy.log
-<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># chmod +x /opt/scripts/hugo-deploy/redeploy.sh
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 3. 测试是否能够打印
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># /opt/scripts/hugo-deploy/redeploy.sh
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cat /opt/scripts/hugo-deploy/redeploy.log
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 4. 创建hooks.json文件
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># vi /opt/scripts/hugo-deploy/hooks.json
-</span><span style="color:#75715e"></span>  <span style="color:#f92672">[</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># chmod +x /opt/scripts/hugo-deploy/redeploy.sh</span>
+
+<span style="color:#75715e"># 3. 测试是否能够打印</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># /opt/scripts/hugo-deploy/redeploy.sh</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cat /opt/scripts/hugo-deploy/redeploy.log</span>
+
+<span style="color:#75715e"># 4. 创建hooks.json文件</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># vi /opt/scripts/hugo-deploy/hooks.json</span>
+  <span style="color:#f92672">[</span>
     <span style="color:#f92672">{</span>
       <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;redeploy-webhook&#34;</span>,
       <span style="color:#e6db74">&#34;execute-command&#34;</span>: <span style="color:#e6db74">&#34;/opt/scripts/hugo-deploy/redeploy.sh&#34;</span>,
@@ -143,17 +127,17 @@ if (!doNotTrack) {
     <span style="color:#f92672">}</span>
   <span style="color:#f92672">]</span>
 
-<span style="color:#75715e"># 5. 启动webhook客户端
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># /usr/setup/go/gopath/bin/webhook -hooks /opt/scripts/hugo-deploy/hooks.json -port=9876 -verbose
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># 6. 开放9876端口，并测试
-</span><span style="color:#75715e"></span>在阿里云安全组上放开9876端口，然后在浏览器中输入：http://&lt;your-ip&gt;:9876/hooks/redeploy-webhook
+<span style="color:#75715e"># 5. 启动webhook客户端</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># /usr/setup/go/gopath/bin/webhook -hooks /opt/scripts/hugo-deploy/hooks.json -port=9876 -verbose</span>
+
+<span style="color:#75715e"># 6. 开放9876端口，并测试</span>
+在阿里云安全组上放开9876端口，然后在浏览器中输入：http://&lt;your-ip&gt;:9876/hooks/redeploy-webhook
 打印log文件
 
-<span style="color:#75715e"># 7. 创建服务
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /etc/systemd/system
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># vi webhook.service
-</span><span style="color:#75715e"></span>  <span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
+<span style="color:#75715e"># 7. 创建服务</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /etc/systemd/system</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># vi webhook.service</span>
+  <span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
   Description<span style="color:#f92672">=</span>Webhooks
 
   <span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
@@ -161,10 +145,10 @@ if (!doNotTrack) {
 
   <span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
   WantedBy<span style="color:#f92672">=</span>multi-user.target
-<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl enable webhook.service
-</span><span style="color:#75715e"></span><span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl start webhook.service
-</span><span style="color:#75715e"></span>
-# <span style="color:#ae81ff">8</span>. 测试</code></pre></div>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl enable webhook.service</span>
+<span style="color:#f92672">[</span>root@izwz97ekphk0kmqgt9zvc4z system<span style="color:#f92672">]</span><span style="color:#75715e"># systemctl start webhook.service</span>
+
+<span style="color:#75715e"># 8. 测试</span></code></pre></div>
 
 <blockquote>
 <p>参考<br>
@@ -207,7 +191,7 @@ if (!doNotTrack) {
 	
 <section class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -362,7 +346,7 @@ if (!doNotTrack) {
 	</div>
 		<footer class="footer">
 			<div class="container container-inner">
-				<div class="footer__copyright">&copy; 2018 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+				<div class="footer__copyright">&copy; 2019 天晴小猪. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 			</div>
 		</footer>
 	</div>
