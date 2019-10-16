@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/gitlab/</link>
     <description>Recent content in Gitlab on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Mon, 01 Oct 2018 13:23:45 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +16,7 @@
       <pubDate>Mon, 01 Oct 2018 13:23:45 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/install/install-gitlab/</guid>
-      <description>更新yum源  备份原有的yum源  [root@vm yum.repos.d]# mv CentOS-Base.repo CentOS-Base.repo.bak_20180611   拷贝到目录下  [root@vm yum.repos.d]# mv /opt/program/Centos-7.repo ./CentOS-Base.repo   删除原有yum缓存  [root@vm yum.repos.d]# yum clean all 已加载插件：fastestmirror 正在清理软件源： base extras updates Cleaning up everything Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos Cleaning up list of fastest mirrors   重新生成yum缓存  [root@vm yum.repos.d]# yum makecache 已加载插件：fastestmirror .</description>
+      <description>更新yum源 备份原有的yum源 1 [root@vm yum.repos.d]# mv CentOS-Base.repo CentOS-Base.repo.bak_20180611 拷贝到目录下 1 [root@vm yum.repos.d]# mv /opt/program/Centos-7.repo ./CentOS-Base.repo 删除原有yum缓存 1 2 3 4 5 6 [root@vm yum.repos.d]# yum clean all 已加载插件：fastestmirr</description>
     </item>
     
   </channel>

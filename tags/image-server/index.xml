@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/image-server/</link>
     <description>Recent content in Image Server on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Oct 2018 11:04:59 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/image-server/index.xml" rel="self" type="application/rss+xml" />
@@ -17,8 +16,7 @@
       <pubDate>Thu, 11 Oct 2018 11:04:59 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/install/install-image-server/</guid>
-      <description>install vsftpd $ yum install -y vsftpd  add user add user and passwor it
-$ useradd ftpuser $ passwd ftpuser  open 21 port $ firewall-cmd --zone=public --add-port=21/tcp --permanent $ firewall-cmd --reload  config selinux $ getsebool -a | grep ftp ftpd_anon_write --&amp;gt; off ftpd_connect_all_unreserved --&amp;gt; off ftpd_connect_db --&amp;gt; off ftpd_full_access --&amp;gt; off ftpd_use_cifs --&amp;gt; off ftpd_use_fusefs --&amp;gt; off ftpd_use_nfs --&amp;gt; off ftpd_use_passive_mode --&amp;gt; off httpd_can_connect_ftp --&amp;gt; off httpd_enable_ftp_server --&amp;gt; off tftp_anon_write --&amp;gt; off tftp_home_dir --&amp;gt; off $ setsebool -P allow_ftpd_full_access on $ setsebool -P tftp_home_dir on  config vsftpd.</description>
+      <description>install vsftpd 1 $ yum install -y vsftpd add user add user and passwor it 1 2 $ useradd ftpuser $ passwd ftpuser open 21 port 1 2 $ firewall-cmd --zone=public --add-port=21/tcp --permanent $ firewall-cmd --reload config selinux 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 $ getsebool -a | grep ftp ftpd_anon_write --&amp;gt; off ftpd_connect_all_unreserved --&amp;gt; off ftpd_connect_db --&amp;gt; off ftpd_full_access</description>
     </item>
     
   </channel>

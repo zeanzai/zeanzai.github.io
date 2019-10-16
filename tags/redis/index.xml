@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/redis/</link>
     <description>Recent content in Redis on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Oct 2018 10:40:03 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/redis/index.xml" rel="self" type="application/rss+xml" />
@@ -17,11 +16,7 @@
       <pubDate>Thu, 11 Oct 2018 10:40:03 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/install/install-redis-cluster/</guid>
-      <description>1. 准备 1.1 centos // 查看版本 [root@studyCentOS7 ~]# cat /etc/redhat-release CentOS Linux release 7.2.1511 (Core) // 查看位数 [root@studyCentOS7 ~]# getconf LONG_BIT 64  1.2 redis 下载地址，下载最近的stable版本：redis-4.0.6.tar.gz
-2. 上传 使用filezilla进行上传即可。
-3. 安装 3.1 编译环境 由于Redis是由ANSI C语言编写，故需要c语言的编译环境。
-3.1.1 检查环境 [root@studyCentOS7 ~]# rpm -qa | grep gcc-c++ gcc-c++-4.8.5-16.el7.x86_64  检查环境之后发现已经安装过gcc-c++工具包，所以不用安装可以直接进入3.2进行编译源码。
-3.1.2 安装 [root@studyCentOS7 ~]# yum install gcc-c++  3.2 解压并编译源码 [root@studyCentOS7 ~]# cd /software_bak/ [root@studyCentOS7 software_bak]# tar -zxf redis-4.0.6.tar.gz [root@studyCentOS7 software_bak]# ll 总用量 5063000 -rw-r--r--.</description>
+      <description>1. 准备 1.1 centos 1 2 3 4 5 6 7 // 查看版本 [root@studyCentOS7 ~]# cat /etc/redhat-release CentOS Linux release 7.2.1511 (Core) // 查看位数 [root@studyCentOS7 ~]# getconf LONG_BIT 64 1.2 redis 下载地址，下载最近的stable版本：redis-4.0.6.t</description>
     </item>
     
   </channel>

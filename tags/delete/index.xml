@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/delete/</link>
     <description>Recent content in Delete on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Oct 2018 10:59:54 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/delete/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +16,7 @@
       <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/delete-openjdk/</guid>
-      <description>// 查看Java [root@localhost local]# java -version openjdk version &amp;quot;1.8.0_101&amp;quot; OpenJDK Runtime Environment (build 1.8.0_101-b13) OpenJDK 64-Bit Server VM (build 25.101-b13, mixed mode) // 查看有哪些安装包 [root@localhost northmeter]# rpm -qa | grep java javapackages-tools-3.4.1-11.el7.noarch java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64 python-javapackages-3.4.1-11.el7.noarch tzdata-java-2016f-1.el7.noarch java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64 java-1.8.0-openjdk-headless-1.8.0.101-3.b13.el7_2.x86_64 java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64 // 卸载 [root@localhost northmeter]# rpm -e --nodeps java-1.8.0-openjdk-1.8.0.101-3.b13.el7_2.x86_64 [root@localhost northmeter]# rpm -e --nodeps java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.2.el7_2.x86_64 警告：/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64/jre/lib/security/local_policy.jar 已另存为 /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64/jre/lib/security/local_policy.jar.rpmsave 警告：/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64/jre/lib/security/US_export_policy.jar 已另存为 /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64/jre/lib/security/US_export_policy.jar.rpmsave [root@localhost northmeter]# rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.101-3.b13.el7_2.x86_64 [root@localhost northmeter]# rpm -e --nodeps java-1.7.0-openjdk-1.7.0.111-2.6.7.2.el7_2.x86_64 // 删除完毕，测试 [root@localhost northmeter]# rpm -qa | grep java javapackages-tools-3.</description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 // 查看Java [root@localhost local]# java -version openjdk version &amp;#34;1.8.0_101&amp;#34; OpenJDK Runtime Environment (build 1.8.0_101-b13) OpenJDK 64-Bit Server VM (build 25.101-b13, mixed mode) // 查看有哪些安</description>
     </item>
     
   </channel>

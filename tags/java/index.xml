@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/java/</link>
     <description>Recent content in Java on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Tue, 09 Oct 2018 15:40:31 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/java/index.xml" rel="self" type="application/rss+xml" />
@@ -17,10 +16,7 @@
       <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/ints-and-integers/</guid>
-      <description>1. 导引 1.1 问题引入 我们知道，Java中int变量存在于jvm的静态区中，在系统之中它的存在形式很简单，就是一个简单的内存块，里面放了一个具体的数字，而Integer则是一个具体的对象，里面不光有具体的数字，还有一些具体的操作方法。早期的Java版本中，要想对int的数据进行对象化操作时，就必须要先把int转化为Integer对象才能够进行操作。例如：在Java1.5中，集合（Collections）不能直接放入int类型的数据，因为集合中要求存放的必须是对象。所以，为了节省由原始类型转化为对象类型的人工成本，也为了迎合Java中一切都是对象的思想，Java后续的版本中就引入了自动拆箱和自动装箱的机制。
-2. 概念 2.1 基本数据类型和封装数据类型 基本数据类型主要有8种，他们分别是：
-   基本数据类型(primitive) byte short int long float double char boolean     占用内存大小 1字节 2字节 4字节 8字节 4字节 8字节 1 字节 未知   默认值 (byte)0 (short)0 0 0L 0.0f 0.0d \u000 false   封装数据类型(wrapper) Byte Short Integer Long Float Double Character Boolean    二者之间的区别：
-   基本数据类型 封装数据类型     1.</description>
+      <description>1. 导引 1.1 问题引入 我们知道，Java中int变量存在于jvm的静态区中，在系统之中它的存在形式很简单，就是一个简单的内存块，里面放了一个具体的</description>
     </item>
     
     <item>
@@ -29,9 +25,7 @@
       <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
-      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。
- 转义字符得加转义 如果用“.”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\.&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;.&amp;quot;)；
-如果用“|”作为分隔的话，必须是如下写法：String.split(&amp;quot;\\|&amp;quot;)。这样才能正确的分隔开，不能用String.split(&amp;quot;|&amp;quot;);</description>
+      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。 转义字符得加转义 如果用“.”作为分隔的话，必须是如</description>
     </item>
     
   </channel>

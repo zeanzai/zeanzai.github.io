@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/develop/</link>
     <description>Recent content in Develop on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Tue, 09 Oct 2018 16:24:50 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/develop/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +16,7 @@
       <pubDate>Tue, 09 Oct 2018 16:24:50 +0800</pubDate>
       
       <guid>https://zeanzai.me/post/dev/springboot-tomcat-start-error/</guid>
-      <description>报错： org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy (default-cli) on project api: Cannot invoke Tomcat manager: Connection reset by peer: socket write error 解决办法：修改path &amp;lt;build&amp;gt; &amp;lt;finalName&amp;gt;api&amp;lt;/finalName&amp;gt;&amp;lt;!--最终生成的文件名--&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;port&amp;gt;8700&amp;lt;/port&amp;gt; &amp;lt;path&amp;gt;/api&amp;lt;/path&amp;gt; &amp;lt;!--此处不能使用 / ，应该使用 /api--&amp;gt; &amp;lt;url&amp;gt;http://IP:PORT/manager/text&amp;lt;/url&amp;gt; &amp;lt;username&amp;gt;northmeter&amp;lt;/username&amp;gt; &amp;lt;password&amp;gt;admin@2017&amp;lt;/password&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt; 报错： call &#39;refresh&#39; before multicasting events via the context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContex 解决方法： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-tomcat&amp;lt;/artifactId&amp;gt; &amp;lt;!--打包时，要把 compile 改成provided，因为SpringBoot中默认是Tomcat8的依赖，使用tomcat7部署时，依赖包会冲突，会报错，无法deploy--&amp;gt; &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  </description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 报错： org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy (default-cli) on project api: Cannot invoke Tomcat manager: Connection reset by peer: socket write error 解决办法：修改path &amp;lt;build&amp;gt; &amp;lt;final</description>
     </item>
     
   </channel>

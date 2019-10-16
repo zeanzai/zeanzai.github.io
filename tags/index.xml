@@ -5,7 +5,6 @@
     <link>https://zeanzai.me/tags/</link>
     <description>Recent content in Tags on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Oct 2018 11:09:31 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -89,6 +88,15 @@
       <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exception</title>
+      <link>https://zeanzai.me/tags/exception/</link>
+      <pubDate>Wed, 06 Jun 2018 00:42:27 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/exception/</guid>
       <description></description>
     </item>
     
@@ -179,231 +187,6 @@
       <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jenkins</title>
-      <link>https://zeanzai.me/tags/jenkins/</link>
-      <pubDate>Mon, 12 Nov 2018 09:18:51 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/jenkins/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Log</title>
-      <link>https://zeanzai.me/tags/log/</link>
-      <pubDate>Thu, 11 Oct 2018 10:56:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/log/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Manual</title>
-      <link>https://zeanzai.me/tags/manual/</link>
-      <pubDate>Thu, 11 Oct 2018 09:23:13 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/manual/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mbp</title>
-      <link>https://zeanzai.me/tags/mbp/</link>
-      <pubDate>Tue, 09 Oct 2018 15:28:44 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/mbp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mybatis</title>
-      <link>https://zeanzai.me/tags/mybatis/</link>
-      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/mybatis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mysql</title>
-      <link>https://zeanzai.me/tags/mysql/</link>
-      <pubDate>Tue, 09 Oct 2018 16:34:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network</title>
-      <link>https://zeanzai.me/tags/network/</link>
-      <pubDate>Mon, 01 Oct 2018 10:19:40 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nexus</title>
-      <link>https://zeanzai.me/tags/nexus/</link>
-      <pubDate>Thu, 01 Nov 2018 10:36:24 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/nexus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>https://zeanzai.me/tags/nginx/</link>
-      <pubDate>Thu, 11 Oct 2018 09:21:46 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://zeanzai.me/tags/notes/</link>
-      <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openjdk</title>
-      <link>https://zeanzai.me/tags/openjdk/</link>
-      <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/openjdk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oracle Jdk</title>
-      <link>https://zeanzai.me/tags/oracle-jdk/</link>
-      <pubDate>Tue, 09 Oct 2018 16:32:07 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/oracle-jdk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>https://zeanzai.me/tags/redis/</link>
-      <pubDate>Thu, 11 Oct 2018 10:40:03 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/redis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Springboot</title>
-      <link>https://zeanzai.me/tags/springboot/</link>
-      <pubDate>Tue, 09 Oct 2018 16:24:50 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/springboot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ssh</title>
-      <link>https://zeanzai.me/tags/ssh/</link>
-      <pubDate>Tue, 09 Oct 2018 15:11:08 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>String</title>
-      <link>https://zeanzai.me/tags/string/</link>
-      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/string/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tips</title>
-      <link>https://zeanzai.me/tags/tips/</link>
-      <pubDate>Mon, 01 Oct 2018 15:55:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tomcat</title>
-      <link>https://zeanzai.me/tags/tomcat/</link>
-      <pubDate>Thu, 11 Oct 2018 10:56:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/tomcat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Webhook</title>
-      <link>https://zeanzai.me/tags/webhook/</link>
-      <pubDate>Mon, 01 Oct 2018 12:27:14 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/webhook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://zeanzai.me/tags/windows/</link>
-      <pubDate>Thu, 11 Oct 2018 11:02:00 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zhuanlan</title>
-      <link>https://zeanzai.me/tags/zhuanlan/</link>
-      <pubDate>Tue, 16 Oct 2018 08:48:37 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/zhuanlan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>总结</title>
-      <link>https://zeanzai.me/tags/%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/%E6%80%BB%E7%BB%93/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>拆箱</title>
-      <link>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</link>
-      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>装箱</title>
-      <link>https://zeanzai.me/tags/%E8%A3%85%E7%AE%B1/</link>
-      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/%E8%A3%85%E7%AE%B1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>面经</title>
-      <link>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</link>
-      <pubDate>Mon, 01 Oct 2018 15:55:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</guid>
       <description></description>
     </item>
     
