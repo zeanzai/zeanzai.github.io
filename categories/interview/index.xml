@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on 天晴小猪</title>
+    <link>https://zeanzai.me/categories/interview/</link>
+    <description>Recent content in Interview on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://zeanzai.me/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>人事面试</title>
+      <link>https://zeanzai.me/post/interview/pingan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeanzai.me/post/interview/pingan/</guid>
+      <description>人事面试可能会问到的问题 你为什么离开上一家公司？ 第一家公司是因为工资给的太低，业务没有挑战性，在团队里面受不到重视，后来公司为了节省成本，让</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Centos7修改Dns - 天晴小猪</title>
+  <title>人事面试 - 天晴小猪</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,8 +22,8 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="天晴小猪" /><meta name="description" content="Centos7修改DNS" />
-<meta name="keywords" content="dns" />
+<meta name="author" content="天晴小猪" /><meta name="description" content="人事面试面试" />
+<meta name="keywords" content="人事, |, 面试" />
 
 
 
@@ -34,7 +34,7 @@
 <meta name="generator" content="Hugo 0.51" />
 
 
-<link rel="canonical" href="https://zeanzai.me/post/dev/centos7-dns/" />
+<link rel="canonical" href="https://zeanzai.me/post/interview/pingan/" />
 
 
 
@@ -56,26 +56,24 @@
 
 
 
-<meta property="og:title" content="Centos7修改Dns" />
-<meta property="og:description" content="Centos7修改DNS" />
+<meta property="og:title" content="人事面试" />
+<meta property="og:description" content="人事面试面试" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zeanzai.me/post/dev/centos7-dns/" /><meta property="article:published_time" content="2018-11-12T17:44:35&#43;08:00"/>
-<meta property="article:modified_time" content="2019-10-16T14:58:14&#43;08:00"/>
+<meta property="og:url" content="https://zeanzai.me/post/interview/pingan/" />
 
-<meta itemprop="name" content="Centos7修改Dns">
-<meta itemprop="description" content="Centos7修改DNS">
-
-
-<meta itemprop="datePublished" content="2018-11-12T17:44:35&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-16T14:58:14&#43;08:00" />
-<meta itemprop="wordCount" content="275">
+<meta itemprop="name" content="人事面试">
+<meta itemprop="description" content="人事面试面试">
 
 
 
-<meta itemprop="keywords" content="centos7," />
+<meta itemprop="wordCount" content="1929">
+
+
+
+<meta itemprop="keywords" content="interview," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Centos7修改Dns"/>
-<meta name="twitter:description" content="Centos7修改DNS"/>
+<meta name="twitter:title" content="人事面试"/>
+<meta name="twitter:description" content="人事面试面试"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -298,18 +296,18 @@ if (!doNotTrack) {
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Centos7修改Dns</h1>
+      <h1 class="post-title">人事面试</h1>
       
       <div class="post-meta">
-        <time datetime="2018-11-12" class="post-time">
-          2018-11-12
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
         </time>
         <div class="post-category">
-            <a href="https://zeanzai.me/categories/dev/"> dev </a>
+            <a href="https://zeanzai.me/categories/interview/"> interview </a>
             
           </div>
-        <span class="more-meta"> 约 275 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="more-meta"> 约 1929 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
         
@@ -326,74 +324,80 @@ if (!doNotTrack) {
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#人事面试可能会问到的问题">人事面试可能会问到的问题</a></li>
+<li><a href="#你需要问人事的问题">你需要问人事的问题？</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
 
     
     <div class="post-content">
-      <p><a href="https://www.cnblogs.com/dadadechengzi/p/6670530.html">https://www.cnblogs.com/dadadechengzi/p/6670530.html</a></p>
+      
 
-<p>在CentOS 7下，手工设置 /etc/resolv.conf 里的DNS，过了一会，发现被系统重新覆盖或者清除了。和CentOS 6下的设置DNS方法不同，有几种方式：
-1、使用全新的命令行工具 nmcli 来设置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">// 显示当前网络连接
-$ nmcli connection show
-NAME UUID                                 TYPE           DEVICE
-eno1 5fb06bd0-0bb0-7ffb-45f1-d6edd65f3e03 802-3-ethernet eno1
+<h2 id="人事面试可能会问到的问题">人事面试可能会问到的问题</h2>
 
-// 修改当前网络连接对应的DNS服务器，这里的网络连接可以用名称或者UUID来标识
-$ nmcli con mod eno1 ipv4.dns &#34;114.114.114.114 8.8.8.8&#34;
+<ul>
+<li><p>你为什么离开上一家公司？</p>
 
-// 将dns配置生效
-$ nmcli con up eno1</pre></td></tr></table>
-</div>
-</div>
-<p>2、使用传统方法，手工修改 /etc/resolv.conf</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">// 修改 /etc/NetworkManager/NetworkManager.conf 文件，在main部分添加 “dns=none” 选项：
+<p>第一家公司是因为工资给的太低，业务没有挑战性，在团队里面受不到重视，后来公司为了节省成本，让我去做实施工程师，全国各地出差，给万和的下级经销商做培训，我感觉跟我的职业发展有所背离。并且呢，我一直想找一个特别具有挑战性的工作，我喜欢迎接新的挑战。</p>
 
-[main]
-plugins=ifcfg-rh
-dns=none
+<p>第二家公司是因为三四月份的时候，我家里父亲突然生病了，我要回家但是又不知道什么时候能够再次回到深圳，此外呢，我也一直想进入金融行业发展，因为我觉得金融行业是一个万能行业，因为它能服务于任何行业，并且这个行业对程序员的要求也是比较严格的，同时它还具有很大的挑战性。所以基于这些考虑，我就打算换一份工作了。十月份回到深圳后开始安心找工作，我就投了平安的产险部门的DMS后端开发工程师，但是由于我没有准备好，第一面就挂了，没过几天我又投了寿险，我知道深圳市重大医疗保险项目就是平安的，我就想如果我能在自己三十岁之前做一款让几百万甚至上千万人都使用的产品，我做梦都会笑醒的。</p></li>
 
-// NetworkManager重新装载上面修改的配置
-$ systemctl restart NetworkManager.service
+<li><p>你期望的薪资是多少？（谈希望的薪资之前要先问清楚对方）</p></li>
 
-// 手工修改 /etc/resolv.conf
-nameserver 114.114.114.114
-nameserver 8.8.8.8</pre></td></tr></table>
-</div>
-</div>
+<li><p>你找工作时，最重要的考虑因素为何？</p></li>
+
+<li><p>为什么我们应该录取你？你有什么优点？</p></li>
+
+<li><p>你觉得自己最大的缺点是什么？</p></li>
+
+<li><p>你认为程序员最需要具备的素质有哪些？（认真细致、有责任心，懂得沟通，不沉浸在自己的小宇宙里）</p></li>
+
+<li><p>谈谈你的家庭情况？（表现出一种感恩的状态）</p></li>
+
+<li><p>谈谈你对我们公司的了解？</p>
+
+<p>平安全称“中国平安”，金融加科技的行业标杆，2019年福布斯全球上市公司第七，Brand z最具价值中国品牌排行榜金融品牌第2，futureBrand全球保险品牌第1</p></li>
+
+<li><p>你有什么业余爱好？你最崇拜谁？（扎克伯格，大学里就有很好的专业素养了，我也做了很多，搞过家教培训类的，搞过少数民族汉语学习系统，这也是我的毕业论文）</p></li>
+
+<li><p>谈谈你的一次失败经历？</p>
+
+<p>上一次面试，挺失败的，由于自己马虎，不够用心，太过于自信，没有准备，所以面的惨不忍睹，后来我就及时调整好自己状态，就好多了。还有，我觉得失败都只是暂时的，我们的眼光要往前看，不能老是盯着失败，因为如果我们从失败中总结经验教训，那失败就真的是我们成功路上的基石，我觉得以后我一定能获取自己想要的成功</p></li>
+
+<li><p>你喜欢深圳这个城市吗？为什么？</p></li>
+
+<li><p>你在上一家做了什么工作内容？</p></li>
+
+<li><p>你在上一家单位遇到的最大的挑战是什么？怎么解决的？</p>
+
+<p>当时感觉公司的架构有些老旧，承载的并发量不高，并且架构的扩展性很差，业务模块与业务模块之间的耦合度太高。然后我就找主管我的部门领导反映了这件事，我跟他说我想利用业余的时间把公司的架构试着重构一下，这对将来公司的业务扩展有很大的帮助，跟他沟通过之后，领导跟我说他支持我，然后我就利用业务加班的时间，把原来的架构重新构建了一下。初期遇到很多问题，一方面是我没有做过架构方面的重构工作，很多公共模块需要抽离出来，然后我就在下班的时候跟同事讨论这个问题，也去网上查了很多的资料，也问了很多之前的同事和同学，最后在两个月的时间内完成了这份工作，后来公司很多的项目都用到这个框架，我觉得挺开心的，从中我也学到很多，我也挺感谢我们领导支持我。</p>
+
+<p>除了这个问题外，我发现我们公司的开发流程不够规范，没有测试环境和持续集成环境，因为当时我已经被公司任命为java开发组小组长了，我觉得我们开发流程不规范，那我们的代码质量就没有办法得到很好的保证，于是我又利用业余时间把我们公司的持续集成环境以及测试环境重新搭建了一下，并且把很多工作内容规范起来，比如说我们用了项目管理工具，实行了每天的站立会制度，还有前后端接口规范和代码审查机制等，通过这一系列的举措，我们团队的开发进度得到了很好的控制，并且代码质量也比较高。</p>
+
+<p>其实上面有很多都是我在公司工作时发现的一些问题，并且我通过自己的努力和同事们的帮助以及领导的支持完成的。我很感激我的领导对我的信任和支持。</p></li>
+</ul>
+
+<h2 id="你需要问人事的问题">你需要问人事的问题？</h2>
+
+<ul>
+<li>咱们公司新员工入职有入职培训吗？有职业上的技能培训吗？都培训哪些内容呢？</li>
+<li>您能简单介绍一下寿险业务大概有多少技术开发人员吗？有多少个分组？团队成员的年龄组成比例呢？</li>
+<li>有什么人才培养计划吗？技术人员所能达到的最高岗位是什么岗位呢？</li>
+<li>您觉得如果我有幸入职的话，我应该怎么做才能达到KPI中的优秀呢？或者是需要注意些什么？</li>
+<li>我看附近吃饭的地方很少，我想问一下咱们同事有自己的餐厅吗？一般去哪里吃饭呢？公司有微波炉吗？</li>
+<li>还有就是您觉得我在整个过程中有哪些不足或者需要提高的地方吗？</li>
+<li>（谈薪资之前）您能简单介绍一下工资的组成吗？平均有多少个月的年终奖？</li>
+<li>我希望在自己原有工资的基础上上涨一些，期望是16k-17k，当然我也不只看重工资，我还看重公司提供的平台。同时我也相信咱们公司也能够根据我个人的能力给我一个市场化的工资水平。</li>
+</ul>
+
     </div>
 
     
@@ -405,7 +409,7 @@ nameserver 8.8.8.8</pre></td></tr></table>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2019-10-16</span>
+    <span class="item-content">0001-01-01</span>
   </p>
   
   <p class="copyright-item">
@@ -437,14 +441,14 @@ nameserver 8.8.8.8</pre></td></tr></table>
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://zeanzai.me/tags/centos7/">centos7</a>
+          <a href="https://zeanzai.me/tags/interview/">interview</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/tips/write-with-docsify/">
+          <a class="prev" href="/post/dev/2018-06-06-springboot-tomcat-start-error/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -454,23 +458,10 @@ nameserver 8.8.8.8</pre></td></tr></table>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">使用docsify为项目添加主题</span>
+            <span class="prev-text nav-default">SpringBoot启动和Tomcat部署出现的问题</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/dev/jenkins-install-config/">
-            <span class="next-text nav-default">在centos7上面搭建Jenkins自动化部署平台</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            
-            <i class="iconfont">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
-</svg>
-
-            </i>
-          </a>
       </nav>
     </footer>
   </article>
