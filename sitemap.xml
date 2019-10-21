@@ -10,8 +10,8 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/interview/pingan/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <loc>https://zeanzai.me/post/interview/_pingan/</loc>
+    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -508,14 +508,14 @@
   
   <url>
     <loc>https://zeanzai.me/tags/interview/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zeanzai.me/categories/interview/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -627,7 +627,7 @@
   
   <url>
     <loc>https://zeanzai.me/post/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
