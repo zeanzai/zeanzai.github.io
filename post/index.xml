@@ -5,19 +5,10 @@
     <link>https://zeanzai.me/post/</link>
     <description>Recent content in Posts on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 15:29:47 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>人事面试</title>
-      <link>https://zeanzai.me/post/interview/_pingan/</link>
-      <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zeanzai.me/post/interview/_pingan/</guid>
-      <description>人事面试可能会问到的问题 你为什么离开上一家公司？ 第一家公司是因为工资给的太低，业务没有挑战性，在团队里面受不到重视，后来公司为了节省成本，让</description>
-    </item>
     
     <item>
       <title>使用docsify为项目添加主题</title>
@@ -190,6 +181,15 @@ upload to &amp;lsquo;/opt/package/&amp;rsquo;
       
       <guid>https://zeanzai.me/post/dev/how-to-devops/</guid>
       <description>前言 良好的运维习惯有很多优点： - 利于自己维护，利于后继者维护 - 对计算机服务器进行最小化改动 - 便于实现对计算机更好的管理 良好的习惯 笔者工作使用</description>
+    </item>
+    
+    <item>
+      <title>Nginx Upstream</title>
+      <link>https://zeanzai.me/post/dev/nginx-upstream/</link>
+      <pubDate>Thu, 11 Oct 2018 09:21:46 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/nginx-upstream/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
     </item>
     
   </channel>
