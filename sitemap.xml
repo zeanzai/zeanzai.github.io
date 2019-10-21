@@ -10,8 +10,15 @@
   </url>
   
   <url>
+    <loc>https://zeanzai.me/post/interview/pingan/</loc>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://zeanzai.me/post/tips/write-with-docsify/</loc>
-    <lastmod>2019-10-16T15:29:47+08:00</lastmod>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -501,12 +508,14 @@
   
   <url>
     <loc>https://zeanzai.me/tags/interview/</loc>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zeanzai.me/categories/interview/</loc>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -618,7 +627,7 @@
   
   <url>
     <loc>https://zeanzai.me/post/</loc>
-    <lastmod>2019-10-16T15:29:47+08:00</lastmod>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -667,14 +676,14 @@
   
   <url>
     <loc>https://zeanzai.me/tags/tips/</loc>
-    <lastmod>2019-10-16T15:29:47+08:00</lastmod>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zeanzai.me/categories/tips/</loc>
-    <lastmod>2019-10-16T15:29:47+08:00</lastmod>
+    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -712,12 +721,6 @@
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/interview/pingan/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
