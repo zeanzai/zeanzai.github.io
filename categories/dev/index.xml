@@ -5,37 +5,10 @@
     <link>https://zeanzai.me/categories/dev/</link>
     <description>Recent content in Dev on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 12 Nov 2018 17:44:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Oct 2018 11:09:31 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/dev/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Centos7修改Dns</title>
-      <link>https://zeanzai.me/post/dev/centos7-dns/</link>
-      <pubDate>Mon, 12 Nov 2018 17:44:35 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/centos7-dns/</guid>
-      <description>https://www.cnblogs.com/dadadechengzi/p/6670530.html 在CentOS 7下，手工设置 /etc/resolv.conf 里的DNS，过了一会，发现被系统重新覆盖或者清除了。和CentOS 6下的设置DNS方法不同，有几种方式： 1、</description>
-    </item>
-    
-    <item>
-      <title>在centos7上面搭建Jenkins自动化部署平台</title>
-      <link>https://zeanzai.me/post/dev/jenkins-install-config/</link>
-      <pubDate>Mon, 12 Nov 2018 09:18:51 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/jenkins-install-config/</guid>
-      <description>1. 概述 1.1 前言 在互联网企业中，运维人员的职位不可获取，他们的主要工作是完成日常文件的备份、服务器状态的监控与日志。不同的企业之间，对运维人员的</description>
-    </item>
-    
-    <item>
-      <title>在Nginx上面配置Https</title>
-      <link>https://zeanzai.me/post/dev/config-https/</link>
-      <pubDate>Thu, 08 Nov 2018 14:24:07 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/config-https/</guid>
-      <description>安装Nginx 安装Nginx，可以参考。特别注意安装的时候要把https的支持模块安装上去。 也就是下面的内容： 1 2 3 &amp;gt; --with-http_stub_status_module \ &amp;gt; --with-http_gzip_static_module \ &amp;gt; --with-http_ssl_module 配置 在相</description>
-    </item>
     
     <item>
       <title>ACID</title>
@@ -53,60 +26,6 @@
       
       <guid>https://zeanzai.me/post/dev/filezilla-server-config/</guid>
       <description>环境说明 公司使用固定ip方式，由于笔者需要使用多个ip，所以，自己假设了路由器，设置本机ip为192.168.100.100，这就造成了公司</description>
-    </item>
-    
-    <item>
-      <title>Centos7上删除默认jdk</title>
-      <link>https://zeanzai.me/post/dev/delete-openjdk/</link>
-      <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/delete-openjdk/</guid>
-      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 // 查看Java [root@localhost local]# java -version openjdk version &amp;#34;1.8.0_101&amp;#34; OpenJDK Runtime Environment (build 1.8.0_101-b13) OpenJDK 64-Bit Server VM (build 25.101-b13, mixed mode) // 查看有哪些安</description>
-    </item>
-    
-    <item>
-      <title>Centos7上面tomcat的日志分割</title>
-      <link>https://zeanzai.me/post/dev/centos7-split-tomcat-log/</link>
-      <pubDate>Thu, 11 Oct 2018 10:56:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/centos7-split-tomcat-log/</guid>
-      <description>前言 笔者在进行试验时，有以下几个操作习惯，具体参考。 Centos7默认开通了80端口和22端口。 应用场景 tomcat7 在实际生产环境中，由于项目不断部署</description>
-    </item>
-    
-    <item>
-      <title>Contos7中Cron的使用</title>
-      <link>https://zeanzai.me/post/dev/contos7-cron/</link>
-      <pubDate>Thu, 11 Oct 2018 10:35:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/contos7-cron/</guid>
-      <description>前言 笔者在进行试验时，有以下几个操作习惯，具体参考。 Centos7默认开通了80端口和22端口。 查看服务相关信息 1 2 $ systemctl status crond // crond状态</description>
-    </item>
-    
-    <item>
-      <title>学习Centos7时的操作日志</title>
-      <link>https://zeanzai.me/post/dev/study-centos-devops-logs/</link>
-      <pubDate>Thu, 11 Oct 2018 09:28:29 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/study-centos-devops-logs/</guid>
-      <description>1 基础环境配置 ip：192.168.100.210 root：root1003 包放置地址：/opt/package 软件安装地址： /usr/setup 2 安装jdk</description>
-    </item>
-    
-    <item>
-      <title>运维工作手册</title>
-      <link>https://zeanzai.me/post/dev/how-to-devops/</link>
-      <pubDate>Thu, 11 Oct 2018 09:23:13 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/how-to-devops/</guid>
-      <description>前言 良好的运维习惯有很多优点： - 利于自己维护，利于后继者维护 - 对计算机服务器进行最小化改动 - 便于实现对计算机更好的管理 良好的习惯 笔者工作使用</description>
-    </item>
-    
-    <item>
-      <title>Nginx Upstream</title>
-      <link>https://zeanzai.me/post/dev/nginx-upstream/</link>
-      <pubDate>Thu, 11 Oct 2018 09:21:46 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/nginx-upstream/</guid>
-      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
     </item>
     
     <item>
@@ -182,12 +101,21 @@
     </item>
     
     <item>
-      <title>为centos7分配子用户，并使用ssh安全登录</title>
-      <link>https://zeanzai.me/post/dev/centos7-new-users/</link>
-      <pubDate>Tue, 09 Oct 2018 15:11:08 +0800</pubDate>
+      <title>java中的字符串操作</title>
+      <link>https://zeanzai.me/post/dev/java-string-plit/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
       
-      <guid>https://zeanzai.me/post/dev/centos7-new-users/</guid>
-      <description>场景描述 一台服务器上面允许多个用户使用，但是又不能把root账户给非管理人员，为保证安全性，就必须要为普通用户创建子账户，并使用ssh安全登</description>
+      <guid>https://zeanzai.me/post/dev/java-string-plit/</guid>
+      <description>在java.lang包中有String.split()方法，返回是一个数组，但是有很多坑。 转义字符得加转义 如果用“.”作为分隔的话，必须是如</description>
+    </item>
+    
+    <item>
+      <title>Mybatis中Foreach的用法</title>
+      <link>https://zeanzai.me/post/dev/mybatis-foreach/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/dev/mybatis-foreach/</guid>
+      <description>foreach属性 属性 描述 item 循环体中的具体对象。支持属性的点路径访问，如item.age,item.info.details。具体说明：若c</description>
     </item>
     
   </channel>

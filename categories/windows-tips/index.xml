@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Tips on 天晴小猪</title>
+    <link>https://zeanzai.me/categories/windows-tips/</link>
+    <description>Recent content in Windows Tips on 天晴小猪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 Nov 2019 21:38:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeanzai.me/categories/windows-tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用命令显示节点树</title>
+      <link>https://zeanzai.me/post/windows-tips/09.git-using/</link>
+      <pubDate>Thu, 28 Nov 2019 21:38:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/09.git-using/</guid>
+      <description>## 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 $ git log --oneline --graph --decorate --all * 9ff333d (HEAD -&amp;gt; master, origin/master, origin/HEAD) u * 8b4d321 u * 312e254 Merge branch &amp;#39;master&amp;#39; of github.com:zeanzai/zeanzai-note |\ | * a2db6d0 u * | 276ffbd u |/ * 8d435c7 u * c9b1051 u * 9d54617</description>
+    </item>
+    
+    <item>
+      <title>idea常用的设置</title>
+      <link>https://zeanzai.me/post/windows-tips/08.idea-normal-settings/</link>
+      <pubDate>Thu, 28 Nov 2019 21:32:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/08.idea-normal-settings/</guid>
+      <description>初始化配置 安装导引文件 修改配置文件存放位置 1 2 3 4 idea.config.path=D:/packages/devtools/ideaIU-2018.1.1.win/.IntelliJIdea/config idea.config.path=D:/packages/devtools/ideaIU-2018.1.1.win/.IntelliJIdea/config idea.plugins.path=${idea.config.path}/plugins idea.plugins.path=${idea.config.path}/plugins 打开idea后，跳过初始化配置后会自动打开初始化界面，打开全局初始化配置界面 默认配</description>
+    </item>
+    
+    <item>
+      <title>使用github打造一个免费的网盘</title>
+      <link>https://zeanzai.me/post/windows-tips/07.use-github-as-netdisk/</link>
+      <pubDate>Thu, 28 Nov 2019 21:31:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/07.use-github-as-netdisk/</guid>
+      <description>文档仓库，非大容量文件网盘。 步骤 安装git工具 申请github账户，创建仓库（私有或公有均可） 设置Windows的task scheduler 功能 免费无限容量</description>
+    </item>
+    
+    <item>
+      <title>windows定时任务</title>
+      <link>https://zeanzai.me/post/windows-tips/06.windows-auto-push/</link>
+      <pubDate>Thu, 28 Nov 2019 21:29:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/06.windows-auto-push/</guid>
+      <description>问题 在Linux中我们可以通过crontab来定时执行脚本，那么windows中如何执行呢？ 步骤 准备bat文件；在项目文件目录下面创建git</description>
+    </item>
+    
+    <item>
+      <title>单台PC设置多个git账户</title>
+      <link>https://zeanzai.me/post/windows-tips/05.github/</link>
+      <pubDate>Thu, 28 Nov 2019 21:29:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/05.github/</guid>
+      <description>单台pc上设置多个github账户 之前已经配置过单个github账户。现在又多了一个github账户，那么如何在本机上面设置sshkey呢？</description>
+    </item>
+    
+    <item>
+      <title>chrome常用快捷键</title>
+      <link>https://zeanzai.me/post/windows-tips/04.chrome-tips/</link>
+      <pubDate>Thu, 28 Nov 2019 21:26:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/04.chrome-tips/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 Ctrl + N // 新建一个chrome窗口 Ctrl + Shift + N // 新建一个</description>
+    </item>
+    
+    <item>
+      <title>StarUML软件的安装与破解</title>
+      <link>https://zeanzai.me/post/windows-tips/03.uml-track/</link>
+      <pubDate>Thu, 28 Nov 2019 21:25:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/03.uml-track/</guid>
+      <description>准备软件 系统环境 Windows10 操作系统。 node-v10.15.1-x64.msi 安装完成后再cmd命令行中输入node -v 显示版本号，输入 npm -v 显示包管理器的版本号。 StarUML Setup 3.0.2.exe 安装完成后，不运行软件</description>
+    </item>
+    
+    <item>
+      <title>正确使用window</title>
+      <link>https://zeanzai.me/post/windows-tips/02.use-windows-correctly/</link>
+      <pubDate>Thu, 28 Nov 2019 21:24:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/02.use-windows-correctly/</guid>
+      <description>准备工作 激活 激活Windows。 https://jingyan.baidu.com/article/22a299b53980b19e19376aaf.html http://www.xitongzhijia.net/xtjc/20171228/116141.html DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 一些原则 从官网上面下载软件：应用类的软件下载最新的版本即可；开发类的软件不要下载最新的版本，一般下载比</description>
+    </item>
+    
+    <item>
+      <title>科学上网</title>
+      <link>https://zeanzai.me/post/windows-tips/01.access-world/</link>
+      <pubDate>Thu, 28 Nov 2019 21:23:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/01.access-world/</guid>
+      <description>0. 系统环境 windows10 专业版 chrome 73.0.3683.86 1. 网址 https://secure.shadowsocks.ch/ 2. 注册账户并登陆 3. 下载相关工具 找到 技术支持 菜单中的 资源下载 界面 在热门下载中找到 适合Windows10 的客户端和</description>
+    </item>
+    
+    <item>
+      <title>安装的软件列表</title>
+      <link>https://zeanzai.me/post/windows-tips/00.install-list/</link>
+      <pubDate>Thu, 28 Nov 2019 21:22:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/00.install-list/</guid>
+      <description>系统工具类软件 sougoupinyin winrar huorong ccleaner chrome 社交软件 tim wechat 基本办公软件 jisupdf office2013 onenote 开发与设计软件 jdk maven idea editplus navicat redisdeskmanager git svn vm docker staruml Xmind 运维软件 filezilla secureCRT filezilla Server 安装的时候：安装为服务，但是服务</description>
+    </item>
+    
+  </channel>
+</rss>

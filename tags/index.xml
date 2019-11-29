@@ -20,51 +20,6 @@
     </item>
     
     <item>
-      <title>Centos7</title>
-      <link>https://zeanzai.me/tags/centos7/</link>
-      <pubDate>Mon, 12 Nov 2018 17:44:35 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/centos7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Centos7 Logs</title>
-      <link>https://zeanzai.me/tags/centos7-logs/</link>
-      <pubDate>Thu, 11 Oct 2018 09:28:29 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/centos7-logs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contos7</title>
-      <link>https://zeanzai.me/tags/contos7/</link>
-      <pubDate>Thu, 11 Oct 2018 10:35:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/contos7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cron</title>
-      <link>https://zeanzai.me/tags/cron/</link>
-      <pubDate>Thu, 11 Oct 2018 10:35:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/cron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Delete</title>
-      <link>https://zeanzai.me/tags/delete/</link>
-      <pubDate>Thu, 11 Oct 2018 10:59:54 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/delete/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Develop</title>
       <link>https://zeanzai.me/tags/develop/</link>
       <pubDate>Tue, 09 Oct 2018 16:24:50 +0800</pubDate>
@@ -76,18 +31,9 @@
     <item>
       <title>Devops</title>
       <link>https://zeanzai.me/tags/devops/</link>
-      <pubDate>Thu, 01 Nov 2018 10:36:24 +0800</pubDate>
+      <pubDate>Tue, 09 Oct 2018 16:28:43 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://zeanzai.me/tags/docker/</link>
-      <pubDate>Tue, 09 Oct 2018 09:57:53 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -119,74 +65,119 @@
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://zeanzai.me/tags/git/</link>
-      <pubDate>Mon, 01 Oct 2018 11:24:05 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gitlab</title>
-      <link>https://zeanzai.me/tags/gitlab/</link>
-      <pubDate>Mon, 01 Oct 2018 13:23:45 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/gitlab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://zeanzai.me/tags/golang/</link>
-      <pubDate>Mon, 01 Oct 2018 14:12:55 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Https</title>
-      <link>https://zeanzai.me/tags/https/</link>
-      <pubDate>Thu, 08 Nov 2018 14:24:07 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/https/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://zeanzai.me/tags/hugo/</link>
-      <pubDate>Mon, 01 Oct 2018 13:25:30 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Image Server</title>
-      <link>https://zeanzai.me/tags/image-server/</link>
-      <pubDate>Thu, 11 Oct 2018 11:04:59 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/image-server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Install</title>
-      <link>https://zeanzai.me/tags/install/</link>
-      <pubDate>Wed, 17 Oct 2018 16:22:57 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/tags/install/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Java</title>
       <link>https://zeanzai.me/tags/java/</link>
       <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
       
       <guid>https://zeanzai.me/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Log</title>
+      <link>https://zeanzai.me/tags/log/</link>
+      <pubDate>Tue, 09 Oct 2018 15:47:40 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mbp</title>
+      <link>https://zeanzai.me/tags/mbp/</link>
+      <pubDate>Tue, 09 Oct 2018 15:28:44 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/mbp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mybatis</title>
+      <link>https://zeanzai.me/tags/mybatis/</link>
+      <pubDate>Mon, 01 Oct 2018 15:05:33 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qa</title>
+      <link>https://zeanzai.me/tags/qa/</link>
+      <pubDate>Wed, 06 Jun 2018 00:42:27 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/qa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Springboot</title>
+      <link>https://zeanzai.me/tags/springboot/</link>
+      <pubDate>Tue, 09 Oct 2018 16:24:50 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/springboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>https://zeanzai.me/tags/string/</link>
+      <pubDate>Mon, 01 Oct 2018 15:54:45 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://zeanzai.me/tags/tips/</link>
+      <pubDate>Thu, 28 Nov 2019 21:38:57 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tomcat</title>
+      <link>https://zeanzai.me/tags/tomcat/</link>
+      <pubDate>Tue, 09 Oct 2018 16:24:50 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/tomcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://zeanzai.me/tags/windows/</link>
+      <pubDate>Thu, 11 Oct 2018 11:02:00 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>总结</title>
+      <link>https://zeanzai.me/tags/%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Oct 2018 10:12:55 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/%E6%80%BB%E7%BB%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>拆箱</title>
+      <link>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</link>
+      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/%E6%8B%86%E7%AE%B1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>装箱</title>
+      <link>https://zeanzai.me/tags/%E8%A3%85%E7%AE%B1/</link>
+      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/tags/%E8%A3%85%E7%AE%B1/</guid>
       <description></description>
     </item>
     

@@ -5,19 +5,10 @@
     <link>https://zeanzai.me/tags/tomcat/</link>
     <description>Recent content in Tomcat on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Oct 2018 10:56:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Oct 2018 16:24:50 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Centos7上面tomcat的日志分割</title>
-      <link>https://zeanzai.me/post/dev/centos7-split-tomcat-log/</link>
-      <pubDate>Thu, 11 Oct 2018 10:56:42 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/centos7-split-tomcat-log/</guid>
-      <description>前言 笔者在进行试验时，有以下几个操作习惯，具体参考。 Centos7默认开通了80端口和22端口。 应用场景 tomcat7 在实际生产环境中，由于项目不断部署</description>
-    </item>
     
     <item>
       <title>SpringBoot启动和Tomcat部署出现的问题</title>

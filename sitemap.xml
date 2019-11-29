@@ -10,64 +10,78 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/tips/write-with-docsify/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/09.git-using/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/centos7-dns/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/08.idea-normal-settings/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/jenkins-install-config/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/07.use-github-as-netdisk/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/config-https/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/06.windows-auto-push/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/install/install-nexus/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/05.github/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/pig/prepareenviroment/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/04.chrome-tips/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/zhuanlan/chapter02/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/03.uml-track/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/zhuanlan/chapter01/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/02.use-windows-correctly/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/zhuanlan/outline/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/post/windows-tips/01.access-world/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/windows-tips/00.install-list/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://zeanzai.me/post/windows-tips/10.write-with-docsify/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -80,84 +94,7 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/install/install-nginx-and-config/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-image-server/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/post/dev/filezilla-server-config/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/delete-openjdk/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/centos7-split-tomcat-log/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-redis-cluster/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/contos7-cron/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/study-centos-devops-logs/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/how-to-devops/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/nginx-upstream/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-mysql/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-oracle-jdk/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -220,27 +157,6 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/post/dev/centos7-new-users/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/study/docker/chapter01/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/tips/findjob/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/post/dev/java-string-plit/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -249,69 +165,6 @@
   
   <url>
     <loc>https://zeanzai.me/post/dev/mybatis-foreach/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-golang/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-hugo/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-gitlab/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-webhook/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-nginx/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/dev/install/install-git/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/study/network/chapter03-data-link-layer/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/study/network/chapter02-physical-layer/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/post/study/network/chapter01-overview/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -353,41 +206,6 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/centos7/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/centos7-logs/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/contos7/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/cron/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/delete/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/categories/dev/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -403,20 +221,6 @@
   
   <url>
     <loc>https://zeanzai.me/tags/devops/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/docker/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/categories/docker/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -444,62 +248,6 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/git/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/gitlab/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/golang/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/https/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/hugo/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/image-server/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/install/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/categories/install/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/tags/java/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -507,21 +255,7 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/jenkins/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/tags/log/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/manual/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -542,71 +276,8 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/mysql/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/network/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/categories/network/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/nexus/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/nginx/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/notes/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/openjdk/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/oracle-jdk/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/categories/pig/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/post/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -619,21 +290,7 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/redis/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zeanzai.me/tags/springboot/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/ssh/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -654,28 +311,21 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/tips/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <loc>https://zeanzai.me/categories/tips/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zeanzai.me/categories/tips/</loc>
-    <lastmod>2019-10-21T15:30:17+08:00</lastmod>
+    <loc>https://zeanzai.me/tags/tips/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zeanzai.me/tags/tomcat/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/webhook/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -689,15 +339,8 @@
   </url>
   
   <url>
-    <loc>https://zeanzai.me/tags/zhuanlan/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/categories/zhuanlan/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
+    <loc>https://zeanzai.me/categories/windows-tips/</loc>
+    <lastmod>2019-11-29T22:28:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -725,13 +368,6 @@
   
   <url>
     <loc>https://zeanzai.me/tags/%E8%A3%85%E7%AE%B1/</loc>
-    <lastmod>2019-10-16T14:58:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zeanzai.me/tags/%E9%9D%A2%E7%BB%8F/</loc>
     <lastmod>2019-10-16T14:58:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
