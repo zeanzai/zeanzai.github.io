@@ -163,7 +163,8 @@ markdown-scroll-sync&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;要注意git安装过程中的某些配置。&lt;/li&gt;
+&lt;li&gt;要注意git安装过程中的某些配置。（sshkey配置、用户名和密码等的配置）&lt;/li&gt;
+&lt;li&gt;hugo的版本好没有用对，导致文章的导航目录丢失。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       
