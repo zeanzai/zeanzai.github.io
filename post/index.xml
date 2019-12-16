@@ -5,10 +5,28 @@
     <link>https://zeanzai.me/post/</link>
     <description>Recent content in Posts on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Nov 2019 21:38:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 16:27:54 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git的常用命令</title>
+      <link>https://zeanzai.me/post/windows-tips/12.use-git/</link>
+      <pubDate>Mon, 16 Dec 2019 16:27:54 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/12.use-git/</guid>
+      <description>一、新建代码库 新建一个目录，将其初始化为Git代码库</description>
+    </item>
+    
+    <item>
+      <title>使用atom打造自己的博客编辑器</title>
+      <link>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</link>
+      <pubDate>Mon, 16 Dec 2019 15:49:37 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</guid>
+      <description>前言 笔者之前使用过很多的笔记类的软件，如：leanote、印象笔记、onenote等，最后感觉不是这款软件少了这个功能，就是那款软件少了那个</description>
+    </item>
     
     <item>
       <title>使用命令显示节点树</title>
@@ -170,24 +188,6 @@
       
       <guid>https://zeanzai.me/post/dev/ints-and-integers/</guid>
       <description>1. 导引 1.1 问题引入 我们知道，Java中int变量存在于jvm的静态区中，在系统之中它的存在形式很简单，就是一个简单的内存块，里面放了一个具体的</description>
-    </item>
-    
-    <item>
-      <title>前后端分离框架中验证码的问题</title>
-      <link>https://zeanzai.me/post/dev/auth-forend-backend/</link>
-      <pubDate>Tue, 09 Oct 2018 15:34:06 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/auth-forend-backend/</guid>
-      <description>1. 所遇到的问题 1.1 验证码唯一性 前后端分离会遇到一个问题就是不再依赖session，前端的请求是无状态的，如何保证A请求的验证码是A请求的不是B</description>
-    </item>
-    
-    <item>
-      <title>前后端分离中的跨域问题</title>
-      <link>https://zeanzai.me/post/dev/across-domain/</link>
-      <pubDate>Tue, 09 Oct 2018 15:32:18 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/across-domain/</guid>
-      <description>使用框架是SpringBoot+Shiro框架，需要更改两个地方： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 public class XssFilter implements Filter { @Override public void init(FilterConfig config) throws ServletException</description>
     </item>
     
   </channel>

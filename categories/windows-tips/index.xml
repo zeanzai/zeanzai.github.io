@@ -5,10 +5,28 @@
     <link>https://zeanzai.me/categories/windows-tips/</link>
     <description>Recent content in Windows Tips on 天晴小猪</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Nov 2019 21:38:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 16:27:54 +0800</lastBuildDate>
     
 	<atom:link href="https://zeanzai.me/categories/windows-tips/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git的常用命令</title>
+      <link>https://zeanzai.me/post/windows-tips/12.use-git/</link>
+      <pubDate>Mon, 16 Dec 2019 16:27:54 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/12.use-git/</guid>
+      <description>一、新建代码库 新建一个目录，将其初始化为Git代码库</description>
+    </item>
+    
+    <item>
+      <title>使用atom打造自己的博客编辑器</title>
+      <link>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</link>
+      <pubDate>Mon, 16 Dec 2019 15:49:37 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</guid>
+      <description>前言 笔者之前使用过很多的笔记类的软件，如：leanote、印象笔记、onenote等，最后感觉不是这款软件少了这个功能，就是那款软件少了那个</description>
+    </item>
     
     <item>
       <title>使用命令显示节点树</title>

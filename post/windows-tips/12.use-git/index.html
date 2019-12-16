@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Qa · 天晴小猪</title>
+  <title>git的常用命令 - 天晴小猪</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,9 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="天晴小猪" />
-  <meta name="description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。" />
-  <meta name="keywords" content="关于后端, 天晴小猪, zeanzai, github, Software Engineer, Backend, JAVA, DevOps, Linux, IDEA, Microservice, Docker, SpringMVC, Mybatis, SpringBoot, SpringCloud, Mysql" />
+<meta name="author" content="天晴小猪" /><meta name="description" content="git的常用命令" />
+<meta name="keywords" content="git" />
+
 
 
 
@@ -34,8 +34,7 @@
 <meta name="generator" content="Hugo 0.54.0" />
 
 
-<link rel="canonical" href="https://zeanzai.me/tags/qa/" />
-<link href="https://zeanzai.me/tags/qa/index.xml" rel="alternate" type="application/rss+xml" title="天晴小猪" />
+<link rel="canonical" href="https://zeanzai.me/post/windows-tips/12.use-git/" />
 
 
 
@@ -57,19 +56,27 @@
 
 
 
-<meta property="og:title" content="Qa" />
-<meta property="og:description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://zeanzai.me/tags/qa/" />
+<meta property="og:title" content="git的常用命令" />
+<meta property="og:description" content="git的常用命令" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeanzai.me/post/windows-tips/12.use-git/" />
+<meta property="article:published_time" content="2019-12-16T16:27:54&#43;08:00"/>
+<meta property="article:modified_time" content="2019-12-16T16:27:54&#43;08:00"/>
 
-<meta property="og:updated_time" content="2018-06-06T00:42:27&#43;08:00"/>
+<meta itemprop="name" content="git的常用命令">
+<meta itemprop="description" content="git的常用命令">
 
-<meta itemprop="name" content="Qa">
-<meta itemprop="description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。">
 
+<meta itemprop="datePublished" content="2019-12-16T16:27:54&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-16T16:27:54&#43;08:00" />
+<meta itemprop="wordCount" content="26">
+
+
+
+<meta itemprop="keywords" content="tips," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Qa"/>
-<meta name="twitter:description" content="天晴小猪 | 关于后端与架构设计 | Software Engineer | Backend | JAVA | DevOps | Linux | IDEA | Microservice | 我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我所愿，我的一生就算成功。"/>
+<meta name="twitter:title" content="git的常用命令"/>
+<meta name="twitter:description" content="git的常用命令"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -289,53 +296,159 @@ if (!doNotTrack) {
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title tag">
-        <h2 class="archive-name">标签： Qa</h2>
+    <header class="post-header">
+      <h1 class="post-title">git的常用命令</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-12-16" class="post-time">
+          2019-12-16
+        </time>
+        <div class="post-category">
+            <a href="https://zeanzai.me/categories/windows-tips/"> windows-tips </a>
+            
+          </div>
+        <span class="more-meta"> 约 26 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+
+        
+        
+          <span id="busuanzi_container_page_pv">
+            · 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
       </div>
+    </header>
+
     
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#一-新建代码库">一、新建代码库</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#新建一个目录-将其初始化为git代码库">新建一个目录，将其初始化为Git代码库</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+
+    
+    <div class="post-content">
+      
+
+<h2 id="一-新建代码库">一、新建代码库</h2>
+
+<h5 id="新建一个目录-将其初始化为git代码库">新建一个目录，将其初始化为Git代码库</h5>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">天晴小猪</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2019-12-16</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/wechat-qr-code.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/alipay-qr-code.png">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://zeanzai.me/tags/tips/">tips</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/windows-tips/11.write-blog-with-atom/">
+            <span class="next-text nav-default">使用atom打造自己的博客编辑器</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
   
 
   
-    <div class="archive-post">
-      <time datetime="2018-06-06" class="archive-post-time">
-        2018-06-06
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/dev/2018-06-06-springboot-tomcat-start-error/" class="archive-post-link">
-          SpringBoot启动和Tomcat部署出现的问题
-        </a>
-      </span>
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "zeanzai/zeanzai.me-comments"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
   
-</section>
-
-
-
-
-
 
   
-  
+
   
 
   
   
-
-  
-  
-
-  
-  
-
-  
-  
-
-
+    
 
 
 

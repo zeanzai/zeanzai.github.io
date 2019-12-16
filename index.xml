@@ -43,6 +43,133 @@
     </item>
     
     <item>
+      <title>git的常用命令</title>
+      <link>https://zeanzai.me/post/windows-tips/12.use-git/</link>
+      <pubDate>Mon, 16 Dec 2019 16:27:54 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/12.use-git/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;一-新建代码库&#34;&gt;一、新建代码库&lt;/h2&gt;
+
+&lt;h5 id=&#34;新建一个目录-将其初始化为git代码库&#34;&gt;新建一个目录，将其初始化为Git代码库&lt;/h5&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>使用atom打造自己的博客编辑器</title>
+      <link>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</link>
+      <pubDate>Mon, 16 Dec 2019 15:49:37 +0800</pubDate>
+      
+      <guid>https://zeanzai.me/post/windows-tips/11.write-blog-with-atom/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;笔者之前使用过很多的笔记类的软件，如：leanote、印象笔记、onenote等，最后感觉不是这款软件少了这个功能，就是那款软件少了那个功能。于是决定自己搭建一个个人博客，自己需要的功能很简单，同时，也可以定制自己的博客主题，还能够更好的管理自己的文章，更重要的是，我一直梦想着有自己的一台笔记本，周末等业余时间，找一家咖啡厅，点上一杯咖啡，耳机里面听着轻音乐，敲着代码……乐不思蜀。哈哈哈，于是自己不断折腾，总结出来了一种比较完善的流程。现在分享给大家~&lt;/p&gt;
+
+&lt;p&gt;但是，笔者不会分享具体的使用，只会简单的介绍一下实现的思路。这就需要读者需要具有一定的基础：atom的使用、git的使用、GitHub的使用以及hugo的使用。&lt;/p&gt;
+
+&lt;h2 id=&#34;配置写作环境&#34;&gt;配置写作环境&lt;/h2&gt;
+
+&lt;p&gt;搭建的个人博客，是使用hugo作为静态网页生成工具，使用markdown作为原生文章文件扩展名的。因此我们需要在自己的电脑上面搭建一个可以markdown的编辑器。&lt;/p&gt;
+
+&lt;h3 id=&#34;atom的安装与配置&#34;&gt;atom的安装与配置&lt;/h3&gt;
+
+&lt;p&gt;atom工具是一款开源的编辑器，功能丰富，在这里我们使用它作为我们的markdown编辑器。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;直接去官方网站，下载atom的exe执行文件，然后双击进行安装。安装完毕之后，在桌面上会出现快捷方式，并且在命令行中，也可以使用&lt;code&gt;apm -version&lt;/code&gt;命令查看具体的版本。（关于apm可以自行百度安装）注意：下载文件的速度有些慢。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;设置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个步骤可选。打开file-settings，把主题调节成atom-light。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;设置国内源&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;atom功能丰富的一个根本原因在于它有着丰富的插件库。在这里，我们需要使用两三个插件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;platformio-ide-terminal
+markdown-priview-plus
+markdown-writer
+markdown-scroll-sync&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;但是，我们在packages里面进行安装的时候，发现很慢，这是由于墙的问题，所以，我们可以先行配置atom的源。&lt;/p&gt;
+
+&lt;p&gt;打开cmd，在cmd里面执行&lt;code&gt;apm config set registry http://registry.npm.taobao.org&lt;/code&gt;，将atom的源修改为淘宝的源。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装插件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;安装插件的命令很简单，只需要在cmd中执行&lt;code&gt;apm install XXXX&lt;/code&gt;即可。&lt;/p&gt;
+
+&lt;h3 id=&#34;git的安装与配置&#34;&gt;git的安装与配置&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;git的安装很简单，只需要下载好git，然后双击进行安装即可。当然，需要注意的是需要生成sshkey，然后配置到github上去。&lt;/p&gt;
+
+&lt;h3 id=&#34;hugo的安装与配置&#34;&gt;hugo的安装与配置&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这里需要注意，笔者的hugo版本是0.54.0版本，需要特别注意这一点，只需要把下载好的hugo.exe放到对应的安装目录下面即可。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;设置环境变量&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;设置环境变量，这样在cmd里面任何位置都可以使用hugo命令了。&lt;/p&gt;
+
+&lt;h2 id=&#34;写作&#34;&gt;写作&lt;/h2&gt;
+
+&lt;h3 id=&#34;文章实时预览&#34;&gt;文章实时预览&lt;/h3&gt;
+
+&lt;p&gt;安装好atom里面的terminal工具之后，就可以在atom中打开实时预览，这样可以一边在atom编写文章，一边又可以在浏览器中实时预览文章的具体效果。&lt;/p&gt;
+
+&lt;h3 id=&#34;生成一篇新文章&#34;&gt;生成一篇新文章&lt;/h3&gt;
+
+&lt;p&gt;如果需要生成一篇新的文章的时候，可以使用&lt;code&gt;hugo new ./post/xxxx.md&lt;/code&gt;命令进行生成，其中命令中的点是以content作为根目录的。&lt;/p&gt;
+
+&lt;h3 id=&#34;提交文章并完成部署过程&#34;&gt;提交文章并完成部署过程&lt;/h3&gt;
+
+&lt;p&gt;编写完成一篇文章，并且在浏览器中实时预览发现没有问题之后，就可以进行提交了，我们使用的是github账号，所以，我们也需要提交到GitHub仓库。&lt;/p&gt;
+
+&lt;p&gt;提交仓库需要命令很多，故此，笔者写了一个sh的脚本，这样可以直接执行脚本即可。执行时可以新开一个terminal的命令窗口，输入&lt;code&gt;./deploy.sh &amp;quot;这是注释&amp;quot;&lt;/code&gt;即可。&lt;/p&gt;
+
+&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;要注意git安装过程中的某些配置。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>使用命令显示节点树</title>
       <link>https://zeanzai.me/post/windows-tips/09.git-using/</link>
       <pubDate>Thu, 28 Nov 2019 21:38:57 +0800</pubDate>
@@ -2167,361 +2294,6 @@ Multilanguage &amp;ndash; 多语言版&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&amp;mid=2665513504&amp;idx=1&amp;sn=25dd6420e3056101dd3f6fdaedacaa2a&amp;chksm=80d67a63b7a1f37572a5159ff6f53810467c15c8beec94770e8360c45f45036360d77755ee78&amp;scene=21#wechat_redirect&#34; target=&#34;_blank&#34;&gt;推荐阅读&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>装箱和拆箱问题详解</title>
-      <link>https://zeanzai.me/post/dev/ints-and-integers/</link>
-      <pubDate>Tue, 09 Oct 2018 15:40:31 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/ints-and-integers/</guid>
-      
-        <description>
-
-&lt;h1 id=&#34;1-导引&#34;&gt;1. 导引&lt;/h1&gt;
-
-&lt;h2 id=&#34;1-1-问题引入&#34;&gt;1.1 问题引入&lt;/h2&gt;
-
-&lt;p&gt;我们知道，Java中int变量存在于jvm的静态区中，在系统之中它的存在形式很简单，就是一个简单的内存块，里面放了一个具体的数字，而Integer则是一个具体的对象，里面不光有具体的数字，还有一些具体的操作方法。早期的Java版本中，要想对int的数据进行对象化操作时，就必须要先把int转化为Integer对象才能够进行操作。例如：在Java1.5中，集合（Collections）不能直接放入int类型的数据，因为集合中要求存放的必须是对象。所以，为了节省由原始类型转化为对象类型的人工成本，也为了迎合Java中一切都是对象的思想，Java后续的版本中就引入了自动拆箱和自动装箱的机制。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;2-概念&#34;&gt;2. 概念&lt;/h1&gt;
-
-&lt;h2 id=&#34;2-1-基本数据类型和封装数据类型&#34;&gt;2.1 基本数据类型和封装数据类型&lt;/h2&gt;
-
-&lt;p&gt;基本数据类型主要有8种，他们分别是：&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;基本数据类型(primitive)&lt;/th&gt;
-&lt;th&gt;byte&lt;/th&gt;
-&lt;th&gt;short&lt;/th&gt;
-&lt;th&gt;int&lt;/th&gt;
-&lt;th&gt;long&lt;/th&gt;
-&lt;th&gt;float&lt;/th&gt;
-&lt;th&gt;double&lt;/th&gt;
-&lt;th&gt;char&lt;/th&gt;
-&lt;th&gt;boolean&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;占用内存大小&lt;/td&gt;
-&lt;td&gt;1字节&lt;/td&gt;
-&lt;td&gt;2字节&lt;/td&gt;
-&lt;td&gt;4字节&lt;/td&gt;
-&lt;td&gt;8字节&lt;/td&gt;
-&lt;td&gt;4字节&lt;/td&gt;
-&lt;td&gt;8字节&lt;/td&gt;
-&lt;td&gt;1 字节&lt;/td&gt;
-&lt;td&gt;未知&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;默认值&lt;/td&gt;
-&lt;td&gt;(byte)0&lt;/td&gt;
-&lt;td&gt;(short)0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0L&lt;/td&gt;
-&lt;td&gt;0.0f&lt;/td&gt;
-&lt;td&gt;0.0d&lt;/td&gt;
-&lt;td&gt;\u000&lt;/td&gt;
-&lt;td&gt;false&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;封装数据类型(wrapper)&lt;/td&gt;
-&lt;td&gt;Byte&lt;/td&gt;
-&lt;td&gt;Short&lt;/td&gt;
-&lt;td&gt;Integer&lt;/td&gt;
-&lt;td&gt;Long&lt;/td&gt;
-&lt;td&gt;Float&lt;/td&gt;
-&lt;td&gt;Double&lt;/td&gt;
-&lt;td&gt;Character&lt;/td&gt;
-&lt;td&gt;Boolean&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;二者之间的区别：&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;基本数据类型&lt;/th&gt;
-&lt;th&gt;封装数据类型&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1.基本类型&lt;br /&gt; 2.是面向机器底层的数据结构，不需要实例化&lt;br /&gt; 3. 在内存中就是一个简单的变量，没有具体的操作方法&lt;/td&gt;
-&lt;td&gt;1.引用类型&lt;br /&gt; 2. 是Java对象，&lt;strong&gt;可能&lt;/strong&gt;需要进行实例化&lt;br /&gt; 3. 有具体的操作方法&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;2-2-拆箱和装箱&#34;&gt;2.2 拆箱和装箱&lt;/h2&gt;
-
-&lt;p&gt;装箱就是将基本数据类型转化为封装数据类型的过程，其主要使用了valueOf()函数将对象的值转化为封装类型的对象；同时，拆箱过程中，就使用intValue()、doubleValue()等函数，将对象的值转化为基本数据类型的值。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;3-适用场景与不适用场景&#34;&gt;3. 适用场景与不适用场景&lt;/h1&gt;
-
-&lt;h2 id=&#34;3-1-适用场景&#34;&gt;3.1 适用场景&lt;/h2&gt;
-
-&lt;p&gt;在Java1.5之前都需要手动的进行基本数据类型到封装类型之间的转化，Java1.5之后就可以实现自动的拆箱和装箱操作了。&lt;/p&gt;
-
-&lt;h3 id=&#34;3-1-1-赋值&#34;&gt;3.1.1 赋值&lt;/h3&gt;
-
-&lt;p&gt;自动拆箱和自动装箱的一个应用场景就是赋值操作。
-如下面代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//before autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;valueOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iPrimitive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;intValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;//after java5
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//autobxing - primitive to wrapper conversion
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iPrimitive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unboxing&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;primitive&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;conversion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Java编译器帮我们自动完成装箱和拆箱操作。&lt;/p&gt;
-
-&lt;h3 id=&#34;3-1-2-方法调用&#34;&gt;3.1.2 方法调用&lt;/h3&gt;
-
-&lt;p&gt;另外一个应用场景就是方法调用，在方法调用的过程中，方法会根据具体的参数类型来进行拆箱和装箱操作。如下所示：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-   &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;autoboxing example - method invocation i: &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;//autoboxing and unboxing in method invocation
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unboxing&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;because&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;3-2-不适用场景&#34;&gt;3.2 不适用场景&lt;/h1&gt;
-
-&lt;h2 id=&#34;3-2-1-重载&#34;&gt;3.2.1 重载&lt;/h2&gt;
-
-&lt;p&gt;什么情况下不适用，就是重载场景中。先看一个场景：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;method with primitive argument&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;method with wrapper argument&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;//calling overloaded method
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AutoboxingTest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;autoTest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoboxingTest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;autoTest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//no autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;iValue&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;autoTest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;no&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;autoboxing&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;pre&gt;
-输出:
-method with primitive argument
-method with wrapper argument
-&lt;/pre&gt;
-在重载的过程中，如果多个同名函数中，一个使用基本数据类型作为参数，一个使用封装数据类型作为参数，那么在使用过程中不会发生重载，传递什么类型的参数，就使用什么类型的函数。&lt;/p&gt;
-
-&lt;h2 id=&#34;3-2-2-对象之间的比较&#34;&gt;3.2.2 对象之间的比较&lt;/h2&gt;
-
-&lt;p&gt;这是一个比较容易出错的地方，”==“可以用于原始值进行比较，也可以用于对象进行比较，当用于对象与对象之间比较时，比较的不是对象代表的值，而是检查两个对象是否是同一对象，这个比较过程中没有自动装箱发生。进行对象值比较不应该使用”==“，而应该使用对象对应的equals方法。看一个能说明问题的例子。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;AutoboxingTest&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-
-        &lt;span class=&#34;c1&#34;&gt;// Example 1: == comparison pure primitive – no autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;i1==i2 : &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// true
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// Example 2: equality operator mixing object and primitive
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;num1 == num2 : &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// true
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// Example 3: special case - arises due to autoboxing in Java
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;obj1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// autoboxing will call Integer.valueOf()
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;obj2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// same call to Integer.valueOf() will return same
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;                            &lt;span class=&#34;c1&#34;&gt;// cached Object
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;obj1 == obj2 : &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;obj1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;obj2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// true
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;// Example 4: equality operator - pure object comparison
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;one&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// no autoboxing
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;anotherOne&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;one == anotherOne : &amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;one&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;anotherOne&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// false
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;pre&gt;
-输出：
-i1==i2 : true
-num1 == num2 : true
-obj1 == obj2 : true
-one == anotherOne : false
-&lt;/pre&gt;
-值得注意的是第三个小例子，这是一种极端情况。obj1和obj2的初始化都发生了自动装箱操作。但是处于节省内存的考虑，JVM会缓存-128到127的Integer对象。因为obj1和obj2实际上是同一个对象。所以使用”==“比较返回true。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;4-使用中需要注意的问题&#34;&gt;4. 使用中需要注意的问题&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;在程序中，如果写了需要不断拆箱和装箱的操作代码，会造成额外的系统开销，增加垃圾回收的压力&lt;/li&gt;
-&lt;li&gt;在自动拆箱和自动装箱过程中要注意默认值的问题（在拆箱过程中，如果使用了未初始化的对象，执行obj.xxxValue就会报NullPointerException异常）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;5-总结&#34;&gt;5. 总结&lt;/h1&gt;
-
-&lt;p&gt;Java中的拆箱和装箱机制便利了程序开发人员，减少了程序开发人员的工作量，使得基本数据类型和封装数据类型之间有一个高效快捷的桥梁。但是凡事都有两面性，在使用过程中一定要注意初始值问题和适用场景问题，切不可以随意任意使用。&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>前后端分离框架中验证码的问题</title>
-      <link>https://zeanzai.me/post/dev/auth-forend-backend/</link>
-      <pubDate>Tue, 09 Oct 2018 15:34:06 +0800</pubDate>
-      
-      <guid>https://zeanzai.me/post/dev/auth-forend-backend/</guid>
-      
-        <description>
-
-&lt;h2 id=&#34;1-所遇到的问题&#34;&gt;1. 所遇到的问题&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-1-验证码唯一性&#34;&gt;1.1 验证码唯一性&lt;/h3&gt;
-
-&lt;p&gt;前后端分离会遇到一个问题就是不再依赖session，前端的请求是无状态的，如何保证A请求的验证码是A请求的不是B请求的？
-例如：A请求的验证码是‘123’，B请求的验证码是‘456’。这是验证码的唯一性&lt;/p&gt;
-
-&lt;h3 id=&#34;1-2-验证码的校验&#34;&gt;1.2 验证码的校验&lt;/h3&gt;
-
-&lt;p&gt;前后端分离后无法使用session，那如何确定用户输入的验证码就是后端返回给用户的验证码，这就所说的验证码的校验。&lt;/p&gt;
-
-&lt;h3 id=&#34;1-3-校验思路&#34;&gt;1.3 校验思路&lt;/h3&gt;
-
-&lt;p&gt;解决验证码的校验的思路大概有这么几种：前端校验、后端校验和前后校验&lt;/p&gt;
-
-&lt;h4 id=&#34;1-3-1-前端校验&#34;&gt;1.3.1 前端校验&lt;/h4&gt;
-
-&lt;p&gt;是指后端在将验证码图片传给前端的同时也会把验证码上面的字符也传给前端，然后由前端根据后端传给的验证码和用户输入的验证码做对比校验。&lt;/p&gt;
-
-&lt;h4 id=&#34;1-3-2-后端校验&#34;&gt;1.3.2 后端校验&lt;/h4&gt;
-
-&lt;p&gt;后端校验是指后端生成验证码图片的同时记录图片上面的验证码，然后由前端传来的验证码和后端存储的验证码进行对比校验，此方式有一个问题就是要保证验证码的唯一性。&lt;/p&gt;
-
-&lt;h4 id=&#34;1-3-3-前后校验&#34;&gt;1.3.3 前后校验&lt;/h4&gt;
-
-&lt;p&gt;是指既有前端校验又有后端校验。&lt;/p&gt;
-
-&lt;h2 id=&#34;2-解决方案&#34;&gt;2. 解决方案&lt;/h2&gt;
-
-&lt;h3 id=&#34;2-1-方案一-后端验证&#34;&gt;2.1 方案一：后端验证&lt;/h3&gt;
-
-&lt;p&gt;前端在请求验证码的时候加一个随机数参数，后台接收到这个随机数参数后，将这个随机数和验证码保存到redis中。验证时，需要前端把随机数也要传过来，后端去redis中去查即可。&lt;/p&gt;
-
-&lt;h3 id=&#34;2-2-方案二-后端验证&#34;&gt;2.2 方案二：后端验证&lt;/h3&gt;
-
-&lt;p&gt;如果是前后端分离，那么，前端每次请求都是无状态的，那么，就需要在前端第一次请求的时候，分配给前端一个token，然后，前端每次请求时，都会带着这个token。可以将该token作为redis的键值，并将验证码放在对应的值位置。&lt;/p&gt;
-
-&lt;h3 id=&#34;2-3-方案三-前端验证&#34;&gt;2.3 方案三：前端验证&lt;/h3&gt;
-
-&lt;p&gt;后端Response Header里面返回一个id的字段，和验证码的值相关联起来，前端读取返回的Header中的id然后跟用户输入的进行验证。&lt;/p&gt;
 </description>
       
     </item>
