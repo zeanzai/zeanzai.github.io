@@ -136,7 +136,7 @@ markdown-scroll-sync&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;li&gt;安装&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;这里需要注意，笔者的hugo版本是0.54.0版本，需要特别注意这一点，只需要把下载好的hugo.exe放到对应的安装目录下面即可。&lt;/p&gt;
+&lt;p&gt;这里需要注意，笔者的hugo版本是0.48版本，需要特别注意这一点，只需要把下载好的hugo.exe放到对应的安装目录下面即可。&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;设置环境变量&lt;/li&gt;
