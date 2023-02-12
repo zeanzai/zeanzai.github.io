@@ -1,0 +1,290 @@
+
+```
+# 加入如下配置
+# 集群名称
+cluster.name: cluster-es
+# 节点名称， 每个节点的名称不能重复
+node.name: node-9200
+#ip 地址， 每个节点的地址不能重复
+network.host: 192.168.124.150
+# 是不是有资格主节点
+node.master: true
+node.data: true
+http.port: 9200
+#tcp 监听端口
+transport.tcp.port: 9300
+# head 插件需要这打开这两个配置
+http.cors.allow-origin: "*"
+http.cors.enabled: true
+http.max_content_length: 200mb
+#es7.x 之后新增的配置，初始化一个新的集群时需要此配置来选举 master
+cluster.initial_master_nodes: ["node-9201"]
+#es7.x 之后新增的配置，节点发现
+discovery.seed_hosts: ["192.168.124.150:9301","192.168.124.150:9302","192.168.124.150:9303"]
+gateway.recover_after_nodes: 2
+network.tcp.keep_alive: true
+network.tcp.no_delay: true
+transport.tcp.compress: true
+# 集群内同时启动的数据任务个数，默认是 2 个
+cluster.routing.allocation.cluster_concurrent_rebalance: 16
+# 添加或删除节点及负载均衡时并发恢复的线程个数，默认 4 个
+cluster.routing.allocation.node_concurrent_recoveries: 16
+# 初 始化数据恢复时，并发恢复线程的个数，默认 4 个
+cluster.routing.allocation.node_initial_primaries_recoveries: 16
+
+
+# 加入如下配置
+# 集群名称
+cluster.name: cluster-es
+# 节点名称， 每个节点的名称不能重复
+node.name: node-9202
+#ip 地址， 每个节点的地址不能重复
+network.host: 192.168.124.150
+# 是不是有资格主节点
+node.master: true
+node.data: true
+http.port: 9202
+#tcp 监听端口
+transport.tcp.port: 9302
+# head 插件需要这打开这两个配置
+http.cors.allow-origin: "*"
+http.cors.enabled: true
+http.max_content_length: 200mb
+#es7.x 之后新增的配置，初始化一个新的集群时需要此配置来选举 master
+cluster.initial_master_nodes: ["node-9201"]
+#es7.x 之后新增的配置，节点发现
+discovery.seed_hosts: ["192.168.124.150:9301","192.168.124.150:9302","192.168.124.150:9303"]
+gateway.recover_after_nodes: 2
+network.tcp.keep_alive: true
+network.tcp.no_delay: true
+transport.tcp.compress: true
+# 集群内同时启动的数据任务个数，默认是 2 个
+cluster.routing.allocation.cluster_concurrent_rebalance: 16
+# 添加或删除节点及负载均衡时并发恢复的线程个数，默认 4 个
+cluster.routing.allocation.node_concurrent_recoveries: 16
+# 初 始化数据恢复时，并发恢复线程的个数，默认 4 个
+cluster.routing.allocation.node_initial_primaries_recoveries: 16
+
+
+
+# 加入如下配置
+# 集群名称
+cluster.name: cluster-es
+# 节点名称， 每个节点的名称不能重复
+node.name: node-9203
+#ip 地址， 每个节点的地址不能重复
+network.host: 192.168.124.150
+# 是不是有资格主节点
+node.master: true
+node.data: true
+http.port: 9203
+#tcp 监听端口
+transport.tcp.port: 9303
+# head 插件需要这打开这两个配置
+http.cors.allow-origin: "*"
+http.cors.enabled: true
+http.max_content_length: 200mb
+#es7.x 之后新增的配置，初始化一个新的集群时需要此配置来选举 master
+cluster.initial_master_nodes: ["node-9201"]
+#es7.x 之后新增的配置，节点发现
+discovery.seed_hosts: ["192.168.124.150:9301","192.168.124.150:9302","192.168.124.150:9303"]
+gateway.recover_after_nodes: 2
+network.tcp.keep_alive: true
+network.tcp.no_delay: true
+transport.tcp.compress: true
+# 集群内同时启动的数据任务个数，默认是 2 个
+cluster.routing.allocation.cluster_concurrent_rebalance: 16
+# 添加或删除节点及负载均衡时并发恢复的线程个数，默认 4 个
+cluster.routing.allocation.node_concurrent_recoveries: 16
+# 初 始化数据恢复时，并发恢复线程的个数，默认 4 个
+cluster.routing.allocation.node_initial_primaries_recoveries: 16
+
+
+```
+
+firewall-cmd --zone=public --add-port=5672/tcp --permanent   # 开放5672端口
+
+firewall-cmd --zone=public --remove-port=5672/tcp --permanent  #关闭5672端口
+
+firewall-cmd --reload   # 配置立即生效
+
+firewall-cmd --zone=public --list-ports
+systemctl stop firewalld.service
+firewall-cmd --state
+
+3、查看系统中有哪些用户：
+
+cut -d : -f 1 /etc/passwd
+
+4、查看可以登录系统的用户：
+
+cat /etc/passwd | grep -v /sbin/nologin | cut -d : -f 1
+
+下载rpm版本的es
+https://mirrors.tuna.tsinghua.edu.cn/elasticstack/yum/elastic-7.x/
+
+rpm版本安装es
+yum localinstall es_xx -y
+修改配置文件 
+    [root@centos essw]# systemctl enable elasticsearch
+    Created symlink from /etc/systemd/system/multi-user.target.wants/elasticsearch.service to /usr/lib/systemd/system/elasticsearch.service.
+重新启动 systemctl restart es
+开放端口
+浏览器访问
+
+
+[Unit]
+Description=Elasticsearch
+Documentation=https://www.elastic.co
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+RuntimeDirectory=elasticsearch9202
+PrivateTmp=true
+Environment=ES_HOME=/usr/share/elasticsearch
+Environment=ES_PATH_CONF=/etc/elasticsearch9202
+Environment=PID_DIR=/var/run/elasticsearch9202
+Environment=ES_SD_NOTIFY=true
+EnvironmentFile=-/etc/sysconfig/elasticsearch9202
+
+WorkingDirectory=/usr/share/elasticsearch
+
+User=elasticsearch
+Group=elasticsearch
+
+ExecStart=/usr/share/elasticsearch/bin/systemd-entrypoint -p ${PID_DIR}/elasticsearch.pid --quiet
+
+# StandardOutput is configured to redirect to journalctl since
+# some error messages may be logged in standard output before
+# elasticsearch logging system is initialized. Elasticsearch
+# stores its logs in /var/log/elasticsearch and does not use
+# journalctl by default. If you also want to enable journalctl
+# logging, you can simply remove the "quiet" option from ExecStart.
+StandardOutput=journal
+StandardError=inherit
+
+# Specifies the maximum file descriptor number that can be opened by this process
+LimitNOFILE=65535
+
+# Specifies the maximum number of processes
+LimitNPROC=4096
+
+# Specifies the maximum size of virtual memory
+LimitAS=infinity
+
+# Specifies the maximum file size
+LimitFSIZE=infinity
+
+# Disable timeout logic and wait until process is stopped
+TimeoutStopSec=0
+
+# SIGTERM signal is used to stop the Java process
+KillSignal=SIGTERM
+
+# Send the signal only to the JVM rather than its control group
+KillMode=process
+
+# Java process is never killed
+SendSIGKILL=no
+
+# When a JVM receives a SIGTERM signal it exits with code 143
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+# Built for packages-7.8.1 (packages)
+
+
+
+
+================================================================================================================
+[Unit]
+Description=Elasticsearch
+Documentation=https://www.elastic.co
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+RuntimeDirectory=elasticsearch9203
+PrivateTmp=true
+Environment=ES_HOME=/usr/share/elasticsearch
+Environment=ES_PATH_CONF=/etc/elasticsearch9203
+Environment=PID_DIR=/var/run/elasticsearch9203
+Environment=ES_SD_NOTIFY=true
+EnvironmentFile=-/etc/sysconfig/elasticsearch9203
+
+WorkingDirectory=/usr/share/elasticsearch
+
+User=elasticsearch
+Group=elasticsearch
+
+ExecStart=/usr/share/elasticsearch/bin/systemd-entrypoint -p ${PID_DIR}/elasticsearch.pid --quiet
+
+# StandardOutput is configured to redirect to journalctl since
+# some error messages may be logged in standard output before
+# elasticsearch logging system is initialized. Elasticsearch
+# stores its logs in /var/log/elasticsearch and does not use
+# journalctl by default. If you also want to enable journalctl
+# logging, you can simply remove the "quiet" option from ExecStart.
+StandardOutput=journal
+StandardError=inherit
+
+# Specifies the maximum file descriptor number that can be opened by this process
+LimitNOFILE=65535
+
+# Specifies the maximum number of processes
+LimitNPROC=4096
+
+# Specifies the maximum size of virtual memory
+LimitAS=infinity
+
+# Specifies the maximum file size
+LimitFSIZE=infinity
+
+# Disable timeout logic and wait until process is stopped
+TimeoutStopSec=0
+
+# SIGTERM signal is used to stop the Java process
+KillSignal=SIGTERM
+
+# Send the signal only to the JVM rather than its control group
+KillMode=process
+
+# Java process is never killed
+SendSIGKILL=no
+
+# When a JVM receives a SIGTERM signal it exits with code 143
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+# Built for packages-7.8.1 (packages)
+
+/etc/systemd/system/multi-user.target.wants
+systemctl start elasticsearch9202.service
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.iocoder.cn/Elasticsearch/install/?self
+
+
+
+https://archive.apache.org/dist/skywalking/8.6.0/
+
+
+
