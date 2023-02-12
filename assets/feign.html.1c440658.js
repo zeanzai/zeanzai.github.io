@@ -1,0 +1,1 @@
+import{c as r,o}from"./app.aaf87aa5.js";import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";const c={},s=["src"];function a(e,l){return o(),r("img",{style:{border:"1px red solid",display:"block",margin:"0 auto"},src:e.$withBase("/qrcode.jpg"),alt:"\u5FAE\u4FE1\u516C\u4F17\u53F7"},null,8,s)}var _=t(c,[["render",a],["__file","feign.html.vue"]]);export{_ as default};
