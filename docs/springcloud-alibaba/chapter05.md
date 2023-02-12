@@ -132,7 +132,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 
 ![分布式事务总结](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221127132619.png)
 
-![](../img/distribute/dstbt-transaction-summary.png)
+
 
 ### 附言
 
