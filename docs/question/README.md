@@ -6,15 +6,6 @@ tag:
   - "面试"
 ---
 
-<center>
-
-![](img/logo.png)
-
-</center>
-
-<p align="center">
-	<strong>Java突击面试问题大全，助你获得心仪Offer</strong>
-</p>
 
 <center>
 
@@ -42,12 +33,6 @@ tag:
 😍本仓库致力于打造全网最全的java面试题库，所以热烈欢迎各种issue和pr。
 
 - 提issue
-
-<center>
-
-![](img/new-issue.png)
-
-</center>
 
 - 提pr
   - fork本项目到自己的仓库
