@@ -7,11 +7,7 @@ tag:
 ---
 
 
-<center>
-
 ![GitHub followers](https://img.shields.io/github/followers/zeanzai?style=plastic) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/zeanzai/java-interview-questions/pulls) ![GitHub stars](https://img.shields.io/github/stars/zeanzai/java-interview-questions?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/java-interview-questions?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/java-interview-questions?style=plastic)
-
-</center>
 
 
 😃 本仓库是笔者在2019年跳槽找工作时收集的面试问题，内容丰富、涉及面广，面向初级、中高级几乎所有阶段的java程序员，希望能帮助大家快速准备java面试。
@@ -50,26 +46,5 @@ tag:
 
 - [我的个人博客](https://zeanzai.me)
 
-## 其他项目
-
-<div align="center" style="border: solid red 1px;"><br />
-  <a href="https://github.com/zeanzai/Computer-Science-Study-Note" target="_blank">Computer-Science-Study-Note</a><br />
-
-  ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Computer-Science-Study-Note?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Computer-Science-Study-Note?style=plastic)
-
-  ❄️ 计算机科学学习笔记：高级mysql、高级redis、分布式、集群、架构、云……
-
-  <a href="https://zeanzai.me/Computer-Science-Study-Note/" target="_blank">快捷访问入口</a>
-</div>
-<br />
-<div align="center" style="border: solid red 1px;"><br />
-  <a href="https://github.com/zeanzai/Java-Linux" target="_blank">Java-Linux</a><br />
-
-  ![GitHub stars](https://img.shields.io/github/stars/zeanzai/Java-Linux?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/zeanzai/Java-Linux?style=plastic) ![GitHub watchers](https://img.shields.io/github/watchers/zeanzai/Java-Linux?style=plastic)
-
-  🐉 Java程序员的必备Linux运维技能，包括各种服务器软件的安装和运维等基本运维参考文档。
-
-  <a href="https://zeanzai.me/Java-Linux/" target="_blank">快捷访问入口</a>
-</div>
 
 <img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
