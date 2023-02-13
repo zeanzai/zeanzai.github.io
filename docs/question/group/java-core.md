@@ -1,0 +1,34 @@
+- JDK和JRE有什么区别？
+- 什么是跨平台？跨平台的原理是什么？
+- 面向对象有哪些特征？
+- java的多态表现在哪里？
+- 什么是重载和重写？什么是多态？
+- Java 8流式迭代的好处?
+- 项目中用到的JDK的哪些特性?
+- == 和 equals 的区别是什么？
+- 俩对象的hashCode() 相同，那它们的equals()相同吗？为什么？
+- final、static、synchronized、volatile、transient等关键字的作用是什么？
+- Math.round(-1.5)的值是多少？
+- 基础数据类型有哪些？基础数据类型和包装数据类型的区别？什么是装箱和拆箱？
+- java中基本数据类型的字节长度？
+- String的底层是什么？为什么长度不可变？有什么好处？
+- String和StringBuilder、StringBuffer的区别？
+- 字符串缓冲池的原理？（String s="abce"; 和 String s = new String("abce"); 的区别？）
+- java中操作字符串有哪些类？它们之间的区别是什么？各自有哪些应用场景？
+- String s1 = "i" 与 String s1 = new String("i") 有什么区别？分别存放在内存的什么位置？
+- 在项目中，有哪些处理字符串的场景？String类中常用的方法有哪些？
+- 抽象类和普通类的区别？接口和抽象类的区别？
+- IO流分为几种？各自有哪些应用场景？实现一个拷贝文件的工具类使用字节流还是字符流？
+- BIO、NIO、AIO有哪些区别？NIO解决了什么问题，什么原理，并简述一个包含NIO技术的通信框架的调优技巧
+- Files的常用方法有哪些？
+- 引用类型是占用几个字节？
+- java中的switch选择结构可以使用数据类型的数据(JDK1.8)有哪些？
+- toString()方法什么情况下需要重写？
+- 判断对象相等时，什么情况下只需要重写 equals()，什么情况下需要重写 equals(),hashcode()？
+- 序列化和反序列化底层如何实现的（ObjectOutputStream 、ObjectInputStream、 readObject  writeObject）?
+- char和double的字节，以及在内存的分布是怎样？
+- float f = 1.4f;double d = 1.4d; 与 float f = 1.5f;double d = 1.5d; 是否为true，内存是怎样的；
+- split的源码，split("a|b|c");得出多少个数组；
+- 写个后缀表达式，为什么要设计后缀表达式，有什么好处？然后写下中缀。
+- 说下Java的克隆体系;
+- Object类有哪些方法，你常用的是哪些？为什么会使用这些方法？

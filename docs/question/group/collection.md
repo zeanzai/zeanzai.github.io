@@ -1,0 +1,21 @@
+- java容器有哪些？画出类图？最常用的三个顶级接口是什么？
+- Collection 和 Collections 有什么区别？
+- List 、 Set 、 Map 之间的区别是什么？
+- ArrayList 、 LinkedList 、 Vector 的区别是什么？它们的默认空间是多少？
+- HashMap 、 HashSet 、 Hashtable 、 ConcurrentHashMap的区别？
+- Object中的hashCode() 是怎么计算的？
+- 若hashcode方法永远返回1或者一个常量会产生什么结果？
+- Java Collections和Arrays的sort方法默认的排序方法是什么？
+- 如何实现数组和List的转换？
+- Queue中poll() 和 remove() 的区别是什么？
+- 迭代器 Iterator 是什么？ 和 ListIterator 有什么区别？
+- 如何确保一个集合不能被修改？
+- 浅拷贝和深拷贝的区别；
+- Set内存放的元素为什么不可以重复，内部是如何保证和实现的？
+- 说一下TreeMap的实现原理？红黑树的性质？红黑树遍历方式有哪些？如果key冲突如何解决？setColor()方法在什么时候用？什么时候会进行旋转和颜色转换？
+- ArrayList和LinkedList的删除一个元素的时间复杂度；（ArrayList是O(N)，LinkedList是O(1)）?
+- CopyOnWriteArrayList是什么?
+- HashMap在什么时候时间复杂度是O（1），什么时候是O（n），什么时候又是O（logn）？
+- HashMap、HashTable和ConcurrentHashMap的区别？
+- HashMap底层实现原理？多线程下是否安全？它与HashTable的区别是什么？HashTable出现的问题是什么？为什么会出现这种问题？如何解决？什么是锁分段机制？ConcurrentHashMap的底层实现原理？为什么它就解决了HashTable的问题？
+- ArrayList是线程安全的吗？什么情况下线程不安全？为什么？会发生什么异常？如何将它置为线程安全的？有使用过CopyOnWriteArrayList吗？什么情况（场景）下会使用这个类？

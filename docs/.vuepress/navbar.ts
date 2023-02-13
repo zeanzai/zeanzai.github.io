@@ -21,4 +21,5 @@ export default defineNavbarConfig([
       { text: "网站建设", icon: "page", link: "web/" },
     ]
   },
+  { text: "面试自查宝典", icon: "quote", link: "/question/" },
 ]);
