@@ -349,6 +349,10 @@ export default defineSidebarConfig({
           link: "distribute-id.md",
         },
         {
+          text: "分布式任务",
+          link: "distribute-job.md",
+        },
+        {
           text: "分布式消息",
           
           prefix: "mq/",
