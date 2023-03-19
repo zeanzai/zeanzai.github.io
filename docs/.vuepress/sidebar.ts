@@ -478,6 +478,7 @@ export default defineSidebarConfig({
       children: [
         { text: "你真的了解技术选型吗？", link: "chapterA.md"},
         { text: "如何在SpringCloud项目中统一管理依赖的版本？", link: "chapterB.md"},
+        { text: "使用idea插件生成代码", link: "easycode.md"},
       ],
     },
     {
@@ -498,8 +499,24 @@ export default defineSidebarConfig({
     },
     {
       text: "05.分布式事务管理之Seata",
-      link: "chapter05.md",
+      collapsable: true,
+      prefix: "seata/",
+      children: [
+        {
+          text: "5.1-分布式事务概论",
+          link: "distribute-transaction.md",
+        },
+        {
+          text: "5.2-Seata服务端环境搭建",
+          link: "install-seata.md",
+        },
+        {
+          text: "5.3-AT模式",
+          link: "seata-at.md",
+        },
+      ],
     },
+    
     {
       text: "06.分布式服务消息处理",
       link: "chapter06.md",
