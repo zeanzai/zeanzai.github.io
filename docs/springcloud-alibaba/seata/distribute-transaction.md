@@ -126,7 +126,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 
 这种事后人工补偿的方式所花费的成本要少的多得多。
 
-![](../img/distribute/dstbt-transaction-summary.png)
+![](../../java/img/distribute/dstbt-transaction-summary.png)
 
 ### 附言
 
