@@ -107,7 +107,7 @@ $ sh nacos-config.sh -h 192.168.1.150 -p 8848 -g SEATA_GROUP -t bb4ba084-9183-44
 
 ```
 
-
+----------
 
 
 ## 业务说明
@@ -116,7 +116,11 @@ $ sh nacos-config.sh -h 192.168.1.150 -p 8848 -g SEATA_GROUP -t bb4ba084-9183-44
 
 ## 实践过程
 
+> 使用 MybatisPlus 作为ORM框架。
+
 ### 1. 搭建项目框架
+
+
 
 // todo 数据库的创建过程，storage模块的搭建过程：相关依赖的坐标及版本、添加配置、自动生成代码，完成保存接口的验证
 // todo 重复上述步骤依次创建account模块和order模块

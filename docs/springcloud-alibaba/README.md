@@ -58,7 +58,7 @@ tag:
   - [x] 重写路由
   - [x] 路由规则可配置化
   - [ ] https的使用[xxx] 现在微服务的部署架构大多情况下是SLB+Nginx类型的部署模型，而微服务大多都是在内网环境中，因此网关也很少使用https；
-  - [ ] 自定义全局异常[xxx]
+  - [ ] 自定义全局异常[xxx]  [https://mp.weixin.qq.com/s/XE4R2wOj08qNivo8Ms5ZRQ]
   - [x] 集成swagger
   - [ ] CROS方案
   - [ ] 灰度发布 ： 

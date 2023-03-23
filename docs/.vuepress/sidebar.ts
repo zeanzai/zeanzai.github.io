@@ -514,6 +514,10 @@ export default defineSidebarConfig({
           text: "5.3-AT模式",
           link: "seata-at.md",
         },
+        {
+          text: "5.4-TCC模式",
+          link: "seata-tcc.md",
+        },
       ],
     },
     
