@@ -1,3 +1,13 @@
+---
+title: "分布式服务之消息处理"
+category:
+  - "springcloud-alibaba"
+tag:
+  - "分布式系统"
+  - "消息处理"
+---
+
+
 
 
 

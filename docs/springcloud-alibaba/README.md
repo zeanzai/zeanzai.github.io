@@ -53,28 +53,27 @@ tag:
     - [x] 以服务名作为命名空间进行配置隔离
     - [x] 以环境名作为命名空间进行配置隔离
     - [ ] 灰度发布
+    - [ ] 自定义全局异常[TODO： 文章未完成] 
 - [ ] gateway
   - [x] 结合配置中心进行请求转发
   - [x] 重写路由
   - [x] 路由规则可配置化
   - [ ] https的使用[xxx] 现在微服务的部署架构大多情况下是SLB+Nginx类型的部署模型，而微服务大多都是在内网环境中，因此网关也很少使用https；
-  - [ ] 自定义全局异常[xxx]  [https://mp.weixin.qq.com/s/XE4R2wOj08qNivo8Ms5ZRQ]
-  - [x] 集成swagger
+  - [x] 集成swagger [TODO： 文章未完成]
   - [ ] CROS方案
   - [ ] 灰度发布 ： 
     - [ ] https://blog.csdn.net/kingwinstar/article/details/105752725
     - [ ] https://github.com/lyb-geek/gateway
 - [ ] Seata
-  - [x]  AT 模式
-  - [ ]  TCC 模式
+  - [x]  AT 模式[TODO： 文章未完成] 
+  - [x]  TCC 模式[TODO： 文章未完成] 
   - [ ]  XA 模式
   - [ ]  Saga 模式 
   - [ ] 两阶段提交事务
 - [ ] Sentinel ： https://mp.weixin.qq.com/s/Q7Xv8cypQFrrOQhbd9BOXw
   - [ ] 持久化配置
   - [x] 基于网关的限流及自定义限流异常
-  - [ ] 
-- [ ] 基于RabbitMQ使用消息中间件
+- [ ] 基于RabbitMQ使用消息中间件[TODO： 文章未完成] 
   - [ ] 创建交换机、binding 、 queue 
   - [ ] 发送消息
   - [ ] 发送消息并确认
@@ -86,6 +85,8 @@ tag:
   - [ ] 分布式事务原理
   - [ ] 分布式ID
   - [ ] 分布式相关算法
+  - [ ] 如何设计一个安全可靠的API接口[TODO： 文章未完成] 
+  - [ ] 多租户SaaS实战
 
 
 ## 获取代码
@@ -96,27 +97,24 @@ tag:
 
 实战演练功能及代码模块与端口对应关系如下：
 
-- `Nacos注册中心`
-  - nacos-provider : 10000 注册到nacos上，并对外提供接口；
-  - nacos-consumer : 10100 注册到nacos上，并通过RestTemplate和OpenFeign分别调用 nacos-provider 提供的接口；
-- `Nacos配置中心及最佳实践`
-  - nacos-config : 10200 实践传统方式获取配置项、配置中心方式获取配置、配置项映射成JavaBean、实时刷新配置项；
-  - nacos-use-service-name : 10300 使用服务名进行隔离；
-  - nacos-use-env-name : 10400 使用环境变量名称进行隔离；
-- `Gateway网关服务（基础特性的实践）`
-  - gateway-demo : 10500 重写路由规则、结合Nacso实现可配置化路由规则；
-  - nacos-provider : 10000 实践服务发现的路由规则；
-- `OpenFeign远程服务调用`
-  - nacos-provider : 10000 服务提供者，实现多参数、路径中带参数、传递实体、上传和下载文件等接口；
-  - nacos-consumer : 10100 服务消费者，通过OpenFeign远程调用 服务提供者 提供的各种接口、开启GZIP压缩、开启日志、超时控制、替换客户端；
-- `Gateway网关服务（高级特性，网关服务整合多服务的接口文档）`
-  - swagger-user : 10600 
-  - swagger-order : 10700 
-  - gateway-swagger : 10800 
-- `Seata分布式事务`
-  - seata-storage : 10900
-  - seata-account : 11000
-  - seata-order : 11100
+- nacos-as-register
+  - nacos-provider: 10000
+  - nacos-consumer: 10100
+- nacos-as-configer: 10200
+- nacos-global-exception: 10300
+- gateway-demo: 10400
+- swagger
+  - gateway-swagger: 10500
+  - swagger-user: 10600
+  - swagger-order: 10700
+- seata-tcc
+  - seata-tcc-account: 10801
+  - seata-tcc-storage: 10802
+  - seata-tcc-order: 10803
+- seata-at
+  - seata-at-account: 10901
+  - seata-at-storage: 10902
+  - seata-at-order: 10903
 
 
 ## SpringCloud的版本

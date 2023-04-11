@@ -545,6 +545,29 @@ export default defineSidebarConfig({
       text: "11.分布式服务Job",
       link: "chapter11.md",
     },
+    {
+      text: "12.其他",
+      collapsable: true,
+      prefix: "other/",
+      children: [
+        {
+          text: "如何设计一个安全可靠的API接口？",
+          link: "create-a-niubi-api.md",
+        },
+        {
+          text: "统一消息体并国际化+可配置全局异常",
+          link: "global-exception.md",
+        },
+        {
+          text: "SCG性能调优",
+          link: "greate-scg.md",
+        },
+        {
+          text: "多租户SaaS实战",
+          link: "/java/practice/una-saas-toturial.md",
+        },
+      ],
+    },
   ],
 
   // 网站建设 done
