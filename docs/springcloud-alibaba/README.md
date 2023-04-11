@@ -93,29 +93,6 @@ tag:
 
 > 微信扫码关注“天晴小猪”（ID： it-come-true），回复“springcloud”，获取本系列教程的实战源码。
 
-## 模块说明
-
-实战演练功能及代码模块与端口对应关系如下：
-
-- nacos-as-register
-  - nacos-provider: 10000
-  - nacos-consumer: 10100
-- nacos-as-configer: 10200
-- nacos-global-exception: 10300
-- gateway-demo: 10400
-- swagger
-  - gateway-swagger: 10500
-  - swagger-user: 10600
-  - swagger-order: 10700
-- seata-tcc
-  - seata-tcc-account: 10801
-  - seata-tcc-storage: 10802
-  - seata-tcc-order: 10803
-- seata-at
-  - seata-at-account: 10901
-  - seata-at-storage: 10902
-  - seata-at-order: 10903
-
 
 ## SpringCloud的版本
 
