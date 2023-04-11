@@ -1,0 +1,1 @@
+import{c as r,o as t}from"./app.bfe2d958.js";import{_ as o}from"./plugin-vue_export-helper.21dcd24c.js";const s={},c=["src"];function l(e,a){return t(),r("img",{style:{border:"1px red solid",display:"block",margin:"0 auto"},src:e.$withBase("/qrcode.jpg"),alt:"\u5FAE\u4FE1\u516C\u4F17\u53F7"},null,8,c)}var i=o(s,[["render",l],["__file","bplustree.html.vue"]]);export{i as default};
