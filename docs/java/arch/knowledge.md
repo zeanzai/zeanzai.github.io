@@ -96,8 +96,6 @@ DDD分层架构是一种架构设计风格，也是微服务架构设计的最�
 而在学习架构演变过程这个主题时，我们要站在软件工程的角度去考虑某一个架构模式的缺点。比如说单体架构，要从其软件工程中的迭代过程中各人员的工作量上来分析。
 
 
-## 如何做技术选型？
-
 
 <img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
