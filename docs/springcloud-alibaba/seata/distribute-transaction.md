@@ -91,7 +91,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 1.服务a先往自己本地表中插入一条消息数据，然后执行业务操作，再往mq中发送事务消息；
 2.服务b接收到消息后，先去查一下本地消息表中是否有改消息id，如果有就丢弃，如果没有就往自己本地表中插入一条消息数据，然后执行业务操作，完成后更新消息数据，再调用a接口更新a的消息数据状态；
 
-![](../../java/img/distribute/local-msg.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/distribute/local-msg.png)
 
 假设b没有接收到数据，a也会有一个定时任务，去查自己本地消息表中未处理过的消息数据，然后再发送给mq中让b去处理，重复这个过程直到b调用a的接口完成了a的消息状态的更新。
 
@@ -126,7 +126,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 
 这种事后人工补偿的方式所花费的成本要少的多得多。
 
-![](../../java/img/distribute/dstbt-transaction-summary.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/distribute/dstbt-transaction-summary.png)
 
 ### 附言
 
