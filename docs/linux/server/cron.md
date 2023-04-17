@@ -309,4 +309,8 @@ corn从左到右（用空格隔开）：秒 分 小时 月份中的日期 月份
 注意：在使用“L”参数时，不要指定列表或范围，因为这会导致问题
 　　
 >转载： https://www.cnblogs.com/javahr/p/8318728.html
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

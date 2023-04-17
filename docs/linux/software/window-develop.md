@@ -66,7 +66,7 @@ nginx作为前端的web容器必不可少，也可以作为图片服务器，还
 
 打开cmd命令行，依次输入`java`、`javac`、`java -version`命令，查看是否能够有正确的输出；如下图，即没有jdk运行环境：
 
-![没有java环境](../img/window-develop/01.png)
+![没有java环境](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/window-develop/01.png)
 
 - 解压jdk压缩包
 
@@ -85,13 +85,13 @@ nginx作为前端的web容器必不可少，也可以作为图片服务器，还
 注意：上面的两个变量值不要忘记“.”和“;”。
 ````
 
-![设置环境变量](../img/window-develop/02.png)
+![设置环境变量](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/window-develop/02.png)
 
 - 测试
 
 再次打开cmd命令行，依次输入`java`、`javac`、`java -version`命令，查看是否正确输出，如下图，即表示jdk安装成功：
 
-![测试](../img/window-develop/03.png)
+![测试](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/window-develop/03.png)
 
 #### 2.3.2. 安装tomcat
 
@@ -114,7 +114,7 @@ nginx作为前端的web容器必不可少，也可以作为图片服务器，还
 使用管理员身份运行cmd，进入到bin目录下，输入service.bat install
 如下图所示：
 
-![安装service](../img/window-develop/04.png)
+![安装service](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/window-develop/04.png)
 
 - 服务自启动
 
@@ -131,4 +131,7 @@ nginx作为前端的web容器必不可少，也可以作为图片服务器，还
 #### 2.3.4. 部署后端项目
 
 后端配置好数据库连接及数据库用户名和密码等重要信息后进行打包。运维人员将打包好的war放置到tomcat的webaap文件夹下面，tomcat会自动解压运行。然后浏览器访问：http://localhost:8080
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

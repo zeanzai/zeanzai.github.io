@@ -149,7 +149,10 @@ tagline: 浪漫骑士的二流键盘，微信公众号： it-come-true。
 
 > 公众号作用：文章分享、资源领取、社群连接
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 
 ## 参与贡献
 

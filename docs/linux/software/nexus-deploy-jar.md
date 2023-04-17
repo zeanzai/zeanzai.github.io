@@ -17,16 +17,16 @@ tag:
 
 - 创建项目b
 
-![创建项目](../img/nexus-deploy-jar/01.png)
-![设置坐标](../img/nexus-deploy-jar/02.png)
-![设置项目名](../img/nexus-deploy-jar/03.png)
-![创建模块](../img/nexus-deploy-jar/04.png)
+![创建项目](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/nexus-deploy-jar/01.png)
+![设置坐标](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/nexus-deploy-jar/02.png)
+![设置项目名](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/nexus-deploy-jar/03.png)
+![创建模块](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/nexus-deploy-jar/04.png)
 
 - 效果图
 
 创建后把多余的文件夹删除后的效果图：
 
-![效果图](../img/nexus-deploy-jar/05.png)
+![效果图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/nexus-deploy-jar/05.png)
 
 - project-b
 
@@ -206,4 +206,7 @@ public class ProjectATest {
 ## 5. 项目源码
 
 [test-nexus.rar](../source/test-nexus.rar)
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

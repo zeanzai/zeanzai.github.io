@@ -59,4 +59,7 @@ maven： apache-maven-3.5.4
 构建成功，但是tomcat没有启动成功，查看catalina.out 日志
 （日志文件更改所属文件夹的属性）
 ```
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

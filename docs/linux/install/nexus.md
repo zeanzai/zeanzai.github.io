@@ -293,4 +293,7 @@ $ systemctl start nexus
 5. https://blog.csdn.net/u013030276/article/details/79640115
 6. http://agiledon.github.io/blog/2013/11/10/create-two-jars-from-one-project-using-maven/
 7. http://ju.outofmemory.cn/entry/69763
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

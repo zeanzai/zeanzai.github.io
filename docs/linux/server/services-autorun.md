@@ -159,4 +159,7 @@ systemctl enable XXX.service
 - http://blog.csdn.net/tiantang_1986/article/details/53704966
 - http://blog.csdn.net/fresh123456/article/details/50925038
 - http://blog.csdn.net/chenxiabinffff/article/details/51374635
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

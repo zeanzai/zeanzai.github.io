@@ -175,7 +175,10 @@ systemctl restart docker
 - [分布式服务配置之nacos](https://mp.weixin.qq.com/s/4Sh9lYxw-OFGXhJyP7PCgA)
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 
 
 

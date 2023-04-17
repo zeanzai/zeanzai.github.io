@@ -344,4 +344,7 @@ ec1fce90e082d070d9ecb99ca5ea7ce2cef64320 192.168.100.201:6387@16387 slave 7dbfd5
 8c7e2c830962f6137e55640769d9c8b2d81c37db 192.168.100.201:6384@16384 slave 17633c5abd228d07bf9a606d2a5c9add63a2af95 0 1569499891000 6 connected
 17633c5abd228d07bf9a606d2a5c9add63a2af95 192.168.100.201:6380@16380 master - 0 1569499890000 2 connected 4096-8191
 ```
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

@@ -1,7 +1,6 @@
 import { defineSidebarConfig } from "vuepress-theme-hope";
 
 export default defineSidebarConfig({
-  
   // 服务器相关
   "/linux/": [
 
@@ -130,32 +129,22 @@ export default defineSidebarConfig({
     },
   ],
 
-  // 面试前准备
-  "/resume/": [
-    {
-      text: "学习方法",
-      
-      link: "study.md",
-    },
-    {
-      text: "简历编写",
-      
-      link: "resume.md",
-    },
-    {
-      text: "面试技巧",
-      
-      link: "interview.md",
-    },
-    {
-      text: "辞职",
-      
-      link: "quictjob.md",
-    },
-  ],
-
   // java
   "/java/": [
+    
+    // 面试前准备
+    {
+      text: "零、面试前准备",
+      collapsable: true,
+      prefix: "resume/",
+      children: [
+        {
+          text: "职业发展道路上的一些坑",
+          link: "advice.md",
+        },
+      ]
+    },
+
 
     // 计算机基础
     {
@@ -164,21 +153,7 @@ export default defineSidebarConfig({
       prefix: "cscore/",
       children: [
         { text: "计算机网络", link: "network.md" },
-        { text: "深入理解计算机网络加解密", link: "encrypt-decrypt.md" },
-        {
-          text: "数据结构与算法",
-          collapsable: true,
-          prefix: "dsa/",
-          children: [
-            { text: "写在前面", link: "firstread.md" },
-            { text: "数据结构与算法", link: "dsa.md" },
-            { text: "哈希表", link: "hashtable.md" },
-            { text: "红黑树", link: "redblacktree.md" },
-            { text: "B+树", link: "bplustree.md" },
-            { text: "LRU算法", link: "lru.md" },
-            { text: "令牌桶算法", link: "tokenbukect.md" },
-          ],
-        },
+        { text: "数据结构与算法", link: "dsa.md" },
         { text: "设计模式", link: "design-pattern.md" },
       ],
     },
@@ -192,39 +167,42 @@ export default defineSidebarConfig({
         
         { text: "集合", link: "collections.md" },
         { text: "JUC", link: "juc.md" },
-        { text: "JUC2", link: "juc2.md" },
+        { text: "Java线程实战", link: "juc2.md" },
         { text: "泛型", link: "everytype.md" },
-        { text: "周志明JVM第三版学习笔记", link: "jvm-version3rd.md" },
+        
         {
           text: "JVM",
           collapsable: true,
           prefix: "jvm/",
           children: [
+            { text: "周志明JVM第三版学习笔记", link: "jvm-version3rd.md" },
+            { text: "00.葛一鸣-深入理解JVM-学习笔记", link: "00-gym.md" },
             { text: "01.类的编译、加载及运行", link: "01.类的编译、加载及运行.md" },
-            { text: "02.内存结构", link: "02.内存结构.md" },
-            { text: "03.java中的GC", link: "03.java中的GC.md" },
+            { text: "02.JVM运行期内存结构", link: "02.内存结构.md" },
+            { text: "03.Java中的GC", link: "03.java中的GC.md" },
             { text: "04.字节码文件", link: "04.字节码文件.md" },
             { text: "05.虚拟机中的高效并发", link: "05.虚拟机中的高效并发.md" },
+            { text: "jvm编译和运行过程", link: "jvm编译和运行过程.md" },
             { text: "面试题", link: "面试题.md" },
           ],
         },
-        {
-          text: "JVM02",
-          collapsable: true,
-          prefix: "jvm02/",
-          children: [
-            { text: "00-jvm作业", link: "00-jvm作业.md" },
-            { text: "01-初识jvm", link: "01-初识jvm.md" },
-            { text: "02-jvm运行机制", link: "02-jvm运行机制.md" },
-            { text: "03-常用jvm配置参数", link: "03-常用jvm配置参数.md" },
-            { text: "04-GC算法和种类", link: "04-GC算法和种类.md" },
-            { text: "05-GC参数", link: "05-GC参数.md" },
-            { text: "06-类加载器", link: "06-类加载器.md" },
-            { text: "07-性能监控工具", link: "07-性能监控工具.md" },
-            { text: "08-java堆分析", link: "08-java堆分析.md" },
-            { text: "jvm编译和运行过程", link: "jvm编译和运行过程.md" },
-          ],
-        },
+        // {
+        //   text: "JVM02",
+        //   collapsable: true,
+        //   prefix: "jvm02/",
+        //   children: [
+        //     { text: "00-jvm作业", link: "00-jvm作业.md" },
+        //     { text: "01-初识jvm", link: "01-初识jvm.md" },
+        //     { text: "02-jvm运行机制", link: "02-jvm运行机制.md" },
+        //     { text: "03-常用jvm配置参数", link: "03-常用jvm配置参数.md" },
+        //     { text: "04-GC算法和种类", link: "04-GC算法和种类.md" },
+        //     { text: "05-GC参数", link: "05-GC参数.md" },
+        //     { text: "06-类加载器", link: "06-类加载器.md" },
+        //     { text: "07-性能监控工具", link: "07-性能监控工具.md" },
+        //     { text: "08-java堆分析", link: "08-java堆分析.md" },
+        //     { text: "jvm编译和运行过程", link: "jvm编译和运行过程.md" },
+        //   ],
+        // },
         { text: "本地缓存", link: "localcache.md" },
         {
           text: "其他",

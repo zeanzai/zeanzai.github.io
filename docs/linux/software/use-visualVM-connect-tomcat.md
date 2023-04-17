@@ -89,4 +89,7 @@ https://my.oschina.net/weidedong/blog/787203
 ```
 jstatd -J-Djava.rmi.server.hostname=10.168.1.200 -J-Djava.security.policy=/usr/setup/jdk1.8.0_144/bin/tools.policy -J-Dcom.sun.management.jmxremote.port=10003 -J-Dcom.sun.management.jmxremote.ssl=false -J-Dcom.sun.management.jmxremote.password.file=/usr/setup/latestTomcat/conf/jmxremote.password -J-Dcom.sun.management.jmxremote.access.file=/usr/setup/latestTomcat/conf/jmxremote.access
 ```
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

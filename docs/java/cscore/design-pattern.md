@@ -295,17 +295,20 @@ java.lang.Runtime 就是经典的饿汉式单例模式；
 
 
 
-
+## 参考链接
 
 - [终于有人把 java代理 讲清楚了，万字详解！](https://mp.weixin.qq.com/s?__biz=MzIyMjQwMTgyNA==&mid=2247483912&idx=1&sn=94e3c520c96a20346974ea498bc5b03a&chksm=e82f4647df58cf517fecbe048108c47cbdfde6c1688e2c4435ae532cc28d1ea5ba7e74d873ba&cur_album_id=1344000958027710464&scene=189#wechat_redirect)
 - [设计模式目录](http://www.cyc2018.xyz/%E5%85%B6%E5%AE%83/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E7%9B%AE%E5%BD%95.html#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80)
 - [2W 字详解设计模式](https://mp.weixin.qq.com/s/Ji_mP7pO17ps5Mtku6Bq1Q)
 - [Java Design Patterns](https://java-design-patterns.com/)
+- [短信防刷浅谈对设计模式的应用](https://blog.csdn.net/t_chao/article/details/120194731)
+- [手机验证短信设计与代码实现](https://blog.csdn.net/a19860903/article/details/49093401)
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
 
 
 
-
-[短信防刷浅谈对设计模式的应用](https://blog.csdn.net/t_chao/article/details/120194731)
-[手机验证短信设计与代码实现](https://blog.csdn.net/a19860903/article/details/49093401)

@@ -166,7 +166,7 @@ systemctl restart rngd
 #### 调优前
 
 调优之前可以通过tomcat自带的管理界面查看服务器、jvm等信息。
-![调优前](../img/install-tomcat/01.png)
+![调优前](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-tomcat/01.png)
 
 
 
@@ -308,9 +308,12 @@ CATALINA_OPTS="-Dfile.encoding=UTF-8 -server -Xms32g -Xmx32g"
 
 #### 调优后
 
-![调优后](../img/install-tomcat/02.png)
+![调优后](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-tomcat/02.png)
 
 ## 参考
 
 1. https://github.com/judasn/Linux-Tutorial/blob/master/markdown-file/Tomcat-Install-And-Settings.md
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

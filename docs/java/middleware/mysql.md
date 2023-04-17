@@ -105,19 +105,19 @@ CLI语法格式适用于大多数命令行场景，如Linux命令行、Redis命�
 
 1. 丢失修改： 当一个线程要修改数据库中的某一个数据a时，由于还未提交到数据库进行持久化，此时另外一个线程也修改了数据a，那么在第一个线程提交后，数据库会丢失第一个线程的修改内容。
 
-![](../img/middleware/mysql/lose-update.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/lose-update.png)
 
 2. 读脏数据： 当一个线程修改了数据a但是还未提交，此时另外一个线程读取a修改后的值，但是之后第一个线程又回滚了操作，那么此时第二个线程就读取了a的脏数据。
 
-![](../img/middleware/mysql/read-dirty.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/read-dirty.png)
 
 3. 不可重复读： 第一个线程先读取了数据a，但是此时另外一个线程修改了数据a，那么第一个线程又读取了一次数据a，此时第一个线程读取同一个数据的两次结果却不相同。
 
-![](../img/middleware/mysql/unrereadable.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/unrereadable.png)
 
 4. 幻影读： 一个线程读取了某个范围的值，此时另外一个线程修改了这个范围内的值，那么第一个线程再次读取这个范围的值，就会得到与第一次读取内容不同的结果。
 
-![](../img/middleware/mysql/huanyingdu.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/huanyingdu.png)
 
 可以把上述四种并发一致性问题总结一下，划分为以下三种类型：
 
@@ -141,7 +141,7 @@ CLI语法格式适用于大多数命令行场景，如Linux命令行、Redis命�
 
 因此也就得出隔离级别不同，解决的读写并发一致性问题也就不同。
 
-![](../img/middleware/mysql/gelijibie.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/gelijibie.png)
 
 > 大多数数据库系统的默认隔离级别都是READ COMMITTED（但MySQL不是)，InnoDB存储引擎默认隔离级别REPEATABLE READ。
 
@@ -195,15 +195,15 @@ CLI语法格式适用于大多数命令行场景，如Linux命令行、Redis命�
 
 例如，往person表中添加一条数据，则隐藏的三个字段我们分别标记为下图所示。
 
-![](../img/middleware/mysql/mvcc01.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/mvcc01.png)
 
 此时我们再对这条数据进行修改，把名称修改为Tom，那么原来的记录就进入undo日志中，并且新的记录产生，隐藏的三个字段也会对应变化
 
-![](../img/middleware/mysql/mvcc02.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/mvcc02.png)
 
 我们又对数据进行修改，把age修改为30，则第二次修改的记录进入undo日志，并生成新的记录，且隐藏的三个字段的值如下图所示。
 
-![](../img/middleware/mysql/mvcc03.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/middleware/mysql/mvcc03.png)
 
 
 如上面三个图所示，每次事务提交完成后，都会在undo日志中添加一条记录数据，这些记录数据通过回滚指针链接起来，就形成了整个记录的版本链。
@@ -298,7 +298,24 @@ if(trx_ids.contains(db_trx_id)){
 ### 6.1. SQL分析工具
 
 慢sql查询日志
+
 explain分析工具
+
+- id
+- table
+- select_type
+- type 
+- possible_key
+- key 
+- key_len
+- ref
+- rows
+- extra
+  - using filesort
+  - using temporary
+  - using index
+  - using where
+  - using join buffer
 
 
 - [后端程序员必备：书写高质量SQL的30条建议](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486461&idx=1&sn=60a22279196d084cc398936fe3b37772&chksm=cea24436f9d5cd20a4fa0e907590f3e700d7378b3f608d7b33bb52cfb96f503b7ccb65a1deed&token=1987003517&lang=zh_CN%23rd)
@@ -306,10 +323,45 @@ explain分析工具
 - [一条SQL语句在MySQL中如何执行的](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485097&idx=1&sn=84c89da477b1338bdf3e9fcd65514ac1&chksm=cea24962f9d5c074d8d3ff1ab04ee8f0d6486e3d015cfd783503685986485c11738ccb542ba7&token=79317275&lang=zh_CN%23rd)
 
 
+### 6.2. SQL优化经验总结
+
+```
+select---
+避免使用select *，不返回用不到的任何字段
+
+from---
+最好是小表驱动大表
+避免使用子查询（嵌套查询），多使用join
+
+
+where---
+避免使用组合索引中的某一列，应按照索引列创建的顺序使用，建议使用覆盖索引
+避免使用or、isnull、isnotnull等语句
+避免字符串不用单引号
+避免在索引上使用函数
+避免like不正确使用，应like "*%"
+避免in和not in，应多使用exists和not exists
+避免使用不等于，多用范围查询
+
+```
+
 
 ## 7. 优化经验总结
 
+## MySQL 大纲
 
+- 架构图
+- DB特性
+- 并发一致性原理
+- 隔离级别
+- 索引（分类、定义、使用方式、数据结构、失效）
+- 锁（表锁、行锁）
+- explain（列和列值的含义） 
+- 慢查询分析步骤
+- 服务器监控（show profile和全局查询日志）
+- 主从复制原理（基本原理、配置过程）
+- 读写分离实现过程
+- join使用
 
 ---
 
@@ -332,4 +384,7 @@ explain分析工具
 - [括号中的可选、必选表示](https://blog.csdn.net/raoqin/article/details/8875089)
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

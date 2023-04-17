@@ -137,7 +137,7 @@ tag:
   - 命令行修改
   - 配置文件修改
 - 混合持久化方式的加载流程
-  - ![](../img/notes/redis-aof-use-rdb.png)
+  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/redis-aof-use-rdb.png)
 - 优缺点
   - 集合了aof和rdb二者的优点，可以使redis更快的启动，也减少了丢失大量数据的风险
   - AOF文件可读性变差，并且只能在4.0以后的版本中才可以同时开启
@@ -192,7 +192,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
 #define REDIS_ENCODING_SKIPLIST 7     // 编码为跳跃表
 ```
 
-![](../img/notes/redisobject-dsa.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/redisobject-dsa.png)
 
 
 - 功能
@@ -235,7 +235,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
       - 64字节 = redisObject + SDS
       - redisObject = 16字节
       - SDS = 4字节 + 44字节的buf[] 
-      - ![](../img/notes/redisobject+sds.png)
+      - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/redisobject+sds.png)
 - SDS 内部结构
 - SDS与c字符串的优点
   - O(1)的时间获取串的长度，SDS是通过访问length值获取长度，而c是通过遍历所有的字符后得到长度；
@@ -265,22 +265,22 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
   - 散列表存储方式及哈希冲突解决思路
     - 开放寻址法
       - 线性探测
-      - ![](../img/notes/hash-open-find-address.png)
+      - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-open-find-address.png)
     - 链表法
       - 数组+链表方式实现
-      - ![](../img/notes/hash-linkedlist.png)
+      - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-linkedlist.png)
   - 装载因子： 已有的元素个数 / 所有的元素个数， eg：数组长度为10，其中只有2个元素，则装载因子为0.2
     - 装载因子过高容易引起哈希冲突，过低造成存储空间浪费；
     - 为了让装载因子处于一个合适的范围，需要对hashtable进行扩容和缩容；
 - dict原理
   - 存储原理
     - ziplist压缩列表
-      - ![](../img/notes/hash-ziplist.png)
+      - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-ziplist.png)
     - 编码转换条件
       - `键值对数量小于512` && `所有键值对的key和value的长度都小于64字节` 时使用ziplist；
       - 否则就使用hashtable
     - hashtable
-      - ![存储结构](../img/notes/hash-hashtable.png)
+      - ![存储结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-hashtable.png)
       - 集中式rehash缺点： 一次性的hash，中间不会停止，会影响redis的读写性能，因为要花费资源去进行hash，性能差
       - 渐进式rehash过程：每一次对字典的操作，都顺带rehash一个index，直到rehash完成，最后把ht[1]变成ht[0]，最后再申请一个ht[1]，并把rehashidx置为-1，为下次rehash做准备；
         - 为ht[1]分配空间，让字典同时拥有ht[0]和ht[1]；
@@ -363,7 +363,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
 - 内部实现
   - quicklist （ Redis 3.2 引入的数据类型 ，而quicklist底层使用压缩列表和双向列表组成，具体见《Redis设计与实现》第8.3章。）
     - 由双向列表和ziplist构成的复合数据结构
-    - ![](../img/notes/quicklist.png)
+    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/quicklist.png)
     - 新增
       - 判断 head 节点是否可以插入，可以插入，就在 ziplist 上插入，否则，就新建一个 quickListnode 节点进行插入
     - 删除
@@ -431,7 +431,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
   - zunionstore
 - 内部实现原理
   - skiplist
-  - ![](../img/notes/skiplist.png)
+  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/skiplist.png)
   - 跳跃表基于单链表加索引的方式实现
   - 跳跃表以空间换时间的方式提升了查找速度
   - Redis有序集合在节点元素较大或者元素数量较多时使用跳跃表实现
@@ -476,7 +476,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
 
 ## 17 Redis 键值过期操作
 
-![](../img/notes/expire.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/expire.png)
 
 - 相关命令
   - expire
@@ -518,7 +518,7 @@ encoding记录了对象`所保存的值的编码`，其枚举值列表如下：
     - 为避免过度扫描，通过判断 timelimit 来确定扫描次数
   - `redis采用惰性过期和定期过期方式进行删除`
 - 执行淘汰的机制
-  - ![](../img/notes/vection.png)
+  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/vection.png)
 - lru的原理
   - 基于链表结构，链表中的元素按照操作顺序从前往后排列，最新操作的键会被移动到表头，当需要内存淘汰时，只需要删除链表尾部的元素即可
   - 手写算法
@@ -710,7 +710,7 @@ https://www.jianshu.com/p/60cc093d6c36
     - bf.mexists
     - bf.reserve： reserve 有 2 个重要的参数：错误率和数组大小，错误率设置的越低，数组设置的越大，需要存储的空间就越大，相对来说查询的错误率也越低，需要如何设置需要使用者根据实际情况进行调整
 - 基本原理
-  - ![](../img/notes/bloomfilter.png)
+  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/bloomfilter.png)
   - 利用几个不同的hash函数，把key均匀的存储在位数组中；
   - 在查找某一个key是否存在时，就去判断这个key的位数组中是否全部为1，如果有一个不为1，则说明这个key一定不存在；但是如果全为1，不能表明这个key一定存在；
   - 分析：当位数组存储的值越稀疏，查询的准确率就越高
@@ -973,4 +973,7 @@ https://www.jianshu.com/p/60cc093d6c36
 - Reids Insight
 
   
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

@@ -91,7 +91,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 1.服务a先往自己本地表中插入一条消息数据，然后执行业务操作，再往mq中发送事务消息；
 2.服务b接收到消息后，先去查一下本地消息表中是否有改消息id，如果有就丢弃，如果没有就往自己本地表中插入一条消息数据，然后执行业务操作，完成后更新消息数据，再调用a接口更新a的消息数据状态；
 
-![](../img/distribute/local-msg.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/distribute/local-msg.png)
 
 假设b没有接收到数据，a也会有一个定时任务，去查自己本地消息表中未处理过的消息数据，然后再发送给mq中让b去处理，重复这个过程直到b调用a的接口完成了a的消息状态的更新。
 
@@ -126,7 +126,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 
 这种事后人工补偿的方式所花费的成本要少的多得多。
 
-![](../img/distribute/dstbt-transaction-summary.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/distribute/dstbt-transaction-summary.png)
 
 ### 附言
 
@@ -154,4 +154,7 @@ TCC就是针对要求数据强一致性时才会使用到这种方案，因为�
 - [消息队列之事务消息，RocketMQ 和 Kafka 是如何做的？](https://juejin.cn/post/6867040340797292558)
 - [微服务中的分布式事务方案](https://jeremyxu2010.github.io/2020/03/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%B8%AD%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%96%B9%E6%A1%88/#heading-3)
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

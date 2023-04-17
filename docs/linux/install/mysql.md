@@ -208,4 +208,7 @@ success
 > > 3. 要求在的mysql>=5.5.3版本，表、字段必须使用utf8mb4字符集和utf8mb4整理。
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

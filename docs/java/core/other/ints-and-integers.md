@@ -170,4 +170,7 @@ one == anotherOne : false
 ## 5. 总结
 
 Java中的拆箱和装箱机制便利了程序开发人员，减少了程序开发人员的工作量，使得基本数据类型和封装数据类型之间有一个高效快捷的桥梁。但是凡事都有两面性，在使用过程中一定要注意初始值问题和适用场景问题，切不可以随意任意使用。
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

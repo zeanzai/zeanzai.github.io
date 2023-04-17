@@ -411,7 +411,10 @@ management:
 3. Nacos的服务注册与发现的两种RPC调用过程及开发过程中的最佳实践；
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 
 
 

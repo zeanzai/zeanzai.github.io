@@ -176,4 +176,7 @@ $ chkconfig rabbitmq-server on
 2. https://www.cnblogs.com/h--d/p/9981377.html
 3. https://www.cnblogs.com/h--d/p/9998858.html
 4. https://blog.csdn.net/qwfys200/article/details/79744414
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

@@ -151,4 +151,7 @@ $ firewall-cmd --zone= public --remove-port=80/tcp --permanent
 > 2. Centos7,配置防火墙，开启端口 https://blog.csdn.net/u013410747/article/details/61696178<br />
 > 3. SELinux百度百科： https://baike.baidu.com/item/SELinux/8865268?fr=aladdin<br />
 > 4. 【Linux/CentOS】Boolean ftp_home_dir is not defined https://www.cnblogs.com/guxin/p/centos-boolean-ftp-home-dir-is-not-defined.html<br />
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

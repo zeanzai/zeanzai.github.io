@@ -158,4 +158,7 @@ firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080   ## 将80端口�
 firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.1.0.1 ## 将80端口的流量转发至192.168.0.1
 firewall-cmd --add-forward-port=proto=80:proto=tcp:toaddr=192.168.0.1:toport=8080 ## 将80端口的流量转发至192.168.0.1的8080端口
 ```
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

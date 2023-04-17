@@ -6,12 +6,10 @@ tag:
   - "server"
 ---
 
-
 ## 版本
 
 ```
 $ uname -a
-
 ```
 
 ## cpu个数及核数
@@ -147,8 +145,8 @@ $ w
 $ last
 ```
 
-## 参考
 
-1. https://blog.csdn.net/u012965373/article/details/76172581
-2. https://www.cnblogs.com/zy-plan/p/8617202.html
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

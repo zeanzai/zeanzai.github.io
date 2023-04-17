@@ -12,7 +12,7 @@ tag:
 
 先来看一下jdk中集合的类图：
 
-![Collection图](./img/collections/collection-uml01.png)
+![Collection图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/collection-uml01.png)
 
 先根据集合大图来看下集合中都包括哪些内容：
 
@@ -33,7 +33,7 @@ tag:
 
 ### 2.1. List
 
-![](./img/collections/list-entity.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/list-entity.png)
 
 **list具有有序性（存入的顺序与存储的顺序一致），不具备唯一性，元素可以重复，可以插入多个 null 元素，并且每一元素都有索引下标。它包含了 ArrayList 、 Vector 、 LinkedList 三个最重要的实现类。**
 
@@ -60,8 +60,8 @@ tag:
   - 使用System.copyArrays()方法
 - `常用方法`
   - 方法大图
-    - ![](./img/collections/arraylist-methods01.png)
-    - ![](./img/collections/arraylist-methods02.png)
+    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/arraylist-methods01.png)
+    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/arraylist-methods02.png)
   - 增
     - add(E)： 添加一个元素
     - add(int, E)： 在int位置添加一个元素
@@ -109,9 +109,9 @@ tag:
 - `是否支持快速随机访问`： ArrayList 支持快速随机访问， LinkedList 不支持，但二者都实现了 ListIterator 接口，而 Set 没有实现
 
 ::: tip 补充双向链表与双向循环链表的区别
-![](./img/collections/straight-circle-linke.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/straight-circle-linke.png)
 
-![](./img/collections/circle-circle-linke.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/circle-circle-linke.png)
 :::
 
 
@@ -126,7 +126,7 @@ tag:
 
 ### 2.2. Map
 
-![map的类图](./img/collections/map-entity.png)
+![map的类图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/map-entity.png)
 
 
 
@@ -138,7 +138,7 @@ map用来存放键值对。包含了 `HashMap` 、 `Hashtable` 、 `TreeMap` 、
 
 - Java7实现
   - `基本数据结构`是： Entry 的数组，而 Entry 中又有一个next引用，指向下一个Entry，整体看起来是一个 数组 + 链表 的数据结构，其实本质上是一个数组；
-    - ![java7中的hashmap实现](./img/collections/java7-hashmap.png)
+    - ![java7中的hashmap实现](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/java7-hashmap.png)
   - `相关属性及默认值` 
     - 初始化容量 DEFAULT_INITIAL_CAPACITY ： 16
     - 装载因子 DEFAULT_LOAD_FACTOR ： 0.75
@@ -155,15 +155,15 @@ map用来存放键值对。包含了 `HashMap` 、 `Hashtable` 、 `TreeMap` 、
     - 树化最小值： 默认为64， 表示数组在转化成红黑树的过程中，如果数组中长度小于64，会先扩容数组；
   - `hash函数发生变化`：相比在1.7中的4次位运算，5次异或运算（9次扰动），在1.8中，只进行了1次位运算和1次异或运算（2次扰动），分布更加均匀，性能更好
     - 在1.8中，是调用了key的父类Object的hashcode方法获取hashcode，然后用hashcode进行1次位运算和1次异或运算
-    - ![hash函数](./img/collections/hashmap-hashcode.png)
+    - ![hash函数](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/hashmap-hashcode.png)
   - `put方法发生变化`：
     - 1.8会多了链表长度的判断，如果链表长度超过8，就会自动转化为红黑树； 如果hash槽的元素个数小于6时，会退化为链表；
-    - ![插入逻辑](./img/collections/hashmap8-putval.png)
+    - ![插入逻辑](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/hashmap8-putval.png)
   - `数据结构发生变化`：
     - 数组中的元素由1.7的 entry 变成了1.8的 node 
     - 头插法变成尾插法：解决了循环链表的问题
     - 1.7时数组+单向链表，变成了1.8中的数组 + 单向链表 + 红黑树，优化了hash冲突后的查询效率，单向链表的查询效率是O(n)，而1.8链表长度超过8，就会自动转化为红黑树，红黑树是一种二叉查找树，查询效率为O(logn)，查询效率更高
-    - ![java8中的hashmap实现](./img/collections/java8-hashmap.png)
+    - ![java8中的hashmap实现](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/java8-hashmap.png)
   - `遍历方法`： 都是调用底层的Itrator迭代器
   - `同步特性`： 同样不支持线程同步，同样支持 fast-fail 机制
 - 实际应用
@@ -222,7 +222,7 @@ map用来存放键值对。包含了 `HashMap` 、 `Hashtable` 、 `TreeMap` 、
 
 ### 2.3. Set
 
-![](./img/collections/set-entity.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/set-entity.png)
 
 **set具有无序性（存入的顺序与实际存储的顺序不一致），具有唯一性，元素不能重复，只允许插入一个 null 元素。它包含了 HashSet 、 LinkedHashSet 、 TreeSet 三个重要的实现类。** 
 
@@ -330,8 +330,9 @@ queue 作为顶级接口，表示队列。
 - [我就知道面试官接下来要问我 ConcurrentHashMap 底层原理了](https://mp.weixin.qq.com/s/My4P_BBXDnAGX1gh630ZKw)
 - [JavaFamily](https://github.com/AobingJava/JavaFamily)
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
 
+---
 
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
 
-测试GitHub

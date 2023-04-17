@@ -47,6 +47,9 @@ tag:
 
 选定组件的类型以及版本后，就需要确定一种统一管理版本的方式。在SpringCloud微服务实践过程中，我们一般采用自定义starter的形式来统一管理所依赖的所有组件的版本信息，详情见[如何在SpringCloud项目中统一管理依赖的版本？](https://mp.weixin.qq.com/s/uckNTewC0xms1VeXRkQ43g)。
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 
 

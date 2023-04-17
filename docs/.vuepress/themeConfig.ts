@@ -18,10 +18,10 @@ export default defineThemeConfig({
 
   docsDir: "docs",
 
-  // navbar
+  // navbar.ts
   navbar: navbar,
 
-  // sidebar
+  // sidebar.ts
   sidebar: sidebar,
 
   footer: "浪漫骑士的二流键盘",

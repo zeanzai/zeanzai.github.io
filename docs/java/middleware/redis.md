@@ -80,7 +80,47 @@ stream
 
 ## 参考链接
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+
+## Redis大纲 
+
+- 线程模型与内存模型
+- 支持的数据结构与各自使用方式、场景
+- 持久化
+  - RDB： 原理、配置过程及参数、优缺点
+  - AOF： 原理、配置过程及参数、优缺点
+  - 混合方式： 原理、配置过程及参数、优缺点
+- rewrite机制
+- 事务（使用方式、特性）
+- 主从复制 
+  - 部署方式
+  - 基本原理
+- 集群配置
+  - 部署方式
+  - 分片原理
+- 哨兵模式
+  - 部署方式
+  - 原理
+- 读写分离 
+  - 实现过程
+- key过期策略
+- 经典缓存问题
+  - key竞争
+  - db与缓存双写一致性问题
+  - 缓存穿透
+  - 缓存击穿
+  - 缓存雪崩
+  - 缓存预热
+  - 缓存降级
+  - 热点数据
+  - 大key打满网卡
+  - 单节点负载过高
+  - QPS统计
+
+
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 
 
 

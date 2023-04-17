@@ -47,4 +47,7 @@ tag:
 ### 4.1. 场景描述
 
 上传第三方组件（即一些开源的或者有版权限制的jar文件）。
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

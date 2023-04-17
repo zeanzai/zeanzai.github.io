@@ -58,4 +58,7 @@ server {
 ### 1.3. 问题
 1. 需要开放443、80端口
 2. ssl证书需要按网络服务商要求修改
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+

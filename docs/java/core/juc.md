@@ -102,11 +102,27 @@ System.out.println("return"+j);
 ### 1.3. 线程的一些操作
 
 - 线程名称的设置与获取
-- sleep：让当前线程睡眠，让出CPU，使线程从执行状态变成限时阻塞状态。等待时间结束后，线程不一定会立即执行，线程状态会变成可执行状态。
-- interrupt：让当前线程进入阻塞状态。
+- start的执行顺序与线程的执行顺序不一致
+- currentThread方法用来获取当前执行线程的名称
+- isAlive用来判断线程是否还在存活状态，活动状态就是线程已经启动且运行没有结束。线程处于正在运行或准备开始运行的状态，就认为线程是『存活』的状态
+- sleep：让当前线程睡眠，让出CPU，使线程从执行状态变成限时阻塞状态。等待时间结束后，线程不一定会立即执行，线程状态会变成可执行状态。作用是在指定的毫秒数内让当前『正在执行的线程』暂停执行。
+- getId方法，作用是获取当前线程的唯一标识
+- 停止线程
+  - stop方法强制结束线程。stop方法已经被作废，如果强制让线程停止有可能使一些清理性的工作得不到完成。另外一个原因是对锁定的对象进行『解锁』，导致数据得不同同步的处理，出现数据不一致性的问题。
+  - 也可以使用退出标志，使线程正常退出，也就是当run方法完成后线程终止。
+- interrupt：让当前线程进入阻塞状态。调用interrupt方法不会真正的结束线程，在当前线程中打上一个停止的标记。Thread类提供了interrupted方法测试当前线程是否中断，isInterrupted方法测试线程是否已经中断。如果程中有sleep代码，不管是否进入到sleep的状态，如果调用了interrupt方法都会产生异常信息。
+- 暂停线程使用suspend，重启暂停线程使用resume方法，suspend如果独占公共的同步对象，使其它线程无法访问公共同步对象，suspend会造成共享对象数据不同步
 - join：多个线程进行合并，本质是：线程a需要在合并点进行等待，一直等到b线程执行完，或者等待超时时，才继续执行。
 - yeild：此方法相当于让当前线程让出cpu执行权限，让cpu执行其他线程，但是此方法虽然会让当前线程暂停，但是不会阻塞当前线程，只是让线程转入就绪状态，可能当前线程暂停了一下，又立即获得了cpu的执行权限，又开始执行了。
-- daemon：线程分为两类，守护线程和用户线程。守护线程指在用户线程执行过程中，在后台提供某些通用服务的线程。GC线程就是守护线程。
+- 线程的优先级
+  - 在操作系统中，线程可以划分优先级，优先级较高的线程得到更多的CPU资源，也就CPU会优先执行优先级较高的线程对象中的任务。设置线程优先有助于帮助『线程调度器』确定在下一次选择哪个线程优先执行。
+  - 设置线程的优先级使用setPriority方法，优级分为1~10个级别，如果设置优先级小于1或大于10，JDK抛出IllegalArgumentException。JDK默认设置3个优先级常量，MIN_PRIORITY=1(最小值)，NORM_PRIORITY=5(中间值，默认)，MAX_PRIORITY=10(最大值)。
+  - 获取线程的优先级使用getPriority方法。
+  - 线程的优先级具有继承性，比如线程A启动线程B，线程B的优先级与线程A是一样的。
+  - 高优先级的线程总是大部分先执行完，但不代表高优先级的线程全部执行完。当线程优先级的等级差距很大时，谁先执行完和代码的调用顺序无关。
+  - 线程的优先还有『随机性』，也就是说优先级高的线不一定每一次都先执行完成。
+- daemon：线程分为两类，守护线程和用户线程。守护线程指在用户线程执行过程中，在后台提供某些通用服务的线程。GC线程就是守护线程。守护线程是一种特殊的线程，特殊指的是当进程中不存在用户线程时，守护线程会自动销毁。典型的守护线程的例子就是垃圾回收线程，当进程中没有用户线程，垃圾回收线程就没有存在的必要了，会自动销毁。设置守护线程必须要在调用start方法之前设置，否则JDK会产生IllegalThreadStateException
+
 - wait：
 
 ### 1.4. 线程的相关概念
@@ -165,7 +181,7 @@ public class MyThread extends Thread{
   - `原子性`和`有序性`特性针对的是操作或是指令，`可见性`则针对的是共享变量。`总之，要想满足线程安全，即线程并发执行的结果的正确性，就必须要保证原子性、可见性、有序性，三者缺一不可。满足这三个条件的程序的运行结果，我们称之为线程安全。`
 - java内存模型——JMM
   - 基于操作系统高速缓存与内存的模型，java虚拟机规范中试图通过定义一种属于java语言的内存模型，来屏蔽异构硬件平台的差异，这种模型就是java内存模型。但是这种内存模型只是规定了执行的指令次序，并没有规定是否使用高速缓存来提高执行速率，也没有规定是否禁止编译器对指令重排序。换句话来说，java的内存模型也是存在缓存一致性问题和指令重排序问题。
-  - ![jmm](./img/juc/jmm.png)
+  - ![jmm](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/jmm.png)
 - 满足线程安全特性的条件
   - `满足原子性`： JMM只保证基本读取和赋值操作是原子操作。更大范围内的原子操作就需要使用Sychronized和lock等来进行保证了。若要实现更大范围的原子性操作，可以通过synchronized关键字和Lock来实现。
   - `满足有序性`： volatile也可以保证有序性。除此以外，满足先行发生原则的操作也一定是有序的。
@@ -246,7 +262,7 @@ public class MyThread extends Thread{
     - 加锁过程： 当一个线程获得锁之后，会把监视器对象的 owner 设置为这个线程的ThreadID，然后count加1；如果再有线程尝试获得锁，就进入EntryList等待；
     - 解锁过程： 当一个线程释放锁时，会把监视器对象的 owner 设置为null，然后count减1，然后再从waitset或entrylist中get一个线程，让这个线程尝试获取锁；
   - synchronized 锁在升级过程中用到了不同的锁机制
-    - ![](./img/juc/markword.png)
+    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/markword.png)
     - 从无锁状态到偏向锁阶段，再到轻量级锁阶段，使用的是Java堆中对象的内存分布中的对象头的不同值来完成同步的；
       - 无锁状态 ：       hashcode +     分代年龄 + 偏向标识（为0） + 锁标志位（为01）
       - 偏向锁状态 ： ThreadID + epoch + 分代年龄 + 偏向标识（为1） + 锁标志位（为01）
@@ -270,7 +286,7 @@ synchronized 与 ReentrantLock 的区别
 
 - ThreadLocal
   - ThreadLocal可以理解为线程本地变量，他会在每个线程都创建一个副本，那么在线程之间访问内部副本变量就行了，做到了线程之间互相隔离，相比于synchronized的做法是用空间来换时间。ThreadLocal有一个静态内部类ThreadLocalMap，ThreadLocalMap又包含了一个Entry数组，Entry本身是一个弱引用，他的key是指向ThreadLocal的弱引用，Entry具备了保存key value键值对的能力。弱引用的目的是为了防止内存泄露，如果是强引用那么ThreadLocal对象除非线程结束否则始终无法被回收，弱引用则会在下一次GC的时候被回收。但是这样还是会存在内存泄露的问题，假如key和ThreadLocal对象被回收之后，entry中就存在key为null，但是value有值的entry对象，但是永远没办法被访问到，同样除非线程结束运行。但是只要ThreadLocal使用恰当，在使用完之后调用remove方法删除Entry对象，实际上是不会出现这个问题的。
-  - ![](./img/juc/threadlocal.png)
+  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/threadlocal.png)
 
 ## AQS
 
@@ -383,11 +399,11 @@ public ThreadPoolExecutor(
 
 ### 2.5. java中线程池框架
 
-![](./img/juc/ThreadPoolExecutor.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ThreadPoolExecutor.png)
 
-![](./img/juc/ScheduledThreadPoolExecutor.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ScheduledThreadPoolExecutor.png)
 
-![](./img/juc/ExecutorService.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ExecutorService.png)
 
 
 > ThreadPoolExecutor 和 ScheduledThreadPoolExecutor 算是我们最常用的线程池类了，从上面我们可以看到这俩个最终都实现了 Executor 和 ExecutorService 这两个接口，实际上主要的接口定义都是在 ExecutorService 中。
@@ -434,4 +450,7 @@ public ThreadPoolExecutor(
 
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+---
+
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
