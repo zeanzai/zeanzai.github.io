@@ -67,14 +67,12 @@ INSERT INTO `user` VALUES ('1', 'test', 'abc123456', 'firstTenant');
 7. 使用`firstTenant`作为租户id，使用`test`作为用户名，使用`abc123456`作为登陆密码。
 
 
+![20230524151158](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230524151158.png)
 
-## 源码
-
-[una-saas-toturial-master.zip](../source/una-saas-toturial-master.zip)
-
+![20230524151230](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230524151230.png)
 
 
-
+8. 使用另外一个链接和另外一个租户的用户再次登录，同样成功。
 
 ---
 

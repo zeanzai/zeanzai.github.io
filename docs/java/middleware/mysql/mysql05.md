@@ -1,15 +1,15 @@
 ---
-title: "安装CentOS7.5"
-description: "安装CentOS7.5"
-keywords: "安装CentOS7.5"
+"title": "MySQL中的锁"
 category:
-  - "linux"
+  - "MySQL"
 tag:
-  - "server"
+  - "数据库"
 ---
 
 
-fasdfasdfa---
+
+
 
 <img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
 

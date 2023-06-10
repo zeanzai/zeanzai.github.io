@@ -141,6 +141,38 @@ cat /mydata/nexus/data/admin.password
 在团队中一般是团队中的重要成员才有推送到私服的权限，因此在实际的开发过程中普通程序员是不需要创建私服的。各位读者在实践过程中，也可以直接创建一个模块，然后把这个模块安装到本地仓库后，在其他模块中引入对应坐标即可。
 
 
+## SpringCloud的版本
+
+分为很多个组件，每一个组件都有自己的版本坐标，这个也很好理解，SpringCloud是一个大型的工程，在这个工程里面有很多组件，每一个组件都是由一个小团队负责交付，由于负责不同的组件的团队不同，所以组件的交付时间节点肯定不一样，所以SpringCloud有一个自己的版本，这个版本中每一个组件的版本是不同的。
+
+### SpringCloud-Alibaba的版本
+
+SpringCloud-Alibaba是基于SpringBoot开发的，也是有不同的组件组成的。
+
+因此二者有一个对应关系。
+
+### 对应关系
+
+![Spring版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131544.png)
+
+![组件之间的版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131636.png)
+
+我们选取的版本如下：
+
+- JDK1.8
+- CentOS7.9
+- SpringBoot-2.2.5.RELEASE
+- SpringCloud-Hoxton.SR3
+- SpringCloudAlibaba-2.2.1.RELEASE
+- Nacos1.2.1
+- Seata1.3.0
+- Sentinel1.7.1
+- ...
+
+
+### 创建服务模块的方法
+
+项目使用idea中的 Spring Initializer 进行生成。这样做的好处是`当团队规模较大，并且每一个团队都负责一个模块时，可以让不同的团队只需要下载自己负责的模块代码即可，便于代码权限的管理`。
 
 
 

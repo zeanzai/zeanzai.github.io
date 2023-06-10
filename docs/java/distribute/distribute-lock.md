@@ -82,6 +82,31 @@ tag:
 - 总结
   - `生产环境下也不会使用这种方式`
 
+伪代码实现
+
+```
+int count;
+for(int i=0; i<nodeNum; i++){
+  if(
+    set(key, value, expireTime, nx, node[i]) == 1
+    && expireTime > (getLockEndTime-getLockStartTime)
+  ){
+    count++; // 统计加锁成功的节点个数
+  } else
+}
+
+if(count > 0.5*nodeNum){
+  // 表明加锁成功
+  // 执行业务操作
+  
+}
+
+// 业务执行完成 或 没有加锁成功，就删除所有key
+for(int i=0; i<nodeNum; i++){
+  del(key, node[i]);
+}
+```
+
 ### 3.4. zk实现方案
 
 - 基本原理
@@ -181,6 +206,7 @@ C：Clock Drift，时钟漂移
 
 ## 5. 参考
 
+- :star:[Spring Boot中使用Redis实现分布式锁 ](https://blog.51cto.com/u_15949251/6215363)
 - [11 分布式锁有哪些应用场景和实现？](http://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%9845%E8%AE%B2-%E5%AE%8C/11%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%92%8C%E5%AE%9E%E7%8E%B0%EF%BC%9F.md)
 - [12 如何使用 Redis 快速实现分布式锁？](http://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%9845%E8%AE%B2-%E5%AE%8C/12%20%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20Redis%20%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%EF%BC%9F.md)
 - [Redis 分布式锁｜从青铜到钻石的五种演进方案](https://my.oschina.net/u/4499317/blog/5039486)

@@ -154,7 +154,21 @@ export default defineSidebarConfig({
       children: [
         { text: "计算机网络", link: "network.md" },
         { text: "数据结构与算法", link: "dsa.md" },
-        { text: "设计模式", link: "design-pattern.md" },
+        {
+          text: "设计模式",
+          collapsable: true,
+          prefix: "design-pattern/",
+          children: [
+            { text: "概述", link: "designpattern.md" },
+            { text: "单例模式", link: "singleton.md" },
+            { text: "代理模式", link: "proxy.md" },
+            { text: "策略模式", link: "strategy.md" },
+            { text: "责任链模式", link: "chain-filter.md" },
+            { text: "模板方法模式", link: "template-method.md" },
+            { text: "观察者模式", link: "observer.md" },
+            
+          ],
+        },
       ],
     },
 
@@ -258,9 +272,29 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "middleware/",
       children: [
-        {
-          text: " MySQL",
-          link: "mysql.md",
+        { text: "MySQL", 
+          collapsable: true,
+          prefix: "mysql/", 
+          children: [
+            { text: "01.架构概览", link: "mysql01.md", },
+            { text: "02.数据库基本理论", link: "mysql02.md", },
+            { text: "03.MySQL中的Binlog", link: "mysql03.md", },
+            { text: "04.Innodb存储引擎", 
+              collapsable: true,
+              prefix: "mysql04/", 
+              children: [
+                { text: "架构大图", link: "mysql04_00.md", },
+                { text: "线程模型", link: "mysql04_01.md", },
+                { text: "内存结构", link: "mysql04_02.md", },
+                { text: "磁盘结构", link: "mysql04_03.md", },
+              ], 
+            },
+            { text: "05.MySQL中的锁", link: "mysql05.md", },
+            { text: "06.MySQL中的索引", link: "mysql06.md", },
+            { text: "07.MySQL的优化", link: "mysql08.md", },
+            { text: "08.分库分表", link: "mysql09.md", },
+
+          ]
         },
         {
           text: "Redis",
@@ -271,19 +305,8 @@ export default defineSidebarConfig({
           link: "zk.md",
         },
         {
-          text: "MQ",
-          prefix: "mq/",
-          collapsable: true,
-          children: [
-            {
-              text: "rocket",
-              link: "rocket.md",
-            },
-            {
-              text: "kafka",
-              link: "kafka.md",
-            },
-          ]
+          text: " MQ",
+          link: "mq.md",
         },
       ],
     },
@@ -388,10 +411,6 @@ export default defineSidebarConfig({
           text: "如何设计一个XXX系统",
           link: "designASystem.md",
         },
-        {
-          text: "多租户SaaS实战",
-          link: "una-saas-toturial.md",
-        },
       ],
     },
 
@@ -436,6 +455,32 @@ export default defineSidebarConfig({
         
       ],
     },
+    // 总结
+    {
+      text: "十、总结",
+      collapsable: true,
+      prefix: "summary/",
+      children: [
+        { text: "集合", link: "collection.md", },
+        { text: "JVM", link: "jvm.md", },
+        { text: "MySQL", 
+          collapsable: true,
+          prefix: "mysql/", 
+          children: [
+            { text: "01.架构概览", link: "mysql01.md", },
+            { text: "02.数据库基本理论", link: "mysql02.md", },
+            { text: "03.MySQL中的Binlog", link: "mysql03.md", },
+            { text: "04.Innodb存储引擎", link: "mysql04.md", },
+            { text: "05.MySQL中的锁", link: "mysql05.md", },
+            { text: "06.MySQL中的索引", link: "mysql06.md", },
+            { text: "07.MySQL的优化", link: "mysql08.md", },
+            { text: "08.分库分表", link: "mysql09.md", },
+
+          ]
+        },
+        
+      ],
+    },
   ],
 
   // 资料分享
@@ -457,6 +502,7 @@ export default defineSidebarConfig({
         { text: "你真的了解技术选型吗？", link: "chapterA.md"},
         { text: "如何在SpringCloud项目中统一管理依赖的版本？", link: "chapterB.md"},
         { text: "使用idea插件生成代码", link: "easycode.md"},
+        { text: "开发环境搭建", link: "env.md"},
       ],
     },
     {
@@ -542,7 +588,7 @@ export default defineSidebarConfig({
         },
         {
           text: "多租户SaaS实战",
-          link: "/java/practice/una-saas-toturial.md",
+          link: "una-saas-toturial.md",
         },
       ],
     },
@@ -564,6 +610,7 @@ export default defineSidebarConfig({
       icon: "edit",
       link: "writearticle.md",
     },
+    { text: "使用ffmpeg自动化切分视频", icon: "edit", link: "ffmpeg-slices.md", },
   ],  
 
   // 面试自查宝典

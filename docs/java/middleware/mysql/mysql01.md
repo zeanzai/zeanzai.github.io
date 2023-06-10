@@ -1,10 +1,173 @@
 ---
-title: "数据库基本原理"
+title: "架构概览"
 category:
   - "middleware"
 tag:
   - "数据库"
 ---
+
+- 架构图
+- DB特性
+- 并发一致性原理
+- 隔离级别
+- 索引（分类、定义、使用方式、数据结构、失效）
+- 锁（表锁、行锁）
+- explain（列和列值的含义） 
+- 慢查询分析步骤
+- 服务器监控（show profile和全局查询日志）
+- 主从复制原理（基本原理、配置过程）
+- 读写分离实现过程
+- join使用
+- 数据库设计
+- SQL语法
+
+
+## 架构大图 
+
+![可插拔式MySQL逻辑架构图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605084426.png)
+
+![丐版](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605084007.png)
+
+### Server层（5层及各自作用）
+
+- 连接池
+- 查询缓存： 保存SQL与查询结果集之间的映射关系
+- 分析器
+- 优化器
+- 执行器
+
+### 存储引擎层
+
+MySQL 是支持可插拔式的存储引擎的。MySQL支持的存储引擎有很多，最常用的是 MyISM 和 InnoDB 。
+
+- MyISM 和 InnoDB 的区别
+
+|   |  MyISM | InnoDB |
+|---|---|---|
+|事务支持和外键支持   | 不支持  | 支持 |
+|锁机制   | 支持表锁，锁定整表  |支持行锁，基于索引加锁实现行级锁 |
+|索引类型   |  使用非聚集索引 |  使用聚集索引，即索引和数据记录一起存储|
+|并发支持   |  使用表锁，任何写操作都会锁住整张表，写写并发和读写并发都是串行，可并发读，锁的粒度为表 | 使用行锁、并使用MVCC优化读写并发，读读、读写可并发，写写串行，锁的粒度为行|
+|存储文件类型   | .frm表结构、.MYD数据文件、.MYI索引文件  | .frm表结构、.ibd数据文件 |
+|适用场景   | 适合不需要事务支持或一致性要求不高，并发度低，读多写少的场景  | 与 MyISM 相反 |
+
+
+## SQL查询语句的执行过程
+
+// todo 
+
+包括 BinLog 、 RedoLog 、 UndoLog
+
+
+
+---
+
+
+## RedoLog
+
+- 保存的内容 
+- 如何开启及配置参数讲解
+- 文件及文件内容 
+
+### 保存内容 
+
+### 开启与配置参数
+
+### 文件及文件内容
+
+### 作用
+
+- 默认只有两个，一个记录
+
+
+![20230605120141](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605120141.png)
+
+![20230605120058](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605120058.png)
+
+[What is the different between ib_logfile0 and ib_logfile1?](https://forums.mysql.com/read.php?22,632751,635384)
+
+---
+
+
+## Redolog 和 Binlog 完成两阶段提交
+
+通过 update 语句分析 Redolog 和 Binlog 的使用过程
+
+
+
+---
+
+## UndoLog
+
+- 存储内容
+- 作用
+  - 数据恢复
+  - MVCC实现 
+  - 
+
+
+---
+
+## 几种日志文件的总结
+
+
+|   |  BinLog |  RedoLog |  UndoLog | 
+|---|---|---|---|
+| 适用对象  |   |   |   |  
+| 文件格式  |   |   |   |  
+| 写入方式 |   |   |   |  
+| 用途  |   |   |   |  
+
+
+## InnoDB中的数据存储
+
+表空间，用于存储存储一个或多个ibd数据文件（记录和索引），一个ibd文件包含多个段（segment）。
+
+每个表空间都具有一个唯一的表空间id。
+
+Mysql 5.6版本默认所有InnoDB的所有表数据会放在一个系统表空间 ibdata1。
+
+5.7版本之后，每个表的数据默认单独放到一个独立表空间内。但每张表的独立表空间只存放数据页、索引页和写缓冲BitMap页，其他信息如回滚页、插入缓冲索引页、二次写缓冲仍放在系统表空间。所以即使每个表的数据单独放到自己的独立表空间，系统表空间也会不断增大。
+
+![20230605143030](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605143030.png)
+
+![20230605143127](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605143127.png)
+
+
+
+
+
+
+
+- MySQL中数据的存储与检索
+- MySQL中数据的回滚
+- MySQL中数据的事务控制
+- 
+
+### 锁机制
+
+- 为什么要有锁？
+
+    - 锁机制
+    - 索引类型
+    - 并发支持
+    - 存储文件类型
+    - 适用场景
+
+- binlog和redolog的区别
+  - 一条更新语句的执行过程(两阶段提交)
+- ibd存储结构
+  - segement
+  - extent
+  - page
+  - row
+- 索引的数据结构
+  - 发展历程： 有序数据 -> 哈希表 -> 搜索树
+  - 哈希表
+  - 搜索树
+  - 快表
+
+
 
 
 
@@ -348,22 +511,7 @@ where---
 
 ## 7. 优化经验总结
 
-## MySQL 大纲
 
-- 架构图
-- DB特性
-- 并发一致性原理
-- 隔离级别
-- 索引（分类、定义、使用方式、数据结构、失效）
-- 锁（表锁、行锁）
-- explain（列和列值的含义） 
-- 慢查询分析步骤
-- 服务器监控（show profile和全局查询日志）
-- 主从复制原理（基本原理、配置过程）
-- 读写分离实现过程
-- join使用
-
----
 
 ## 8. 面试题
 
@@ -382,6 +530,15 @@ where---
 - [命令行语法字符](https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm)
 - [命令行语法格式中常用符号的含义](https://www.cnblogs.com/uakora/p/11809501.html)
 - [括号中的可选、必选表示](https://blog.csdn.net/raoqin/article/details/8875089)
+
+
+
+
+
+
+
+
+
 
 
 ---
