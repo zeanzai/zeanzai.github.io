@@ -425,20 +425,8 @@ export default defineSidebarConfig({
           link: "distribute-system-theory.md",
         },
         {
-          text: "《中华石杉》",
-          link: "zh13.md",
-        },
-        {
           text: "《C2C 电商系统微服务架构 120 天实战训练营》",
           link: "c2c.md",
-        },
-        {
-          text: "《Redis 核心原理与实战》",
-          link: "redis.md",
-        },
-        {
-          text: "《基于Shardingsphere的分库分表实战》",
-          link: "Shardingsphere.md",
         },
       ],
     },
