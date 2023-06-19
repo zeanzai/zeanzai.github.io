@@ -54,12 +54,11 @@ Server层的操作日志。记录表结构变更和表数据变更的日志。
 
 ## 故障恢复 
 
-- 单行恢复： 只恢复部分数据
-  - delete：row 格式下，当我们执⾏ delete 命令时，如果 binlog_row_image 设置了 'FULL'，那么 Delete_rows ⾥⾯，包含了删掉的⾏的所有字段的值。如果误删了，因为 binlog 记录了所有字段的值，反向执⾏ insert 就可以了；当 binlog_row_image 设置为 MINIMAL ，只记录关键信息，⽐如 id=80；
-  - insert：row 格式下，binlog 会 记录 insert 的所有字段值。如果误操作，只需要根据这些值找到对应的⾏，再执⾏ delete 操作即可；
-  - update：row 格式下，binlog 会 记录 update 修改前、修改后的整⾏数据。如果误操作，只需要⽤修改前的数据覆盖即可；
-
-- 整库恢复： 使用binlog文件恢复数据： `mysqlbinlog mysql-bin.000001 --start-position=1 --stop-position=3000 | mysql -
+- `单行恢复`： 只恢复部分数据
+  - `delete`：row 格式下，当我们执⾏ delete 命令时，如果 binlog_row_image 设置了 'FULL'，那么 Delete_rows ⾥⾯，包含了删掉的⾏的所有字段的值。如果误删了，因为 binlog 记录了所有字段的值，反向执⾏ insert 就可以了；当 binlog_row_image 设置为 MINIMAL ，只记录关键信息，⽐如 id=80；
+  - `insert`：row 格式下，binlog 会 记录 insert 的所有字段值。如果误操作，只需要根据这些值找到对应的⾏，再执⾏ delete 操作即可；
+  - `update`：row 格式下，binlog 会 记录 update 修改前、修改后的整⾏数据。如果误操作，只需要⽤修改前的数据覆盖即可；
+- `整库恢复`： 使用binlog文件恢复数据： `mysqlbinlog mysql-bin.000001 --start-position=1 --stop-position=3000 | mysql -
 h192.168.0.1 -P3306 -u$user -p$pwd;`， 将 mysql-bin.000001 ⽂件位置从 1到3000 的 binlog 在 192.168.0.1 机器的数据库上回放，还原。
 
 ## 主从同步 
@@ -71,9 +70,9 @@ h192.168.0.1 -P3306 -u$user -p$pwd;`， 将 mysql-bin.000001 ⽂件位置从 1�
   - 从库会创建一个专门的 I/O 线程，连接主库的 log dump 线程，来接收主库的 binlog 日志，再把 binlog 信息写入 relay log 的中继日志里，再返回给主库“复制成功”的响应。
   - 从库会创建一个用于回放 binlog 的线程，去读 relay log 中继日志，然后回放 binlog 更新存储引擎中的数据，最终实现主从的数据一致性。
 - 主从复制模式
-  - 同步复制：MySQL 主库提交事务的线程要等待所有从库的复制成功响应，才返回客户端结果。这种方式在实际项目中，基本上没法用，原因有两个：一是性能很差，因为要复制到所有节点才返回响应；二是可用性也很差，主库和所有从库任何一个数据库出问题，都会影响业务。
-  - 异步复制（默认模型）：MySQL 主库提交事务的线程并不会等待 binlog 同步到各从库，就返回客户端结果。这种模式一旦主库宕机，数据就会发生丢失。
-  - 半同步复制：MySQL 5.7 版本之后增加的一种复制方式，介于两者之间，事务线程不用等待所有的从库复制成功响应，只要一部分复制成功响应回来就行，比如一主二从的集群，只要数据成功复制到任意一个从库上，主库的事务线程就可以返回给客户端。这种半同步复制的方式，兼顾了异步复制和同步复制的优点，即使出现主库宕机，至少还有一个从库有最新的数据，不存在数据丢失的风险。
+  - `同步复制`：MySQL 主库提交事务的线程要等待所有从库的复制成功响应，才返回客户端结果。这种方式在实际项目中，基本上没法用，原因有两个：一是性能很差，因为要复制到所有节点才返回响应；二是可用性也很差，主库和所有从库任何一个数据库出问题，都会影响业务。
+  - `异步复制（默认模型）`：MySQL 主库提交事务的线程并不会等待 binlog 同步到各从库，就返回客户端结果。这种模式一旦主库宕机，数据就会发生丢失。
+  - `半同步复制`：MySQL 5.7 版本之后增加的一种复制方式，介于两者之间，事务线程不用等待所有的从库复制成功响应，只要一部分复制成功响应回来就行，比如一主二从的集群，只要数据成功复制到任意一个从库上，主库的事务线程就可以返回给客户端。这种半同步复制的方式，兼顾了异步复制和同步复制的优点，即使出现主库宕机，至少还有一个从库有最新的数据，不存在数据丢失的风险。
 - 是不是从节点越多越好？
   - 不是的。因为从库数量增加，从库连接上来的 I/O 线程也比较多，主库也要创建同样多的 log dump 线程来处理复制的请求，对主库资源消耗比较高，同时还受限于主库的网络带宽。实际上，一主两从就行。
 - relay log
@@ -312,9 +311,11 @@ End_log_pos: 12626
 ![20230605133528](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605133528.png)
 
 - binlog格式为Statement的查询示例
+
 ![20230605132506](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605132506.png)
 
 
 
+<br /><br /><br />
 <img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
 
