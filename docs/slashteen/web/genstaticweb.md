@@ -38,6 +38,85 @@ tag:
   - 域名： [optional] 这个看自己需要，如果觉得GitHubPages也可以使用的，不注册也行
   - vscode 插件列表： `markdown all in one` 和 `markdown-index`
 
+说明：
+
+1. 使用 node.msi 安装包的方式进行安装，安装完node之后，npm会自动安装，并且 msi 的安装方式会自动添加环境变量；
+2. 设置好 node_global 和 node_cache 的位置，这里有点类似于 maven 的 repository 的意思，[参考这里](https://juejin.cn/post/7034705127868989447)，由于科学上网已设置，因此没有必要使用淘宝源；
+  a. 先创建 node_global 和 node_cache 这两个文件夹；
+  b. 用户变量的 path 变量中增加 node_global 的地址；
+  c. 修改系统环境变量，移除 msi 添加的node的环境变量，添加 NODE_PATH 变量，并把 NODE_PATH 添加到 path 中；
+  d. 管理员角色打开 cmd ，执行 `npm config set prefix "D:\work\node\node_global"` 和 `npm config set cache "D:\work\node\node_cache"` ， 并替换自己的路径；
+3. 使用管理员角色打开 cmd ，并执行 `npm i yarn -g` 安装 yarn 包管理工具，安装完成之后会在上一步骤中配置的 node_global 文件夹中找到 yarn 文件；
+4. 使用管理员角色打开 Windows PowerShell ， 输入命令： `set-ExecutionPolicy RemoteSigned` ；
+5. 在系统环境变量path中添加 yarn 的路径，使 yarn 全局可用；
+6. 重启vscode；
+7. 执行 yarn install 完成依赖的安装；
+8. 执行 yarn docs:dev 进行启动；
+
+注意：
+1. 如果报错： `yarn : 无法将“yarn”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。 + yarn install ... ` ，就需要检查是否没有使用管理员角色安装 yarn ，同时检查是否已经完成yarn的系统变量的配置；
+2. 如果报错： `yarn : 无法加载文件 E:\Node\node_global\yarn.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。所在位置 行:1 字符: 1` ， 就需要检查是否使用管理员角色在 Windows PowerShell 中执行了 `set-ExecutionPolicy RemoteSigned` ；
+
+参考：
+1. [PowerShell : 无法加载文件 C:\Users\huyn\AppData\Roaming\npm\ng.ps1，因为在此系统上禁止运行脚本](https://blog.csdn.net/weixin_38883338/article/details/100054550)
+2. [安装node.js，npm，yarn环境](https://juejin.cn/post/7034705127868989447)
+3. [安装完，运行yarn报错:无法将“yarn”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。 所在位置 行:1 字符: 1](https://www.cnblogs.com/fujijill/p/16080641.html)
+
+```
+PS E:\Source\Github\zeanzai.github.io> yarn docs:dev
+yarn : 无法加载文件 E:\Node\node_global\yarn.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 1
++ ~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS E:\Source\Github\zeanzai.github.io> yarn docs:dev
+yarn run v1.22.19
+$ vuepress dev docs
+'vuepress' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+PS E:\Source\Github\zeanzai.github.io> yarn install
+yarn install v1.22.19
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info There appears to be trouble with your network connection. Retrying...
+[3/4] Linking dependencies...
+warning "vuepress-theme-hope > vuepress-plugin-sass-palette > sass-loader@12.6.0" has unmet peer dependency "webpack@^5.0.0".
+warning "vuepress-theme-hope > vuepress-plugin-md-enhance > mermaid > cypress-image-snapshot@4.0.1" has unmet peer dependency "cypress@^4.5.0".
+warning "vuepress-theme-hope > vuepress-plugin-md-enhance > mermaid > cypress-image-snapshot > jest-image-snapshot@4.2.0" has unmet peer dependency "jest@>=20 <=26".
+[4/4] Building fresh packages...
+Done in 94.78s.
+PS E:\Source\Github\zeanzai.github.io> yarn docs:dev
+yarn run v1.22.19
+$ vuepress dev docs
+info Initializing VuePress and preparing data...
+warning Broken links found in java/core/collections.md: ../cscore/dsa/hashtable.md
+warning Broken links found in java/distribute/cache.md: ../middleware/redis.md
+
+  vite v2.9.6 dev server running at:
+
+  > Network:  http://192.168.1.104:8080/
+  > Local:    http://localhost:8080/
+13:33:11 [vite] ✨ optimized dependencies changed. reloading
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+info page slashteen\web\genstaticweb.md is modified
+
+```
+
+
+PicGo的配置
+1. 安装vscode的插件：
+
+![20230817140316](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230817140316.png)
+
+2. 完成配置：
+
+![20230817125902](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230817125902.png)
+
+
 
 ## 5. 初始化项目
 
