@@ -1,3 +1,27 @@
+---
+"title": "生产问题及解决方案"
+category:
+  - "Redis"
+tag:
+  - "Redis"
+---
+
+
+
+- 经典缓存问题
+  - key竞争
+  - db与缓存双写一致性问题
+  - 缓存穿透
+  - 缓存击穿
+  - 缓存雪崩
+  - 缓存预热
+  - 缓存降级
+  - 热点数据
+  - 大key打满网卡
+  - 单节点负载过高
+  - QPS统计
+
+
 
 > 分布式缓存中的七大经典问题
 
@@ -104,3 +128,11 @@
   - 不可删除：
     - value 是 string，比较难拆分，则使用序列化、压缩算法将key的大小控制在合理范围内，但是序列化和反序列化都会带来更多时间上的消耗； 如果压缩之后仍然是大key，则需要进行拆分，一个大key分为不同的部分，记录每个部分的key，使用multiget等操作实现事务读取；
     - value 是 list/set 等集合类型时，根据预估的数据规模来进行分片，不同的元素计算后分到不同的片；
+
+
+
+
+<br /><br /><br />
+<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+
+

@@ -6,6 +6,8 @@ tag:
   - "数据库"
 ---
 
+## 查看InnoDB中的工作线程
+
 ```
 mysql> show engine innodb status;
 ```
@@ -117,13 +119,34 @@ END OF INNODB MONITOR OUTPUT
 ============================
 ```
 
+从上面输出结果的`FILE I/O`部分可知，总共有四类IO工作线程，如下：
 - read thread：将数据从磁盘加载到缓存page页；
 - write thread：将缓存脏页刷新到磁盘；
 - log thread：将日志缓冲区刷盘到log文件；
 - insert buffer thread：将写缓冲change buffer的更改内容刷新到磁盘；
 
 
-- 事务提交之后，该事务相关的undo日志不再需要，Purge Thread负责回收已分配的undo页。默认有4个purge thread。
+
+### Master Thread 主线程
+
+负责调度其他线程，优先级最高。主要职能：脏页刷盘（调用page cleaner thread）、undo页回收（purge thread）、redo日志刷新（log thread）、合并写缓冲（insert buffer thread）。如果这些子线程通过配置关闭了，那么关闭的子线程的任务就会由master thread来做。
+
+主线程是由多个无限循环构成的，主要有2个主处理，分别是每隔1秒和10秒的处理：
+
+- 每1秒的操作（有条件的做）：
+  - 刷盘日志缓冲区
+  - 合并change buffer数据到磁盘的B+树中，根据IO读写压力决定是否操作
+  - 刷盘脏页到磁盘（条件是脏页比例达到75%才操作（innodb_max_dirty_pages_pct），而且不是一次性刷盘所有脏页，而是默认每次刷盘200页（innodb_io_capacity））。
+- 每10秒操作（无条件的做）：
+  - 刷盘脏页到磁盘
+  - 合并change buffer数据
+  - 刷盘日志缓冲区
+  - 删除无用的undo页
+
+
+### Purge Thread 线程
+
+事务提交之后，该事务相关的undo日志不再需要，Purge Thread负责回收已分配的undo页。默认有4个purge thread。
 
 ```
 mysql> show variables like '%innodb_purge_threads%';
@@ -135,8 +158,9 @@ mysql> show variables like '%innodb_purge_threads%';
 1 row in set (0.00 sec)
 ```
 
+### Page Cleaner thread 线程
 
-- 将脏数据刷新到磁盘（会调用 write thread 线程），脏数据刷盘后对应的redo log也就没用了，可以释放掉这部分 redo log，达到redo log 循环使用的目的。默认有1个Page Cleaner thread。
+将脏数据刷新到磁盘（会调用 write thread 线程），脏数据刷盘后对应的redo log也就没用了，可以释放掉这部分 redo log，达到redo log 循环使用的目的。默认有1个Page Cleaner thread。
 
 ```
 mysql> show variables like '%innodb_page_cleaners%';
@@ -148,25 +172,24 @@ mysql> show variables like '%innodb_page_cleaners%';
 1 row in set (0.00 sec)
 ```
 
-- Master Thread 主线程
 
-负责调度其他线程，优先级最高。主要职能：脏页刷盘（调用page cleaner thread）、undo页回收（purge thread）、redo日志刷新（log thread）、合并写缓冲（insert buffer thread）。如果这些子线程通过配置关闭了，那么关闭的子线程的任务就会由master thread来做。
+## 总结
 
-主线程是由多个无限循环构成的，主要有2个主处理，分别是每隔1秒和10秒的处理：
+InnoDB中的线程包括两大类：
+- 读写工作线程
+  - `read thread`：将数据从磁盘加载到缓存page页；
+  - `write thread`：将缓存脏页刷新到磁盘；
+  - `log thread`：将日志缓冲区刷盘到log文件；
+  - `insert buffer thread`：将写缓冲change buffer的更改内容刷新到磁盘；
+- 后台辅助线程
+  - `Master Thread 主线程`： 负责调度其他线程，优先级最高。主要职能：脏页刷盘（调用page cleaner thread）、undo页回收（purge thread）、redo日志刷新（log thread）、合并写缓冲（insert buffer thread）。如果这些子线程通过配置关闭了，那么关闭的子线程的任务就会由master thread来做。
+  - `Purge Thread 线程`：事务提交之后，该事务相关的undo日志不再需要，Purge Thread负责回收已分配的undo页。默认有4个purge thread。
+  - `Page Cleaner thread 线程`：将脏数据刷新到磁盘（会调用 write thread 线程），脏数据刷盘后对应的redo log也就没用了，可以释放掉这部分 redo log，达到redo log 循环使用的目的。默认有1个Page Cleaner thread。
 
-每1秒的操作（有条件的做）：
-刷盘日志缓冲区
-合并change buffer数据到磁盘的B+树中，根据IO读写压力决定是否操作
-刷盘脏页到磁盘（条件是脏页比例达到75%才操作（innodb_max_dirty_pages_pct），而且不是一次性刷盘所有脏页，而是默认每次刷盘200页（innodb_io_capacity））。
 
- 
 
-每10秒操作（无条件的做）：
-刷盘脏页到磁盘
-合并change buffer数据
-刷盘日志缓冲区
-删除无用的undo页
 
+<br /><br /><br />
 
 <img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
 

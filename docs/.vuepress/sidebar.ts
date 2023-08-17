@@ -178,7 +178,7 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "core/",
       children: [
-        
+        { text: "基础", link: "basic.md" },
         { text: "集合", link: "collections.md" },
         { text: "JUC", link: "juc.md" },
         { text: "Java线程实战", link: "juc2.md" },
@@ -190,8 +190,17 @@ export default defineSidebarConfig({
           prefix: "jvm/",
           children: [
             { text: "周志明JVM第三版学习笔记", link: "jvm-version3rd.md" },
-            { text: "00.葛一鸣-深入理解JVM-学习笔记", link: "00-gym.md" },
-            { text: "01.类的编译、加载及运行", link: "01.类的编译、加载及运行.md" },
+            // { text: "00.葛一鸣-深入理解JVM-学习笔记", link: "00-gym.md" },
+            // { text: "01.类的编译、加载及运行", link: "01.类的编译、加载及运行.md" },
+            {
+              text: "类的编译、加载及运行",
+              collapsable: true,
+              prefix: "01/",
+              children: [
+                { text: "01.类的编译、加载及运行", link: "01.类的编译、加载及运行.md" },
+                { text: "一个类在jvm内存分配的实例", link: "0101-一个类在jvm内存分配的实例.md" },
+              ]
+            },
             { text: "02.JVM运行期内存结构", link: "02.内存结构.md" },
             { text: "03.Java中的GC", link: "03.java中的GC.md" },
             { text: "04.字节码文件", link: "04.字节码文件.md" },
@@ -289,16 +298,31 @@ export default defineSidebarConfig({
                 { text: "磁盘结构", link: "mysql04_03.md", },
               ], 
             },
-            { text: "05.MySQL中的锁", link: "mysql05.md", },
+            { text: "05.SQL执行原理", link: "mysql05.md", },
             { text: "06.MySQL中的索引", link: "mysql06.md", },
-            { text: "07.MySQL的优化", link: "mysql08.md", },
-            { text: "08.分库分表", link: "mysql09.md", },
+            { text: "07.MySQL的优化", link: "mysql07.md", },
+            { text: "08.分库分表", link: "mysql08.md", },
 
           ]
         },
-        {
-          text: "Redis",
-          link: "redis.md",
+        { text: "Redis", 
+          collapsable: true,
+          prefix: "redis/", 
+          children: [
+            { text: "单机版部署及可视化操作台", link: "redis-glance.md", },
+            { text: "Redis中的对象系统", 
+              collapsable: true,
+              prefix: "redisobject/", 
+              children: [
+                { text: "底层数据结构", link: "redis_value_dsa.md", },
+                { text: "支持的数据类型", link: "redis_values.md", },
+              ], 
+            },
+            { text: "高级特性", link: "redis-high-character.md", },
+            { text: "内存淘汰机制与持久化机制", link: "memory-management.md", },
+            { text: "生产环境运维", link: "pro-env.md", },
+            { text: "生产问题及解决方案", link: "pro-problem.md", },
+          ], 
         },
         {
           text: " ZooKeeper",
@@ -428,8 +452,17 @@ export default defineSidebarConfig({
           text: "《C2C 电商系统微服务架构 120 天实战训练营》",
           link: "c2c.md",
         },
+        {
+          text: "《深入理解JVM-葛一鸣》",
+          link: "jvm.md",
+        },
+        {
+          text: "《Redis 核心原理与实战》",
+          link: "redis.md",
+        },
       ],
     },
+
     // 工作技巧
     {
       text: "九、工作技巧",
@@ -443,32 +476,8 @@ export default defineSidebarConfig({
         
       ],
     },
-    // 总结
-    {
-      text: "十、总结",
-      collapsable: true,
-      prefix: "summary/",
-      children: [
-        { text: "集合", link: "collection.md", },
-        { text: "JVM", link: "jvm.md", },
-        { text: "MySQL", 
-          collapsable: true,
-          prefix: "mysql/", 
-          children: [
-            { text: "01.架构概览", link: "mysql01.md", },
-            { text: "02.数据库基本理论", link: "mysql02.md", },
-            { text: "03.MySQL中的Binlog", link: "mysql03.md", },
-            { text: "04.Innodb存储引擎", link: "mysql04.md", },
-            { text: "05.MySQL中的锁", link: "mysql05.md", },
-            { text: "06.MySQL中的索引", link: "mysql06.md", },
-            { text: "07.MySQL的优化", link: "mysql08.md", },
-            { text: "08.分库分表", link: "mysql09.md", },
 
-          ]
-        },
-        
-      ],
-    },
+
   ],
 
   // 资料分享
