@@ -460,6 +460,10 @@ export default defineSidebarConfig({
           text: "《Redis 核心原理与实战》",
           link: "redis.md",
         },
+        {
+          text: "谷粒商城学习笔记",
+          link: "guli.md",
+        },
       ],
     },
 
