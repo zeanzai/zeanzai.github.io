@@ -612,6 +612,7 @@ export default defineSidebarConfig({
       link: "writearticle.md",
     },
     { text: "使用ffmpeg自动化切分视频", icon: "edit", link: "ffmpeg-slices.md", },
+    { text: "使用图片生成短视频", icon: "edit", link: "genvideo.md", },
   ],  
 
   // 面试自查宝典

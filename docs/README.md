@@ -108,7 +108,8 @@ tagline: 浪漫骑士的二流键盘，微信公众号： it-come-true。
 
 最后形成这样一个`技术观`：
 
-![](./img/wojh.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/wojh.png)
+
 
 这可把我吓了一跳，但是罗马不是一天建成的，我这样安慰着自己，硬着头皮去做。
 

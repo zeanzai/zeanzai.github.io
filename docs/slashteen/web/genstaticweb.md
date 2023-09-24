@@ -234,7 +234,7 @@ Notice: Deployment failed! ❌
 
 修改 工作流 权限
 
-![](../img/workflow.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/workflow.png)
 
 发现执行成功
 
@@ -246,7 +246,7 @@ https://github.com/zeanzai/vpblog/settings/actions
 
 - 修改pages的配置
 
-![](../img/pages.png)
+![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/pages.png)
 
 ### 7.4. 验证
 
