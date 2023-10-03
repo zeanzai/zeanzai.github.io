@@ -6,9 +6,5 @@ export default defineNavbarConfig([
   { text: "SpringCloud-Alibaba实战", icon: "code", link: "/springcloud-alibaba/" },
   { text: "面试自查宝典", icon: "quote", link: "/question/" },
   { text: "开发环境手册", icon: "customize", link: "/linux/" },
-  { text: "副业之路", icon: "java", prefix: "/slashteen/",
-    children: [
-      { text: "网站建设", icon: "page", link: "web/" },
-    ]
-  },
+  { text: "副业之路", icon: "java", link: "/slashteen/"}
 ]);

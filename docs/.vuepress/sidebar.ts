@@ -9,48 +9,18 @@ export default defineSidebarConfig({
       text: "服务器管理",
       collapsable: true,
       prefix: "server/",
-      
+
       children: [
-        {
-          text: "服务器基本信息",
-          link: "basic-information.md",
-        },
-        {
-          text: "安装CentOS7.5",
-          link: "cento7.5-install-tutorial.md",
-        },
-        {
-          text: "定时器",
-          link: "cron.md",
-        },
-        {
-          text: "磁盘扩展",
-          link: "disk-extend.md",
-        },
-        {
-          text: "DNS",
-          link: "dns.md",
-        },
-        {
-          text: "创建用户",
-          link: "new-users.md",
-        },
-        {
-          text: "服务自启动",
-          link: "services-autorun.md",
-        },
-        {
-          text: "tomcat日志切分",
-          link: "split-tomcat-log.md",
-        },
-        {
-          text: "修改yum源",
-          link: "update-yum.md",
-        },
-        {
-          text: "使用vi编辑器",
-          link: "use-vi-vim.md",
-        },
+        { text: "服务器基本信息", link: "basic-information.md", },
+        { text: "安装CentOS7.5", link: "cento7.5-install-tutorial.md", },
+        { text: "定时器", link: "cron.md", },
+        { text: "磁盘扩展", link: "disk-extend.md", },
+        { text: "DNS", link: "dns.md", },
+        { text: "创建用户", link: "new-users.md", },
+        { text: "服务自启动", link: "services-autorun.md", },
+        { text: "tomcat日志切分", link: "split-tomcat-log.md", },
+        { text: "修改yum源", link: "update-yum.md", },
+        { text: "使用vi编辑器", link: "use-vi-vim.md", },
       ],
     },
 
@@ -61,23 +31,23 @@ export default defineSidebarConfig({
       prefix: "install/",
       icon: "software",
       children: [
-        { text: "docker", link: "docker.md"},
-        { text: "ffmpeg", link: "ffmpeg.md"},
-        { text: "git", link: "git.md"},
-        { text: "gitlab", link: "gitlab.md"},
-        { text: "golang", link: "golang.md"},
-        { text: "jdk", link: "jdk.md"},
-        { text: "jekyll", link: "jekyll.md"},
-        { text: "jenkins", link: "jenkins.md"},
-        { text: "maven", link: "maven.md"},
-        { text: "mysql", link: "mysql.md"},
-        { text: "nexus", link: "nexus.md"},
-        { text: "nginx", link: "nginx.md"},
-        { text: "node", link: "node.md"},
-        { text: "rabbitMQ", link: "rabbitMQ.md"},
-        { text: "redis", link: "redis.md"},
-        { text: "showdoc", link: "showdoc.md"},
-        { text: "tomcat", link: "tomcat.md"},
+        { text: "docker", link: "docker.md" },
+        { text: "ffmpeg", link: "ffmpeg.md" },
+        { text: "git", link: "git.md" },
+        { text: "gitlab", link: "gitlab.md" },
+        { text: "golang", link: "golang.md" },
+        { text: "jdk", link: "jdk.md" },
+        { text: "jekyll", link: "jekyll.md" },
+        { text: "jenkins", link: "jenkins.md" },
+        { text: "maven", link: "maven.md" },
+        { text: "mysql", link: "mysql.md" },
+        { text: "nexus", link: "nexus.md" },
+        { text: "nginx", link: "nginx.md" },
+        { text: "node", link: "node.md" },
+        { text: "rabbitMQ", link: "rabbitMQ.md" },
+        { text: "redis", link: "redis.md" },
+        { text: "showdoc", link: "showdoc.md" },
+        { text: "tomcat", link: "tomcat.md" },
       ],
     },
 
@@ -131,17 +101,14 @@ export default defineSidebarConfig({
 
   // java
   "/java/": [
-    
+
     // 面试前准备
     {
       text: "零、面试前准备",
       collapsable: true,
       prefix: "resume/",
       children: [
-        {
-          text: "职业发展道路上的一些坑",
-          link: "advice.md",
-        },
+        { text: "职业发展道路上的一些坑", link: "advice.md", },
       ]
     },
 
@@ -166,7 +133,7 @@ export default defineSidebarConfig({
             { text: "责任链模式", link: "chain-filter.md" },
             { text: "模板方法模式", link: "template-method.md" },
             { text: "观察者模式", link: "observer.md" },
-            
+
           ],
         },
       ],
@@ -178,12 +145,13 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "core/",
       children: [
+        { text: "专业名词", link: "java-specification.md" },
         { text: "基础", link: "basic.md" },
         { text: "集合", link: "collections.md" },
         { text: "JUC", link: "juc.md" },
         { text: "Java线程实战", link: "juc2.md" },
         { text: "泛型", link: "everytype.md" },
-        
+
         {
           text: "JVM",
           collapsable: true,
@@ -281,22 +249,24 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "middleware/",
       children: [
-        { text: "MySQL", 
+        {
+          text: "MySQL",
           collapsable: true,
-          prefix: "mysql/", 
+          prefix: "mysql/",
           children: [
             { text: "01.架构概览", link: "mysql01.md", },
             { text: "02.数据库基本理论", link: "mysql02.md", },
             { text: "03.MySQL中的Binlog", link: "mysql03.md", },
-            { text: "04.Innodb存储引擎", 
+            {
+              text: "04.Innodb存储引擎",
               collapsable: true,
-              prefix: "mysql04/", 
+              prefix: "mysql04/",
               children: [
                 { text: "架构大图", link: "mysql04_00.md", },
                 { text: "线程模型", link: "mysql04_01.md", },
                 { text: "内存结构", link: "mysql04_02.md", },
                 { text: "磁盘结构", link: "mysql04_03.md", },
-              ], 
+              ],
             },
             { text: "05.SQL执行原理", link: "mysql05.md", },
             { text: "06.MySQL中的索引", link: "mysql06.md", },
@@ -305,24 +275,26 @@ export default defineSidebarConfig({
 
           ]
         },
-        { text: "Redis", 
+        {
+          text: "Redis",
           collapsable: true,
-          prefix: "redis/", 
+          prefix: "redis/",
           children: [
             { text: "单机版部署及可视化操作台", link: "redis-glance.md", },
-            { text: "Redis中的对象系统", 
+            {
+              text: "Redis中的对象系统",
               collapsable: true,
-              prefix: "redisobject/", 
+              prefix: "redisobject/",
               children: [
                 { text: "底层数据结构", link: "redis_value_dsa.md", },
                 { text: "支持的数据类型", link: "redis_values.md", },
-              ], 
+              ],
             },
             { text: "高级特性", link: "redis-high-character.md", },
             { text: "内存淘汰机制与持久化机制", link: "memory-management.md", },
             { text: "生产环境运维", link: "pro-env.md", },
             { text: "生产问题及解决方案", link: "pro-problem.md", },
-          ], 
+          ],
         },
         {
           text: " ZooKeeper",
@@ -341,62 +313,25 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "distribute/",
       children: [
-        {
-          text: "分布式基本原理",
-          link: "distribute-system-theory.md",
-        },
-        {
-          text: "分布式缓存",
-          link: "cache.md",
-        },
-        {
-          text: "一致性Hash",
-          link: "hash.md",
-        },
-        {
-          text: "分布式事务",
-          link: "transaction.md",
-        },
-        {
-          text: "Seata TCC分布式事务",
-          link: "seataTCC/SeataTCC.md",
-        },
-        {
-          text: "分布式锁",
-          link: "distribute-lock.md",
-        },
-        {
-          text: "分库分表",
-          link: "sharding.md",
-        },
-        {
-          text: "分布式ID",
-          link: "distribute-id.md",
-        },
-        {
-          text: "分布式任务",
-          link: "distribute-job.md",
-        },
+        { text: "分布式基本原理", link: "distribute-system-theory.md", },
+        { text: "分布式缓存", link: "cache.md", },
+        { text: "一致性Hash", link: "hash.md", },
+        { text: "分布式事务", link: "transaction.md", },
+        { text: "Seata TCC分布式事务", link: "seataTCC/SeataTCC.md", },
+        { text: "分布式锁", link: "distribute-lock.md", },
+        { text: "分库分表", link: "sharding.md", },
+        { text: "分布式ID", link: "distribute-id.md", },
+        { text: "分布式任务", link: "distribute-job.md", },
         {
           text: "分布式消息",
-          
           prefix: "mq/",
           collapsable: true,
           children: [
-            {
-              text: "rocket",
-              link: "rocket.md",
-            },
-            {
-              text: "kafka",
-              link: "kafka.md",
-            },
+            { text: "rocket", link: "rocket.md", },
+            { text: "kafka", link: "kafka.md", },
           ]
         },
-        {
-          text: "系统高可用设计研究",
-          link: "high-avaiable.md",
-        },
+        { text: "系统高可用设计研究", link: "high-avaiable.md", },
       ],
     },
 
@@ -406,10 +341,7 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "origincode/",
       children: [
-        {
-          text: "集合源码",
-          link: "collections.md",
-        }
+        { text: "集合源码", link: "collections.md", }
       ],
     },
 
@@ -419,22 +351,10 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "practice/",
       children: [
-        {
-          text: "框架中的线程池",
-          link: "excutors.md",
-        },
-        {
-          text: "开发阶段如何进行任务分配",
-          link: "management.md",
-        },
-        {
-          text: "RedisUtils",
-          link: "RedisUtils.md",
-        },
-        {
-          text: "如何设计一个XXX系统",
-          link: "designASystem.md",
-        },
+        { text: "框架中的线程池", link: "excutors.md", },
+        { text: "开发阶段如何进行任务分配", link: "management.md", },
+        { text: "RedisUtils", link: "RedisUtils.md", },
+        { text: "如何设计一个XXX系统", link: "designASystem.md", },
       ],
     },
 
@@ -444,26 +364,11 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "notes/",
       children: [
-        {
-          text: "《分布式技术原理与实战45讲》",
-          link: "distribute-system-theory.md",
-        },
-        {
-          text: "《C2C 电商系统微服务架构 120 天实战训练营》",
-          link: "c2c.md",
-        },
-        {
-          text: "《深入理解JVM-葛一鸣》",
-          link: "jvm.md",
-        },
-        {
-          text: "《Redis 核心原理与实战》",
-          link: "redis.md",
-        },
-        {
-          text: "谷粒商城学习笔记",
-          link: "guli.md",
-        },
+        { text: "《分布式技术原理与实战45讲》", link: "distribute-system-theory.md", },
+        { text: "《C2C 电商系统微服务架构 120 天实战训练营》", link: "c2c.md", },
+        { text: "《深入理解JVM-葛一鸣》", link: "jvm.md", },
+        { text: "《Redis 核心原理与实战》", link: "redis.md", },
+        { text: "谷粒商城学习笔记", link: "guli.md", },
       ],
     },
 
@@ -473,11 +378,8 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "devtips/",
       children: [
-        {
-          text: "你的团队用对版本控制了吗？",
-          link: "versioncontrol.md",
-        },
-        
+        { text: "你的团队用对版本控制了吗？", link: "versioncontrol.md", },
+
       ],
     },
 
@@ -486,10 +388,7 @@ export default defineSidebarConfig({
 
   // 资料分享
   "/shared/": [
-    {
-      text: "m1版本mac安装idea2022.2",
-      link: "mac-idea.md",
-    },
+    { text: "m1版本mac安装idea2022.2", link: "mac-idea.md", },
   ],
 
 
@@ -500,120 +399,70 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "before/",
       children: [
-        { text: "你真的了解技术选型吗？", link: "chapterA.md"},
-        { text: "如何在SpringCloud项目中统一管理依赖的版本？", link: "chapterB.md"},
-        { text: "使用idea插件生成代码", link: "easycode.md"},
-        { text: "开发环境搭建", link: "env.md"},
+        { text: "你真的了解技术选型吗？", link: "chapterA.md" },
+        { text: "如何在SpringCloud项目中统一管理依赖的版本？", link: "chapterB.md" },
+        { text: "使用idea插件生成代码", link: "easycode.md" },
+        { text: "开发环境搭建", link: "env.md" },
       ],
     },
-    {
-      text: "01.服务治理之Nacos",
-      link: "chapter01.md",
-    },
-    {
-      text: "02.服务配置之Nacos",
-      link: "chapter02.md",
-    },
-    {
-      text: "03.服务调用之OpenFeign",
-      link: "chapter03.md",
-    },
-    {
-      text: "04.服务网关之Gateway",
-      link: "chapter04.md",
-    },
+    { text: "01.服务治理之Nacos", link: "chapter01.md", },
+    { text: "02.服务配置之Nacos", link: "chapter02.md", },
+    { text: "03.服务调用之OpenFeign", link: "chapter03.md", },
+    { text: "04.服务网关之Gateway", link: "chapter04.md", },
     {
       text: "05.分布式事务管理之Seata",
       collapsable: true,
       prefix: "seata/",
       children: [
-        {
-          text: "5.1-分布式事务概论",
-          link: "distribute-transaction.md",
-        },
-        {
-          text: "5.2-Seata服务端环境搭建",
-          link: "install-seata.md",
-        },
-        {
-          text: "5.3-AT模式",
-          link: "seata-at.md",
-        },
-        {
-          text: "5.4-TCC模式",
-          link: "seata-tcc.md",
-        },
+        { text: "5.1-分布式事务概论", link: "distribute-transaction.md", },
+        { text: "5.2-Seata服务端环境搭建", link: "install-seata.md", },
+        { text: "5.3-AT模式", link: "seata-at.md", },
+        { text: "5.4-TCC模式", link: "seata-tcc.md", },
       ],
     },
-    
-    {
-      text: "06.分布式服务消息处理",
-      link: "chapter06.md",
-    },
-    {
-      text: "07.分布式服务流量控制",
-      link: "chapter07.md",
-    },
-    {
-      text: "08.分布式服务缓存",
-      link: "chapter08.md",
-    },
-    {
-      text: "09.分布式服务链路追踪",
-      link: "chapter09.md",
-    },
-    {
-      text: "10.分库分表",
-      link: "chapter10.md",
-    },
-    {
-      text: "11.分布式服务Job",
-      link: "chapter11.md",
-    },
+
+    { text: "06.分布式服务消息处理", link: "chapter06.md", },
+    { text: "07.分布式服务流量控制", link: "chapter07.md", },
+    { text: "08.分布式服务缓存", link: "chapter08.md", },
+    { text: "09.分布式服务链路追踪", link: "chapter09.md", },
+    { text: "10.分库分表", link: "chapter10.md", },
+    { text: "11.分布式服务Job", link: "chapter11.md", },
     {
       text: "12.其他",
       collapsable: true,
       prefix: "other/",
       children: [
-        {
-          text: "如何设计一个安全可靠的API接口？",
-          link: "create-a-niubi-api.md",
-        },
-        {
-          text: "统一消息体并国际化+可配置全局异常",
-          link: "global-exception.md",
-        },
-        {
-          text: "SCG性能调优",
-          link: "greate-scg.md",
-        },
-        {
-          text: "多租户SaaS实战",
-          link: "una-saas-toturial.md",
-        },
+        { text: "如何设计一个安全可靠的API接口？", link: "create-a-niubi-api.md", },
+        { text: "统一消息体并国际化+可配置全局异常", link: "global-exception.md", },
+        { text: "SCG性能调优", link: "greate-scg.md", },
+        { text: "多租户SaaS实战", link: "una-saas-toturial.md", },
       ],
     },
   ],
 
-  // 网站建设 done
-  "/slashteen/web/": [
+  // 网站建设
+  "/slashteen/": [
     {
-      text: "程序员如何打造自己的个人IP？",
-      link: "myip.md",
+      text: "个人网站",
+      collapsable: true,
+      prefix: "web/",
+      children: [
+        { text: "程序员如何打造自己的个人IP？", link: "myip.md", },
+        { text: "个人网站搭建", icon: "alias", link: "genstaticweb.md", },
+        { text: "文章编辑规范", icon: "edit", link: "writearticle.md", },
+      ],
     },
+
     {
-      text: "个人网站搭建",
-      icon: "alias",
-      link: "genstaticweb.md",
+      text: "ffmpeg",
+      collapsable: true,
+      prefix: "ffmpeg/",
+      children: [
+        { text: "使用ffmpeg自动化切分视频", icon: "edit", link: "ffmpeg-slices.md", },
+        { text: "使用图片生成短视频", icon: "edit", link: "genvideo.md", },
+      ],
     },
-    {
-      text: "文章编辑规范",
-      icon: "edit",
-      link: "writearticle.md",
-    },
-    { text: "使用ffmpeg自动化切分视频", icon: "edit", link: "ffmpeg-slices.md", },
-    { text: "使用图片生成短视频", icon: "edit", link: "genvideo.md", },
-  ],  
+  ],
 
   // 面试自查宝典
   "/question/": [
@@ -622,47 +471,47 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "company/",
       children: [
-          {text:"平安面试题",link:"pingan.md",},
-          {text:"环金科技面试",link:"huanjinkeji.md",},
-          {text:"自由职客面试",link:"ziyouzhike.md",},
+        { text: "平安面试题", link: "pingan.md", },
+        { text: "环金科技面试", link: "huanjinkeji.md", },
+        { text: "自由职客面试", link: "ziyouzhike.md", },
       ],
     },
     {
-        text: "基础题",
-        collapsable: true,
-        prefix: "group/",
-        children: [
-            {text:"java基础",link:"java-core.md",},
-            {text:"容器",link:"collection.md",},
-            {text:"多线程",link:"juc.md",},
-            {text:"反射",link:"reflection.md",},
-            {text:"web",link:"web.md",},
-            {text:"异常",link:"exception.md",},
-            {text:"网络",link:"network.md",},
-            {text:"设计模式",link:"design-pattern.md",},
-            {text:"Spring相关",link:"spring-surrounding.md",},
-            {text:"mybatis",link:"mybatis.md",},
-            {text:"rabbitmq",link:"rabbitmq.md",},
-            {text:"mysql",link:"mysql.md",},
-            {text:"redis",link:"redis.md",},
-            {text:"jvm",link:"jvm.md",},
-            {text:"数据结构与算法",link:"dsa.md",},
-            {text:"Kafka",link:"kafka.md",},
-            {text:"Zookeeper",link:"zookeeper.md",},
-            {text:"消息队列",link:"message-queue.md",},
-            {text:"netty",link:"netty.md",},
-            {text:"分布式",link:"distribution.md",},
-            {text:"Dubbo",link:"dubbo.md",},
-            {text:"微服务",link:"micro-service.md",},
-            {text:"安全相关",link:"security.md",},
-            {text:"性能优化",link:"improvement.md",},
-            {text:"系统设计能力",link:"system-design.md",},
-            {text:"软实力",link:"soft-power.md",},
-            {text:"操作系统",link:"operate-system.md",},
-            {text:"nginx",link:"nginx.md",},
-            {text:"tomcat",link:"tomcat.md",},
-        ],
+      text: "基础题",
+      collapsable: true,
+      prefix: "group/",
+      children: [
+        { text: "java基础", link: "java-core.md", },
+        { text: "容器", link: "collection.md", },
+        { text: "多线程", link: "juc.md", },
+        { text: "反射", link: "reflection.md", },
+        { text: "web", link: "web.md", },
+        { text: "异常", link: "exception.md", },
+        { text: "网络", link: "network.md", },
+        { text: "设计模式", link: "design-pattern.md", },
+        { text: "Spring相关", link: "spring-surrounding.md", },
+        { text: "mybatis", link: "mybatis.md", },
+        { text: "rabbitmq", link: "rabbitmq.md", },
+        { text: "mysql", link: "mysql.md", },
+        { text: "redis", link: "redis.md", },
+        { text: "jvm", link: "jvm.md", },
+        { text: "数据结构与算法", link: "dsa.md", },
+        { text: "Kafka", link: "kafka.md", },
+        { text: "Zookeeper", link: "zookeeper.md", },
+        { text: "消息队列", link: "message-queue.md", },
+        { text: "netty", link: "netty.md", },
+        { text: "分布式", link: "distribution.md", },
+        { text: "Dubbo", link: "dubbo.md", },
+        { text: "微服务", link: "micro-service.md", },
+        { text: "安全相关", link: "security.md", },
+        { text: "性能优化", link: "improvement.md", },
+        { text: "系统设计能力", link: "system-design.md", },
+        { text: "软实力", link: "soft-power.md", },
+        { text: "操作系统", link: "operate-system.md", },
+        { text: "nginx", link: "nginx.md", },
+        { text: "tomcat", link: "tomcat.md", },
+      ],
     },
-  
+
   ],
 });
