@@ -172,6 +172,11 @@ ApplicationContext的优缺点：
 | 任意修改都会创建一个新实例 | 任意修改不会创建一个新实例 |
 | 适用于设置很多属性         | 适用于设置少量属性         |
 
+
+
+
+
+
 ## 6. spring 提供了哪些配置方式？
 
 - 基于 xml 配置
@@ -238,6 +243,20 @@ IOC就是控制反转，通俗的说就是我们不用自己创建实例对象�
   8 @Repository : 对应持久层即 Dao 层，主要用于数据库相关操作。
 - @Service : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao层。
 - @Controller : 对应 Spring MVC 控制层，主要用户接受用户请求并调用 Service 层返回数据给前端页面。
+
+> @Autowired vs @Resource 
+> 
+> 相同点： 都是依赖注入的注解，并且当接口只有一个实现类时，二者使用效果一样；
+> 
+> 不同点： 
+>   @Autowired ： 属于Spring实现的注解，耦合性较高；可以用于构造器、方法、参数、成员变量和注解的依赖注入上；默认是按照byType完成自动装配；
+>   @Resource： 属于JDK（JSR-250）的实现，支持绝大多数Java框架，耦合性较低；可用于类、成员变量和方法的依赖注入上；
+
+
+@Autowired vs @Resource 
+- 依赖识别方式 ：@Autowired默认是byType 可以使用@Qualifier指定Name，@Resource默认ByName 如果找不到则ByType
+- 适用对象 ：@Autowired可以对构造器、方法、参数、字段 使用，@Resource只能对方法、字段 使用
+- 提供方 ：@Autowired是Spring 提供的，@Resource是JSR-250 提供的
 
 ## 10. spring 支持几种 bean scope？
 

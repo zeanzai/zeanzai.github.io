@@ -4,6 +4,57 @@ export default defineSidebarConfig({
   // 服务器相关
   "/linux/": [
 
+    // mac
+    {
+      text: "MAC",
+      collapsable: true,
+      prefix: "devenv/",
+
+      children: [
+        { text: "mac上彻底卸载某一个软件", link: "mac-uninstall-software.md", },
+        { text: "mac上配置GitHub和Gitee同时访问", link: "mac-use-git.md", },
+        { text: "mac上破解idea", link: "mac-idea-crack.md", },
+        { text: "mac上破解mindmanager", link: "mac-mindmanager-crack.md", },
+      ],
+    },
+
+    // win
+    {
+      text: "WIN",
+      collapsable: true,
+      prefix: "win-devenv/",
+
+      children: [
+        { text: "win10", link: "window10.md", },
+        { text: "vscode", link: "vscode.md", },
+      ],
+    },
+
+    // centos
+    {
+      text: "CentOS",
+      collapsable: true,
+      prefix: "centos/",
+
+      children: [
+        { text: "centos安装及配置过程", link: "centos7-install-log.md", },
+        { text: "centos常用命令", link: "command.md", },
+        { text: "centos安装docker", link: "docker.md", },
+        { text: "centos安装jdk", link: "jdk.md", },
+        { text: "centos安装nacos", link: "nacos.md", },
+        {
+          text: "Docker",
+          collapsable: true,
+          prefix: "docker/",
+    
+          children: [
+            { text: "安装mysql", link: "mysql.md", },
+            { text: "安装nexus", link: "nexus.md", },
+          ],
+        },
+      ],
+    },
+
     // 服务器管理
     {
       text: "服务器管理",
