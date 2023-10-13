@@ -8,9 +8,10 @@ export default defineSidebarConfig({
     {
       text: "MAC",
       collapsable: true,
-      prefix: "devenv/",
+      prefix: "mac/",
 
       children: [
+        { text: "mac上的一些信息", link: "mac-info.md", },
         { text: "mac上彻底卸载某一个软件", link: "mac-uninstall-software.md", },
         { text: "mac上配置GitHub和Gitee同时访问", link: "mac-use-git.md", },
         { text: "mac上破解idea", link: "mac-idea-crack.md", },
@@ -50,6 +51,7 @@ export default defineSidebarConfig({
           children: [
             { text: "安装mysql", link: "mysql.md", },
             { text: "安装nexus", link: "nexus.md", },
+            { text: "安装redis", link: "redis.md", },
           ],
         },
       ],
