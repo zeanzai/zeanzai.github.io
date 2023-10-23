@@ -117,6 +117,11 @@ PicGo的配置
 ![20230817125902](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230817125902.png)
 
 
+![](./images/2023-10-23-17-20-27.png)
+
+![](./images/2023-10-23-17-22-39.png)
+
+
 
 ## 5. 初始化项目
 
