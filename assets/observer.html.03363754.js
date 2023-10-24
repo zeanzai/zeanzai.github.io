@@ -1,1 +1,0 @@
-import{c as r,o}from"./app.98de23b3.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const t={},c=["src"];function a(e,l){return o(),r("img",{style:{border:"1px red solid",display:"block",margin:"0 auto"},src:e.$withBase("/qrcode.jpg"),alt:"\u5FAE\u4FE1\u516C\u4F17\u53F7"},null,8,c)}var i=s(t,[["render",a],["__file","observer.html.vue"]]);export{i as default};
