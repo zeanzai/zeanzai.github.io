@@ -9,7 +9,7 @@ tag:
 1. [参考这里](https://www.quanxiaoha.com/idea-pojie/idea-pojie-20232.html)
 2. 在执行破解脚本的过程中可能会遇到
 
-![20231004010950](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231004010950.png)
+![](./images/2023-10-24-18-19-07.png)
 
 解决思路是：
 
@@ -40,6 +40,6 @@ csrutil enable
 ---
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

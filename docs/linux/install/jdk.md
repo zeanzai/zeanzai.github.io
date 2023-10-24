@@ -69,5 +69,5 @@ $ javac
 - 注意要先卸载原来的OpenJDK， https://www.cnblogs.com/yyjf/p/10287301.html
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

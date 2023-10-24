@@ -486,11 +486,11 @@ public class GlobalExceptionHandler {
 
 我们在nacos上添加配置文件，并填充内容。
 
-![20230423203347](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203347.png)
+![](./images/2023-10-24-18-12-37.png)
 
-![20230423203405](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203405.png)
+![](./images/2023-10-24-18-12-38.png)
 
-![20230423203424](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203424.png)
+![](./images/2023-10-24-18-12-39.png)
 
 
 我们编写一个controller进行测试：
@@ -508,9 +508,9 @@ public OperationResponse test02_01() {
 }
 ```
 
-![20230423203254](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203254.png)
+![](./images/2023-10-24-18-12-41.png)
 
-![20230423203454](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203454.png)
+![](./images/2023-10-24-18-12-42.png)
 
 
 2. 抛出校验异常
@@ -545,11 +545,11 @@ public DataResponse<UserDTO> test02_02(
 }
 ```
 
-![20230423203629](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203629.png)
+![](./images/2023-10-24-18-12-43.png)
 
-![20230423203516](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203516.png)
+![](./images/2023-10-24-18-12-44.png)
 
-![20230423203543](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203543.png)
+![](./images/2023-10-24-18-12-46.png)
 
 原理解读： @NotBlank 和 @NotEmpty 注解校验不通过时，会抛出 MethodArgumentNotValidException 异常信息，而我们在 GlobalExceptionHandler 中捕获这个异常信息之后做了自定义处理逻辑，大概逻辑就是先获取到抛出异常信息的message信息，拿到异常码，之后利用工具类和语言信息从Nacos中获取异常码的描述信息。
 
@@ -569,7 +569,7 @@ public DataResponse<UserDTO> test02_03(
 }
 ```
 
-![20230423203707](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203707.png)
+![](./images/2023-10-24-18-12-47.png)
 
 
 4. 抛出多个参数组成的异常信息
@@ -586,9 +586,9 @@ public DataResponse<UserDTO> test02_04(
 }
 ```
 
-![20230423203733](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203733.png)
+![](./images/2023-10-24-18-12-48.png)
 
-![20230423203756](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203756.png)
+![](./images/2023-10-24-18-12-49.png)
 
 
 5. 返回默认的响应失败消息体
@@ -603,7 +603,7 @@ public DataResponse<UserDTO> test02_05(
 }
 ```
 
-![20230423203814](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230423203814.png)
+![](./images/2023-10-24-18-12-51.png)
 
 ## 参考
 
@@ -615,7 +615,7 @@ public DataResponse<UserDTO> test02_05(
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

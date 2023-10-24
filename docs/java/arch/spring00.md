@@ -169,7 +169,7 @@ Transaction
 
 所谓容器，就是说Spring提供了一个类似于数据库的功能，只不过这个功能保存的是JavaBean。
 
-![20230920110214](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230920110214.png)
+![](./images/2023-10-24-18-18-19.png)
 
 如上图，步骤解析如下：
 
@@ -193,7 +193,7 @@ Transaction
 
 ### Bean的元信息
 
-![20230926185926](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230926185926.png)
+![](./images/2023-10-24-18-18-20.png)
 
 
 
@@ -241,7 +241,7 @@ destruction 方法 | 当包含该 bean 的容器被销毁时，使用回调方�
 <bean id="book02" class="com.spring.beans.Book" scope="application"></bean>
 ```
 
-![20230926195526](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230926195526.png)
+![](./images/2023-10-24-18-18-21.png)
 
 bean的状态： 
 
@@ -281,7 +281,7 @@ autodetect - 首先容器尝试通过构造函数使用 autowire 装配，如果
 - 基于注解的配置
 - 基于 Java 的配置
 
-![20230926190636](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230926190636.png)
+![](./images/2023-10-24-18-18-22.png)
 
 ```
 <bean id="book02" class="com.spring.beans.Book" scope="singleton"></bean>
@@ -555,5 +555,5 @@ Spring容器提供了这几种方式： set、构造方法、静态工厂、实�
 <br />
 <br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

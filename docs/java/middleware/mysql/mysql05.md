@@ -27,7 +27,7 @@ tag:
 
 这样我们的查找过程就变成了，从根页开始，先去查找页的目录，定位到具体数据信息在哪一个页上，然后再通过页内查找，是不是就可以不用全表扫描了。这个过程是可行的，但是涉及到另外一个问题，从根页开始之后，如何查找页的记录？我们可以在创建页的目录的时候就把筛选的这个列值与数据页的信息保存到一起，一块作为页的目录里面的数据，这样我们在查找页的目录的时候，就可以通过比对筛选条件与记录下来的列值信息，来定位到数据页的编号。这样我们就可以定位到数据具体会在哪一个数据页上面。
 
-![20230612162053](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230612162053.png)
+![](./images/2023-10-24-18-14-22.png)
 
 举例说明，InnoDB为一个表的某一列name创建索引的过程大概是这样的：
 
@@ -55,6 +55,6 @@ tag:
 
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

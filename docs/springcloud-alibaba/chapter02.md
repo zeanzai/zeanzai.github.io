@@ -46,13 +46,13 @@ tag:
 
 1. 在配置文件中填写配置内容；
 
-![填写配置内容](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115104132.png)
+![](./images/2023-10-24-18-13-21.png)
 
 2. 通过 @Value 注解获取配置信息；
 
-![使用注解标注](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115104226.png)
+![](./images/2023-10-24-18-13-22.png)
 
-![获取成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115104634.png)
+![](./images/2023-10-24-18-13-23.png)
 
 这种方式有一个缺点：`每次修改配置项，都需要重启应用；无法满足在项目中实时感知配置项的变化的需求。`
 
@@ -82,7 +82,7 @@ Nacos的接入也分成三个步骤：
 
 Nacos作为注册中心，完全替代了原有的配置文件，因此需要使用更高级别的配置文件，即 bootstrap 的配置文件，因此nacos的配置内容需要在 bootstrap.yml 文件中完成。
 
-![配置nacos相关信息](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115111039.png)
+![](./images/2023-10-24-18-13-24.png)
 
 3. 直接使用
 
@@ -92,13 +92,13 @@ Nacos作为注册中心，完全替代了原有的配置文件，因此需要使
 
 1. 在nacos的控制台添加配置项
 
-![在nacos控制台添加配置项](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115111513.png)
+![](./images/2023-10-24-18-13-26.png)
 
 2. 通过@Value标注变量，并获取配置项
 
-![获取配置项](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115111615.png)
+![](./images/2023-10-24-18-13-27.png)
 
-![成功获取](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115111712.png)
+![](./images/2023-10-24-18-13-28.png)
 
 
 ## 使用nacos共享配置文件方式获取配置项
@@ -107,15 +107,15 @@ Nacos作为注册中心，完全替代了原有的配置文件，因此需要使
 
 1. 在bootstrap.yml中添加共享配置项的配置
 
-![共享配置项](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115112520.png)
+![](./images/2023-10-24-18-13-29.png)
 
 2. 在nacos控制台添加共享配置项
 
-![添加共享配置项](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115112350.png)
+![](./images/2023-10-24-18-13-30.png)
 
 3. 通过@Value标注变量，并获取配置项
 
-![获取配置项成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115112614.png)
+![](./images/2023-10-24-18-13-32.png)
 
 
 ## 共享配置文件映射成JavaBean
@@ -124,11 +124,11 @@ Nacos作为注册中心，完全替代了原有的配置文件，因此需要使
 
 1. 在bootstrap.yml中添加共享配置项的配置
 
-![添加共享配置项](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115113232.png)
+![](./images/2023-10-24-18-13-33.png)
 
 2. 控制台添加配置
 
-![控制台添加配置](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115113318.png)
+![](./images/2023-10-24-18-13-34.png)
 
 3. 添加配置项的JavaBean进行映射
 
@@ -169,9 +169,9 @@ public class MyBrotherInfo {
 
 4. 注入JavaBean后进行使用
 
-![使用](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115113518.png)
+![](./images/2023-10-24-18-13-35.png)
 
-![获取成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115113623.png)
+![](./images/2023-10-24-18-13-37.png)
 
 我们还可以把不同项目的一些公共配置放到一个配置文件中，然后在不同的项目中设置相同的配置项，达到`一处变更，处处修改`的目的。
 
@@ -196,19 +196,19 @@ public class MyBrotherInfo {
 
 2. 配置文件中配置日志的级别
 
-![配置日志级别](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115114149.png)
+![](./images/2023-10-24-18-13-38.png)
 
 3. 使用注解标注日志统计器
 
-![标注日志统计器](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115114228.png)
+![](./images/2023-10-24-18-13-39.png)
 
 4. 记录日志信息
 
-![记录日志信息](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115114302.png)
+![](./images/2023-10-24-18-13-40.png)
 
 在ide控制台的输入日志中，我们还可以查看nacos客户端读取服务端配置文件的日志信息：
 
-![控制台日志](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221115120458.png)
+![](./images/2023-10-24-18-13-41.png)
 
 
 ## Nacos方式VS传统方式
@@ -266,6 +266,6 @@ public class MyBrotherInfo {
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

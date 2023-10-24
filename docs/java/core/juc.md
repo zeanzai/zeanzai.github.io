@@ -181,7 +181,7 @@ public class MyThread extends Thread{
   - `原子性`和`有序性`特性针对的是操作或是指令，`可见性`则针对的是共享变量。`总之，要想满足线程安全，即线程并发执行的结果的正确性，就必须要保证原子性、可见性、有序性，三者缺一不可。满足这三个条件的程序的运行结果，我们称之为线程安全。`
 - java内存模型——JMM
   - 基于操作系统高速缓存与内存的模型，java虚拟机规范中试图通过定义一种属于java语言的内存模型，来屏蔽异构硬件平台的差异，这种模型就是java内存模型。但是这种内存模型只是规定了执行的指令次序，并没有规定是否使用高速缓存来提高执行速率，也没有规定是否禁止编译器对指令重排序。换句话来说，java的内存模型也是存在缓存一致性问题和指令重排序问题。
-  - ![jmm](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/jmm.png)
+![](./images/2023-10-24-18-15-25.png)
 - 满足线程安全特性的条件
   - `满足原子性`： JMM只保证基本读取和赋值操作是原子操作。更大范围内的原子操作就需要使用Sychronized和lock等来进行保证了。若要实现更大范围的原子性操作，可以通过synchronized关键字和Lock来实现。
   - `满足有序性`： volatile也可以保证有序性。除此以外，满足先行发生原则的操作也一定是有序的。
@@ -262,7 +262,7 @@ public class MyThread extends Thread{
     - 加锁过程： 当一个线程获得锁之后，会把监视器对象的 owner 设置为这个线程的ThreadID，然后count加1；如果再有线程尝试获得锁，就进入EntryList等待；
     - 解锁过程： 当一个线程释放锁时，会把监视器对象的 owner 设置为null，然后count减1，然后再从waitset或entrylist中get一个线程，让这个线程尝试获取锁；
   - synchronized 锁在升级过程中用到了不同的锁机制
-    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/markword.png)
+![](./images/2023-10-24-18-15-27.png)
     - 从无锁状态到偏向锁阶段，再到轻量级锁阶段，使用的是Java堆中对象的内存分布中的对象头的不同值来完成同步的；
       - 无锁状态 ：       hashcode +     分代年龄 + 偏向标识（为0） + 锁标志位（为01）
       - 偏向锁状态 ： ThreadID + epoch + 分代年龄 + 偏向标识（为1） + 锁标志位（为01）
@@ -286,7 +286,7 @@ synchronized 与 ReentrantLock 的区别
 
 - ThreadLocal
   - ThreadLocal可以理解为线程本地变量，他会在每个线程都创建一个副本，那么在线程之间访问内部副本变量就行了，做到了线程之间互相隔离，相比于synchronized的做法是用空间来换时间。ThreadLocal有一个静态内部类ThreadLocalMap，ThreadLocalMap又包含了一个Entry数组，Entry本身是一个弱引用，他的key是指向ThreadLocal的弱引用，Entry具备了保存key value键值对的能力。弱引用的目的是为了防止内存泄露，如果是强引用那么ThreadLocal对象除非线程结束否则始终无法被回收，弱引用则会在下一次GC的时候被回收。但是这样还是会存在内存泄露的问题，假如key和ThreadLocal对象被回收之后，entry中就存在key为null，但是value有值的entry对象，但是永远没办法被访问到，同样除非线程结束运行。但是只要ThreadLocal使用恰当，在使用完之后调用remove方法删除Entry对象，实际上是不会出现这个问题的。
-  - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/threadlocal.png)
+![](./images/2023-10-24-18-15-28.png)
 
 ## AQS
 
@@ -399,11 +399,11 @@ public ThreadPoolExecutor(
 
 ### 2.5. java中线程池框架
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ThreadPoolExecutor.png)
+![](./images/2023-10-24-18-15-29.png)
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ScheduledThreadPoolExecutor.png)
+![](./images/2023-10-24-18-15-30.png)
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/juc/ExecutorService.png)
+![](./images/2023-10-24-18-15-32.png)
 
 
 > ThreadPoolExecutor 和 ScheduledThreadPoolExecutor 算是我们最常用的线程池类了，从上面我们可以看到这俩个最终都实现了 Executor 和 ExecutorService 这两个接口，实际上主要的接口定义都是在 ExecutorService 中。
@@ -452,5 +452,5 @@ public ThreadPoolExecutor(
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

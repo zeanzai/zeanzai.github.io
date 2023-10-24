@@ -132,5 +132,5 @@ tmpfs                        6.3G     0  6.3G    0% /run/user/0
 1. https://blog.csdn.net/huqigang/article/details/79710201
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

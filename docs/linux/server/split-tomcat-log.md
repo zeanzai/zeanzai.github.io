@@ -106,5 +106,5 @@ $CATALINA_HOME/conf/context.xml文件中的<Context>标签为：
 - https://tomcat.apache.org/tomcat-7.0-doc/logging.html#Using_Log4j
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

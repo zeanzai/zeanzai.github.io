@@ -14,7 +14,7 @@ tag:
 
 ## 七层协议及每层的作用、五层协议、TCP/IP四层模型的关系
 
-![20230723134036](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230723134036.png)
+![](./images/2023-10-24-18-18-06.png)
 
 - 所谓`通信`，就涉及到信息的发送方和信息的接收方，因此，对于发送方发送出去的消息是如何进行控制的（如加密、压缩、分组等控制手段），只要能够让接收方接收到的信息进行反向操作（解密、解压缩、合并分组等反向控制手段），那么就可以达到信息的“可靠”传递。至于接收方接收到信息后如何处理，则需要通信双方事先规定好信息的控制手段，这些信息的控制手段就被称为`协议`。
 - 计算机网络，就是解决信息在互联网上进行传递的一门学问，核心就是各种各样的协议。
@@ -59,7 +59,7 @@ tag:
 - URL：(Uniform Resource Location) 是统⼀资源定位符，可以提供该资源的路径，相当于要访问资源的“家庭住址”。
 :::
 
-![20230723144216](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230723144216.png)
+![](./images/2023-10-24-18-18-08.png)
 
 在这个过程中，请求协议有很多，包括HTTP、FTP、POP3、SMTP等，浏览器访问某个链接使用的是HTTP协议，我们在Chrome中F12打开控制台，可以看到：
 
@@ -113,7 +113,7 @@ tag:
 - IP报文格式
 - 网络号、主机号、IP地址、子网掩码、网关
 
-![20230731162157](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230731162157.png)
+![](./images/2023-10-24-18-18-09.png)
 
 - 多网卡选择过程
 - IP协议转发流程（MAC-端口映射表、路由表）
@@ -313,5 +313,5 @@ tag:
 
 ---
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

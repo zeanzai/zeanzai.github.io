@@ -60,5 +60,5 @@ jenkins是一个持续集成开发工具。后端配置好构建流程后，只�
 之后，每一次构建都只需要将自己的代码提交到svn，然后执行初次部署的“构建”过程即可。
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

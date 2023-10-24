@@ -171,6 +171,6 @@ public class ChainPatternDemo {
 3. 如果需要新增一个责任节点，只需要新建一个类继承AbstractHandler类，并实现虚方法doFilter()；
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

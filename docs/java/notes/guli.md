@@ -9,37 +9,37 @@ tag:
 
 ## 虚拟机安装
 
-![20230823112745](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112745.png)
+![](./images/2023-10-24-18-17-29.png)
 
-![20230823112801](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112801.png)
+![](./images/2023-10-24-18-17-30.png)
 
-![20230823112813](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112813.png)
+![](./images/2023-10-24-18-17-32.png)
 
-![20230823112837](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112837.png)
+![](./images/2023-10-24-18-17-33.png)
 
-![20230823112851](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112851.png)
+![](./images/2023-10-24-18-17-34.png)
 
-![20230823112908](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112908.png)
+![](./images/2023-10-24-18-17-35.png)
 
-![20230823112929](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823112929.png)
+![](./images/2023-10-24-18-17-37.png)
 
-![20230823113004](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113004.png)
+![](./images/2023-10-24-18-17-38.png)
 
 ## vagrant 安装
 
-![20230823113619](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113619.png)
+![](./images/2023-10-24-18-17-39.png)
 
-![20230823113636](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113636.png)
+![](./images/2023-10-24-18-17-40.png)
 
-![20230823113740](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113740.png)
+![](./images/2023-10-24-18-17-41.png)
 
-![20230823113751](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113751.png)
+![](./images/2023-10-24-18-17-43.png)
 
-![20230823113805](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113805.png)
+![](./images/2023-10-24-18-17-44.png)
 
-![20230823113944](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823113944.png)
+![](./images/2023-10-24-18-17-45.png)
 
-![20230823114005](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823114005.png)
+![](./images/2023-10-24-18-17-46.png)
 
 https://app.vagrantup.com/boxes/search
 
@@ -80,7 +80,7 @@ error message for that particular provider.
 1. virtualBox的版本问题，尽量与视频中的版本信息一致；
 2. 排查window的虚拟化设置是否开启，BIOS中的虚拟化需要开启，hyper-v功能也开启；
 
-![20230823122055](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823122055.png)
+![](./images/2023-10-24-18-17-48.png)
 
 
 ### 登录虚拟服务器
@@ -221,7 +221,7 @@ Hi zeanzai(@zeanzai)! You've successfully authenticated, but GITEE.COM does not 
 
 gitee上创建仓库：
 
-![20230823131811](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823131811.png)
+![](./images/2023-10-24-18-17-49.png)
 
 克隆到本地
 
@@ -239,13 +239,13 @@ Receiving objects: 100% (3/3), done.
 
 创建项目；
 
-![20230823134145](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823134145.png)
+![](./images/2023-10-24-18-17-50.png)
 
-![20230823134237](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230823134237.png)
+![](./images/2023-10-24-18-17-52.png)
 
 
-![20230825101459](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230825101459.png)
-![20230825101445](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230825101445.png)
+![](./images/2023-10-24-18-17-53.png)
+![](./images/2023-10-24-18-17-55.png)
 
 
 导入MySQL数据文件；
@@ -292,4 +292,4 @@ Receiving objects: 100% (3/3), done.
 
 <br /><br /><br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />

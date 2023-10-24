@@ -26,5 +26,5 @@ tag:
 如果上述问题还是没有解决好，可以先在jenkins中执行`clean compile`命令，执行成功之后，再把原来的配置还原就可以解决。
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

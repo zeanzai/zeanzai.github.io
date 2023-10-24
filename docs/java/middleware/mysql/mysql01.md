@@ -12,7 +12,7 @@ tag:
 
 ## 架构大图 
 
-![可插拔式MySQL逻辑架构图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605084426.png)
+![](./images/2023-10-24-18-14-11.png)
 
 ### 存储引擎层
 
@@ -30,7 +30,7 @@ MySQL 是支持可插拔式（类比排插和插头、U盘和主机）的存储�
 
 ### Server层（5层及各自作用）
 
-![丐版](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605084007.png)
+![](./images/2023-10-24-18-14-12.png)
 
 - 连接池： 管理线程池和权限控制；频繁创建连接会产生线程上下文切换及线程开关资源消耗，为了避免这两大问题，使用线程池，统一对外提供服务，复用连接，减少线程开关性能损耗及上下文切换的性能损耗；
 - 查询缓存： 保存SQL与查询结果集之间的映射关系，使得首次查询后能够快速响应SQL结果；
@@ -78,5 +78,5 @@ MySQL 是支持可插拔式（类比排插和插头、U盘和主机）的存储�
 
 <br /><br /><br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

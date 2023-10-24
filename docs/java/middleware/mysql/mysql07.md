@@ -26,10 +26,10 @@ show profiles;
 ## explain 
 
 
-![20230621154652](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230621154652.png)
+![](./images/2023-10-24-18-14-23.png)
 
 
-![20230621154932](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230621154932.png)
+![](./images/2023-10-24-18-14-24.png)
 
 可以模拟优化器执行SQL语句，主要用来查看优化器是如何执行SQL语句的，用法是 explain + [你的SQL] ，结果是一个表。
 
@@ -93,6 +93,6 @@ Null表示没有分区。
 
 <br /><br /><br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

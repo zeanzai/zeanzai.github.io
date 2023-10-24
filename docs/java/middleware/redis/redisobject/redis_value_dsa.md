@@ -10,7 +10,7 @@ tag:
 
 Redis使用对象来表示每一个键值对，在Redis中创建的每一个键值对，Redis都会为我们创建至少两个RedisObject对象，一个是键对象，即key，一个是值对象，即value。键对象的数据结构为字符串，而值对象因其保存的数据内容不一样，因而其使用的数据结构也不一样。
 
-![20230706092329](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706092329.png)
+![](./images/2023-10-24-18-13-47.png)
 
 
 ```c
@@ -147,7 +147,7 @@ Redis根据为了更好的利用内存，就根据保存的数据的不同，然
 2. redisObject = 16字节
 3. SDS = 4字节（包括一个字节的结束符 \0 ） + 44字节的buf[] 
 
-![20230706181113](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706181113.png)
+![](./images/2023-10-24-18-13-48.png)
 :::
 
 ### 使用了SDS之后
@@ -191,7 +191,7 @@ typedef struct intset{
 
 一个保存了三个元素（1， 2， 3）的 int16_t 类型的数组集合中保存了一个 65535 ，则在保存 65535 需要进行升级，升级过程如下：
 
-![20230706163008](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706163008.png)
+![](./images/2023-10-24-18-13-49.png)
 
 可大概分成三个步骤：
 1. 扩容，原本空间的大小之上再扩容多 4x32-3x16=80 位，这样就能保存下 4 个类型为 int32_t 的元素。 
@@ -221,24 +221,24 @@ typedef struct intset{
 - 解决了数据的插入和删除操作低效的问题，插入和删除元素不需要移动元素；
 - 查询元素时间复杂度变成O（n）【最坏情况】
 
-![20230706173704](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706173704.png)
+![](./images/2023-10-24-18-13-51.png)
 
 3. 单向循环链表
 - 把单向链表中的尾节点的next指针指向头节点
 
-![20230706174238](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706174238.png)
+![](./images/2023-10-24-18-13-52.png)
 
 4. 双向链表
 - 使用前驱指针和后继指针把前面元素和后续元素连接成串；
 - 解决了数据的插入和删除操作低效的问题，插入和删除元素不需要移动元素；
 - 查找元素时间复杂度变成O（1）
 
-![20230706173913](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706173913.png)
+![](./images/2023-10-24-18-13-53.png)
 
 5. 双向循环链表
 - 把双向链表中的尾节点的后继指针指向头节点，并把头节点的前驱指针指向尾节点；
 
-![20230706174310](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706174310.png)
+![](./images/2023-10-24-18-13-54.png)
 
 ::: 
 
@@ -262,7 +262,7 @@ typedef struct listNode{
 } listNode;
 ```
 
-![双向无环链表](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707142602.png)
+![](./images/2023-10-24-18-13-56.png)
 
 为了更好的管理节点，Redis又设计出list数据结构，用来管理双向无环链表。
 
@@ -289,7 +289,7 @@ typedef struct list{
 
 ```
 
-![linkedlist](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230706184623.png)
+![](./images/2023-10-24-18-13-57.png)
 
 ---
 
@@ -303,7 +303,7 @@ typedef struct list{
 
 :::
 
-![20230707143744](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707143744.png)
+![](./images/2023-10-24-18-13-58.png)
 
 压缩列表的描述信息部分：
 - zlbytes，记录整个压缩列表占用的内存字节数；
@@ -363,7 +363,7 @@ typedef struct quicklistLZF {
 
 ```
 
-![quicklist](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/quicklist.png)
+![](./images/2023-10-24-18-13-59.png)
 
 - 新增
   - 判断 head 节点是否可以插入，可以插入，就在 ziplist 上插入，否则，就新建一个 quickListnode 节点进行插入
@@ -387,11 +387,11 @@ typedef struct quicklistLZF {
 
 有两种常见的方式，一种是开放寻址方式，一种是拉链法。开放寻址方式，就是把数据元素放到一个数组中。如果遇到hash（key1） 之后发现这个位置上已经存放有元素时，就直接往下判断，直到找到一个空闲的位置：
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-open-find-address.png)
+![](./images/2023-10-24-18-14-01.png)
 
 拉链法，就是利用一个数组和多个链表的方式存储数据。数组中保存hash（key）的结果，实际的数据内容保存在与数组相关联的链表上，也就是同一个链表上的保存的所有数据都是hash冲突的数据元素。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-linkedlist.png)
+![](./images/2023-10-24-18-14-02.png)
 
 4. 装载因子 
 
@@ -401,7 +401,7 @@ typedef struct quicklistLZF {
 
 Redis中的Hash数据结构如下：
 
-![存储结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/hash-hashtable.png)
+![](./images/2023-10-24-18-14-03.png)
 
 ```
 typedef struct dict{
@@ -503,19 +503,19 @@ Redis为了保证哈希表具有一个稳定的负载，所以随着数据元素
 
 ::: tip 跳跃表的发展过程
 
-![20230707200740](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707200740.png)
+![](./images/2023-10-24-18-14-04.png)
 
 针对上图所示的单向链表来说，即便数据存储是有序的，我们在查找某一个数据时，仍然需要从头到尾进行遍历，这样的查找效率低下。于是，我们想，能不能给链表也创建一个索引呢？在单向链表上，每隔几个节点，就创建一个索引。
 
-![20230707201227](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707201227.png)
+![](./images/2023-10-24-18-14-06.png)
 
 这样，我们在查找某一个数据时，就可以利用索引，来减少遍历的节点个数，从而提高查找效率。同理，我们再在已经创建好的索引上，利用同样的原理再创建一级索引：
 
-![20230707201424](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707201424.png)
+![](./images/2023-10-24-18-14-07.png)
 
 这样，我们查找某一个数据时，遍历到的节点个数更少了，查找效率也提高的更多了。这样我们就得到了跳跃表的数据结构：
 
-![20230707201547](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230707201547.png)
+![](./images/2023-10-24-18-14-08.png)
 
 :::
 
@@ -553,7 +553,7 @@ typedef struct zskiplistNode {
 } zskiplistNode;
 ```
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/skiplist.png)
+![](./images/2023-10-24-18-14-09.png)
 
 说明：
 - 跳跃表事实上是基于单向链表+索引的方式实现的；
@@ -593,6 +593,6 @@ Redis既然能够动态自适应的选择保存的值对象的数据结构，那
 
 ---
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

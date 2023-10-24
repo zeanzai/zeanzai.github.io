@@ -44,11 +44,11 @@ ABA的问题是指线程a获取的旧值为A，而期望值是B，这个旧值�
 
 操作系统内存模型： 
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/os-mm.png)
+![](./images/2023-10-24-18-15-23.png)
 
 人们在操作系统内存模型的基础上演变出来java内存模型JMM： 
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/collections/jmm.png)
+![](./images/2023-10-24-18-15-24.png)
 
 volatile 关键字修饰的变量，赋值之后多执行了一个“lock addl$0x0，(%esp)”操作，则会在生成的字节码附近生成一个内存屏障，这个内存屏障能够保证在这个屏障之前的指令不会指令重拍到内存屏障之前。这就标志着 volatile 关键字具有禁止指令重排（即保证有序性）的特性。而 addl$0x0，(%esp) 作用是把本处理器的缓存写入主内存，这就保证了 volatile 关键字的可见性。但 volatile 并不保证操作的原子性。
 

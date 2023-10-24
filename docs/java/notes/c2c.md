@@ -239,7 +239,7 @@ Nacos：基于raft算法的CP模型，同时也支持配置成类似eureka的AP�
 7.部署阶段
 如果上述过程一切都是ok的，那么功能就可以上线了，上线后需要PM进行验证，如果上线后有问题，还需要对代码进行回滚。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/c2c-test.png)
+![](./images/2023-10-24-18-17-56.png)
 
 ::: tip 
 
@@ -392,7 +392,7 @@ Spring中的隔离级别是什么意思呢？就是在不同的模块中需要�
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

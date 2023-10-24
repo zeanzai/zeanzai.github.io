@@ -43,7 +43,7 @@ Seata的用法其实很简单，我们类比于在SpringBoot项目中使用Mysql
 
 安装包下载完成之后，上传到服务器上，并完成解压。解压后的文件目录如下：
 
-![20230320000231](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320000231.png)
+![](./images/2023-10-24-18-12-27.png)
 
 ### 2. 执行脚本
 
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `lock_table`
 
 ```
 
-![20230320104329](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320104329.png)
+![](./images/2023-10-24-18-12-28.png)
 
 步骤二，导入Seata项目的一些配置信息到nacso上去，由于配置项比较多，官方提供了使用脚本进行导入的方式，这个过程可能需要具备一些Nacos的基本知识。
 
@@ -137,7 +137,7 @@ sh nacos-config.sh -h 192.168.1.150 -p 8848 -g SEATA_GROUP -t bb4ba084-9183-4406
 
 执行后的效果如下：
 
-![20230320105235](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320105235.png)
+![](./images/2023-10-24-18-12-29.png)
 
 
 
@@ -243,15 +243,15 @@ config {
 
 进入安装包下面的bin目录，在命令行里面直接运行 seata-server.sh 即可。
 
-![20230320111709](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320111709.png)
+![](./images/2023-10-24-18-12-31.png)
 
 查看日志中，已经成功启动。
 
-![20230320111732](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320111732.png)
+![](./images/2023-10-24-18-12-32.png)
 
 再去nacos上看看，服务实例已经启动，并注册到了Nacos上了。
 
-![20230320111753](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230320111753.png)
+![](./images/2023-10-24-18-12-33.png)
 
 
 
@@ -259,7 +259,7 @@ config {
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

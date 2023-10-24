@@ -100,17 +100,17 @@ done
 ```
 
 
-![切片后的视频](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230520212336.png)
+![](./images/2023-10-24-18-11-40.png)
 
-![编辑后的视频](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230520212437.png)
+![](./images/2023-10-24-18-11-42.png)
 
 ## 题外话
 
 ffmpeg真的很耗费cpu资源，可以根据显卡等相关硬件，修改ffmpeg的命令，编解码过程进行加速。
 
-![20230520212144](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230520212144.png)
+![](./images/2023-10-24-18-11-43.png)
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

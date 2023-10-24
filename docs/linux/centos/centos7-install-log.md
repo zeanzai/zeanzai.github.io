@@ -54,7 +54,7 @@ and check to make sure that only the key(s) you wanted were added.
 
 - 再然后在mac上使用免密登陆
 
-![20231007190541](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231007190541.png)
+![](./images/2023-10-24-18-18-31.png)
 
 ## 系统信息
 
@@ -178,6 +178,6 @@ mkdir /usr/setup
 
 ---
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

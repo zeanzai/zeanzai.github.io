@@ -12,5 +12,5 @@ tag:
 2. 在服务控制窗口启动nginx时，出现问题，可以考虑是不是因为端口冲突等原因启动不起来；
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

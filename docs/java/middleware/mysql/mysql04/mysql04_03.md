@@ -9,7 +9,7 @@ tag:
 
 ## 磁盘上的文件
 
-![磁盘结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230606112259.png)
+![](./images/2023-10-24-18-14-49.png)
 
 一个表空间具有一个唯一的表空间ID，表空间根据数据存放的类型不一样，划分为： 
 - 系统表空间
@@ -23,7 +23,7 @@ tag:
 
 ## 表空间、段、区、页、行
 
-![鸟瞰](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230610155911.png)
+![](./images/2023-10-24-18-14-50.png)
 
 
 - 从上图可知：
@@ -38,7 +38,7 @@ tag:
   - 64个连续的页组成一个区，即extent，一个区的大小为1MB；
   - InnoDB存储引擎有表空间、段、区等结构，目的在于：让逻辑上相邻的页面在物理上也相近，从而减少磁盘IO所带来的时间消耗；并在此基础上尽可能减少大单位分配存储空间造成的空间浪费；
 
-![20230614155139](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230614155139.png)
+![](./images/2023-10-24-18-14-51.png)
 
 - 从上图可知
   - 256个区组成一个区分组，一个区分组的大小为256MB；
@@ -47,7 +47,7 @@ tag:
   - 之后的每一个区分组的第一个区的前两页比较特殊。如上图中第二个区分组的extent0的前2页，第一页保存了本区分组内所有区的控制信息，第二页保存了change buffer的控制信息；
 
 
-![表空间结构分解](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/yuque_diagram00.jpg)
+![](./images/2023-10-24-18-14-52.jpg)
 
 
 ## Row的组织形式
@@ -61,7 +61,7 @@ Redundant 行格式我这里就不讲了，因为现在基本没人用了，这�
 
 所以，弄懂了 Compact 行格式，之后你们在去了解其他行格式，很快也能看懂。
 
-![20230611153000](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611153000.png)
+![](./images/2023-10-24-18-14-55.png)
 
 先从整体的视角来来分析一下：
 - 数据库表中的每一行数据对应于数据页上的一个User Record，即对应数据页上的一条『用户记录』；
@@ -94,7 +94,7 @@ CREATE TABLE `t_user` (
 
 并往里面插入三条数据，结果如下图：
 
-![20230611160021](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611160021.png)
+![](./images/2023-10-24-18-14-56.png)
 
 下面我们根据具体表信息，并参照上面结论来解释一下『行描述信息』部分是如何存储的。
 
@@ -102,13 +102,13 @@ CREATE TABLE `t_user` (
 
 那么第一行数据，根据字符集规则可知 name=a 占用长度为 1 个字节， phone=123 占用长度为 3 个字节，且这一行中并没有Null值，因此这一行的存储格式大概是这样的：
 
-![20230611162549](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611162549.png)
+![](./images/2023-10-24-18-14-58.png)
 
 同理，第二行和第三行的数据依次为：
 
-![20230611175007](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611175007.png)
+![](./images/2023-10-24-18-14-59.png)
 
-![20230611175048](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611175048.png)
+![](./images/2023-10-24-18-15-00.png)
 
 记录头具有特定的格式，具体格式如上图。这里特别说一下几个：
 
@@ -116,7 +116,7 @@ CREATE TABLE `t_user` (
 - min_rec_mash： 与页间查找有关，后面会说；
 - n_owed：与页内行的分组有关，下面会说；
 - head_no： 行记录是一条条紧密地排列着的。因此User records区【页结构中的区域】的数据结构是一个堆，也就是说，行记录事实上是保存在数据堆上的，这个字段标识了这行记录在堆上的编号，如下图
-- ![数据堆](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611185503.png)
+![](./images/2023-10-24-18-15-02.png)
 - record_type： 标识这行记录的存储数据的类型，0-普通数据记录，1-B+树非叶子节点行记录，2-表示最小记录，3-最大记录；
 - next_record： 下一行记录的 next_record 和 cid列 的中间位置，这样读取数据时，往左是行的描述信息，往右是行的真实数据信息，这也是为什么『变长字段长度列表』部分和『Null值列表』部分按照字段逆序方式排列的原因；同时，也可以看出多行数据是通过这个字段链起来了，所以相邻行记录之间是通过`单向链表`方式进行链接的。
 
@@ -131,7 +131,7 @@ CREATE TABLE `t_user` (
 
 ## Page的组织形式
 
-![20230611192235](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611192235.png)
+![](./images/2023-10-24-18-15-03.png)
 
 先整体说一下页的组织形式：
 - 一页数据为16k，是InnoDB管理数据的基本单位，事实上可以把页划分为四个结构
@@ -147,13 +147,13 @@ CREATE TABLE `t_user` (
 
 文件头，页的描述信息，主要包含以下内容。
 
-![20230611192845](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611192845.png)
+![](./images/2023-10-24-18-15-04.png)
 
 ### Page Header 
 
 页头，页的状态信息等，主要包含以下内容：
 
-![20230611193008](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611193008.png)
+![](./images/2023-10-24-18-15-05.png)
 
 ### File Trailer
 
@@ -163,17 +163,17 @@ CREATE TABLE `t_user` (
 
 数据堆区是按照数据行的方式进行分配空间的，并规定第一行记录和第二行记录分别为最小值记录和最大值记录，这两行记录的格式与普通行记录的数据格式一致，只不过是真实数据部分保存的是两个单词，并且记录头信息中的heap_no值分别为0和1，即： 
 
-![20230611194109](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611194109.png)
+![](./images/2023-10-24-18-15-07.png)
 
 之后就是一般的数据行信息了，并且这些数据行是紧凑排列的。为了更方便的检索数据，InnoDB在数据堆区靠近堆末尾的区域，以逆序的方式增加了一块区域，并且里面保存的内容为主键，这块区域就是页目录Page Directory，页目录在逻辑上就是一个有序数组，数组中的元素称为槽（Slot），每个槽占2字节。即： 
 
-![20230611195134](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611195134.png)
+![](./images/2023-10-24-18-15-08.png)
 
 所以，数据堆 区域的数据组织形式就变成了：
 - 页内的所有未被删除的记录（包括Infimum 和 Supremum）按照索引顺序被划分位几个组，组内的记录也是按索引值升序排的。每个组的最大的记录是“组长”，组内的其他记录是“组员”，组长头信息的 n_owned 属性表示组内有多少记录；
 - 将每个组的组长的页内地址（即组长的真实数据开始位置与页中第0个字节的距离）提取出来，按顺序存储到靠近页尾部空间的页目录的槽中；
 
-![20230611201054](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611201054.png)
+![](./images/2023-10-24-18-15-09.png)
 
 
 ## 其他 
@@ -188,13 +188,13 @@ CREATE TABLE `t_user` (
 
 整体来说，多行数据存放到一个页的数据堆区域。
 
-![20230611154952](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611154952.png)
+![](./images/2023-10-24-18-15-11.png)
 
 ### 多个页之间的组织形式
 
 多个页之间的组织形式，是通过双向链表的方式链接起来了，并且从整个数据库表空间的角度来看，页数据对应于B+树上的节点，也就是说，B+树上的一个节点就是一个数据页。
 
-![20230611201523](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230611201523.png)
+![](./images/2023-10-24-18-15-12.png)
 
 
 ### 页内数据记录的查询
@@ -216,7 +216,7 @@ CREATE TABLE `t_user` (
 ## 总结
 
 
-![页结构分解](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/yuque_diagram01.jpg)
+![](./images/2023-10-24-18-15-13.jpg)
 
 
 ## 参考
@@ -230,7 +230,7 @@ CREATE TABLE `t_user` (
 
 <br /><br /><br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

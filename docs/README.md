@@ -108,7 +108,7 @@ tagline: 浪漫骑士的二流键盘，微信公众号： it-come-true。
 
 最后形成这样一个`技术观`：
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/wojh.png)
+![](./images/2023-10-24-18-18-27.png)
 
 
 这可把我吓了一跳，但是罗马不是一天建成的，我这样安慰着自己，硬着头皮去做。
@@ -152,7 +152,7 @@ tagline: 浪漫骑士的二流键盘，微信公众号： it-come-true。
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 ## 参与贡献

@@ -12,7 +12,7 @@ tag:
 
 这篇文章主要是学习《分布式技术原理与实战45讲》相关课程之后的学习笔记，并且是以抽记卡的形式进行展示的。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/distribute-system-theory-mindmap.png)
+![](./images/2023-10-24-18-17-57.png)
 
 ## 01 如何证明分布式系统的 CAP 理论？
 
@@ -199,7 +199,7 @@ tag:
                     - confirm阶段： 先往本地数据库中插入要锁定的金额的记录，然后调用b银行的扣减金额的接口，再调用c银行的增加金额的接口；
                     - cancel阶段： 先把c的金额给减掉，然后把b的金额再加回去；
                     - 总结： 通俗一点讲就是try阶段准备各服务所需要的资源或对某些资源进行锁定，confirm就是进行各服务的提交，cancel阶段就是进行补偿，把原来成功的事务进行回滚。TCC 的本质是把数据库的二阶段提交上升到微服务来实现，从而避免数据库二阶段中长事务引起的低性能风险。可以让应用自己定义数据库操作的粒度，可以降低锁冲突，提高系统的业务吞吐量。不足是对业务的侵入性较强。
-                    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/WX20220403-104131.png)
+![](./images/2023-10-24-18-17-58.png)
                 - 分析：
                     - 本质上是把两阶段提交的理论上升到微服务来实现；可以让应用自己定义数据库操作的力度，这样有利于降低锁冲突，提高系统的业务吞吐量；
                     - 这种方案是针对要求强一致性的业务场景，这种方案要求写额外的补偿事务的代码，不利于系统的维护；
@@ -208,7 +208,7 @@ tag:
                         - 回答： TCC 中会添加事务日志，如果 Confirm 或者 Cancel 阶段出错，则会进行重试，所以这两个阶段需要支持幂等；如果重试失败，则需要人工介入进行恢复和处理等。
             - 本地消息表
                 - 过程： 
-                    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/WX20220401-181534.png)
+![](./images/2023-10-24-18-18-00.png)
                 - 分析：
                     - 实现逻辑简单，开发成本低；
                     - 高度耦合业务，通用性差；高并发场景下可用性较差；
@@ -233,7 +233,7 @@ tag:
     - 我们知道MySQL是通过记录文件的方式来存储数据的，记录的文件有binlog、redolog、undolog，这就涉及到文件与文件之间不一致的情况。因此我们需要了解MySQL中是如何实现XA规范的。在这里我们主要聊一下MySQL内部的XA规范。
 - 解决
     - MySQL中server层产生binlog，InnoDB存储引擎层产生redolog。
-    - ![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/notes/WX20220403-103655.png)
+![](./images/2023-10-24-18-18-01.png)
     - Prepare阶段和commit阶段就可以看作是两阶段提交的实现
 
 ## 10 如何在业务中体现 TCC 事务模型？
@@ -312,5 +312,5 @@ tag:
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

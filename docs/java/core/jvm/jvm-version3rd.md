@@ -8,7 +8,7 @@ tag:
 
 ## 运行期的内存数据区域
 
-![运行期内存数据结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221212120517.png)
+![](./images/2023-10-24-18-16-57.png)
 
 - 编译期也会使用到内存，但是这个阶段主要是把java语言编译成可供机器识别的机器码，它的内存的分配以及回收可由具体的虚拟机的实现来进行管理；并且这个过程主要由程序猿的代码平台或编译工具来完成，因此它相较于运行期的内存数据区域就显得不那么重要了。
 - 这个区域是为了解决垃圾回收而产生的一个概念。
@@ -137,7 +137,7 @@ tag:
 
 ## 垃圾收集器
 
-![垃圾收集器](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221216210422.png)
+![](./images/2023-10-24-18-16-58.png)
 
 
 
@@ -152,7 +152,7 @@ https://www.douyin.com/aweme/v1/play/?video_id=v0200fg10000ca4bp3bc77u3srd46ocg&
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

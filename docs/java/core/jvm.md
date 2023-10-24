@@ -18,7 +18,7 @@ Java整个编译以及运行的过程相当繁琐，本文通过一个简单的�
 1. 源文件由编译器编译成字节码（ByteCode）
 2. 字节码由java虚拟机解释运行
 
-![img](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/jvm/jvm-compile-and-run.png)
+![](./images/2023-10-24-18-17-00.png)
 
 因为java程序既要编译同时也要经过JVM的解释运行，所以说Java被称为半解释语言（ "semi-interpreted" language）。
 
@@ -56,9 +56,9 @@ public class Animal {
 >
 > 下面是MainApp.class通过反汇编的结果，我们可以清楚看到.class文件的结构：
 
-![常量池](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/jvm/constant-pool.png)
+![](./images/2023-10-24-18-17-01.png)
 
-![类方法字节码](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/jvm/mathod-byte-code.png)
+![](./images/2023-10-24-18-17-02.png)
 
 #### 第二步：运行过程
 
@@ -75,7 +75,7 @@ java类运行的过程大概可分为两个过程：1、类的加载  2、类的
 5. 当使用animal.printName()的时候，JVM根据animal引用找到Animal对象，然后根据Animal对象持有的引用定位到方法区中Animal类的类型信息的方法表，获得printName()函数的字节码的地址。
 6. 开始运行printName()函数。
 
-![java程序运行过程](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/jvm/java-file-run-proceed.png)
+![](./images/2023-10-24-18-17-03.png)
 
 
 ```
@@ -112,7 +112,7 @@ java类运行的过程大概可分为两个过程：1、类的加载  2、类的
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

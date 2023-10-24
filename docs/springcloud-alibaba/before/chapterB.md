@@ -38,11 +38,11 @@ cat /mydata/nexus/data/admin.password
 
 - 创建角色
 
-![创建角色](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113305.png)
+![](./images/2023-10-24-18-12-54.png)
 
 - 创建用户
 
-![创建用户](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113401.png)
+![](./images/2023-10-24-18-12-56.png)
 
 
 ## 配置maven的config
@@ -107,21 +107,21 @@ cat /mydata/nexus/data/admin.password
 
 - 在maven的窗口中，找到“create..”：
 
-![打开maven的生命周期](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113526.png)
+![](./images/2023-10-24-18-12-57.png)
 
 - 在打开的窗口中输入 `clean deploy -DskipTests` ：
 
-![创建maven的deploy命令](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113624.png)
+![](./images/2023-10-24-18-12-58.png)
 
 - 运行命令，发布到nexus私服上：
 
-![双击运行](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113646.png)
+![](./images/2023-10-24-18-12-59.png)
 
 - 运行结果：
 
-![运行成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113701.png)
+![](./images/2023-10-24-18-13-00.png)
 
-![上传成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221111113739.png)
+![](./images/2023-10-24-18-13-02.png)
 
 
 ## 其他模块的依赖坐标
@@ -153,9 +153,9 @@ SpringCloud-Alibaba是基于SpringBoot开发的，也是有不同的组件组成
 
 ### 对应关系
 
-![Spring版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131544.png)
+![](./images/2023-10-24-18-13-03.png)
 
-![组件之间的版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131636.png)
+![](./images/2023-10-24-18-13-04.png)
 
 我们选取的版本如下：
 
@@ -179,7 +179,7 @@ SpringCloud-Alibaba是基于SpringBoot开发的，也是有不同的组件组成
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

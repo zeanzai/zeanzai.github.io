@@ -30,7 +30,7 @@ tag:
 
 SSH是建立在传输层和应用层上面的一种安全的传输协议。SSH目前较为可靠，专为远程登录和其他网络提供的安全协议。在主机远程登录的过程中有两种认证方式:
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/centos7-new-users/021.png)
+![](./images/2023-10-24-18-18-32.png)
 
 #### 2.2.1. 基于口令认证
 
@@ -53,11 +53,11 @@ SSH是建立在传输层和应用层上面的一种安全的传输协议。SSH�
 
 #### 2.3.2. 查看是否开发22端口
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/centos7-new-users/017.png)
+![](./images/2023-10-24-18-18-34.png)
 
 #### 2.3.3. 查看ssh服务是否启动
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/centos7-new-users/018.png)
+![](./images/2023-10-24-18-18-35.png)
 
 ### 2.4. SSH客户端连接（口令认证）
 
@@ -67,11 +67,11 @@ SSH是建立在传输层和应用层上面的一种安全的传输协议。SSH�
 
 #### 2.5.1. 在主机B上面生成公钥和私钥
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/centos7-new-users/019.png)
+![](./images/2023-10-24-18-18-36.png)
 
 #### 2.5.2. 主机A拷贝主机b的公钥
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/centos7-new-users/020.png)
+![](./images/2023-10-24-18-18-37.png)
 
 
 #### 2.5.3. 在主机A上面连接主机B
@@ -168,5 +168,5 @@ northmeter:x:1001:1001::/home/northmeter:/bin/bash
 * [CentOS 7.1下SSH远程登录服务器详解](https://www.linuxidc.com/Linux/2016-03/129204.htm)
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

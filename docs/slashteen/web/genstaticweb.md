@@ -110,11 +110,11 @@ info page slashteen\web\genstaticweb.md is modified
 PicGo的配置
 1. 安装vscode的插件：
 
-特舒坦 ![20230817140316](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230817140316.png)
+![](./images/2023-10-24-18-11-45.png)
 
 2. 完成配置：
 
-![20230817125902](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230817125902.png)
+![](./images/2023-10-24-18-11-46.png)
 
 使用截图或者复制一个图片，均可以使用此插件；
 ![](./images/2023-10-23-17-20-27.png)
@@ -239,7 +239,7 @@ Notice: Deployment failed! ❌
 
 修改 工作流 权限
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/workflow.png)
+![](./images/2023-10-24-18-11-47.png)
 
 发现执行成功
 
@@ -251,7 +251,7 @@ https://github.com/zeanzai/vpblog/settings/actions
 
 - 修改pages的配置
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/pages.png)
+![](./images/2023-10-24-18-11-49.png)
 
 ### 7.4. 验证
 
@@ -306,5 +306,5 @@ yarn install
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

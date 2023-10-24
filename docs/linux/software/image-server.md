@@ -153,5 +153,5 @@ $ firewall-cmd --zone= public --remove-port=80/tcp --permanent
 > 4. 【Linux/CentOS】Boolean ftp_home_dir is not defined https://www.cnblogs.com/guxin/p/centos-boolean-ftp-home-dir-is-not-defined.html<br />
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

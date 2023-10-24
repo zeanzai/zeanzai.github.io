@@ -13,45 +13,45 @@ tag:
 
 2. 选择语言
 
-![选择语言](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/01.png)
+![](./images/2023-10-24-18-18-38.png)
 
 3. 安装信息摘要
 
-![安装信息摘要](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/02.png)
+![](./images/2023-10-24-18-18-40.png)
 
 4. 配置网络和主机名
 
-![配置网络和主机名](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/03.png)
+![](./images/2023-10-24-18-18-41.png)
 
 选择：“IPV4设置”选项卡、选择“方法（手动）”、编辑信息（地址、子网掩码、网关、DNS服务器）、勾选“需要IPV4完成这个连接”、保存。
 
-![打开网络并修改主机名](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/04.png)
+![](./images/2023-10-24-18-18-42.png)
 
 打开网络连接、修改主机名，点击完成，返回“安装信息摘要”界面。
 
 5. 设置时间
 
-![打开网络时间](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/05.png)
+![](./images/2023-10-24-18-18-43.png)
 
 确保使用的是网络时间，点击完成，返回“安装信息摘要”界面。
 
 6. 设置安装位置
 
-![选中磁盘](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/06.png)
+![](./images/2023-10-24-18-18-45.png)
 
 选中磁盘，点击完成，返回“安装信息摘要”界面。
 
 7. 点击“开始安装”
 
-![开始安装](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/07.png)
+![](./images/2023-10-24-18-18-46.png)
 
 8. 设置root密码
 
-![设置密码](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/08.png)
+![](./images/2023-10-24-18-18-47.png)
 
 9. 等待
 
-![等待](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/install-centos7.5/09.png)
+![](./images/2023-10-24-18-18-48.png)
 
 10. 重新启动
 
@@ -65,5 +65,5 @@ tag:
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

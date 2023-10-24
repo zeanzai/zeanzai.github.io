@@ -155,6 +155,6 @@ public class TestController{
 2. 如果要增加一个类型为C的解析逻辑，只需要添加一个类来实现 IFileStrategy ，也不需要修改调用过程；
 
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

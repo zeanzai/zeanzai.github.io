@@ -13,7 +13,7 @@ tag:
 
 ## 网关的必要性
 
-![部署视图](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221122120811.png)
+![](./images/2023-10-24-18-12-10.png)
 
 上面是一个互联网应用典型的部署视图，从上面我们可以看到，一般情况下，我们会把应用部署划分成几个网络区域：
 
@@ -98,7 +98,7 @@ spring:
 
 浏览器中输入： http://localhost:15000?green ，点击回车后，浏览器会跳转到百度网站，
 
-![路由转发](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119172133.png)
+![](./images/2023-10-24-18-12-11.png)
 
 ### 重写路由
 
@@ -175,7 +175,7 @@ public class GatewayController {
 
 - 启动两个服务，进行测试
 
-![请求转发成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119172210.png)
+![](./images/2023-10-24-18-12-12.png)
 
 ### 其他基础功能
 
@@ -227,7 +227,7 @@ spring:
 
 - 在nacos的控制台配置上路由规则
 
-![配置路由规则](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221122100229.png)
+![](./images/2023-10-24-18-12-14.png)
 
 - 重新启动，测试运行结果
 
@@ -460,7 +460,7 @@ swagger-order模块的搭建步骤与swagger-user模块的搭建步骤一致。�
 
 分别启动swagger-user、swagger-order和gateway-swagger模块，浏览器中输入： http://localhost:10800/doc.html ，然后在服务选择框中选择想要展示的服务接口即可。
 
-![集成swagger成功](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221122130047.png)
+![](./images/2023-10-24-18-12-15.png)
 
 ### 其他
 
@@ -484,6 +484,6 @@ swagger-order模块的搭建步骤与swagger-user模块的搭建步骤一致。�
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

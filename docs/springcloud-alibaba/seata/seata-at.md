@@ -233,7 +233,7 @@ public boolean deduct(String userId, Long money) {
 
 由于 seata-at-order 服务模块中需要使用OpenFeign来调用仓储和账户服务，因此还需要创建两个接口： 
 
-![20230426175644](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426175644.png)
+![](./images/2023-10-24-18-12-16.png)
 
 ```
 @FeignClient(value = "seata-at-account")
@@ -287,7 +287,7 @@ public boolean createOrder(String userId, Long productId, Long num) {
 
 分别启动 seata-at-storage 、 seata-at-account 、seata-at-order 模块，我们会发现已经注册到nacos上了。
 
-![20230426175924](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426175924.png)
+![](./images/2023-10-24-18-12-17.png)
 
 之后我们只需要调用订单模块中的createOrder接口就行了。
 
@@ -300,7 +300,7 @@ public boolean createOrder(String userId, Long productId, Long num) {
 
 1. 首先要先启动Seata
 
-![20230426180919](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426180919.png)
+![](./images/2023-10-24-18-12-18.png)
 
 2. 在三个模块中分别添加Seata的配置
 
@@ -330,13 +330,13 @@ seata:
 
 3. 创建Seata服务端配置，这里要特别注意：值均为default。
 
-![20230426181125](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426181125.png)
+![](./images/2023-10-24-18-12-20.png)
 
-![20230426181144](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426181144.png)
+![](./images/2023-10-24-18-12-21.png)
 
-![20230426181207](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426181207.png)
+![](./images/2023-10-24-18-12-22.png)
 
-![20230426181227](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426181227.png)
+![](./images/2023-10-24-18-12-23.png)
 
 4. 修改业务代码，在订单模块中设置生成订单的方法为全局事务
 
@@ -363,15 +363,15 @@ public boolean createOrder(String userId, Long productId, Long num) {
 
 5. 启动测试 
 
-![20230426181927](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426181927.png)
+![](./images/2023-10-24-18-12-24.png)
 
-![20230426182255](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230426182255.png)
+![](./images/2023-10-24-18-12-26.png)
 
 
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

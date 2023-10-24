@@ -39,7 +39,7 @@ EJB的技术，重点在于想方设法实现一个又一个的可复用的JavaB
 
 ## 控制反转 
 
-![20231019175530](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019175530.png)
+![](./images/2023-10-24-18-18-10.png)
 
 ::: tip DIP、IoC、DI、Spring之间的关系
 
@@ -83,7 +83,7 @@ Spring6和Spring5。
 
 ### Spring核心组件
 
-![20231019182425](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019182425.png)
+![](./images/2023-10-24-18-18-11.png)
 
 - Spring Core模块： 这是Spring框架最基础的部分，它提供了依赖注入（DependencyInjection）特征来实现容器对Bean的管理。核心容器的主要组件是 BeanFactory，BeanFactory是工厂模式的一个实现，是任何Spring应用的核心。它使用IoC将应用配置和依赖从实际的应用代码中分离出来。
 - Spring Context模块： 如果说核心模块中的BeanFactory使Spring成为容器的话，那么上下文模块就是Spring成为框架的原因。
@@ -95,18 +95,18 @@ Spring6和Spring5。
 - Spring WebFlux模块： Spring Framework 中包含的原始 Web 框架 Spring Web MVC 是专门为 Servlet API 和 Servlet 容器构建的。反应式堆栈 Web 框架 Spring WebFlux 是在 5.0 版的后期添加的。它是完全非阻塞的，支持反应式流(Reactive Stream)背压，并在Netty，Undertow和Servlet 3.1+容器等服务器上运行。
 - Spring Web模块： Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文，提供了Spring和其它Web框架的集成，比如Struts、WebWork。还提供了一些面向服务支持，例如：实现文件上传的multipart请求。
 
-![20231019182808](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019182808.png)
+![](./images/2023-10-24-18-18-13.png)
 
 ### Spring容器高层视图
 
-![20231019182950](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019182950.png)
+![](./images/2023-10-24-18-18-14.png)
 
 
 ## Bean
 
 ### Bean的元信息
 
-![20231019183530](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019183530.png)
+![](./images/2023-10-24-18-18-15.png)
 
 ### Bean的作用域 
 
@@ -387,7 +387,7 @@ Spring的配置方式有哪些
 父子容器
 
 
-![20231019222915](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019222915.png)
+![](./images/2023-10-24-18-18-16.png)
 
 org.springframework.beans.factory.BeanFactory
 
@@ -538,7 +538,7 @@ MVC原理
 - 事务及其特性
 - 事务属性 
 
-![20231019200209](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231019200209.png)
+![](./images/2023-10-24-18-18-18.png)
 
 - 声明式事务实现原理了解吗？
 - 事务失效原因及其解决方案
@@ -573,5 +573,5 @@ SpringBoot启动原理
 
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

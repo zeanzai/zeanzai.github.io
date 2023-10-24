@@ -6,12 +6,12 @@ tag:
   - "mac"
 ---
 
-![20231007164147](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231007164147.png)
+![](./images/2023-10-24-18-19-03.png)
 
 
 ---
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

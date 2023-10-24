@@ -11,11 +11,11 @@ tag:
 
 有时候想要在vscode中完成类似于idea中的代码的快速生成，比如，在idea中输入main会自动完成main方法的创建。其实，在vscode中也可以完成类似的功能。
 
-![20231007173745](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231007173745.png)
+![](./images/2023-10-24-18-19-08.png)
 
 在弹出的代码片段配置窗口中，直接找到 markdown.json 文件： 
 
-![20231007173759](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231007173759.png)
+![](./images/2023-10-24-18-19-10.png)
 
 在打开的编辑窗口中添加下面内容：
 
@@ -61,7 +61,7 @@ tag:
 
 如果出现没有生效的问题，可以打开 setting.json 的配置文件，然后在此文件中添加下面内容：
 
-![20231007173833](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231007173833.png)
+![](./images/2023-10-24-18-19-11.png)
 
 ```
 
@@ -78,6 +78,6 @@ tag:
 
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 

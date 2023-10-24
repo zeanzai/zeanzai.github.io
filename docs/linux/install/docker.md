@@ -80,5 +80,5 @@ https://blog.csdn.net/qq_23489303/article/details/80682798
 https://blog.csdn.net/aa1215018028/article/details/80623111
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

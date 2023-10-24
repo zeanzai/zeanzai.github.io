@@ -131,5 +131,5 @@ CREATE DATABASE ${tablename} DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_gen
 https://www.jianshu.com/p/90f751ea37d1
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

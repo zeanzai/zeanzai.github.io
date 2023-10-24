@@ -56,5 +56,5 @@ tag:
 这个问题其实是在问一个理想团队中需要有多少个初级开发、多少个中级开发、多少个高级开发。这个问题一般情况下要问下到底是什么业务团队以及是怎样的团队架构，
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

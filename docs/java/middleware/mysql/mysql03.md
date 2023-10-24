@@ -21,20 +21,20 @@ Server层的操作日志。记录表结构变更和表数据变更的日志。
 
 查看binlog日志是否开启，默认是不开启的，需要手动开启：
 
-![20230605121752](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605121752.png)
+![](./images/2023-10-24-18-14-25.png)
 
 也可以查看my.cnf中的配置，如果没有开启，就需要先开启，并设置好Binlog的格式： 
 
-![20230605115607](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605115607.png)
+![](./images/2023-10-24-18-14-27.png)
 
 也可以单独查看binlog的格式：
 
-![20230605125257](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605125257.png)
+![](./images/2023-10-24-18-14-28.png)
 
 
 生成的文件： 
 
-![20230605120802](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605120802.png)
+![](./images/2023-10-24-18-14-29.png)
 
 配置参数， my.cnf文件中的mysqld节的配置：
 
@@ -82,7 +82,7 @@ h192.168.0.1 -P3306 -u$user -p$pwd;`， 将 mysql-bin.000001 ⽂件位置从 1�
 
 MySQLServer层有一块专门的区域，用来放置缓存的信息，这部分被称为Cache。对MySQL进行操作时，MySQLServer会根据会话创建多个线程，每一个线程都有自己的Binlog-Cache，Binlog-Cache达到设置的阈值后，会把Binlog—Cache中的数据保存到磁盘上。
 
-![20230605135343](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605135343.png)
+![](./images/2023-10-24-18-14-30.png)
 
 其中，write 指的是 把 Binlog-Cache 中的内容写到文件系统中的  page cache 里，此时并没有落到磁盘上，这个阶段不涉及IO； fsync 才是持久化到磁盘上，这个阶段才会产生IO。
 
@@ -126,7 +126,7 @@ mysql> show binlog events [IN 'log_name'] [FROM pos] [LIMIT [offset,] row_count]
 
 - binlog格式为row的查询示例
 
-![20230605131523](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605131523.png)
+![](./images/2023-10-24-18-14-31.png)
 ```
 mysql> show binlog events in 'master-bin.000001' from 1 limit 20\G
 *************************** 1. row ***************************
@@ -308,14 +308,14 @@ End_log_pos: 12626
 
 > mysqlbinlog -vv mysql-bin.000001 --start-position=2986;
 
-![20230605133528](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605133528.png)
+![](./images/2023-10-24-18-14-33.png)
 
 - binlog格式为Statement的查询示例
 
-![20230605132506](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605132506.png)
+![](./images/2023-10-24-18-14-34.png)
 
 
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

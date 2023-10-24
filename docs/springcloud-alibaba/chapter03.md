@@ -183,7 +183,7 @@ String test01(@RequestParam("name")String name, @RequestParam("age")String age);
 
 - 测试结果，
 
-![多参数测试结果](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119120927.png)
+![](./images/2023-10-24-18-13-15.png)
 
 
 ### URL中携带参数
@@ -212,7 +212,7 @@ String test02(@PathVariable("name") String name, @PathVariable("age")Integer age
 
 - 测试结果，
 
-![地址中携带参数](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119121626.png)
+![](./images/2023-10-24-18-13-16.png)
 
 ### 传递对象
 
@@ -246,7 +246,7 @@ public void test03() {
 
 - 测试结果，
 
-![传递实体对象](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119122412.png)
+![](./images/2023-10-24-18-13-17.png)
 
 
 ### 文件上传
@@ -280,7 +280,7 @@ public String test04(MultipartFile file) {
 
 - 测试
 
-![上传文件](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119123817.png)
+![](./images/2023-10-24-18-13-18.png)
 
 
 ### 文件下载
@@ -377,7 +377,7 @@ public void test05(@RequestBody MyFiles myFiles, HttpServletResponse httpServlet
 
 - 测试结果
 
-![文件下载](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221119125223.png)
+![](./images/2023-10-24-18-13-19.png)
 
 ### 开启GZIP压缩
 
@@ -473,5 +473,5 @@ feign:
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

@@ -39,7 +39,7 @@ leetcode刷题
 - Java中高级程序员
 
 
-![img](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/cscore/algorithm.jpg)
+![](./images/2023-10-24-18-18-02.jpg)
 
 
 
@@ -228,11 +228,11 @@ p22
 
 一种是开放寻址，说白了，就是先运算出一个地址，如果这个地址上有数据，就往下面一个地址顺移，如果下面一个地址还有数据，那就接着往下顺移……直到找到一个没有数据的位置。这种方式有一个问题，那就是如果这块区域已经满了，就会造成循环寻址的情况。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/cscore/dsa/hashtable-01.png)
+![](./images/2023-10-24-18-18-03.png)
 
 另一种是拉链法，这种方式是先运算出一个地址，而这个地址并不保存数据，而是保存一个指针或者是引用，这样这个地址上就可以保存多个运算结果一样的数据了。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/cscore/dsa/hashtable-02.png)
+![](./images/2023-10-24-18-18-05.png)
 
 #### Hash槽
 
@@ -287,7 +287,7 @@ Hash槽就是散列表的数组+链表的实现方式中的数组元素所在的
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

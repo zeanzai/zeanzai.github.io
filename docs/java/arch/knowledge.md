@@ -51,13 +51,13 @@ DDD分层架构是一种架构设计风格，也是微服务架构设计的最�
 
 基础设施层：主要为上面各层提供通用的技术能力，为用户界面层绘制屏幕组件，为应用层传递消息，为领域层提供持久化机制。包括了，外部库、数据库接口、应用服务器操作、消息后端、缓存后端等。Repository与DAO的区别在于，DAO是从数据库表的角度来看待问题的，它只提供一种面向数据库表的数据处理风格，而Repository和Data Mapper更加面向对象，通常用在领域模型中，并且在领域模型中应避免使用DAO模式。
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/arch/ddd.png)
+![](./images/2023-10-24-18-18-24.png)
 
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/arch/ddd01.png)
+![](./images/2023-10-24-18-18-25.png)
 
 
-![](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/arch/ddd02.png)
+![](./images/2023-10-24-18-18-26.png)
 
 
 ::: tip 其他概念
@@ -99,7 +99,7 @@ DDD分层架构是一种架构设计风格，也是微服务架构设计的最�
 
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

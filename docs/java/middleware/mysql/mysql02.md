@@ -83,7 +83,7 @@ tag:
 
 因此也就得出隔离级别不同，解决的读写并发一致性问题也就不同。但是具体是怎么个不同法，要根据不同数据库产品的不同实现来定。如MySQL的不同隔离级别下的并发一致性问题如下：
 
-![20230619191530](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619191530.png)
+![](./images/2023-10-24-18-14-35.png)
 
 
 > PS： 大多数数据库系统的默认隔离级别都是READ COMMITTED（但MySQL不是)，由于MySQL默认的存储引擎是InnoDB，而InnoDB存储引擎默认的隔离级别是REPEATABLE READ，所以MySQL默认的隔离级别是REPEATABLE READ。
@@ -181,25 +181,25 @@ MVCC多版本并发控制协议本质上可以理解为InnoDB对于隔离级别�
 
 假如现在InnoDB中，对id=10的数据已经存在两条undo日志，版本链大概是这样的：
 
-![20230619085205](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619085205.png)
+![](./images/2023-10-24-18-14-37.png)
 
 此时，有一个事务trxid=3修改了这条数据的name值，那么版本链变成这样： 
 
-![20230619085224](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619085224.png)
+![](./images/2023-10-24-18-14-38.png)
 
 此时，又来了一个事务trxid=4，这个事务也需要修改name的值，那么针对 读已提交 的隔离级别，在这个事务中读取这条事务时，就会在这个事务开启后立马就创建一个读视图，如下图：
 
-![20230619085522](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619085522.png)
+![](./images/2023-10-24-18-14-39.png)
 
 由于trxid=3的事务还未提交，所以读视图中就只包含版本链中的前两条，于是读操作执行时，就只返回trxid=2的那条数据。以后在这个事务中每次读取数据，就都会创建一个读视图，假如trxid=3的事务提交了，trxid=4的事务再次读取时，就会重新创建一个视图，如图：
 
-![20230619085619](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619085619.png)
+![](./images/2023-10-24-18-14-40.png)
 
 读视图中会包含已经提交的最新的数据内容，所以 读已提交 隔离级别下，总能读取到最新的提交内容。 
 
 针对 可重复读 的隔离级别，在这个事务中读取这条事务时，就会在事务开启之后立马就创建一个读视图，
 
-![20230619085522](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619085522.png)
+![](./images/2023-10-24-18-14-42.png)
 
 同样，由于trxid=3的事务还没有提交，所以读视图中页只包含版本链的前两条，所以就只返回trxid=2的那条数据，假如trxid=3的事务提交了，也不会读取到trxid=3的这条修改记录，因为读视图不会重新创建，所以返回的还是trxid=2的那条记录。
 
@@ -207,7 +207,7 @@ MVCC多版本并发控制协议本质上可以理解为InnoDB对于隔离级别�
 
 ### MySQL中两种读方式
 
-![20230619184024](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619184024.png)
+![](./images/2023-10-24-18-14-43.png)
 
 ### 多级封锁协议 VS 多版本并发控制
 
@@ -222,13 +222,13 @@ MVCC多版本并发控制协议本质上可以理解为InnoDB对于隔离级别�
 ### 查看与修改隔离级别
 
 
-![会话级别的隔离级别](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619090629.png)
+![](./images/2023-10-24-18-14-44.png)
 
 > SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 
-![修改后的会话后的隔离级别](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619090443.png)
+![](./images/2023-10-24-18-14-45.png)
 
-![全局的隔离级别](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230619090501.png)
+![](./images/2023-10-24-18-14-47.png)
 
 - 分为`全局级别`的隔离级别和`会话级`的隔离级别；全局的只能超级管理员的用户才可以修改；
   - SESSION：表示修改的事务隔离级别将应用于当前 session（当前 cmd 窗口）内的所有事务；
@@ -252,5 +252,5 @@ MVCC多版本并发控制协议本质上可以理解为InnoDB对于隔离级别�
 
 
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

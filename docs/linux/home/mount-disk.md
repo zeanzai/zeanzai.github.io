@@ -122,5 +122,5 @@ yum install exfat-utils fuse-exfat
 3. [如何在 CentOS 7 上挂载一个 exFAT 磁盘驱动器](https://cloud.tencent.com/developer/article/1626805)
 ---
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

@@ -8,17 +8,17 @@ tag:
 
 ## 安装插件
 
-![20230319141742](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319141742.png)
+![](./images/2023-10-24-18-13-05.png)
 
 ## 插件的配置
 
-![20230319141937](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319141937.png)
+![](./images/2023-10-24-18-13-07.png)
 
-![20230319142009](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319142009.png)
+![](./images/2023-10-24-18-13-08.png)
 
-![20230319142135](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319142135.png)
+![](./images/2023-10-24-18-13-09.png)
 
-![20230319142152](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319142152.png)
+![](./images/2023-10-24-18-13-10.png)
 
 
 ## 插件的使用
@@ -26,8 +26,8 @@ tag:
 1. 在idea中配置数据库链接
 
 2. 生成代码
-![20230319142409](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319142409.png)
+![](./images/2023-10-24-18-13-12.png)
 
-![20230319142530](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230319142530.png)
+![](./images/2023-10-24-18-13-13.png)
 
 

@@ -6,7 +6,7 @@ tag:
   - "数据库"
 ---
 
-![内存结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230606112227.png)
+![](./images/2023-10-24-18-15-16.png)
 
 - Buffer Pool
   - change pool 以外的区域
@@ -23,7 +23,7 @@ tag:
 
 ## Buffer Pool 
 
-![Buffer Pool逻辑结构](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605195942.png)
+![](./images/2023-10-24-18-15-17.png)
 
 `整个mysql使用的内存区可以划分为多个Buffer Pool ，一个Buffer Pool 可以分为多个块（chunk），每个chunk包含有多个page。`
 
@@ -42,7 +42,7 @@ MySQL启动时，就会根据配置参数，操作系统申请的一块连续的
 
 由于`描述信息`的存在，一个设置成128M的 chunk ，最后可能变成130M，多出来的就是`描述信息`的大小。
 
-![20230605210136](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230605210136.png)
+![](./images/2023-10-24-18-15-18.png)
 
 此外，MySQL还把缓存页进行分类： 
 
@@ -146,7 +146,7 @@ Log Buffer中主要是 RedoLog 和 UndoLog 的数据页。本质上还是属于I
 
 ### IO模型 
 
-![20230620074639](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230620074639.png)
+![](./images/2023-10-24-18-15-19.png)
 
 由上面IO模型可知：
 - LogBuffer属于用户态内存区域。在内存中划分一部分区域给用户使用，那这部分就被称为用户态（或用户空间）内存，LogBuffer 和 BufferPool 都属于用户态内存；内核态（或内核空间）是指给操作系统使用的这部分内存区域；
@@ -215,7 +215,7 @@ crash-safe： 故障恢复，即可以保证即使数据库发生异常重启，
 
 
 
-![Binlog与RedoLog](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230620190751.png)
+![](./images/2023-10-24-18-15-20.png)
 
 
 
@@ -227,5 +227,5 @@ crash-safe： 故障恢复，即可以保证即使数据库发生异常重启，
 
 <br /><br /><br />
 
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 

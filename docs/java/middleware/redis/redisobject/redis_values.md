@@ -328,11 +328,11 @@ Bitmap即位图，是一串连续的二进制数组（只有0和1），可以通
 
 具体实现可能是这样的： 以具有月份意义的字符串作为key，然后以这个月份具有的天数作为偏移量，出勤为1，缺勤为0。这样就相当于为每一个用户都创建12个key，每一个key所使用的Bit位不超过31个（一个月份最多有31天），也就是说最多使用365个bit位就可以表示一个用户的全年出勤情况。如下图表示用户id=28的用户全年的出勤情况：
 
-![20230708111911](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230708111911.png)
+![](./images/2023-10-24-18-13-43.png)
 
 下图表示用户id=32的用户的全年出勤情况：
 
-![20230708111931](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230708111931.png)
+![](./images/2023-10-24-18-13-44.png)
 
 如，id=13的用户在202206月份的25日出勤了，那么就可以：
 
@@ -371,7 +371,7 @@ BITPOS uuid:sign:100:202206 1
 在很多web应用中，有时会遇到要统计用户登陆情况的业务场景，我们就可以把日期作为key，把用户的id作为偏移量。
 
 
-![20230708094630](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20230708094630.png)
+![](./images/2023-10-24-18-13-45.png)
 
 
 例如，userid=4的用户在20220521这一天登陆了，就使用下面的命令在Redis中记录一下：
@@ -621,7 +621,7 @@ OK
 
 ---
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
 

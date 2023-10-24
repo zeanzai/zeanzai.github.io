@@ -35,7 +35,7 @@ tag:
 - 他们只存在于创建他们的block里（{}之间）无法在block外进行任何操作，如读取、赋值；
 - 在Java多线程中，每个线程都复制一份局部变量，可防止某些同步问题发生；
 
-![20230927100157](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/20230927100157.png)
+![](./images/2023-10-24-18-17-04.png)
 
 ### 全局变量
 
@@ -187,7 +187,7 @@ RPC vs RMI
 
 ### 依赖(Dependency)
 
-![20231018093523](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231018093523.png)
+![](./images/2023-10-24-18-17-06.png)
 
 - 类A用到了类B，但是关系属于偶然建立的（used-a）关系，不是长期的关系，而是短期的、偶然建立的、临时的关系；
 - 例如，我用锤子修桌子，我和锤子之间就是一种临时建立起来的关系，除去修桌子场景（表现在代码中就是“修桌子”方法中用到了“锤子”）外，我和锤子之间没有任何关系；
@@ -201,7 +201,7 @@ RPC vs RMI
 
 ### 关联(Association)
 
-![20231018093532](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20231018093532.png)
+![](./images/2023-10-24-18-17-07.png)
 
 - 这种关系属于拥有的（has-a）关系，是长期存在的关系；这种关系可以是单向的，也可以是双向的；
 - 例如，教师教授知识，教师和学生就是一种长期存在的关系，要想完成教授知识的业务，教师就必须拥有学生，教师教授知识离开学生后就没有办法完成；
@@ -239,6 +239,6 @@ RPC vs RMI
 <br />
 <br />
 <br />
-<img style="border:1px red solid; display:block; margin:0 auto;" src="https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/img/qrcode.jpg" alt="微信公众号" />
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
 
 
