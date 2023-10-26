@@ -1,105 +1,183 @@
 ---
-title: "Spring基本原理"
+"title": "Bean"
 category:
   - "arch"
 tag:
   - "spring"
 ---
 
-## EJB的困境
 
-::: tip 前置知识
-POJO（Plain Old Java Object, 简单又老的 Java 对象）：不继承任何类、也不实现任何接口、更不遵循任何约定、也不被任何框架侵入的Java对象，理想情况下，POJO是一个只遵循Java语言规范的Java对象；
-
-所谓组件就是一个由可以自行进行内部管理的一个或几个类所组成、外界不了解其内部信息和运行方式的群体。使用它的对象只能通过接口来操作。
-
-Bean的含义是可重复使用的Java组件，并具有以下特点
-
-- 提供默认的构造方法；
-- 所有属性的访问范围为private；
-- 提供针对属性的get、set方法；
-- 实现序列化接口；
-
-简而言之，当一个POJO可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，他就是一个JavaBean。（没毛病！）
-:::
-
-在没有出现Spring之前，EJB是Java领域大型企业级应用的主要技术选型。但EJB有着很大的问题：
-
-1. 整个软件过程中，非业务相关的技术步骤过于复杂与重复。比如每开发一个模块就都需要创建servlet、web.xml等，还需要重量级容器作为支撑等；
-2. EJB并没有对Bean的管理和维护设置统一标准，这使得Bean的管理和维护极其混乱；
-3. EJB的交叉业务实现过程复杂。比如安全控制、日志记录、事务控制等交叉业务，需要在每个需求中都要进行实现；
-4. 由于框架的复杂性，导致很多业务模块的开发过程并不能很好的遵守设计模式中的 OCP 原则和 DIP 原则，这导致项目模块耦合性较强，耦合性越强，可扩展性就越差；
-5. ......
-
-EJB的技术，重点在于想方设法实现一个又一个的可复用的JavaBean组件。但是这个过程中需要程序员自行实现，而由于`程序员技术素养的差别`以及`Java语言的灵活性特点`，这又导致Bean的实现过程千差万别，最终导致软件系统难以维护。
-
-::: tip 设计模式的原则
-
-:::
-
-## 控制反转 
-
-![](./images/2023-10-24-18-18-10.png)
-
-::: tip DIP、IoC、DI、Spring之间的关系
-
-DIP是设计模式中的一种设计原则，不过它属于GoF；
-IoC可以看作一种全新的设计模式，但是理论和时间成熟相对较晚，并没有包含在GoF中；
-DI是实现了IoC的一种常见的技术实现方式，另一种方式是依赖查找；
-而Spring框架就是一个实现了IoC思想的框架；接口注入会使类之间形成一定的依赖关系，产生侵入性，所以Spring不支持接口注入，这不是Spring的缺点，而应该是优点。
-:::
+> 容器中保存的内容就是Bean -》 那何为bean -》 如何描述Bean -》 Bean注册到容器的方式 -》 在Bean中使用另一个Bean -》 Bean的装配【何为装配、装配的分类】 -》 Bean的生命周期 
 
 
-## 防止DI的滥用
 
-> 扩展阅读： 
 
-### 原则一
+## 何为Bean
 
-建模时辨别清楚`对象生命周期`就不难选择采用DI还是创建对象： 
+## 描述Bean的元信息的方式
 
-- 依赖关系不需要DI也不需要创建对象；
-- 关联关系和聚合关系需要采用DI方式；
-- 组合关系需要创建对象方式；
+### Bean的元信息 
 
-### 原则二
+包括bean的状态
 
-在决定采用DI设计后，马上要考虑的是注入方式问题。DI中注入方式主要有构造函数注入和Setter注入（还有接口注入较少使用，本文不讨论）。“人与身份证的依赖关系”适合采用Setter注入，因为人不是一出生就有身份证，而是到了法定年龄才有，用构造函数注入表达的语义与此相违背。相反“人与父母的依赖关系”则适合采用构造函数注入，因为亲子关系是从人一出生就建立的，用Setter注入必然使得对象创建后有一段时间处于非法状态，按契约式设计的术语即破坏了对象的不变量(invariant)。
+## Bean注册到容器的方式 
 
-## Spring概览
 
-Spring6和Spring5。
+## 在Bean中使用另一个Bean
 
-### Spring版本命名规范
+## Bean的装配【何为装配、装配的分类】
 
-### Spring特点 
+Spring容器在用到Bean的位置构造出Bean的过程就是装配，比如类A中有依赖了类B，那么Spring容器把类B的一个对象给到A的过程，就是装配。
 
-- 轻量级
-- 实现了控制反转和容器
-- 支持面向切面编程
-- 支持事物管理
-- 模块化
-- ......
+装配分为两种：
+- 手动装配
+- 自动装配 
 
-### Spring核心组件
+## Bean的生命周期 
 
-![](./images/2023-10-24-18-18-11.png)
+## 注解详解 
 
-- Spring Core模块： 这是Spring框架最基础的部分，它提供了依赖注入（DependencyInjection）特征来实现容器对Bean的管理。核心容器的主要组件是 BeanFactory，BeanFactory是工厂模式的一个实现，是任何Spring应用的核心。它使用IoC将应用配置和依赖从实际的应用代码中分离出来。
-- Spring Context模块： 如果说核心模块中的BeanFactory使Spring成为容器的话，那么上下文模块就是Spring成为框架的原因。
-这个模块扩展了BeanFactory，增加了对国际化（I18N）消息、事件传播、验证的支持。另外提供了许多企业服务，例如电子邮件、JNDI访问、EJB集成、远程以及时序调度（scheduling）服务。也包括了对模版框架例如Velocity和FreeMarker集成的支持
-- Spring AOP模块： Spring在它的AOP模块中提供了对面向切面编程的丰富支持，Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖组件，就可以将声明性事务管理集成到应用程序中，可以自定义拦截器、切点、日志等操作。
-- Spring DAO模块： 提供了一个JDBC的抽象层和异常层次结构，消除了烦琐的JDBC编码和数据库厂商特有的错误代码解析，用于简化JDBC。
-- Spring ORM模块： Spring提供了ORM模块。Spring并不试图实现它自己的ORM解决方案，而是为几种流行的ORM框架提供了集成方案，包括Hibernate、JDO和iBATIS SQL映射，这些都遵从 Spring 的通用事务和 DAO 异常层次结构。
-- Spring Web MVC模块： Spring为构建Web应用提供了一个功能全面的MVC框架。虽然Spring可以很容易地与其它MVC框架集成，例如Struts，但Spring的MVC框架使用IoC对控制逻辑和业务对象提供了完全的分离。
-- Spring WebFlux模块： Spring Framework 中包含的原始 Web 框架 Spring Web MVC 是专门为 Servlet API 和 Servlet 容器构建的。反应式堆栈 Web 框架 Spring WebFlux 是在 5.0 版的后期添加的。它是完全非阻塞的，支持反应式流(Reactive Stream)背压，并在Netty，Undertow和Servlet 3.1+容器等服务器上运行。
-- Spring Web模块： Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文，提供了Spring和其它Web框架的集成，比如Struts、WebWork。还提供了一些面向服务支持，例如：实现文件上传的multipart请求。
+> autowiring vs resource 
+> Configuration vs Component 
+> 
 
-![](./images/2023-10-24-18-18-13.png)
+## 常见面试题
 
-### Spring容器高层视图
+1. Spring中出现同名bean怎么办？
+2. 循环依赖
+3. 单例Bean的线程同步问题
+4. 
 
-![](./images/2023-10-24-18-18-14.png)
+
+
+
+
+
+
+---
+
+## Bean 相关
+
+单个Bean的构造权，通过元信息提供给Spring容器，并由Spring容器进行构造。即Spring容器剥夺了Bean的构造权。
+
+多个Bean之间组合使用，由此产生的依赖关系的装配权，可以由Spring来管理，也可以由开发人员来管理；
+
+### Bean的生命周期 
+
+// TODO 
+
+
+### Bean的元信息
+
+![](./images/2023-10-24-18-18-20.png)
+
+
+
+属性 | 描述
+---|---
+class | 这个属性是强制性的，并且指定用来创建 bean 的 bean 类。
+name | 这个属性指定唯一的 bean 标识符。在基于 XML 的配置元数据中，你可以使用 ID 和/或 name 属性来指定 bean 标识符。
+scope | 这个属性指定由特定的 bean 定义创建的对象的作用域，它将会在 bean 作用域的章节中进行讨论。
+constructor-arg | 它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+properties | 它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+autowiring mode | 它是用来注入依赖关系的，并会在接下来的章节中进行讨论。
+lazy-initialization mode | 延迟初始化的 bean 告诉 IoC 容器在它第一次被请求时，而不是在启动时去创建一个 bean 实例。
+initialization 方法 | 在 bean 的所有必需的属性被容器设置之后，调用回调方法。它将会在 bean 的生命周期章节中进行讨论。
+destruction 方法 | 当包含该 bean 的容器被销毁时，使用回调方法。它将会在 bean 的生命周期章节中进行讨论。
+
+#### scope
+
+- singleton
+  - 描述：该作用域下的 Bean 在 IoC 容器中只存在一个实例：获取 Bean（即通过 applicationContext.getBean等方法获取）及装配 Bean（即通过 @Autowired 注入）都是同一个对象；
+  - 场景：通常无状态的 Bean 使用该作用域，无状态表示 Bean 对象的属性状态不需要更新；
+  - 备注：Spring 默认选择该作用域，线程不安全，Spring使用ThreadLocal解决线程安全问题；
+- prototype
+  - 描述：每次对该作用域下的 Bean 的请求都会创建新的实例：获取 Bean（即通过 applicationContext.getBean 等方法获取）及装配 Bean（即通过 @Autowired 注入）都是新的对象实例。
+  - 场景：通常有状态的 Bean 使用该作用域。
+- request
+  - 描述：每次 Http 请求会创建新的 Bean 实例，且创建的Bean实例只对当前 Http 请求有效，Http 请求结束，改Bean实例也被销毁；类似于 prototype。
+  - 场景：一次 Http 的请求和响应的共享 Bean。
+  - 备注：限定 Spring MVC 框架中使用。
+- session
+  - 描述：在一个 Http Session 中，定义一个 Bean 实例，不同的 Session 中不共享Bean实例；
+  - 场景：用户会话的共享 Bean, 比如：记录一个用户的登陆信息。
+  - 备注：限定 Spring MVC 框架中使用。
+- application
+  - 描述：在一个 Http Servlet Context 中，定义一个 Bean 实例。
+  - 场景：Web 应用的上下文信息，比如：记录一个应用的共享信息。
+  - 备注：限定 Spring MVC 框架中使用。
+
+设置Bean的Scope属性的方法：
+
+```
+<bean id="book02" class="com.spring.beans.Book" scope="singleton"></bean>
+<bean id="book02" class="com.spring.beans.Book" scope="prototype"></bean>
+<bean id="book02" class="com.spring.beans.Book" scope="request"></bean>
+<bean id="book02" class="com.spring.beans.Book" scope="session"></bean>
+<bean id="book02" class="com.spring.beans.Book" scope="application"></bean>
+```
+
+![](./images/2023-10-24-18-18-21.png)
+
+bean的状态： 
+
+无状态bean和有状态bean
+
+有状态就是有数据存储功能。有状态对象(Stateful Bean)，就是有实例变量的对象，可以保存数据，是非线程安全的。在不同方法调用间不保留任何状态。
+无状态就是一次操作，不能保存数据。无状态对象(Stateless Bean)，就是没有实例变量的对象 .不能保存数据，是不变类，是线程安全的。
+
+参考[链接](https://www.cnblogs.com/vipstone/p/16641846.html)
+
+
+Spring中出现同名bean怎么办？
+
+#### autowiring
+
+no - 这是默认设置，表示没有自动装配。应使用显式 bean 引用进行装配。
+byName - 它根据 bean 的名称注入对象依赖项。它匹配并装配其属性与 XML 文件中由相同名称定义的 bean。
+byType - 它根据类型注入对象依赖项。如果属性的类型与 XML 文件中的一个 bean 名称匹配，则匹配并装配属性。
+构造函数 - 它通过调用类的构造函数来注入依赖项。它有大量的参数。
+autodetect - 首先容器尝试通过构造函数使用 autowire 装配，如果不能，则尝试通过 byType 自动装配。
+
+
+#### lazy-initialization
+
+在bean定义的时候通过lazy-init属性来配置bean是否是延迟加载，true：延迟初始化，false：实时初始化
+
+```
+<bean lazy-init="是否是延迟初始化" />
+
+@Lazy 注解
+```
+
+### 把元数据提供给 Spring 容器
+
+有三种方式：
+- 基于 XML 的配置文件
+- 基于注解的配置
+- 基于 Java 的配置
+
+![](./images/2023-10-24-18-18-22.png)
+
+```
+<bean id="book02" class="com.spring.beans.Book" scope="singleton"></bean>
+```
+
+
+## Bean 配置元信息的方式 
+
+- xml 
+- 注解方式 
+- SpringAPI方式 
+- properties方式
+
+### Bean的依赖注入的方式
+
+- 构造方法
+- set方式
+- 静态工厂方法
+- 实例工厂方法
+
 
 
 ## Bean
@@ -381,24 +459,7 @@ Spring的配置方式有哪些
 
 
 
-## 容器 
 
-容器启动过程
-父子容器
-
-
-![](./images/2023-10-24-18-18-16.png)
-
-org.springframework.beans.factory.BeanFactory
-
-org.springframework.context.ApplicationContext
-
-org.springframework.context.support.ClassPathXmlApplicationContext
-
-org.springframework.context.annotation.AnnotationConfigApplicationContext
-
-
-> BeanFactory VS Application VS FactoryBean
 
 
 ## 注解详解
@@ -465,113 +526,8 @@ AOP:
 
 @Transactional：在要开启事务的方法上使用@Transactional注解，即可声明式开启事务。
 
-## 面向切面编程
 
-AOP的术语、切点表达式
-GoF之代理模式、静态代理和动态代理（JDK动态代理、CGLib动态代理）、Spring AOP 和 AspectJ AOP 区别
-主要应用场景 
-
-
-
-- AOP定义及相关术语
-● 连接点 Joinpoint
-  ○ 在程序的整个执行流程中，可以织入切面的位置。方法的执行前后，异常抛出之后等位置。
-● 切点 Pointcut
-  ○ 在程序执行流程中，真正织入切面的方法。（一个切点对应多个连接点）
-● 通知 Advice
-  ○ 通知又叫增强，就是具体你要织入的代码。
-  ○ 通知包括：
-    ■ 前置通知
-    ■ 后置通知
-    ■ 环绕通知
-    ■ 异常通知
-    ■ 最终通知
-● 切面 Aspect
-  ○ 切点 + 通知就是切面。
-● 织入 Weaving
-  ○ 把通知应用到目标对象上的过程。
-● 代理对象 Proxy
-  ○ 一个目标对象被织入通知后产生的新对象。
-● 目标对象 Target
-  ○ 被织入通知的对象。
-
-- 切点表达式 
-
-● 连接点 Joinpoint
-  ○ 在程序的整个执行流程中，可以织入切面的位置。方法的执行前后，异常抛出之后等位置。
-● 切点 Pointcut
-  ○ 在程序执行流程中，真正织入切面的方法。（一个切点对应多个连接点）
-● 通知 Advice
-  ○ 通知又叫增强，就是具体你要织入的代码。
-  ○ 通知包括：
-    ■ 前置通知
-    ■ 后置通知
-    ■ 环绕通知
-    ■ 异常通知
-    ■ 最终通知
-● 切面 Aspect
-  ○ 切点 + 通知就是切面。
-● 织入 Weaving
-  ○ 把通知应用到目标对象上的过程。
-● 代理对象 Proxy
-  ○ 一个目标对象被织入通知后产生的新对象。
-● 目标对象 Target
-  ○ 被织入通知的对象。
-
-
-
-
-
-## WEB 
-
-MVC原理
-
-常用注解
-
-升级
-
-
-
-## Spring中的事务原理
-
-- Spring中如何进行事务管理、Spring中事务框架有什么好处？
-- 事务及其特性
-- 事务属性 
-
-![](./images/2023-10-24-18-18-18.png)
-
-- 声明式事务实现原理了解吗？
-- 事务失效原因及其解决方案
-
-
-
-
-## SpringBoot 
-
-SpringBoot优点
-
-SpringBoot启动原理
-
-
-
-## SpringCloud
-
-
-## 参考资料
-
-- 《字节大佬总结的面试题库》
-- 《Java小抄》
-- [面渣逆袭：Spring三十五问，四万字+五十图详解](https://www.cnblogs.com/three-fighter/p/16166891.html)
-- [Java-充电社-Spring教程](http://www.itsoku.com/course/5)
-- [Spring](https://docs.spring.io/spring-framework/reference/core/beans/definition.html)
-- [Spring6(尚硅谷2023)](https://www.yuque.com/yguangbxiu/note/cfw98m0tg3k6a38d#QCP35)
-- [动力节点2022-Spring6](https://www.yuque.com/dujubin/ltckqu/kipzgd)
-- [控制反转](https://zh.wikipedia.org/zh-hans/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC)
-- [依赖注入中的`依赖`与UML中`依赖关系`在语义上的区别](https://www.cnblogs.com/weidagang2046/archive/2009/12/10/1620587.html)
 
 ---
-
-
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
-
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="withBase('/qrcode.jpg')" alt="微信公众号" />
