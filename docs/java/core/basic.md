@@ -8,6 +8,19 @@ tag:
 
 ## 一些专有名词
 
+
+DEV(Development environment)
+FAT(Feature Acceptance Test environment)
+UAT(User Acceptance Test environment)
+PRO(Production environment)
+
+
+OLTP和OLAP区别
+
+- [OLTP与OLAP的区别精简总结](https://cloud.tencent.com/developer/article/1496132)
+
+
+
 ### 多态 
 
 ### 继承 VS 实现

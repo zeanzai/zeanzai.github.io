@@ -1,8 +1,8 @@
 import { defineSidebarConfig } from "vuepress-theme-hope";
 
 export default defineSidebarConfig({
-  // 服务器相关
-  "/linux/": [
+  // 开发环境、服务器运维
+  "/devops/": [
 
     // mac
     {
@@ -23,7 +23,7 @@ export default defineSidebarConfig({
     {
       text: "WIN",
       collapsable: true,
-      prefix: "win-devenv/",
+      prefix: "win/",
 
       children: [
         { text: "win10", link: "window10.md", },
@@ -47,107 +47,110 @@ export default defineSidebarConfig({
           text: "Docker",
           collapsable: true,
           prefix: "docker/",
-    
+
           children: [
+            { text: "常用命令", link: "docker-command.md", },
             { text: "安装mysql", link: "mysql.md", },
             { text: "安装nexus", link: "nexus.md", },
             { text: "安装redis", link: "redis.md", },
+            { text: "安装mongo", link: "mongo.md", },
+            { text: "安装rabbitmq", link: "rabbitmq.md", },
+            { text: "安装rocketmq", link: "rocketmq.md", },
+            { text: "安装ES", link: "es.md", },
+            { text: "安装Sentinel", link: "sentinel.md", },
           ],
         },
       ],
     },
 
-    // 服务器管理
+    // 其他
     {
-      text: "服务器管理",
+      text: "其它",
       collapsable: true,
-      prefix: "server/",
+      prefix: "other/",
 
       children: [
-        { text: "服务器基本信息", link: "basic-information.md", },
-        { text: "安装CentOS7.5", link: "cento7.5-install-tutorial.md", },
-        { text: "定时器", link: "cron.md", },
-        { text: "磁盘扩展", link: "disk-extend.md", },
-        { text: "DNS", link: "dns.md", },
-        { text: "创建用户", link: "new-users.md", },
-        { text: "服务自启动", link: "services-autorun.md", },
-        { text: "tomcat日志切分", link: "split-tomcat-log.md", },
-        { text: "修改yum源", link: "update-yum.md", },
-        { text: "使用vi编辑器", link: "use-vi-vim.md", },
-      ],
-    },
+        // 服务器管理
+        {
+          text: "服务器管理",
+          collapsable: true,
+          prefix: "server/",
 
-    // 软件安装
-    {
-      text: "软件安装",
-      collapsable: true,
-      prefix: "install/",
-      icon: "software",
-      children: [
-        { text: "docker", link: "docker.md" },
-        { text: "ffmpeg", link: "ffmpeg.md" },
-        { text: "git", link: "git.md" },
-        { text: "gitlab", link: "gitlab.md" },
-        { text: "golang", link: "golang.md" },
-        { text: "jdk", link: "jdk.md" },
-        { text: "jekyll", link: "jekyll.md" },
-        { text: "jenkins", link: "jenkins.md" },
-        { text: "maven", link: "maven.md" },
-        { text: "mysql", link: "mysql.md" },
-        { text: "nexus", link: "nexus.md" },
-        { text: "nginx", link: "nginx.md" },
-        { text: "node", link: "node.md" },
-        { text: "rabbitMQ", link: "rabbitMQ.md" },
-        { text: "redis", link: "redis.md" },
-        { text: "showdoc", link: "showdoc.md" },
-        { text: "tomcat", link: "tomcat.md" },
-      ],
-    },
+          children: [
+            { text: "安装CentOS7.5", link: "cento7.5-install-tutorial.md", },
+            { text: "定时器", link: "cron.md", },
+            { text: "磁盘扩展", link: "disk-extend.md", },
+            { text: "DNS", link: "dns.md", },
+            { text: "创建用户", link: "new-users.md", },
+            { text: "服务自启动", link: "services-autorun.md", },
+            { text: "tomcat日志切分", link: "split-tomcat-log.md", },
+            { text: "修改yum源", link: "update-yum.md", },
+            { text: "使用vi编辑器", link: "use-vi-vim.md", },
+            { text: "挂载NTFS硬盘", link: "mount-disk.md", },
+          ],
+        },
 
-    // 软件维护
-    {
-      text: "软件维护",
-      collapsable: true,
-      prefix: "software/",
-      icon: "set",
-      children: [
-        { text: "删除openjdk", link: "delete-openjdk.md" },
-        { text: "前端项目自动部署", link: "forend-auto-deploy.md" },
-        { text: "图片服务器", link: "image-server.md" },
-        { text: "后端系统自动部署", link: "jenkins-java-project.md" },
-        { text: "jenkins使用问题", link: "jenkins-use.md" },
-        { text: "maven配置jdk1.8", link: "maven-config-jdk1.8.md" },
-        { text: "迁移showdoc", link: "move-showdoc.md" },
-        { text: "mysql常见配置", link: "mysql-config-file.md" },
-        { text: "mysql配置文件", link: "mysql5.7-config-file.md" },
-        { text: "mysql不同配置场景解决方案", link: "mysql5.7-configure.md" },
-        { text: "mysql配置主从", link: "mysql5.7-master-and-slave.md" },
-        { text: "nexus配置阿里代理源", link: "nexus-config-aliyun-proxy.md" },
-        { text: "nexus私服的使用", link: "nexus-deploy-jar.md" },
-        { text: "nginx配置https", link: "nginx-config-https.md" },
-        { text: "nginx配置tomcat", link: "nginx-tomcat.md" },
-        { text: "nginx配置方向代理", link: "nginx-upstream.md" },
-        { text: "linux问题汇总", link: "problems.md" },
-        { text: "redis3.0配置文件", link: "redis3.0-configFile.md" },
-        { text: "redis5.0集群模式安装", link: "redis5.0-cluster.md" },
-        { text: "tomcat设置jmx", link: "tomcat-jmx.md" },
-        { text: "使用nexus", link: "use-nexus.md" },
-        { text: "使用visualVM连接tomcat", link: "use-visualVM-connect-tomcat.md" },
-        { text: "西部数码配置https", link: "west.cn-https-config.md" },
-        { text: "windows系统进行部署", link: "window-develop.md" },
-        { text: "windows配置ng的自启动", link: "window-nginx-install-auto-start.md" },
-      ],
-    },
+        // 软件安装
+        {
+          text: "软件安装",
+          collapsable: true,
+          prefix: "install/",
+          icon: "software",
+          children: [
+            { text: "docker", link: "docker.md" },
+            { text: "ffmpeg", link: "ffmpeg.md" },
+            { text: "git", link: "git.md" },
+            { text: "gitlab", link: "gitlab.md" },
+            { text: "golang", link: "golang.md" },
+            { text: "jdk", link: "jdk.md" },
+            { text: "jekyll", link: "jekyll.md" },
+            { text: "jenkins", link: "jenkins.md" },
+            { text: "maven", link: "maven.md" },
+            { text: "mysql", link: "mysql.md" },
+            { text: "nexus", link: "nexus.md" },
+            { text: "nginx", link: "nginx.md" },
+            { text: "node", link: "node.md" },
+            { text: "rabbitMQ", link: "rabbitMQ.md" },
+            { text: "redis", link: "redis.md" },
+            { text: "showdoc", link: "showdoc.md" },
+            { text: "tomcat", link: "tomcat.md" },
+          ],
+        },
 
-    // HOME服务器日志
-    {
-      text: "HOME服务器",
-      collapsable: true,
-      prefix: "home/",
-      icon: "emoji",
-      children: [
-        { text: "00.服务器安装软件日志", link: "home.centos-install.log.md", },
-        { text: "01.挂载NTFS硬盘", link: "mount-disk.md", },
+        // 软件维护
+        {
+          text: "软件维护",
+          collapsable: true,
+          prefix: "software/",
+          icon: "set",
+          children: [
+            { text: "删除openjdk", link: "delete-openjdk.md" },
+            { text: "前端项目自动部署", link: "forend-auto-deploy.md" },
+            { text: "图片服务器", link: "image-server.md" },
+            { text: "后端系统自动部署", link: "jenkins-java-project.md" },
+            { text: "jenkins使用问题", link: "jenkins-use.md" },
+            { text: "maven配置jdk1.8", link: "maven-config-jdk1.8.md" },
+            { text: "迁移showdoc", link: "move-showdoc.md" },
+            { text: "mysql常见配置", link: "mysql-config-file.md" },
+            { text: "mysql配置文件", link: "mysql5.7-config-file.md" },
+            { text: "mysql不同配置场景解决方案", link: "mysql5.7-configure.md" },
+            { text: "mysql配置主从", link: "mysql5.7-master-and-slave.md" },
+            { text: "nexus配置阿里代理源", link: "nexus-config-aliyun-proxy.md" },
+            { text: "nexus私服的使用", link: "nexus-deploy-jar.md" },
+            { text: "nginx配置https", link: "nginx-config-https.md" },
+            { text: "nginx配置tomcat", link: "nginx-tomcat.md" },
+            { text: "nginx配置方向代理", link: "nginx-upstream.md" },
+            { text: "linux问题汇总", link: "problems.md" },
+            { text: "redis3.0配置文件", link: "redis3.0-configFile.md" },
+            { text: "redis5.0集群模式安装", link: "redis5.0-cluster.md" },
+            { text: "tomcat设置jmx", link: "tomcat-jmx.md" },
+            { text: "使用nexus", link: "use-nexus.md" },
+            { text: "使用visualVM连接tomcat", link: "use-visualVM-connect-tomcat.md" },
+            { text: "西部数码配置https", link: "west.cn-https-config.md" },
+            { text: "windows系统进行部署", link: "window-develop.md" },
+            { text: "windows配置ng的自启动", link: "window-nginx-install-auto-start.md" },
+          ],
+        },
       ],
     },
   ],
@@ -427,12 +430,6 @@ export default defineSidebarConfig({
     },
 
   ],
-
-  // 资料分享
-  "/shared/": [
-    { text: "m1版本mac安装idea2022.2", link: "mac-idea.md", },
-  ],
-
 
   // springcloud-alibaba
   "/springcloud-alibaba/": [
