@@ -198,7 +198,6 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "core/",
       children: [
-        { text: "专业名词", link: "java-specification.md" },
         { text: "基础", link: "basic.md" },
         { text: "集合", link: "collections.md" },
         { text: "JUC", link: "juc.md" },
@@ -374,6 +373,7 @@ export default defineSidebarConfig({
         { text: "分布式锁", link: "distribute-lock.md", },
         { text: "分库分表", link: "sharding.md", },
         { text: "分布式ID", link: "distribute-id.md", },
+        { text: "分布式会话", link: "session.md", },
         { text: "分布式任务", link: "distribute-job.md", },
         {
           text: "分布式消息",
@@ -398,16 +398,17 @@ export default defineSidebarConfig({
       ],
     },
 
-    // 项目实战
+    // 过程控制
     {
-      text: "七、项目实战",
+      text: "七、过程控制",
       collapsable: true,
-      prefix: "practice/",
+      prefix: "proceduralcontrol/",
       children: [
         { text: "框架中的线程池", link: "excutors.md", },
         { text: "开发阶段如何进行任务分配", link: "management.md", },
         { text: "RedisUtils", link: "RedisUtils.md", },
         { text: "如何设计一个XXX系统", link: "designASystem.md", },
+        { text: "你的团队用对版本控制了吗？", link: "versioncontrol.md", },
       ],
     },
 
@@ -424,18 +425,6 @@ export default defineSidebarConfig({
         { text: "谷粒商城学习笔记", link: "guli.md", },
       ],
     },
-
-    // 工作技巧
-    {
-      text: "九、工作技巧",
-      collapsable: true,
-      prefix: "devtips/",
-      children: [
-        { text: "你的团队用对版本控制了吗？", link: "versioncontrol.md", },
-
-      ],
-    },
-
 
   ],
 
