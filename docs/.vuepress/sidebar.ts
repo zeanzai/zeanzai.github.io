@@ -292,7 +292,6 @@ export default defineSidebarConfig({
             { text: "springboot", link: "springboot.md" },
             { text: "springcloud", link: "springcloud.md" },
 
-            
           ],
         },
       ],
