@@ -286,10 +286,13 @@ export default defineSidebarConfig({
             { text: "Bean", link: "bean.md" },
             { text: "AOP", link: "aop.md" },
             { text: "Web", link: "web.md" },
+            { text: "响应式编程", link: "webflux.md" },
             { text: "事务", link: "transaction.md" },
             { text: "事件", link: "event.md" },
             { text: "springboot", link: "springboot.md" },
             { text: "springcloud", link: "springcloud.md" },
+
+            
           ],
         },
       ],

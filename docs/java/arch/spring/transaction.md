@@ -1,9 +1,9 @@
 ---
-"title": ""
+"title": "transaction"
 category:
-  - ""
+  - "arch"
 tag:
-  - ""
+  - "spring"
 ---
 
 
@@ -19,10 +19,13 @@ tag:
 - 事务失效原因及其解决方案
 
 
+## 总结
 
+1. 根据在框架中使用事务的发展规律来看，最开始要想使用事务，就是程序员自己去编写事务的每一个步骤的控制逻辑，这种方式就是编程式事务；
+2. 所谓声明式事务就是把本来需要程序员自行编程控制的事务的每一个步骤声明出来，之后通过配置的方式给到Spring，让Spring容器自行管理，程序员只需要关注业务的具体执行；
+3. 
 
 
 
 ---
 <br /><br /><br />
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="withBase('/qrcode.jpg')" alt="微信公众号" />
