@@ -191,11 +191,3 @@ test(){
 使用间接方式注册到Bean工厂的过程称为装配。（有点像装配车间的概念，把多个模块封装然后分配到各个位置形成统一的整体，然后使用这个整体）。
 
 
----
-
-<br />
-<br />
-<br />
-
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
-

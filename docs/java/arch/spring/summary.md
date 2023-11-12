@@ -6,38 +6,6 @@ tag:
   - "spring"
 ---
 
-## 背景 
-
-### 前置概念 
-
-
-
-
-### 黎明前的“黑夜”
-
-- 例子1： EJB软件困境
-
-[对比平台--EJB VS Spring之间的区别](https://www.1024sky.cn/blog/article/3622)
-
-
-- 例子2： 构造方法的灵活性
-
-- 例子3： 从设计模式角度
-
-
-### EJB的困境 
-
-### 总结 
-
-## Spring 
-
-### 特点
-
-### 组件及jar包
-
-### 命名规范 
-
-
 
 
 
@@ -278,14 +246,6 @@ Spring6和Spring5。
 
 ### Spring版本命名规范
 
-### Spring特点 
-
-- 轻量级
-- 实现了控制反转和容器
-- 支持面向切面编程
-- 支持事物管理
-- 模块化
-- ......
 
 ### Spring核心组件
 
@@ -301,43 +261,8 @@ Spring6和Spring5。
 - Spring WebFlux模块： Spring Framework 中包含的原始 Web 框架 Spring Web MVC 是专门为 Servlet API 和 Servlet 容器构建的。反应式堆栈 Web 框架 Spring WebFlux 是在 5.0 版的后期添加的。它是完全非阻塞的，支持反应式流(Reactive Stream)背压，并在Netty，Undertow和Servlet 3.1+容器等服务器上运行。
 - Spring Web模块： Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文，提供了Spring和其它Web框架的集成，比如Struts、WebWork。还提供了一些面向服务支持，例如：实现文件上传的multipart请求。
 
-![](./images/2023-10-24-18-18-13.png)
-
-### Spring容器高层视图
-
-![](./images/2023-10-24-18-18-14.png)
-
-
-## Spring的组件 
-
-Core
-AOP
-Transaction
 
 
 
 
-
-
-## 参考资料
-
-- 《字节大佬总结的面试题库》
-- 《Java小抄》
-- [面渣逆袭：Spring三十五问，四万字+五十图详解](https://www.cnblogs.com/three-fighter/p/16166891.html)
-- [Java-充电社-Spring教程](http://www.itsoku.com/course/5)
-- [Spring](https://docs.spring.io/spring-framework/reference/core/beans/definition.html)
-- [Spring6(尚硅谷2023)](https://www.yuque.com/yguangbxiu/note/cfw98m0tg3k6a38d#QCP35)
-- [动力节点2022-Spring6](https://www.yuque.com/dujubin/ltckqu/kipzgd)
-- [控制反转](https://zh.wikipedia.org/zh-hans/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC)
-- [依赖注入中的`依赖`与UML中`依赖关系`在语义上的区别](https://www.cnblogs.com/weidagang2046/archive/2009/12/10/1620587.html)
-
-
-1. Spring实战（第5版）【文字版】 (克雷格·沃斯) (z-lib.org).pdf
-2. Spring高手系列.pdf https://gitee.com/javacode2018/spring-series
-3. Spring 5核心原理与30个类手写实战@www.cmsblogs.cn.pdf
-
-- [此文](https://github.com/wuyouzhuguli/SpringAll) 中关于Spring原理部分
-- [此文](https://doocs.github.io/source-code-hunter/#/) 中关于Spring原理部分
-- [Spring三十五问，四万字+五十图详解！建议收藏！](https://mp.weixin.qq.com/s/Y17S85ntHm_MLTZMJdtjQQ)
- 
 
