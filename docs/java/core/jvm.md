@@ -110,9 +110,5 @@ java类运行的过程大概可分为两个过程：1、类的加载  2、类的
 
 ---
 
----
-
-<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
-
 
 

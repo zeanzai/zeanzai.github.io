@@ -170,30 +170,7 @@ export default defineSidebarConfig({
 
 
     // 计算机基础
-    {
-      text: "一、计算机基础",
-      collapsable: true,
-      prefix: "cscore/",
-      children: [
-        { text: "计算机网络", link: "network.md" },
-        { text: "数据结构与算法", link: "dsa.md" },
-        {
-          text: "设计模式",
-          collapsable: true,
-          prefix: "design-pattern/",
-          children: [
-            { text: "概述", link: "designpattern.md" },
-            { text: "单例模式", link: "singleton.md" },
-            { text: "代理模式", link: "proxy.md" },
-            { text: "策略模式", link: "strategy.md" },
-            { text: "责任链模式", link: "chain-filter.md" },
-            { text: "模板方法模式", link: "template-method.md" },
-            { text: "观察者模式", link: "observer.md" },
 
-          ],
-        },
-      ],
-    },
 
     // Java核心
     {
@@ -201,18 +178,13 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "core/",
       children: [
-        { text: "基础", link: "basic.md" },
-        { text: "集合", link: "collections.md" },
-        { text: "JUC", link: "juc.md" },
-        { text: "Java线程实战", link: "juc2.md" },
-        { text: "泛型", link: "everytype.md" },
 
         {
           text: "JVM",
           collapsable: true,
           prefix: "jvm/",
           children: [
-            { text: "周志明JVM第三版学习笔记", link: "jvm-version3rd.md" },
+            // { text: "周志明JVM第三版学习笔记", link: "jvm-version3rd.md" },
             // { text: "00.葛一鸣-深入理解JVM-学习笔记", link: "00-gym.md" },
             // { text: "01.类的编译、加载及运行", link: "01.类的编译、加载及运行.md" },
             {
@@ -249,117 +221,13 @@ export default defineSidebarConfig({
         //     { text: "jvm编译和运行过程", link: "jvm编译和运行过程.md" },
         //   ],
         // },
-        { text: "本地缓存", link: "localcache.md" },
-        {
-          text: "其他",
-          collapsable: true,
-          prefix: "other/",
-          children: [
-            { text: "装箱和拆箱问题详解", link: "ints-and-integers.md" },
-          ],
-        },
+
       ],
     },
 
     // Java框架
-    {
-      text: "三、框架",
-      collapsable: true,
-      prefix: "arch/",
-      children: [
-
-        {
-          text: "框架知识",
-          link: "knowledge.md",
-        },
-        {
-          text: "mybatis",
-          link: "mybatis.md",
-        },
-        {
-          text: "spring",
-          collapsable: true,
-          prefix: "spring/",
-          children: [
-            { text: "概览", link: "summary.md" },
-            { text: "容器", link: "container.md" },
-            { text: "Bean", link: "bean.md" },
-            { text: "AOP", link: "aop.md" },
-            { text: "Web", link: "web.md" },
-            { text: "响应式编程", link: "webflux.md" },
-            { text: "事务", link: "transaction.md" },
-            { text: "事件", link: "event.md" },
-            { text: "springboot", link: "springboot.md" },
-            { text: "springcloud", link: "springcloud.md" },
-
-          ],
-        },
-      ],
-    },
 
     // 中间件
-    {
-      text: "四、中间件",
-      collapsable: true,
-      prefix: "middleware/",
-      children: [
-        {
-          text: "MySQL",
-          collapsable: true,
-          prefix: "mysql/",
-          children: [
-            { text: "01.架构概览", link: "mysql01.md", },
-            { text: "02.数据库基本理论", link: "mysql02.md", },
-            { text: "03.MySQL中的Binlog", link: "mysql03.md", },
-            {
-              text: "04.Innodb存储引擎",
-              collapsable: true,
-              prefix: "mysql04/",
-              children: [
-                { text: "架构大图", link: "mysql04_00.md", },
-                { text: "线程模型", link: "mysql04_01.md", },
-                { text: "内存结构", link: "mysql04_02.md", },
-                { text: "磁盘结构", link: "mysql04_03.md", },
-              ],
-            },
-            { text: "05.SQL执行原理", link: "mysql05.md", },
-            { text: "06.MySQL中的索引", link: "mysql06.md", },
-            { text: "07.MySQL的优化", link: "mysql07.md", },
-            { text: "08.分库分表", link: "mysql08.md", },
-
-          ]
-        },
-        {
-          text: "Redis",
-          collapsable: true,
-          prefix: "redis/",
-          children: [
-            { text: "单机版部署及可视化操作台", link: "redis-glance.md", },
-            {
-              text: "Redis中的对象系统",
-              collapsable: true,
-              prefix: "redisobject/",
-              children: [
-                { text: "底层数据结构", link: "redis_value_dsa.md", },
-                { text: "支持的数据类型", link: "redis_values.md", },
-              ],
-            },
-            { text: "高级特性", link: "redis-high-character.md", },
-            { text: "内存淘汰机制与持久化机制", link: "memory-management.md", },
-            { text: "生产环境运维", link: "pro-env.md", },
-            { text: "生产问题及解决方案", link: "pro-problem.md", },
-          ],
-        },
-        {
-          text: " ZooKeeper",
-          link: "zk.md",
-        },
-        {
-          text: " MQ",
-          link: "mq.md",
-        },
-      ],
-    },
 
     // 分布式
     {
@@ -367,16 +235,9 @@ export default defineSidebarConfig({
       collapsable: true,
       prefix: "distribute/",
       children: [
-        { text: "分布式基本原理", link: "distribute-system-theory.md", },
-        { text: "分布式缓存", link: "cache.md", },
-        { text: "一致性Hash", link: "hash.md", },
-        { text: "分布式事务", link: "transaction.md", },
+
         { text: "Seata TCC分布式事务", link: "seataTCC/SeataTCC.md", },
-        { text: "分布式锁", link: "distribute-lock.md", },
-        { text: "分库分表", link: "sharding.md", },
-        { text: "分布式ID", link: "distribute-id.md", },
-        { text: "分布式会话", link: "session.md", },
-        { text: "分布式任务", link: "distribute-job.md", },
+
         {
           text: "分布式消息",
           prefix: "mq/",
@@ -391,44 +252,18 @@ export default defineSidebarConfig({
     },
 
     // 源码系列
-    {
-      text: "六、源码系列",
-      collapsable: true,
-      prefix: "origincode/",
-      children: [
-        { text: "集合源码", link: "collections.md", }
-      ],
-    },
+
 
     // 过程控制
-    {
-      text: "七、过程控制",
-      collapsable: true,
-      prefix: "proceduralcontrol/",
-      children: [
-        { text: "框架中的线程池", link: "excutors.md", },
-        { text: "开发阶段如何进行任务分配", link: "management.md", },
-        { text: "RedisUtils", link: "RedisUtils.md", },
-        { text: "如何设计一个XXX系统", link: "designASystem.md", },
-        { text: "你的团队用对版本控制了吗？", link: "versioncontrol.md", },
-      ],
-    },
+
 
     // 学习笔记
-    {
-      text: "八、学习笔记",
-      collapsable: true,
-      prefix: "notes/",
-      children: [
-        { text: "《分布式技术原理与实战45讲》", link: "distribute-system-theory.md", },
-        { text: "《C2C 电商系统微服务架构 120 天实战训练营》", link: "c2c.md", },
-        { text: "《深入理解JVM-葛一鸣》", link: "jvm.md", },
-        { text: "《Redis 核心原理与实战》", link: "redis.md", },
-        { text: "谷粒商城学习笔记", link: "guli.md", },
-      ],
-    },
+
 
   ],
+
+
+
 
   // springcloud-alibaba
   "/springcloud-alibaba/": [
