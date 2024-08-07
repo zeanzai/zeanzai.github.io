@@ -1,3 +1,12 @@
+---
+title: "职业发展道路上的一些坑"
+category:
+  - "resume"
+tag:
+  - "advice"
+---
+
+
 - OOM
   - OOM类型
     - 服务器异常
